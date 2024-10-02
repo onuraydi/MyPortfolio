@@ -1,0 +1,45 @@
+using Microsoft.EntityFrameworkCore;
+using MyPortfolio.WebApi.Context;
+using MyPortfolio.WebApi.Services.PortfolioAboutMeServices;
+using MyPortfolio.WebApi.Services.PortfolioMainTitleServices;
+using System.Reflection;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<PortfolioContext>(opt =>
+{
+    opt.UseSqlServer(connectionString);
+});
+
+builder.Services.AddScoped<IPortfolioMainTitleService, PortfolioMainTitleService>();
+builder.Services.AddScoped<IPortfolioAboutMeService, PortfolioAboutMeService>();
+
+
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
+
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();

@@ -1,0 +1,54 @@
+[
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioAboutMeApiController",
+    "Method": "GetPortfolioAboutMe",
+    "RelativePath": "api/PortfolioAboutMeApi",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioAboutMeApiController",
+    "Method": "UpdatePortfolioAboutMe",
+    "RelativePath": "api/PortfolioAboutMeApi",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updatePortfolioAboutMeDto",
+        "Type": "MyPortfolio.WebApi.Dtos.PortfolioAboutMeDtos.UpdatePortfolioAboutMeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioMainTitlesController",
+    "Method": "GetPortfolioMainTitle",
+    "RelativePath": "api/PortfolioMainTitles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioMainTitlesController",
+    "Method": "UpdatePortfolioMainTitle",
+    "RelativePath": "api/PortfolioMainTitles",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updatePortfoiloMainTitleDto",
+        "Type": "MyPortfolio.WebApi.Dtos.PortfolioMainTitleDtos.UpdatePortfoiloMainTitleDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

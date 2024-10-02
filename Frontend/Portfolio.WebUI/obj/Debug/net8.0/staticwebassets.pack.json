@@ -1,0 +1,1133 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Portfolio.WebUI.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Portfolio.WebUI.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\css\\main.css",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\css\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\css\\normalize.min.css",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\css\\normalize.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\img\\Thumbs.db",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\img\\Thumbs.db"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\img\\logo.png",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\index.html",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\js\\custom.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\js\\custom.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\js\\jquery-1.11.0.min.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\js\\jquery-1.11.0.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\js\\jquery.nav.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\js\\jquery.nav.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shAutoloader.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shAutoloader.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushAS3.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushAS3.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushAppleScript.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushAppleScript.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushBash.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushBash.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushCSharp.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushCSharp.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushColdFusion.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushColdFusion.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushCpp.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushCpp.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushCss.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushCss.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushDelphi.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushDelphi.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushDiff.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushDiff.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushErlang.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushErlang.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushGroovy.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushGroovy.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushJScript.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushJScript.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushJava.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushJava.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushJavaFX.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushJavaFX.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushPerl.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushPerl.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushPhp.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushPhp.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushPlain.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushPlain.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushPowerShell.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushPowerShell.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushPython.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushPython.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushRuby.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushRuby.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushSass.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushSass.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushScala.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushScala.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushSql.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushSql.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushVb.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushVb.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushXml.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shBrushXml.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shCore.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shCore.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shLegacy.js",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\scripts\\shLegacy.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shCore.css",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shCore.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shCoreDefault.css",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shCoreDefault.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shCoreDjango.css",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shCoreDjango.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shCoreEclipse.css",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shCoreEclipse.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shCoreEmacs.css",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shCoreEmacs.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shCoreFadeToGrey.css",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shCoreFadeToGrey.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shCoreMDUltra.css",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shCoreMDUltra.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shCoreMidnight.css",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shCoreMidnight.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shCoreRDark.css",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shCoreRDark.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shThemeDefault.css",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shThemeDefault.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shThemeDjango.css",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shThemeDjango.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shThemeEclipse.css",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shThemeEclipse.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shThemeEmacs.css",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shThemeEmacs.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shThemeFadeToGrey.css",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shThemeFadeToGrey.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shThemeMDUltra.css",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shThemeMDUltra.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shThemeMidnight.css",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shThemeMidnight.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shThemeRDark.css",
+      "PackagePath": "staticwebassets\\gilb-master\\195 resume DOC\\syntax-highlighter\\styles\\shThemeRDark.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\about.html",
+      "PackagePath": "staticwebassets\\gilb-master\\about.html"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\blog.html",
+      "PackagePath": "staticwebassets\\gilb-master\\blog.html"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\contact.html",
+      "PackagePath": "staticwebassets\\gilb-master\\contact.html"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\contact_process.php",
+      "PackagePath": "staticwebassets\\gilb-master\\contact_process.php"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\css\\all.css",
+      "PackagePath": "staticwebassets\\gilb-master\\css\\all.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\css\\animate.css",
+      "PackagePath": "staticwebassets\\gilb-master\\css\\animate.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\css\\aos.css",
+      "PackagePath": "staticwebassets\\gilb-master\\css\\aos.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\gilb-master\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\css\\flaticon.css",
+      "PackagePath": "staticwebassets\\gilb-master\\css\\flaticon.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\gilb-master\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\css\\gijgo.min.css",
+      "PackagePath": "staticwebassets\\gilb-master\\css\\gijgo.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\css\\magnific-popup.css",
+      "PackagePath": "staticwebassets\\gilb-master\\css\\magnific-popup.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\css\\nice-select.css",
+      "PackagePath": "staticwebassets\\gilb-master\\css\\nice-select.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\css\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\gilb-master\\css\\owl.carousel.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\css\\slick.css",
+      "PackagePath": "staticwebassets\\gilb-master\\css\\slick.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\css\\style.css",
+      "PackagePath": "staticwebassets\\gilb-master\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\css\\style.map",
+      "PackagePath": "staticwebassets\\gilb-master\\css\\style.map"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\css\\swiper.min.css",
+      "PackagePath": "staticwebassets\\gilb-master\\css\\swiper.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\css\\themify-icons.css",
+      "PackagePath": "staticwebassets\\gilb-master\\css\\themify-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\elements.html",
+      "PackagePath": "staticwebassets\\gilb-master\\elements.html"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\fonts\\Flaticon.eot",
+      "PackagePath": "staticwebassets\\gilb-master\\fonts\\Flaticon.eot"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\fonts\\Flaticon.ttf",
+      "PackagePath": "staticwebassets\\gilb-master\\fonts\\Flaticon.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\fonts\\Flaticon.woff",
+      "PackagePath": "staticwebassets\\gilb-master\\fonts\\Flaticon.woff"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\fonts\\Flaticon.woff2",
+      "PackagePath": "staticwebassets\\gilb-master\\fonts\\Flaticon.woff2"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\fonts\\themify.eot",
+      "PackagePath": "staticwebassets\\gilb-master\\fonts\\themify.eot"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\fonts\\themify.svg",
+      "PackagePath": "staticwebassets\\gilb-master\\fonts\\themify.svg"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\fonts\\themify.ttf",
+      "PackagePath": "staticwebassets\\gilb-master\\fonts\\themify.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\fonts\\themify.woff",
+      "PackagePath": "staticwebassets\\gilb-master\\fonts\\themify.woff"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\banner_bg.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\banner_bg.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\banner_bg_1.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\banner_bg_1.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\banner_overlay_1.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\banner_overlay_1.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\banner_overlay_2.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\banner_overlay_2.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\blog\\author.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\blog\\author.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\blog\\blog_1.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\blog\\blog_1.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\blog\\blog_2.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\blog\\blog_2.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\blog\\blog_3.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\blog\\blog_3.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\blog\\blog_4.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\blog\\blog_4.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\blog\\learn_about_bg.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\blog\\learn_about_bg.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\blog\\single_blog_1.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\blog\\single_blog_1.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\blog\\single_blog_2.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\blog\\single_blog_2.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\blog\\single_blog_3.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\blog\\single_blog_3.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\blog\\single_blog_4.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\blog\\single_blog_4.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\blog\\single_blog_5.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\blog\\single_blog_5.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\blog\\slide_thumb_1.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\blog\\slide_thumb_1.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\breadcrumb.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\breadcrumb.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\client\\client_1.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\client\\client_1.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\client\\client_2.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\client\\client_2.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\client\\client_3.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\client\\client_3.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\client\\client_4.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\client\\client_4.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\comment\\comment_1.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\comment\\comment_1.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\comment\\comment_2.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\comment\\comment_2.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\comment\\comment_3.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\comment\\comment_3.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\elements\\a.jpg",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\elements\\a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\elements\\a2.jpg",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\elements\\a2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\elements\\d.jpg",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\elements\\d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\elements\\disabled-check.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\elements\\disabled-check.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\elements\\disabled-radio.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\elements\\disabled-radio.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\elements\\f1.jpg",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\elements\\f1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\elements\\f2.jpg",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\elements\\f2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\elements\\f3.jpg",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\elements\\f3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\elements\\f4.jpg",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\elements\\f4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\elements\\f5.jpg",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\elements\\f5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\elements\\f6.jpg",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\elements\\f6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\elements\\f7.jpg",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\elements\\f7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\elements\\f8.jpg",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\elements\\f8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\elements\\g1.jpg",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\elements\\g1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\elements\\g2.jpg",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\elements\\g2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\elements\\g3.jpg",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\elements\\g3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\elements\\g4.jpg",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\elements\\g4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\elements\\g5.jpg",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\elements\\g5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\elements\\g6.jpg",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\elements\\g6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\elements\\g7.jpg",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\elements\\g7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\elements\\g8.jpg",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\elements\\g8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\elements\\primary-check.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\elements\\primary-check.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\elements\\primary-radio.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\elements\\primary-radio.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\elements\\success-check.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\elements\\success-check.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\elements\\success-radio.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\elements\\success-radio.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\favicon.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\footer_overlay_1.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\footer_overlay_1.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\footer_overlay_2.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\footer_overlay_2.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\logo.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\philosophy.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\philosophy.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\port_1.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\port_1.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\port_2.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\port_2.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\port_3.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\port_3.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\port_4.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\port_4.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\port_5.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\port_5.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\post\\next.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\post\\next.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\post\\post_1.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\post\\post_1.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\post\\post_10.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\post\\post_10.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\post\\post_2.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\post\\post_2.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\post\\post_3.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\post\\post_3.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\post\\post_4.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\post\\post_4.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\post\\post_5.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\post\\post_5.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\post\\post_6.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\post\\post_6.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\post\\post_7.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\post\\post_7.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\post\\post_8.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\post\\post_8.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\post\\post_9.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\post\\post_9.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\post\\preview.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\post\\preview.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\img\\project_details.png",
+      "PackagePath": "staticwebassets\\gilb-master\\img\\project_details.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\index.html",
+      "PackagePath": "staticwebassets\\gilb-master\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\gilb-master\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\js\\contact.js",
+      "PackagePath": "staticwebassets\\gilb-master\\js\\contact.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\js\\custom.js",
+      "PackagePath": "staticwebassets\\gilb-master\\js\\custom.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\js\\gmaps.min.js",
+      "PackagePath": "staticwebassets\\gilb-master\\js\\gmaps.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\js\\jquery-1.12.1.min.js",
+      "PackagePath": "staticwebassets\\gilb-master\\js\\jquery-1.12.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\js\\jquery.ajaxchimp.min.js",
+      "PackagePath": "staticwebassets\\gilb-master\\js\\jquery.ajaxchimp.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\js\\jquery.easing.min.js",
+      "PackagePath": "staticwebassets\\gilb-master\\js\\jquery.easing.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\js\\jquery.form.js",
+      "PackagePath": "staticwebassets\\gilb-master\\js\\jquery.form.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\js\\jquery.magnific-popup.js",
+      "PackagePath": "staticwebassets\\gilb-master\\js\\jquery.magnific-popup.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\js\\jquery.nice-select.min.js",
+      "PackagePath": "staticwebassets\\gilb-master\\js\\jquery.nice-select.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\js\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\gilb-master\\js\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\js\\mail-script.js",
+      "PackagePath": "staticwebassets\\gilb-master\\js\\mail-script.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\js\\masonry.pkgd.js",
+      "PackagePath": "staticwebassets\\gilb-master\\js\\masonry.pkgd.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\js\\masonry.pkgd.min.js",
+      "PackagePath": "staticwebassets\\gilb-master\\js\\masonry.pkgd.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\gilb-master\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\gilb-master\\js\\popper.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\portfolio.html",
+      "PackagePath": "staticwebassets\\gilb-master\\portfolio.html"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\portfolio_details.html",
+      "PackagePath": "staticwebassets\\gilb-master\\portfolio_details.html"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\sass\\_about.scss",
+      "PackagePath": "staticwebassets\\gilb-master\\sass\\_about.scss"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\sass\\_attorneys.scss",
+      "PackagePath": "staticwebassets\\gilb-master\\sass\\_attorneys.scss"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\sass\\_banner.scss",
+      "PackagePath": "staticwebassets\\gilb-master\\sass\\_banner.scss"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\sass\\_blog.scss",
+      "PackagePath": "staticwebassets\\gilb-master\\sass\\_blog.scss"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\sass\\_blog_part.scss",
+      "PackagePath": "staticwebassets\\gilb-master\\sass\\_blog_part.scss"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\sass\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\gilb-master\\sass\\_breadcrumb.scss"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\sass\\_button.scss",
+      "PackagePath": "staticwebassets\\gilb-master\\sass\\_button.scss"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\sass\\_common.scss",
+      "PackagePath": "staticwebassets\\gilb-master\\sass\\_common.scss"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\sass\\_contact.scss",
+      "PackagePath": "staticwebassets\\gilb-master\\sass\\_contact.scss"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\sass\\_copyright_part.scss",
+      "PackagePath": "staticwebassets\\gilb-master\\sass\\_copyright_part.scss"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\sass\\_elements.scss",
+      "PackagePath": "staticwebassets\\gilb-master\\sass\\_elements.scss"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\sass\\_extends.scss",
+      "PackagePath": "staticwebassets\\gilb-master\\sass\\_extends.scss"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\sass\\_footer.scss",
+      "PackagePath": "staticwebassets\\gilb-master\\sass\\_footer.scss"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\sass\\_menu.scss",
+      "PackagePath": "staticwebassets\\gilb-master\\sass\\_menu.scss"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\sass\\_mixins.scss",
+      "PackagePath": "staticwebassets\\gilb-master\\sass\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\sass\\_philosophy_part.scss",
+      "PackagePath": "staticwebassets\\gilb-master\\sass\\_philosophy_part.scss"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\sass\\_portfolio_part.scss",
+      "PackagePath": "staticwebassets\\gilb-master\\sass\\_portfolio_part.scss"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\sass\\_related_project.scss",
+      "PackagePath": "staticwebassets\\gilb-master\\sass\\_related_project.scss"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\sass\\_review.scss",
+      "PackagePath": "staticwebassets\\gilb-master\\sass\\_review.scss"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\sass\\_service.scss",
+      "PackagePath": "staticwebassets\\gilb-master\\sass\\_service.scss"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\sass\\_single_blog.scss",
+      "PackagePath": "staticwebassets\\gilb-master\\sass\\_single_blog.scss"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\sass\\_variables.scss",
+      "PackagePath": "staticwebassets\\gilb-master\\sass\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\sass\\style.scss",
+      "PackagePath": "staticwebassets\\gilb-master\\sass\\style.scss"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\single-blog.html",
+      "PackagePath": "staticwebassets\\gilb-master\\single-blog.html"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\webfonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\gilb-master\\webfonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\webfonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\gilb-master\\webfonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\gilb-master\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\webfonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\gilb-master\\webfonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\gilb-master\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\webfonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\gilb-master\\webfonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\webfonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\gilb-master\\webfonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\gilb-master\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\webfonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\gilb-master\\webfonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\gilb-master\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\webfonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\gilb-master\\webfonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\webfonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\gilb-master\\webfonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\gilb-master\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\webfonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\gilb-master\\webfonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\gilb-master\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\gilb-master\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Portfolio.WebUI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Portfolio.WebUI.props",
+      "PackagePath": "build\\Portfolio.WebUI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Portfolio.WebUI.props",
+      "PackagePath": "buildMultiTargeting\\Portfolio.WebUI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Portfolio.WebUI.props",
+      "PackagePath": "buildTransitive\\Portfolio.WebUI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
