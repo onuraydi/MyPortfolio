@@ -1,7 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using MyPortfolio.WebApi.Context;
 using MyPortfolio.WebApi.Services.PortfolioAboutMeServices;
+using MyPortfolio.WebApi.Services.PortfolioCertificateServices;
+using MyPortfolio.WebApi.Services.PortfolioExperienceServices;
 using MyPortfolio.WebApi.Services.PortfolioMainTitleServices;
+using MyPortfolio.WebApi.Services.PortfolioSkillServices;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,7 +20,9 @@ builder.Services.AddDbContext<PortfolioContext>(opt =>
 
 builder.Services.AddScoped<IPortfolioMainTitleService, PortfolioMainTitleService>();
 builder.Services.AddScoped<IPortfolioAboutMeService, PortfolioAboutMeService>();
-
+builder.Services.AddScoped<IPortfolioExperienceService, PortfolioExperienceService>();
+builder.Services.AddScoped<IPortfolioSkillService, PortfolioSkillService>();
+builder.Services.AddScoped<IPortfolioCertificateService, PortfolioCertificateService>();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 

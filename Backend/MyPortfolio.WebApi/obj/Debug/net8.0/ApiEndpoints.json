@@ -26,6 +26,154 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioCertificatesController",
+    "Method": "GetAllPortfolioCertificate",
+    "RelativePath": "api/PortfolioCertificates",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioCertificatesController",
+    "Method": "CreatePortfolioCertificate",
+    "RelativePath": "api/PortfolioCertificates",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createPortfolioCertificateDto",
+        "Type": "MyPortfolio.WebApi.Dtos.PortfolioCertificateDtos.CreatePortfolioCertificateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioCertificatesController",
+    "Method": "UpdatePortfolioCertificate",
+    "RelativePath": "api/PortfolioCertificates",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updatePortfolioCertificateDto",
+        "Type": "MyPortfolio.WebApi.Dtos.PortfolioCertificateDtos.UpdatePortfolioCertificateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioCertificatesController",
+    "Method": "DeletePortfolioCertificate",
+    "RelativePath": "api/PortfolioCertificates",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioCertificatesController",
+    "Method": "GetPortfolioCertificateByPortfolioCertificateId",
+    "RelativePath": "api/PortfolioCertificates/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioExperiencesController",
+    "Method": "GetAllPortfolioExperience",
+    "RelativePath": "api/PortfolioExperiences",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioExperiencesController",
+    "Method": "CreatePortfolioExperience",
+    "RelativePath": "api/PortfolioExperiences",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createPortfolioExperienceDto",
+        "Type": "MyPortfolio.WebApi.Dtos.PortfolioExperienceDtos.CreatePortfolioExperienceDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioExperiencesController",
+    "Method": "UpdatePortfolioExperience",
+    "RelativePath": "api/PortfolioExperiences",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updatePortfolioExperienceDto",
+        "Type": "MyPortfolio.WebApi.Dtos.PortfolioExperienceDtos.UpdatePortfolioExperienceDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioExperiencesController",
+    "Method": "DeletePortfolioExperience",
+    "RelativePath": "api/PortfolioExperiences",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioExperiencesController",
+    "Method": "GetPortfolioExperienceByPortfolioExperienceId",
+    "RelativePath": "api/PortfolioExperiences/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioMainTitlesController",
     "Method": "GetPortfolioMainTitle",
     "RelativePath": "api/PortfolioMainTitles",
@@ -46,6 +194,80 @@
       {
         "Name": "updatePortfoiloMainTitleDto",
         "Type": "MyPortfolio.WebApi.Dtos.PortfolioMainTitleDtos.UpdatePortfoiloMainTitleDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioSkillsController",
+    "Method": "GetAllPortfolioSkill",
+    "RelativePath": "api/PortfolioSkills",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioSkillsController",
+    "Method": "CreatePortfolioSkill",
+    "RelativePath": "api/PortfolioSkills",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createPortfolioSkillDto",
+        "Type": "MyPortfolio.WebApi.Dtos.PortfolioSkillDtos.CreatePortfolioSkillDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioSkillsController",
+    "Method": "UpdatePortfolioSkill",
+    "RelativePath": "api/PortfolioSkills",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updatePortfolioSkillDto",
+        "Type": "MyPortfolio.WebApi.Dtos.PortfolioSkillDtos.UpdatePortfolioSkillDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioSkillsController",
+    "Method": "DeletePortfolioSkill",
+    "RelativePath": "api/PortfolioSkills",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioSkillsController",
+    "Method": "GetPortfolioSkillBySkillId",
+    "RelativePath": "api/PortfolioSkills/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

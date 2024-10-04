@@ -9,5 +9,8 @@ namespace MyPortfolio.WebApi.Context
 
         public DbSet<PortfolioMainTitle> PortfolioMainTitles { get; set; }
         public DbSet<PortfolioAboutMe> portfolioAboutMe { get; set; }
+        public DbSet<PortfolioExperience> portfolioExperiences { get; set; }
+        public DbSet<PortfolioSkill> portfolioSkills { get; set; }
+        public DbSet<PortfolioCertificate> portfolioCertificates { get; set; }
     }
 }
