@@ -1,0 +1,36 @@
+﻿@model Portfolio.DtoLayer.PortfolioDtos.PortfolioMainTitleDtos.GetPortfolioMainTitleDto
+@{
+    ViewData["Title"] = "GetPortfolioMainTitle";
+    Layout = "~/Areas/Admin/Views/AdminLayout/AdminLayout.cshtml";
+}
+
+
+<div class="col-lg-12 grid-margin stretch-card" style="background-color: #191c24 ">
+    <div class="card-body">
+        <h4 class="card-title">Ana başlık</h4>
+        <p class="card-description">Resim eklemeyi unuttun!</p>
+        <div class="table-res">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Başlık</th>
+                        <th>Açıklama</th>
+                        <th>Resim</th>
+                        <th>Güncelle</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>@Model.Title</td>
+                        <td>@Model.Description</td>
+                        <td class="py-3"><img src="~/clark-master/images/image_1.jpg" /></td>
+                        <td> <label class="btn btn-primary btn-rounded btn-fw">Güncelle</label></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -5,7 +5,7 @@ using Portfolio.WebUI.Services.PortfolioServices.PortfolioMainTitleServices;
 namespace Portfolio.WebUI.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Route("Admin/Portfolio")]
+    [Route("Admin/PortfolioMainTitle")]
     public class PortfolioMainTitleController : Controller
     {
         private readonly IPortfolioMainTitleService _portfolioMainTitleService;

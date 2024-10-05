@@ -14,7 +14,7 @@ namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioMainTitleServices
 
         public async Task<GetPortfolioMainTitleDto> GetPortfolioMainTitleAsync()
         {
-            var responseMessage = await _httpClient.GetAsync("portfoliomaintitles");
+            var responseMessage = await _httpClient.GetAsync("PortfolioMainTitles");
             var jsonData = await responseMessage.Content.ReadAsStringAsync();
             var values = JsonConvert.DeserializeObject<GetPortfolioMainTitleDto>(jsonData);
             return values;

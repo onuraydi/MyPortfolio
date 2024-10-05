@@ -9,7 +9,7 @@
           "Port": 7301
         }
       ],
-      "UpstreamPathTemplate": "/backend/portfolio/{everything}",
+      "UpstreamPathTemplate": "/Backend/{everything}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
       "UpstreamScheme": "https"
     }
