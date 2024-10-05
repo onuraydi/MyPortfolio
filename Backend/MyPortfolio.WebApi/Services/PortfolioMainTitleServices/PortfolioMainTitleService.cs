@@ -23,6 +23,12 @@ namespace MyPortfolio.WebApi.Services.PortfolioMainTitleServices
             return _mapper.Map<GetPortfolioMainTitleDto>(values);
         }
 
+        public async Task<GetPortfolioMainTitleByPortfolioMainTitleIdDto> GetPortfolioMainTitleByPortfolioMainTitleIdAsync(int id)
+        {
+            var values = await _context.PortfolioMainTitles.FindAsync(id);
+            return _mapper.Map<GetPortfolioMainTitleByPortfolioMainTitleIdDto>(values);
+        }
+
         public async Task UpdatePortfolioMainTitleAsync(UpdatePortfoiloMainTitleDto updatePortfoiloMainTitleDto)
         {
             var values = _mapper.Map<PortfolioMainTitle>(updatePortfoiloMainTitleDto);

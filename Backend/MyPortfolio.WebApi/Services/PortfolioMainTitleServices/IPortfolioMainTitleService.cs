@@ -6,5 +6,6 @@ namespace MyPortfolio.WebApi.Services.PortfolioMainTitleServices
     {
         Task<GetPortfolioMainTitleDto> GetPortfolioMainTitleAsync();
         Task UpdatePortfolioMainTitleAsync(UpdatePortfoiloMainTitleDto updatePortfoiloMainTitleDto);
+        Task<GetPortfolioMainTitleByPortfolioMainTitleIdDto> GetPortfolioMainTitleByPortfolioMainTitleIdAsync(int id);
     }
 }

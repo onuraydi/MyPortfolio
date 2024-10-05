@@ -274,6 +274,96 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioMainTitlesController",
+    "Method": "GetPortfolioMainTitleByPortfolioMainTitleId",
+    "RelativePath": "api/PortfolioMainTitles/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioProjectsController",
+    "Method": "GetAllPortfolioProject",
+    "RelativePath": "api/PortfolioProjects",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioProjectsController",
+    "Method": "CreatePortfolioProject",
+    "RelativePath": "api/PortfolioProjects",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createPortfolioProjectDto",
+        "Type": "MyPortfolio.WebApi.Dtos.PortfolioProjectDtos.CreatePortfolioProjectDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioProjectsController",
+    "Method": "UpdatePortfolioProject",
+    "RelativePath": "api/PortfolioProjects",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updatePortfolioProjectDto",
+        "Type": "MyPortfolio.WebApi.Dtos.PortfolioProjectDtos.UpdatePortfolioProjectDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioProjectsController",
+    "Method": "DeletePortfolioProject",
+    "RelativePath": "api/PortfolioProjects",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioProjectsController",
+    "Method": "GetPortfolioProjectByPortfolioProjectId",
+    "RelativePath": "api/PortfolioProjects/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioSkillsController",
     "Method": "GetAllPortfolioSkill",
     "RelativePath": "api/PortfolioSkills",

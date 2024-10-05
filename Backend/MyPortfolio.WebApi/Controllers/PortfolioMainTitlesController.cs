@@ -23,6 +23,13 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetPortfolioMainTitleByPortfolioMainTitleId(int id)
+        {
+            var values = await _portfolioMainTitleService.GetPortfolioMainTitleByPortfolioMainTitleIdAsync(id);
+            return Ok(values);
+        }
+
         [HttpPut]
         public async Task<IActionResult> UpdatePortfolioMainTitle(UpdatePortfoiloMainTitleDto updatePortfoiloMainTitleDto)
         {

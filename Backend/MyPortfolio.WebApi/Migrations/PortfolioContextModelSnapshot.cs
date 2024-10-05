@@ -153,6 +153,65 @@ namespace MyPortfolio.WebApi.Migrations
                     b.ToTable("PortfolioMainTitles");
                 });
 
+            modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioProject", b =>
+                {
+                    b.Property<int>("PortfolioProjectId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PortfolioProjectId"));
+
+                    b.Property<string>("Image1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image10")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image3")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image4")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image5")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image6")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image7")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image8")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image9")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProjectDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProjectName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProjectRole")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProjectStartDate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("PortfolioProjectId");
+
+                    b.ToTable("portfolioProjects");
+                });
+
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioSkill", b =>
                 {
                     b.Property<int>("PortfolioSkillId")

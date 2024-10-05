@@ -4,6 +4,7 @@ using MyPortfolio.WebApi.Dtos.PortfolioCertificateDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioEducationDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioExperienceDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioMainTitleDtos;
+using MyPortfolio.WebApi.Dtos.PortfolioProjectDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioSkillDtos;
 using MyPortfolio.WebApi.Entites;
 
@@ -16,6 +17,7 @@ namespace MyPortfolio.WebApi.Mapping
             // Main Title 
             CreateMap<PortfolioMainTitle, GetPortfolioMainTitleDto>().ReverseMap();
             CreateMap<PortfolioMainTitle, UpdatePortfoiloMainTitleDto>().ReverseMap();
+            CreateMap<PortfolioMainTitle, GetPortfolioMainTitleByPortfolioMainTitleIdDto>().ReverseMap();
 
             // About Me 
             CreateMap<PortfolioAboutMe, GetPortfolioAboutMeDto>().ReverseMap();
@@ -44,6 +46,12 @@ namespace MyPortfolio.WebApi.Mapping
             CreateMap<PortfolioEducation, CreatePortfolioEducationDto>().ReverseMap();
             CreateMap<PortfolioEducation, UpdatePortfolioEducationDto>().ReverseMap();
             CreateMap<PortfolioEducation, GetPortfolioEducationByPortfolioEducationId>().ReverseMap();
+
+            // Project
+            CreateMap<PortfolioProject, GetAllPortfolioProjectDto>().ReverseMap();
+            CreateMap<PortfolioProject, CreatePortfolioProjectDto>().ReverseMap();
+            CreateMap<PortfolioProject, UpdatePortfolioProjectDto>().ReverseMap();
+            CreateMap<PortfolioProject, GetPortfolioProjectByPortfolioProjectIdDto>().ReverseMap();
         }
     }
 }

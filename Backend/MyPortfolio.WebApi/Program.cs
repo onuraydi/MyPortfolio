@@ -5,6 +5,7 @@ using MyPortfolio.WebApi.Services.PortfolioCertificateServices;
 using MyPortfolio.WebApi.Services.PortfolioEducationServices;
 using MyPortfolio.WebApi.Services.PortfolioExperienceServices;
 using MyPortfolio.WebApi.Services.PortfolioMainTitleServices;
+using MyPortfolio.WebApi.Services.PortfolioProjectServices;
 using MyPortfolio.WebApi.Services.PortfolioSkillServices;
 using System.Reflection;
 
@@ -25,6 +26,7 @@ builder.Services.AddScoped<IPortfolioExperienceService, PortfolioExperienceServi
 builder.Services.AddScoped<IPortfolioSkillService, PortfolioSkillService>();
 builder.Services.AddScoped<IPortfolioCertificateService, PortfolioCertificateService>();
 builder.Services.AddScoped<IPortfolioEducationService, PortfolioEducationService>();
+builder.Services.AddScoped<IPortfolioProjectService, PortfolioProjectService>();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
