@@ -1,4 +1,5 @@
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioAboutMeServices;
+using Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioExperienceServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioMainTitleServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioProjectServices;
@@ -51,6 +52,10 @@ builder.Services.AddHttpClient<IPortfolioProjectService, PortfolioProjectService
 });
 
 
+builder.Services.AddHttpClient<IPortfolioBlogService, PortfolioBlogService>(opt =>
+{
+    opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
+});
 
 
 

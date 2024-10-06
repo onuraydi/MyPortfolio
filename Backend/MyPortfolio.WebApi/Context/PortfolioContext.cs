@@ -15,5 +15,6 @@ namespace MyPortfolio.WebApi.Context
         public DbSet<PortfolioEducation> portfolioEducations { get; set; }
         public DbSet<PortfolioProject> portfolioProjects { get; set; }
         public DbSet<PortfolioTechnology> portfolioTechnologies { get; set; }
+        public DbSet<PortfolioBlog> portfolioBlogs { get; set; }
     }
 }

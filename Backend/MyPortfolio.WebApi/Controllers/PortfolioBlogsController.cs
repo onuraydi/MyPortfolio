@@ -1,0 +1,54 @@
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using MyPortfolio.WebApi.Dtos.PortfolioBlogDtos;
+using MyPortfolio.WebApi.Services.PortfolioBlogServices;
+
+namespace MyPortfolio.WebApi.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class PortfolioBlogsController : ControllerBase
+    {
+        private readonly IPortfolioBlogService _portfolioBlogService;
+
+        public PortfolioBlogsController(IPortfolioBlogService portfolioBlogService)
+        {
+            _portfolioBlogService = portfolioBlogService;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllPortfolioBlog()
+        {
+            var values = await _portfolioBlogService.GetAllPortfolioBlogAsync();
+            return Ok(values);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetPortfolioBlogByPortfolioBlogId(int id)
+        {
+            var values = await _portfolioBlogService.GetPortfolioBlogByPortfolioBlogIdAsync(id);
+            return Ok(values);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreatePortfolioBlog(CreatePortfolioBlogDto createPortfolioBlogDto)
+        {
+            await _portfolioBlogService.CreatePortfolioBlogAsync(createPortfolioBlogDto);
+            return Ok("Blog ekleme işlemi başarılı");
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> UpdatePortfolioBlog(UpdatePortfolioBlogDto updatePortfolioBlogDto)
+        {
+            await _portfolioBlogService.UpdatePortfolioBlogAsync(updatePortfolioBlogDto);
+            return Ok("Blog güncelleme işlemi başarılı");
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> DeletePortfolioBlog(int id)
+        {
+            await _portfolioBlogService.DeletePortfolioBlogAsync(id);
+            return Ok("Blog silme işlemi başarılı");
+        }
+    }
+}

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using MyPortfolio.WebApi.Dtos.PortfolioAboutMeDtos;
+using MyPortfolio.WebApi.Dtos.PortfolioBlogDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioCertificateDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioEducationDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioExperienceDtos;
@@ -60,6 +61,12 @@ namespace MyPortfolio.WebApi.Mapping
             CreateMap<PortfolioTechnology, CreatePortfolioTechnologyDto>().ReverseMap();
             CreateMap<PortfolioTechnology, UpdatePortfolioTechnologyDto>().ReverseMap();
             CreateMap<PortfolioTechnology, GetPortfolioTechnologyByPortfolioTechnologyIdDto>().ReverseMap();
+
+            // Blog
+            CreateMap<PortfolioBlog, GetAllPortfolioBlogDto>().ReverseMap();
+            CreateMap<PortfolioBlog, CreatePortfolioBlogDto>().ReverseMap();
+            CreateMap<PortfolioBlog, UpdatePortfolioBlogDto>().ReverseMap();
+            CreateMap<PortfolioBlog, GetPortfolioBlogByPortfolioBlogIdDto>().ReverseMap();
         }
     }
 }

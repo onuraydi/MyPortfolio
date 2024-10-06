@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\onuraydiportfolio\\frontend\\portfolio.webui\\services\\portfolioservices\\portfolioprojectservices\\portfolioprojectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\services\\portfolioservices\\portfolioprojectservices\\portfolioprojectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\onuraydiportfolio\\frontend\\portfolio.webui\\services\\portfolioservices\\portfolioblogservices\\portfolioblogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\services\\portfolioservices\\portfolioblogservices\\portfolioblogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PortfolioProjectService.cs",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Services\\PortfolioServices\\PortfolioProjectServices\\PortfolioProjectService.cs",
-              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Services\\PortfolioServices\\PortfolioProjectServices\\PortfolioProjectService.cs",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Services\\PortfolioServices\\PortfolioProjectServices\\PortfolioProjectService.cs",
-              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Services\\PortfolioServices\\PortfolioProjectServices\\PortfolioProjectService.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAgwCkAAABdAAAAAAAAAA==",
+              "Title": "PortfolioBlogService.cs",
+              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Services\\PortfolioServices\\PortfolioBlogServices\\PortfolioBlogService.cs",
+              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Services\\PortfolioServices\\PortfolioBlogServices\\PortfolioBlogService.cs",
+              "ToolTip": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Services\\PortfolioServices\\PortfolioBlogServices\\PortfolioBlogService.cs",
+              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Services\\PortfolioServices\\PortfolioBlogServices\\PortfolioBlogService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T12:18:07.135Z",
+              "WhenOpened": "2024-10-06T14:26:43.27Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
