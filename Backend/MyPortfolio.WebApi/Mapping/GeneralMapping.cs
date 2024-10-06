@@ -6,6 +6,7 @@ using MyPortfolio.WebApi.Dtos.PortfolioExperienceDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioMainTitleDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioProjectDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioSkillDtos;
+using MyPortfolio.WebApi.Dtos.PortfolioTechnologyDtos;
 using MyPortfolio.WebApi.Entites;
 
 namespace MyPortfolio.WebApi.Mapping
@@ -22,6 +23,7 @@ namespace MyPortfolio.WebApi.Mapping
             // About Me 
             CreateMap<PortfolioAboutMe, GetPortfolioAboutMeDto>().ReverseMap();
             CreateMap<PortfolioAboutMe, UpdatePortfolioAboutMeDto>().ReverseMap();
+            CreateMap<PortfolioAboutMe, GetPortfolioAboutMeByPortfolioAboutMeIdDto>().ReverseMap();
 
             // Experience
             CreateMap<PortfolioExperience, GetAllPortfolioExperienceDto>().ReverseMap();
@@ -52,6 +54,12 @@ namespace MyPortfolio.WebApi.Mapping
             CreateMap<PortfolioProject, CreatePortfolioProjectDto>().ReverseMap();
             CreateMap<PortfolioProject, UpdatePortfolioProjectDto>().ReverseMap();
             CreateMap<PortfolioProject, GetPortfolioProjectByPortfolioProjectIdDto>().ReverseMap();
+
+            // Technology
+            CreateMap<PortfolioTechnology, GetAllPortfolioTechnologyDto>().ReverseMap();
+            CreateMap<PortfolioTechnology, CreatePortfolioTechnologyDto>().ReverseMap();
+            CreateMap<PortfolioTechnology, UpdatePortfolioTechnologyDto>().ReverseMap();
+            CreateMap<PortfolioTechnology, GetPortfolioTechnologyByPortfolioTechnologyIdDto>().ReverseMap();
         }
     }
 }

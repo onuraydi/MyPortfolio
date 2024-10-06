@@ -1,0 +1,27 @@
+﻿@model GetPortfolioMainTitleByPortfolioMainTitleIdDto
+
+@{
+    ViewData["Title"] = "UpdatePortfolioMainTitle";
+    Layout = "~/Areas/Admin/Views/AdminLayout/AdminLayout.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card" style="background-color: #191c24">
+    <div class="card-body">
+        <h4 class="card-title">Ana Başlık</h4>
+        <p class="card-description">Güncelleme Sayfası</p>
+        <form class="forms-sample" method="post">
+            <input type="hidden" asp-for="PortfolioMainTitleId" />
+            <div class="form-group">
+                <label for="Title">Başlık</label>
+                <input type="text" class="form-control" asp-for="Title" placeholder="Başlık" />
+            </div>
+            <div class="form-group">
+                <label for="Title">Açıklama</label>
+                <input type="text" class="form-control" asp-for="Description" placeholder="Açıklama" />
+            </div>
+            <button type="submit" class="btn btn-primary mr-2">Güncelle</button>
+            <button class="btn btn-dark">Geri</button>
+        </form>
+    </div>
+</div>
+

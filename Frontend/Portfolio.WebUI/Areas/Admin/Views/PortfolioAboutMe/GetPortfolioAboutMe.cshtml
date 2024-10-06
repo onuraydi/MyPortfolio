@@ -1,0 +1,35 @@
+﻿@model GetPortfolioAboutMeDto
+@{
+    ViewData["Title"] = "GetPortfolioAboutMe";
+    Layout = "~/Areas/Admin/Views/AdminLayout/AdminLayout.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card" style="background-color: #191c24 ">
+    <div class="card-body">
+        <h4 class="card-title">Hakkımda kısmı</h4>
+        <p class="card-description">Resim eklemeyi unuttun! iletişim bilgileri için farklı bir kısım oluşturulabilir geri butonlarını hallet</p>
+        <div class="table-res">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Başlık</th>
+                        <th>Açıklama</th>
+                        <th>Resim</th>
+                        <th>Güncelle</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>@Model.Title</td>
+                        <td>@Model.Description</td>
+                        <td><img src="~/clark-master/images/image_1.jpg" /></td>
+                        <td><a href="/Admin/PortfolioAboutMe/UpdatePortfolioAboutMe/@Model.PortfolioAboutMeId" class="btn btn-primary">Güncelle</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

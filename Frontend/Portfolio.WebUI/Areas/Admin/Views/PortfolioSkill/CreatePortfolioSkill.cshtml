@@ -1,0 +1,25 @@
+﻿@model CreatePortfolioSkillDto
+@{
+    ViewData["Title"] = "CreatePortfolioSkill";
+    Layout = "~/Areas/Admin/Views/AdminLayout/AdminLayout.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card" style="background-color: #191c24">
+    <div class="card-body">
+        <h4 class="card-title">Yetenekler</h4>
+        <p class="card-description">Yetenek Ekleme Sayfası</p>
+        <form class="forms-sample" method="post">
+            <div class="form-group">
+                <label for="Title">Yetenek Adı</label>
+                <input type="text" class="form-control" asp-for="SkillName" placeholder="Yetenek Adı" />
+            </div>
+            <div class="form-group">
+                <label for="Title">Yetkinlik Yüzdesi(0-100)</label>
+                <input type="range" class="form-control" asp-for="SkillPercent" placeholder="Yetkinlik Yüzdesi(0-100)" />
+            </div>
+            <button type="submit" class="btn btn-primary mr-2">Ekle</button>
+            <button class="btn btn-info">Geri</button>
+        </form>
+    </div>
+</div>
+

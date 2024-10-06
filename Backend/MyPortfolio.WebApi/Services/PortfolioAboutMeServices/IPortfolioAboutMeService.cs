@@ -6,5 +6,6 @@ namespace MyPortfolio.WebApi.Services.PortfolioAboutMeServices
     {
         Task<GetPortfolioAboutMeDto> GetPortfolioAboutMeAsync();
         Task UpdatePortfolioAboutMeAsync(UpdatePortfolioAboutMeDto updatePortfolioAboutMeDto);
+        Task<GetPortfolioAboutMeByPortfolioAboutMeIdDto> GetPortfolioAboutMeByPortfolioAboutMeIdAsync(int id);
     }
 }

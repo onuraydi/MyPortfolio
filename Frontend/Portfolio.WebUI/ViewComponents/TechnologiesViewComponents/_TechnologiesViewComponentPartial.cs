@@ -1,12 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Portfolio.WebUI.Services.PortfolioServices.PortfolioTechnologyServices;
 
 namespace Portfolio.WebUI.ViewComponents.TechnologiesViewComponents
 {
     public class _TechnologiesViewComponentPartial:ViewComponent
     {
-        public IViewComponentResult Invoke()
+        private readonly IPortfolioTechnologyService _portfolioTechnologyService;
+
+        public _TechnologiesViewComponentPartial(IPortfolioTechnologyService portfolioTechnologyService)
         {
-            return View();
+            _portfolioTechnologyService = portfolioTechnologyService;
+        }
+
+        public async Task<IViewComponentResult> InvokeAsync()
+        {
+            var values = await _portfolioTechnologyService.GetAllPortfolioTechnologyAsync();
+            return View(values);
         }
     }
 }

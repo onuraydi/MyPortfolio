@@ -30,7 +30,7 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
             return View(values);
         }
 
-        [HttpPut]  // daha sonra post yapmak gerekebilir
+        [HttpPost]
         [Route("UpdatePortfolioMainTitle/{id}")]  // burada ID'ye gerek var mı?
         public async Task<IActionResult> UpdatePortfolioMainTitle(UpdatePortfolioMainTitleDto updatePortfolioMainTitleDto)
         {

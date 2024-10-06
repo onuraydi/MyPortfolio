@@ -1,0 +1,44 @@
+﻿@model List<GetAllPortfolioSkillDto>
+
+@{
+    ViewData["Title"] = "GetAllPortfolioSkill";
+    Layout = "~/Areas/Admin/Views/AdminLayout/AdminLayout.cshtml";
+    int count = 0;
+}
+
+
+<div class="col-lg-12 grid-margin stretch-card" style="background-color: #191c24 ">
+    <div class="card-body">
+        <h4 class="card-title">Yetenekler</h4>
+        <p class="card-description">Yetenekler ile ilgili işlemleri içerir</p>
+        <div class="table-res">
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Yetenek Adı</th>
+                        <th>Yetkinlik</th>
+                        <th>Güncelle</th>
+                        <th>Sil</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        count += 1;
+                        <tr>
+                            <td>@count</td>
+                            <td>@item.SkillName</td>
+                            <td>@item.SkillPercent</td>
+                            <td><a href="/Admin/PortfolioSkill/UpdatePortfolioSkill/@item.PortfolioSkillId" class="btn btn-primary">Güncelle</a></td>
+                            <td><a href="/Admin/PortfolioSkill/DeletePortfolioSkill/@item.PortfolioSkillId" class="btn btn-danger">Sil</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <br />
+            <a href="/Admin/PortfolioSkill/CreatePortfolioSkill/" class="btn btn-success">Yetenek Ekle</a>
+        </div>
+    </div>
+</div>

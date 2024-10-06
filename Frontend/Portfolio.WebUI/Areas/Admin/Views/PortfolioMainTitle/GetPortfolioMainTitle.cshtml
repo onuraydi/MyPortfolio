@@ -1,4 +1,4 @@
-﻿@model Portfolio.DtoLayer.PortfolioDtos.PortfolioMainTitleDtos.GetPortfolioMainTitleDto
+﻿@model GetPortfolioMainTitleDto
 @{
     ViewData["Title"] = "GetPortfolioMainTitle";
     Layout = "~/Areas/Admin/Views/AdminLayout/AdminLayout.cshtml";
@@ -8,7 +8,7 @@
 <div class="col-lg-12 grid-margin stretch-card" style="background-color: #191c24 ">
     <div class="card-body">
         <h4 class="card-title">Ana başlık</h4>
-        <p class="card-description">Resim eklemeyi unuttun!</p>
+        <p class="card-description">Resim eklemeyi unuttun! selamlama ifadesini de dinamikleştir. ve aynılarını iki sayfa olacak şekilde bir tane daha ekleyip home kısmını ikili yap</p>
         <div class="table-res">
             <table class="table">
                 <thead>
@@ -26,11 +26,14 @@
                         <td>1</td>
                         <td>@Model.Title</td>
                         <td>@Model.Description</td>
-                        <td class="py-3"><img src="~/clark-master/images/image_1.jpg" /></td>
-                        <td> <label class="btn btn-primary btn-rounded btn-fw">Güncelle</label></td>
+                        <td><img src="~/clark-master/images/image_1.jpg" /></td>
+                        <td><a href="/Admin/PortfolioMainTitle/UpdatePortfolioMainTitle/@Model.PortfolioMainTitleId" class="btn btn-primary">Güncelle</a></td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
 </div>
+
+
+@*<label class="badge badge-primary">Güncelle</label>*@

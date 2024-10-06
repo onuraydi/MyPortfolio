@@ -26,6 +26,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioAboutMeApiController",
+    "Method": "GetPortfolioAboutMeByPortfolioAboutMeId",
+    "RelativePath": "api/PortfolioAboutMeApi/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioCertificatesController",
     "Method": "GetAllPortfolioCertificate",
     "RelativePath": "api/PortfolioCertificates",
@@ -425,6 +441,80 @@
     "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioSkillsController",
     "Method": "GetPortfolioSkillBySkillId",
     "RelativePath": "api/PortfolioSkills/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioTechnologiesController",
+    "Method": "GetAllPortfolioTechnology",
+    "RelativePath": "api/PortfolioTechnologies",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioTechnologiesController",
+    "Method": "CreatePortfolioTechnology",
+    "RelativePath": "api/PortfolioTechnologies",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createPortfolioTechnologyDto",
+        "Type": "MyPortfolio.WebApi.Dtos.PortfolioTechnologyDtos.CreatePortfolioTechnologyDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioTechnologiesController",
+    "Method": "UpdatePortfolioTechnology",
+    "RelativePath": "api/PortfolioTechnologies",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updatePortfolioTechnologyDto",
+        "Type": "MyPortfolio.WebApi.Dtos.PortfolioTechnologyDtos.UpdatePortfolioTechnologyDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioTechnologiesController",
+    "Method": "DeletePortfolioTechnology",
+    "RelativePath": "api/PortfolioTechnologies",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioTechnologiesController",
+    "Method": "GetPortfolioTechnologyByPortfolioTechnologyId",
+    "RelativePath": "api/PortfolioTechnologies/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

@@ -3605,6 +3605,10 @@
       "PackagePath": "staticwebassets\\AdminTemplate\\gulpfile.js"
     },
     {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\AdminTemplate\\images\\postgresql.png",
+      "PackagePath": "staticwebassets\\AdminTemplate\\images\\postgresql.png"
+    },
+    {
       "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\AdminTemplate\\index.html",
       "PackagePath": "staticwebassets\\AdminTemplate\\index.html"
     },

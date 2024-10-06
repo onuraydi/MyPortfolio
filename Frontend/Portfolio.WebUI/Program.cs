@@ -1,4 +1,9 @@
+using Portfolio.WebUI.Services.PortfolioServices.PortfolioAboutMeServices;
+using Portfolio.WebUI.Services.PortfolioServices.PortfolioExperienceServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioMainTitleServices;
+using Portfolio.WebUI.Services.PortfolioServices.PortfolioProjectServices;
+using Portfolio.WebUI.Services.PortfolioServices.PortfolioSkillServices;
+using Portfolio.WebUI.Services.PortfolioServices.PortfolioTechnologyServices;
 using Portfolio.WebUI.Settings;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,11 +21,34 @@ builder.Services.AddHttpClient<IPortfolioMainTitleService, PortfolioMainTitleSer
 });
 
 
+builder.Services.AddHttpClient<IPortfolioAboutMeService, PortfolioAboutMeService>(opt =>
+{
+    opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
+});
 
 
+builder.Services.AddHttpClient<IPortfolioExperienceService, PortfolioExperienceService>(opt =>
+{
+    opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
+});
 
 
+builder.Services.AddHttpClient<IPortfolioTechnologyService, PortfolioTechnologyService>(opt =>
+{
+    opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
+});
 
+
+builder.Services.AddHttpClient<IPortfolioSkillService, PortfolioSkillService>(opt =>
+{
+    opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
+});
+
+
+builder.Services.AddHttpClient<IPortfolioProjectService, PortfolioProjectService>(opt =>
+{
+    opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
+});
 
 
 

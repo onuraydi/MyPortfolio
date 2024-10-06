@@ -232,6 +232,27 @@ namespace MyPortfolio.WebApi.Migrations
 
                     b.ToTable("portfolioSkills");
                 });
+
+            modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioTechnology", b =>
+                {
+                    b.Property<int>("PortfolioTechnologyId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PortfolioTechnologyId"));
+
+                    b.Property<string>("IconUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TechnologyName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("PortfolioTechnologyId");
+
+                    b.ToTable("portfolioTechnologies");
+                });
 #pragma warning restore 612, 618
         }
     }

@@ -23,6 +23,13 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetPortfolioAboutMeByPortfolioAboutMeId(int id)
+        {
+            var values = await _portfolioAboutMeService.GetPortfolioAboutMeByPortfolioAboutMeIdAsync(id);
+            return Ok(values);
+        }
+
         [HttpPut]
         public async Task<IActionResult> UpdatePortfolioAboutMe(UpdatePortfolioAboutMeDto updatePortfolioAboutMeDto)
         {

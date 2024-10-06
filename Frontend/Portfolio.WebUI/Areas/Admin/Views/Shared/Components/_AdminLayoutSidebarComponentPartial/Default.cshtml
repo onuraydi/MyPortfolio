@@ -1,14 +1,14 @@
 ﻿<nav class="sidebar sidebar-offcanvas" id="sidebar">
     <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-        <a class="sidebar-brand brand-logo" href="index.html"><img src="assets/images/logo.svg" alt="logo" /></a>
-        <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+        <a class="sidebar-brand brand-logo" href="index.html"><img src="~/AdminTemplate/assets/images/logo.svg" alt="logo" /></a>
+        <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="~/AdminTemplate/assets/images/logo-mini.svg" alt="logo" /></a>
     </div>
     <ul class="nav">
         <li class="nav-item profile">
             <div class="profile-desc">
                 <div class="profile-pic">
                     <div class="count-indicator">
-                        <img class="img-xs rounded-circle " src="assets/images/faces/face15.jpg" alt="">
+                        <img class="img-xs rounded-circle " src="~/AdminTemplate/assets/images/faces/face15.jpg" alt="">
                         <span class="count bg-success"></span>
                     </div>
                     <div class="profile-name">
@@ -54,17 +54,25 @@
             </div>
         </li>
         <li class="nav-item nav-category">
-            <span class="nav-link">Navigation</span>
+            <span class="nav-link">İşlemler</span>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="/Deneme/Index/">
                 <span class="menu-icon">
-                    <i class="mdi mdi-speedometer"></i>
+                    <i class="mdi mdi-window-maximize"></i>
                 </span>
-                <span class="menu-title">Dashboard</span>
+                <span class="menu-title">Siteye Git</span>
             </a>
         </li>
         <li class="nav-item menu-items">
+            <a class="nav-link" href="/Admin/PortfolioMainTitle/GetPortfolioMainTitle/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-human-greeting"></i>
+                </span>
+                <span class="menu-title">Ana Başlık</span>
+            </a>
+        </li>
+        @*<li class="nav-item menu-items">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-icon">
                     <i class="mdi mdi-laptop"></i>
@@ -79,21 +87,45 @@
                     <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
                 </ul>
             </div>
-        </li>
+        </li>*@
         <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/forms/basic_elements.html">
+            <a class="nav-link" href="/Admin/PortfolioAboutMe/GetPortfolioAboutMe/">
                 <span class="menu-icon">
-                    <i class="mdi mdi-playlist-play"></i>
+                    <i class="mdi mdi-contacts"></i>
                 </span>
-                <span class="menu-title">Form Elements</span>
+                <span class="menu-title">Hakkımda</span>
             </a>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/tables/basic-table.html">
+            <a class="nav-link" href="/Admin/PortfolioExperience/GetAllPortfolioExperince/">
                 <span class="menu-icon">
-                    <i class="mdi mdi-table-large"></i>
+                    <i class="mdi mdi-briefcase"></i>
                 </span>
-                <span class="menu-title">Tables</span>
+                <span class="menu-title">İş Tecrübeleri</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/Admin/PortfolioTechnology/GetAllPortfolioTechnology/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-language-csharp"></i>
+                </span>
+                <span class="menu-title">Teknolojiler</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/Admin/PortfolioSkill/GetAllPortfolioSkill/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-percent"></i>
+                </span>
+                <span class="menu-title">Yetenekler</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/Admin/PortfolioProject/GetAllPortfolioProject/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-xml"></i>
+                </span>
+                <span class="menu-title">Projeler</span>
             </a>
         </li>
         <li class="nav-item menu-items">
