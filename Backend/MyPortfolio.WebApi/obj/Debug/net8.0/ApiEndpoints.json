@@ -42,6 +42,80 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioBlogsController",
+    "Method": "GetAllPortfolioBlog",
+    "RelativePath": "api/PortfolioBlogs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioBlogsController",
+    "Method": "CreatePortfolioBlog",
+    "RelativePath": "api/PortfolioBlogs",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createPortfolioBlogDto",
+        "Type": "MyPortfolio.WebApi.Dtos.PortfolioBlogDtos.CreatePortfolioBlogDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioBlogsController",
+    "Method": "UpdatePortfolioBlog",
+    "RelativePath": "api/PortfolioBlogs",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updatePortfolioBlogDto",
+        "Type": "MyPortfolio.WebApi.Dtos.PortfolioBlogDtos.UpdatePortfolioBlogDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioBlogsController",
+    "Method": "DeletePortfolioBlog",
+    "RelativePath": "api/PortfolioBlogs",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioBlogsController",
+    "Method": "GetPortfolioBlogByPortfolioBlogId",
+    "RelativePath": "api/PortfolioBlogs/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioCertificatesController",
     "Method": "GetAllPortfolioCertificate",
     "RelativePath": "api/PortfolioCertificates",
