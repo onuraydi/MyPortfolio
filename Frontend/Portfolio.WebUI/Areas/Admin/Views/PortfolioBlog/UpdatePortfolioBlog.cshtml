@@ -1,0 +1,75 @@
+﻿@model GetPortfolioBlogByPortfolioBlogIdDto
+@{
+    ViewData["Title"] = "UpdatePortfolioBlog";
+    Layout = "~/Areas/Admin/Views/AdminLayout/AdminLayout.cshtml";
+}
+
+
+<link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<div class="col-lg-12 grid-margin stretch-card" style="background-color: #191c24">
+    <div class="card-body">
+        <h4 class="card-title">Blog</h4>
+        <p class="card-description">Blog Güncelleme Sayfası</p>
+        <form id="blogForm" class="forms-sample">
+            <input type="hidden" asp-for="PortfolioBlogId" id="portfolioBlogId" />
+            <div class="form-group">
+                <label for="Title">Başlık</label>
+                <input type="text" class="form-control" id="title" asp-for="Title" placeholder="Başlık" />
+            </div>
+            <div class="form-group">
+                <label for="CoverImage">Kapak Fotoğrafı</label>
+                @* <input type="text" class="form-control" asp-for="CoverImage" placeholder="Kapak Fotoğrafı" /> *@
+            </div>
+            <div class="form-group">
+                <label for="Content">Blog İçeriği</label>
+                <div id="editor" style="height: 200px;"></div>
+                <input type="hidden" id="content" name="Content" /> <!-- İçeriği saklayacağımız hidden input -->
+            </div>
+            <button type="button" class="btn btn-primary mr-2" id="submitBtn">Güncelle</button>
+            <button type="button" class="btn btn-info" onclick="history.back()">Geri</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    // Quill editörünü başlat
+    const quill = new Quill('#editor', {
+        modules: { toolbar: true },
+        theme: 'snow'
+    });
+
+    // Mevcut içeriği Quill editörüne yükle
+    $(document).ready(function() {
+        var existingContent = '@Html.Raw(Model.Content)'; // Model'den mevcut içeriği al
+        quill.root.innerHTML = existingContent; // Mevcut içeriği Quill editörüne ata
+    });
+
+    // AJAX ile formu gönder
+    $('#submitBtn').click(function () {
+        // Quill'den içeriği al
+        var content = quill.root.innerHTML;
+        var title = $('#title').val();
+        var portfolioBlogId = $('#portfolioBlogId').val(); // ID'yi al
+
+        // AJAX POST isteği ile veriyi gönder
+        $.ajax({
+            url: '@Url.Action("UpdatePortfolioBlog", "PortfolioBlog")', // Controller action URL'si
+            type: 'POST',
+            data: {
+                PortfolioBlogId: portfolioBlogId, // ID'yi gönder
+                Title: title,
+                Content: content
+            },
+            success: function(response) {
+                window.location.href = '@Url.Action("GetAllPortfolioBlog", "PortfolioBlog", new { area = "Admin" })';
+            },
+            error: function(xhr, status, error) {
+                alert('Güncelleme işlemi başarısız oldu: ' + error);
+            }
+        });
+    });
+</script>
+

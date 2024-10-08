@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZYa63bASPsR7goXFd8J6ttBlX2rfdfoNoBU0NhcDQ0U=",
+  "Hash": "A/R9hd1ewfXw+zEwHukDPqkXEjPSSTRkgczjSmvPZJU=",
   "Source": "Portfolio.WebUI",
   "BasePath": "_content/Portfolio.WebUI",
   "Mode": "Default",
@@ -17153,6 +17153,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\AdminTemplate\\gulp-tasks\\vendors.js"
+    },
+    {
+      "Identity": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\AdminTemplate\\images\\indir.png",
+      "SourceId": "Portfolio.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\",
+      "BasePath": "_content/Portfolio.WebUI",
+      "RelativePath": "AdminTemplate/images/indir.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\AdminTemplate\\images\\indir.png"
     },
     {
       "Identity": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\AdminTemplate\\images\\postgresql.png",

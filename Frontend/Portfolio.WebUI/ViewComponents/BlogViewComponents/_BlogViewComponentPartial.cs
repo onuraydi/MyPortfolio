@@ -1,12 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogServices;
 
 namespace Portfolio.WebUI.ViewComponents.BlogViewComponents
 {
     public class _BlogViewComponentPartial:ViewComponent
     {
-        public IViewComponentResult Invoke()
+        private readonly IPortfolioBlogService _portfolioBlogService;
+
+        public _BlogViewComponentPartial(IPortfolioBlogService portfolioBlogService)
         {
-            return View();
+            _portfolioBlogService = portfolioBlogService;
+        }
+
+        public async Task<IViewComponentResult> InvokeAsync()
+        {
+            var values = await _portfolioBlogService.GetAllPortfolioBlogAsync();
+            return View(values);
         }
     }
 }
