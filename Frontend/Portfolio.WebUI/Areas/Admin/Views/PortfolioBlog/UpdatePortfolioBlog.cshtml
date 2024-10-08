@@ -5,9 +5,62 @@
 }
 
 
-<link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
-<script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Arial&family=Courier+New&family=Georgia&family=Times+New+Roman&family=Verdana&family=Trebuchet+MS&family=Comic+Sans+MS&family=Impact&family=Tahoma&family=Helvetica&display=swap" rel="stylesheet">
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/quill-image-resize-module@3.0.0/image-resize.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Quill editörü için stil -->
+<style>
+    #editor-container {
+        height: 1000px; /* Düzenleme alanının yüksekliği */
+    }
+
+
+    .ql-snow {
+        .ql-picker
+
+    {
+        &.ql-size
+
+    {
+        .ql-picker-label, .ql-picker-item
+
+    {
+        &::before
+
+    {
+        content: attr(data-value) !important;
+    }
+
+    }
+    }
+    }
+    }
+
+    .ql-snow {
+        .ql-picker
+
+    {
+        &.ql-font
+
+    {
+        .ql-picker-label, .ql-picker-item
+
+    {
+        &::before
+
+    {
+        content: attr(data-value) !important;
+    }
+
+    }
+    }
+    }
+    }
+</style>
+
 
 <div class="col-lg-12 grid-margin stretch-card" style="background-color: #191c24">
     <div class="card-body">
@@ -20,12 +73,8 @@
                 <input type="text" class="form-control" id="title" asp-for="Title" placeholder="Başlık" />
             </div>
             <div class="form-group">
-                <label for="CoverImage">Kapak Fotoğrafı</label>
-                @* <input type="text" class="form-control" asp-for="CoverImage" placeholder="Kapak Fotoğrafı" /> *@
-            </div>
-            <div class="form-group">
                 <label for="Content">Blog İçeriği</label>
-                <div id="editor" style="height: 200px;"></div>
+                <div id="editor-container"></div>
                 <input type="hidden" id="content" name="Content" /> <!-- İçeriği saklayacağımız hidden input -->
             </div>
             <button type="button" class="btn btn-primary mr-2" id="submitBtn">Güncelle</button>
@@ -34,32 +83,62 @@
     </div>
 </div>
 
+
+
 <script>
-    // Quill editörünü başlat
-    const quill = new Quill('#editor', {
-        modules: { toolbar: true },
+    // Yazı tipi ve boyut seçeneklerini tanımla
+
+    const fontSizeArr = ['8px', '9px', '10px', '12px', '14px', '16px', '20px', '24px', '32px', '42px', '54px', '68px', '84px', '98px'];
+    const fontFamilyArr = ['Arial', 'Courier New', 'Georgia', 'Times New Roman', 'Verdana', 'Trebuchet MS', 'Comic Sans MS', 'Impact', 'Tahoma', 'Helvetica'];
+
+    var Font = Quill.import('attributors/style/font');
+    Font.whitelist = fontFamilyArr;
+    Quill.register(Font, true);
+
+    var Size = Quill.import('attributors/style/size');
+    Size.whitelist = fontSizeArr;
+    Quill.register(Size, true);
+
+    // Toolbar ayarları
+    var toolbarOptions = [
+        [{ 'font': fontFamilyArr }],
+        [{ 'size': fontSizeArr }],
+        ['bold', 'italic', 'underline', 'strike'],
+        [{ 'color': [] }, { 'background': [] }],
+        [{ 'script': 'sub' }, { 'script': 'super' }],
+        [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+        ['blockquote', 'code-block'],
+        [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+        [{ 'indent': '-1' }, { 'indent': '+1' }],
+        [{ 'direction': 'rtl' }],
+        [{ 'align': [] }],
+        ['link', 'image', 'video'],
+        ['clean']
+    ];
+
+    // Quill'i başlat
+    var quill = new Quill('#editor-container', {
+        modules: {
+            toolbar: toolbarOptions,
+            imageResize: {}
+        },
         theme: 'snow'
     });
 
-    // Mevcut içeriği Quill editörüne yükle
-    $(document).ready(function() {
-        var existingContent = '@Html.Raw(Model.Content)'; // Model'den mevcut içeriği al
-        quill.root.innerHTML = existingContent; // Mevcut içeriği Quill editörüne ata
-    });
+    // Quill'e mevcut içerik ile doldurma
+    quill.root.innerHTML = '@Html.Raw(Model.Content)'; // Mevcut içeriği Quill editörüne yükle
 
-    // AJAX ile formu gönder
-    $('#submitBtn').click(function () {
-        // Quill'den içeriği al
+    document.getElementById('submitBtn').addEventListener('click', function () {
+        var portfolioBlogId = document.getElementById('portfolioBlogId').value;
         var content = quill.root.innerHTML;
-        var title = $('#title').val();
-        var portfolioBlogId = $('#portfolioBlogId').val(); // ID'yi al
+        var title = document.getElementById('title').value;
 
-        // AJAX POST isteği ile veriyi gönder
+        // AJAX ile formu gönder
         $.ajax({
-            url: '@Url.Action("UpdatePortfolioBlog", "PortfolioBlog")', // Controller action URL'si
+            url: '@Url.Action("UpdatePortfolioBlog", "PortfolioBlog")',
             type: 'POST',
             data: {
-                PortfolioBlogId: portfolioBlogId, // ID'yi gönder
+                PortfolioBlogId: portfolioBlogId,
                 Title: title,
                 Content: content
             },

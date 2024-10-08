@@ -6,81 +6,88 @@
 
 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Arial&family=Courier+New&family=Georgia&family=Times+New+Roman&family=Verdana&family=Trebuchet+MS&family=Comic+Sans+MS&family=Impact&family=Tahoma&family=Helvetica&display=swap" rel="stylesheet">
 
 <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/quill-image-resize-module@3.0.0/image-resize.min.js"></script>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.core.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
 <!-- Quill editörü için stil -->
 <style>
-        #editor-container {
-            height: 400px; /* Düzenleme alanının yüksekliği */
-        }
+    #editor-container {
+        height: 400px; /* Düzenleme alanının yüksekliği */
+    }
 
-        /* Yazı tipleri için CSS */
-        .ql-font-roboto {
-            font-family: 'Roboto', sans-serif;
-        }
+    .ql-snow {
+        .ql-picker
 
-        .ql-font-open-sans {
-            font-family: 'Open Sans', sans-serif;
-        }
+    {
+        &.ql-size
 
-        /* Yazı boyutları için CSS */
-        .ql-size-small {
-            font-size: 10px;
-        }
+    {
+        .ql-picker-label, .ql-picker-item
 
-        .ql-size-normal {
-            font-size: 14px;
-        }
+    {
+        &::before
 
-        .ql-size-large {
-            font-size: 18px;
-        }
+    {
+        content: attr(data-value) !important;
+    }
 
-        .ql-size-huge {
-            font-size: 24px;
-        }
+    }
+    }
+    }
+    }
 
-        /* Tooltip için stil */
-        .tooltip {
-            position: absolute;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 5px;
-            border-radius: 3px;
-            display: none;
-            z-index: 1000;
-        }
-    </style>
+    .ql-snow {
+        .ql-picker
 
-    <div class="col-lg-12 grid-margin stretch-card" style="background-color: #191c24">
-        <div class="card-body">
-            <h4 class="card-title">Blog</h4>
-            <p class="card-description">Blog Yazma/Ekleme Sayfası</p>
-            <form id="blogForm" class="forms-sample">
-                <div class="form-group">
-                    <label for="Title">Başlık</label>
-                    <input type="text" class="form-control" id="title" placeholder="Başlık" />
-                </div>
-                <div class="form-group">
-                    <label for="CoverImage">Kapak Fotoğrafı</label>
-                </div>
-                <div id="editor-container">
-                    <p></p>
-                </div>
-                <br />
-                <button type="button" class="btn btn-primary mr-2" id="submitBtn">Ekle</button>
-                <button type="button" class="btn btn-info" onclick="history.back()">Geri</button>
-            </form>
-        </div>
+    {
+        &.ql-font
+
+    {
+        .ql-picker-label, .ql-picker-item
+
+    {
+        &::before
+
+    {
+        content: attr(data-value) !important;
+    }
+
+    }
+    }
+    }
+    }
+</style>
+
+<div class="col-lg-12 grid-margin stretch-card" style="background-color: #191c24">
+    <div class="card-body">
+        <h4 class="card-title">Blog</h4>
+        <p class="card-description">Blog Yazma/Ekleme Sayfası</p>
+        <form id="blogForm" class="forms-sample">
+            <div class="form-group">
+                <label for="Title">Başlık</label>
+                <input type="text" class="form-control" id="title" placeholder="Başlık" />
+            </div>
+            <div class="form-group">
+                <label for="CoverImage">Kapak Fotoğrafı</label>
+            </div>
+            <div id="editor-container">
+                <p></p>
+            </div>
+            <br />
+            <button type="button" class="btn btn-primary mr-2" id="submitBtn">Ekle</button>
+            <button type="button" class="btn btn-info" onclick="history.back()">Geri</button>
+        </form>
     </div>
+</div>
 
-
-<div class="tooltip" id="tooltip"></div>
 
 
 <script>
@@ -88,6 +95,23 @@
 
     const fontSizeArr = ['8px', '9px', '10px', '12px', '14px', '16px', '20px', '24px', '32px', '42px', '54px', '68px', '84px', '98px'];
 
+    const fontFamilyArr = [
+        'Arial',
+        'Courier New',
+        'Georgia',
+        'Times New Roman',
+        'Verdana',
+        'Trebuchet MS',
+        'Comic Sans MS',
+        'Impact',
+        'Tahoma',
+        'Helvetica'
+    ];
+
+
+    var Font = Quill.import('attributors/style/font');
+    Font.whitelist = fontFamilyArr;
+    Quill.register(Font, true);
 
     var Size = Quill.import('attributors/style/size');
     Size.whitelist = fontSizeArr;
@@ -96,7 +120,7 @@
 
     // Toolbar ayarları
     var toolbarOptions = [
-        [{ 'font': [] },],
+        [{ 'font': fontFamilyArr },],
         [{ 'size': fontSizeArr}],
         ['bold', 'italic', 'underline', 'strike'],
         [{ 'color': [] }, { 'background': [] }],
@@ -130,53 +154,33 @@
         }
     });
 
-    // Tooltip için mouse hareketi
-    const tooltip = document.getElementById('tooltip');
-    const toolbar = document.getElementById('toolbar-container');
-
-    toolbar.addEventListener('mouseover', function (e) {
-        const target = e.target;
-        const title = target.getAttribute('title');
-        if (title) {
-            showTooltip(title, e);
-        }
-    });
-
-    toolbar.addEventListener('mousemove', function (e) {
-        tooltip.style.left = e.clientX + 10 + 'px';
-        tooltip.style.top = e.clientY + 10 + 'px';
-    });
-
-    toolbar.addEventListener('mouseout', function () {
-        tooltip.style.display = 'none';
-    });
-
-    function showTooltip(text, e) {
-        tooltip.textContent = text;
-        tooltip.style.display = 'block';
-    }
 
     // AJAX ile formu gönder
-    document.getElementById('submitBtn').addEventListener('click', function () {
-        var content = quill.root.innerHTML;
-        var title = document.getElementById('title').value;
+document.getElementById('submitBtn').addEventListener('click', function (event) {
+    event.preventDefault(); // Varsayılan davranışı engelle
+    var content = quill.root.innerHTML;
+    var title = document.getElementById('title').value;
 
-        // AJAX POST isteği ile veriyi gönder
-        $.ajax({
-            url: '@Url.Action("CreatePortfolioBlog", "PortfolioBlog")',
-            type: 'POST',
-            data: {
-                Title: title,
-                Content: content
-            },
-            success: function(response) {
-                window.location.href = '@Url.Action("GetAllPortfolioBlog", "PortfolioBlog", new { area = "Admin" })';
-            },
-            error: function(xhr, status, error) {
-                console.error("Hata: ", error);
-                alert("Ekleme işlemi başarısız oldu. Lütfen tekrar deneyin.");
-            }
-        });
+    console.log("Gönderilecek veri:", { Title: title, Content: content }); // Gönderilecek veriyi kontrol et
+
+    // AJAX POST isteği ile veriyi gönder
+    $.ajax({
+        url: '@Url.Action("CreatePortfolioBlog", "PortfolioBlog")',
+        type: 'POST',
+        data: {
+            Title: title,
+            Content: content
+        },
+        success: function(response) {
+            console.log("Başarılı yanıt:", response); // Başarı yanıtını kontrol et
+            window.location.href = '@Url.Action("GetAllPortfolioBlog", "PortfolioBlog", new { area = "Admin" })';
+        },
+        error: function(xhr, status, error) {
+            console.error("Hata: ", error);
+            alert("Ekleme işlemi başarısız oldu. Lütfen tekrar deneyin.");
+        }
     });
+});
+
 </script>
 
