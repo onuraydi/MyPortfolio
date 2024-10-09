@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\onuraydiportfolio\\frontend\\portfolio.webui\\areas\\admin\\views\\portfolioblog\\updateportfolioblog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\areas\\admin\\views\\portfolioblog\\updateportfolioblog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\onuraydiportfolio\\frontend\\portfolio.webui\\views\\shared\\components\\_blogviewcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\views\\shared\\components\\_blogviewcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\onuraydiportfolio\\frontend\\portfolio.webui\\areas\\admin\\controllers\\portfolioeducationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\areas\\admin\\controllers\\portfolioeducationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\onuraydiportfolio\\frontend\\portfolio.webui\\viewcomponents\\blogviewcomponents\\_blogviewcomponentpartial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\viewcomponents\\blogviewcomponents\\_blogviewcomponentpartial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,36 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UpdatePortfolioBlog.cshtml",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Areas\\Admin\\Views\\PortfolioBlog\\UpdatePortfolioBlog.cshtml",
-              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Areas\\Admin\\Views\\PortfolioBlog\\UpdatePortfolioBlog.cshtml",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Areas\\Admin\\Views\\PortfolioBlog\\UpdatePortfolioBlog.cshtml",
-              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Areas\\Admin\\Views\\PortfolioBlog\\UpdatePortfolioBlog.cshtml",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAIwJcAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-08T07:21:16.154Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PortfolioEducationController.cs",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Areas\\Admin\\Controllers\\PortfolioEducationController.cs",
-              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Areas\\Admin\\Controllers\\PortfolioEducationController.cs",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Areas\\Admin\\Controllers\\PortfolioEducationController.cs",
-              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Areas\\Admin\\Controllers\\PortfolioEducationController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAA0wD0AAABuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T13:16:35.408Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -55,6 +27,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_BlogViewComponentPartial\\Default.cshtml",
+              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_BlogViewComponentPartial\\Default.cshtml",
+              "ToolTip": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_BlogViewComponentPartial\\Default.cshtml",
+              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_BlogViewComponentPartial\\Default.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-09T09:54:37.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_BlogViewComponentPartial.cs",
+              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\ViewComponents\\BlogViewComponents\\_BlogViewComponentPartial.cs",
+              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\ViewComponents\\BlogViewComponents\\_BlogViewComponentPartial.cs",
+              "ToolTip": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\ViewComponents\\BlogViewComponents\\_BlogViewComponentPartial.cs",
+              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\ViewComponents\\BlogViewComponents\\_BlogViewComponentPartial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T09:54:27.992Z",
+              "EditorCaption": ""
             }
           ]
         }

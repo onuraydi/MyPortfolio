@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyPortfolio.WebApi.Context;
 
@@ -11,9 +12,11 @@ using MyPortfolio.WebApi.Context;
 namespace MyPortfolio.WebApi.Migrations
 {
     [DbContext(typeof(PortfolioContext))]
-    partial class PortfolioContextModelSnapshot : ModelSnapshot
+    [Migration("20241009094642_mig12")]
+    partial class mig12
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -52,17 +55,6 @@ namespace MyPortfolio.WebApi.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PortfolioBlogId"));
 
                     b.Property<string>("Content")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CoverImage")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("PublishDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("SubContent")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
