@@ -73,6 +73,18 @@
                 <input type="text" class="form-control" id="title" asp-for="Title" placeholder="Başlık" />
             </div>
             <div class="form-group">
+                <label for="SubContent">Kısa Açıklama</label>
+                <input type="text" class="form-control" id="SubContent" asp-for="SubContent" placeholder="Kısa Açıklama" />
+            </div>
+            <div class="form-group">
+                <label for="CoverImage">Kapak Resmi</label>
+                <input type="text" class="form-control" id="CoverImage" asp-for="CoverImage" placeholder="Kapak Resmi" />
+            </div>
+            <div class="form-group">
+                <label for="PublishDate">Yayımlanma Tarihi</label>
+                <input type="date" class="form-control" id="PublishDate" asp-for="PublishDate" placeholder="Yayımlanma Tarihi" />
+            </div>
+            <div class="form-group">
                 <label for="Content">Blog İçeriği</label>
                 <div id="editor-container"></div>
                 <input type="hidden" id="content" name="Content" /> <!-- İçeriği saklayacağımız hidden input -->
@@ -128,10 +140,14 @@
     // Quill'e mevcut içerik ile doldurma
     quill.root.innerHTML = '@Html.Raw(Model.Content)'; // Mevcut içeriği Quill editörüne yükle
 
+
     document.getElementById('submitBtn').addEventListener('click', function () {
         var portfolioBlogId = document.getElementById('portfolioBlogId').value;
         var content = quill.root.innerHTML;
         var title = document.getElementById('title').value;
+        var subContent = document.getElementById('SubContent').value;
+        var coverImage = document.getElementById('CoverImage').value;
+        var publishDate = document.getElementById('PublishDate').value;
 
         // AJAX ile formu gönder
         $.ajax({
@@ -140,7 +156,10 @@
             data: {
                 PortfolioBlogId: portfolioBlogId,
                 Title: title,
-                Content: content
+                Content: content,
+                SubContent: subContent,
+                CoverImage: coverImage,
+                PublishDate: publishDate
             },
             success: function(response) {
                 window.location.href = '@Url.Action("GetAllPortfolioBlog", "PortfolioBlog", new { area = "Admin" })';

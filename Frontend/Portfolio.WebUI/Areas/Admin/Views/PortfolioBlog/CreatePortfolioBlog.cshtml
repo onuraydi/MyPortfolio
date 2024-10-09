@@ -76,7 +76,16 @@
                 <input type="text" class="form-control" id="title" placeholder="Başlık" />
             </div>
             <div class="form-group">
-                <label for="CoverImage">Kapak Fotoğrafı</label>
+                <label for="SubContent">Kısa Açıklama</label>
+                <input type="text" class="form-control" id="SubContent" placeholder="Kısa Açıklama" />
+            </div>
+            <div class="form-group">
+                <label for="CoverImage">Kapak Resmi</label>
+                <input type="text" class="form-control" id="CoverImage" placeholder="Kapak Resmi" />
+            </div>
+            <div class="form-group">
+                <label for="PublishDate">Yayımlanma Tarihi</label>
+                <input type="date" class="form-control" id="PublishDate" placeholder="Yayımlanma Tarihi" />
             </div>
             <div id="editor-container">
                 <p></p>
@@ -156,21 +165,40 @@
 
 
     // AJAX ile formu gönder
+// AJAX ile formu gönder
 document.getElementById('submitBtn').addEventListener('click', function (event) {
     event.preventDefault(); // Varsayılan davranışı engelle
-    var content = quill.root.innerHTML;
-    var title = document.getElementById('title').value;
 
-    console.log("Gönderilecek veri:", { Title: title, Content: content }); // Gönderilecek veriyi kontrol et
+    var content = quill.root.innerHTML; // Quill editör içeriğini al
+    var title = document.getElementById('title').value; // Başlık verisini al
+    var subContent = document.getElementById('SubContent').value; // Kısa açıklamayı al
+    var coverImage = document.getElementById('CoverImage').value; // Kapak resmi URL'sini al
+    var publishDate = document.getElementById('PublishDate').value; // Yayımlanma tarihini al
+
+    // FormData objesi oluştur
+    var formData = new FormData();
+    formData.append("Title", title);
+    formData.append("SubContent", subContent);
+    formData.append("CoverImage", coverImage);
+    formData.append("PublishDate", publishDate);
+    formData.append("Content", content);
+
+    // Gönderilecek veriyi kontrol et
+    console.log("Gönderilecek veri:", {
+        Title: title,
+        SubContent: subContent,
+        CoverImage: coverImage,
+        PublishDate: publishDate,
+        Content: content
+    });
 
     // AJAX POST isteği ile veriyi gönder
     $.ajax({
         url: '@Url.Action("CreatePortfolioBlog", "PortfolioBlog")',
         type: 'POST',
-        data: {
-            Title: title,
-            Content: content
-        },
+        processData: false,  // FormData için bu gerekli
+        contentType: false,  // FormData için bu gerekli
+        data: formData,
         success: function(response) {
             console.log("Başarılı yanıt:", response); // Başarı yanıtını kontrol et
             window.location.href = '@Url.Action("GetAllPortfolioBlog", "PortfolioBlog", new { area = "Admin" })';
@@ -181,6 +209,8 @@ document.getElementById('submitBtn').addEventListener('click', function (event) 
         }
     });
 });
+
+
 
 </script>
 
