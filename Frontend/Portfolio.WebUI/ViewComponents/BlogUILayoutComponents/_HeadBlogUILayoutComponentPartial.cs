@@ -2,7 +2,7 @@
 
 namespace Portfolio.WebUI.ViewComponents.BlogUIComponents
 {
-    public class _HeadBlogUIComponentPartial:ViewComponent
+    public class _HeadBlogUILayoutComponentPartial:ViewComponent
     {
         public IViewComponentResult Invoke()
         {

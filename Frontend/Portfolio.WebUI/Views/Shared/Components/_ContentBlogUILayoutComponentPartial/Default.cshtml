@@ -1,0 +1,48 @@
+﻿
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 ftco-animate">
+
+
+                @await Component.InvokeAsync("_BlogContentContentBlogUILayoutComponentPartial")
+
+                @await Component.InvokeAsync("_BlogPublisherContentBlogUILayoutComponentPartial")
+
+               
+                
+                <div class="pt-5 mt-5">
+
+                    @await Component.InvokeAsync("_BlogAllCommentsContentBlogUILayoutComponentPartial")
+
+                    @await Component.InvokeAsync("_BlogLeaveCommentContentBlogUILayoutComponentPartial")
+                    
+                </div>
+
+            </div> <!-- Arama kısmı -->
+            <div class="col-lg-4 sidebar ftco-animate">
+                <div class="sidebar-box">
+                    <form action="#" class="search-form">
+                        <div class="form-group">
+                            <span class="icon icon-search"></span>
+                            <input type="text" class="form-control" placeholder="Type a keyword and hit enter">
+                        </div>
+                    </form>
+                </div>
+
+                @await Component.InvokeAsync("_BlogCategoryContentBlogUILayoutComponentPartial")
+
+
+                @await Component.InvokeAsync("_BlogOtherBlogContentBlogUILayoutComponentPartial")
+                
+                @await Component.InvokeAsync("_BlogBlogTagsContentBlogUILayoutComponentPartial")
+
+                @await Component.InvokeAsync("_BlogSubParagraphContentBlogUILayoutComponentPartial")
+
+
+            </div>
+
+        </div>
+    </div>
+</section>
