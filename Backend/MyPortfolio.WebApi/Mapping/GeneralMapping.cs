@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using MyPortfolio.WebApi.Dtos.PortfolioAboutMeDtos;
+using MyPortfolio.WebApi.Dtos.PortfolioBlogCommentDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioBlogDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioCertificateDtos;
+using MyPortfolio.WebApi.Dtos.PortfolioContactDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioEducationDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioExperienceDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioMainTitleDtos;
@@ -67,6 +69,17 @@ namespace MyPortfolio.WebApi.Mapping
             CreateMap<PortfolioBlog, CreatePortfolioBlogDto>().ReverseMap();
             CreateMap<PortfolioBlog, UpdatePortfolioBlogDto>().ReverseMap();
             CreateMap<PortfolioBlog, GetPortfolioBlogByPortfolioBlogIdDto>().ReverseMap();
+
+            // Contact
+            CreateMap<PortfolioContact, GetAllPortfolioContactDto>().ReverseMap();
+            CreateMap<PortfolioContact, CreatePortfolioContactDto>().ReverseMap();
+            CreateMap<PortfolioContact, UpdatePortfolioContactDto>().ReverseMap();
+            CreateMap<PortfolioContact, GetPortfolioContactByPortfolioContactDto>().ReverseMap();
+
+            // Blog Comment
+            CreateMap<PortfolioBlogComment, GetAllPortfolioBlogCommentDto>().ReverseMap();
+            CreateMap<PortfolioBlogComment, CreatePortfolioBlogCommentDto>().ReverseMap();
+            CreateMap<PortfolioBlogComment, GetPortfolioBlogCommentByPortfolioBlogCommentIdDto>().ReverseMap();
         }
     }
 }

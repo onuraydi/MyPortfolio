@@ -135,6 +135,38 @@ namespace MyPortfolio.WebApi.Migrations
                     b.ToTable("portfolioCertificates");
                 });
 
+            modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioContact", b =>
+                {
+                    b.Property<int>("PortfolioContactId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PortfolioContactId"));
+
+                    b.Property<string>("MessageDetail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MessageSubject")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SenderEmail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SenderNameSurname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("isRead")
+                        .HasColumnType("bit");
+
+                    b.HasKey("PortfolioContactId");
+
+                    b.ToTable("portfolioContacts");
+                });
+
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioEducation", b =>
                 {
                     b.Property<int>("PortfolioEducationId")

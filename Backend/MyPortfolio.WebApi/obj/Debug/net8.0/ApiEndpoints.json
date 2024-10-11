@@ -42,6 +42,64 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioBlogCommentsController",
+    "Method": "GetAllPortfolioBlogComment",
+    "RelativePath": "api/PortfolioBlogComments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioBlogCommentsController",
+    "Method": "CreatePortfolioBlogComment",
+    "RelativePath": "api/PortfolioBlogComments",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createPortfolioBlogCommentDto",
+        "Type": "MyPortfolio.WebApi.Dtos.PortfolioBlogCommentDtos.CreatePortfolioBlogCommentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioBlogCommentsController",
+    "Method": "DeletePortfolioBlogComment",
+    "RelativePath": "api/PortfolioBlogComments",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioBlogCommentsController",
+    "Method": "GetPortfolioBlogCommentByPortfolioBlogCommentId",
+    "RelativePath": "api/PortfolioBlogComments/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioBlogsController",
     "Method": "GetAllPortfolioBlog",
     "RelativePath": "api/PortfolioBlogs",
@@ -178,6 +236,112 @@
     "Method": "GetPortfolioCertificateByPortfolioCertificateId",
     "RelativePath": "api/PortfolioCertificates/{id}",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioContactsController",
+    "Method": "GetAllPortfolioContact",
+    "RelativePath": "api/PortfolioContacts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioContactsController",
+    "Method": "CreatePortfolioContact",
+    "RelativePath": "api/PortfolioContacts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createPortfolioContactDto",
+        "Type": "MyPortfolio.WebApi.Dtos.PortfolioContactDtos.CreatePortfolioContactDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioContactsController",
+    "Method": "UpdatePortfolioContact",
+    "RelativePath": "api/PortfolioContacts",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updatePortfolioContactDto",
+        "Type": "MyPortfolio.WebApi.Dtos.PortfolioContactDtos.UpdatePortfolioContactDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioContactsController",
+    "Method": "DeletePortfolioContact",
+    "RelativePath": "api/PortfolioContacts",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioContactsController",
+    "Method": "GetPortfolioContactByPortfolioContactId",
+    "RelativePath": "api/PortfolioContacts/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioContactsController",
+    "Method": "MarkAsNotRead",
+    "RelativePath": "api/PortfolioContacts/MarkAsNotRead/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioContactsController",
+    "Method": "MarkAsRead",
+    "RelativePath": "api/PortfolioContacts/MarkAsRead/{id}",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
