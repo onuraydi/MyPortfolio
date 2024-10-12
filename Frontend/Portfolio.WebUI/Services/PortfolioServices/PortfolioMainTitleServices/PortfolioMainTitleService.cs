@@ -12,11 +12,11 @@ namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioMainTitleServices
             _httpClient = httpClient;
         }
 
-        public async Task<GetPortfolioMainTitleDto> GetPortfolioMainTitleAsync()
+        public async Task<List<GetPortfolioMainTitleDto>> GetPortfolioMainTitleAsync()
         {
             var responseMessage = await _httpClient.GetAsync("PortfolioMainTitles");
             var jsonData = await responseMessage.Content.ReadAsStringAsync();
-            var values = JsonConvert.DeserializeObject<GetPortfolioMainTitleDto>(jsonData);
+            var values = JsonConvert.DeserializeObject<List<GetPortfolioMainTitleDto>>(jsonData);
             return values;
         }
 

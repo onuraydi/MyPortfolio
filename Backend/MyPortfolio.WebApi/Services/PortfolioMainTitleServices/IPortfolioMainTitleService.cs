@@ -4,7 +4,7 @@ namespace MyPortfolio.WebApi.Services.PortfolioMainTitleServices
 {
     public interface IPortfolioMainTitleService
     {
-        Task<GetPortfolioMainTitleDto> GetPortfolioMainTitleAsync();
+        Task<List<GetPortfolioMainTitleDto>> GetPortfolioMainTitleAsync();
         Task UpdatePortfolioMainTitleAsync(UpdatePortfoiloMainTitleDto updatePortfoiloMainTitleDto);
         Task<GetPortfolioMainTitleByPortfolioMainTitleIdDto> GetPortfolioMainTitleByPortfolioMainTitleIdAsync(int id);
     }

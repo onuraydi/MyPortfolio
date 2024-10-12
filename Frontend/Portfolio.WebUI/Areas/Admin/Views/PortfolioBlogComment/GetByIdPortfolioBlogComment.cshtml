@@ -1,0 +1,38 @@
+﻿@model GetPortfolioBlogCommentByPortfolioBlogCommentIdDto
+
+@{
+    ViewData["Title"] = "GetByIdPortfolioBlogComment";
+    Layout = "~/Areas/Admin/Views/AdminLayout/AdminLayout.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card" style="background-color: #191c24">
+    <div class="card-body">
+        <h4 class="card-title">Yorum Detayı</h4>
+        <p class="card-description">Yorum Detayını görüntüleme Sayfası</p>
+        <form class="forms-sample" method="post">
+            <input type="hidden" asp-for="PortfolioBlogCommentId" />
+            <div class="form-group">
+                <label for="Title">Gönderen Kişinin Adı</label>
+                <input type="text" class="form-control" asp-for="Name" placeholder="Gönderen Kişi" disabled style="background-color: #2a3038" />
+            </div>
+            <div class="form-group">
+                <label for="Title">Gönderen Kişinin Soyadı</label>
+                <input type="text" class="form-control" asp-for="Surname" placeholder="Gönderen Kişi" disabled style="background-color: #2a3038" />
+            </div>
+            <div class="form-group">
+                <label for="Title">Rate</label>
+                <input type="text" class="form-control" asp-for="CommentRate" placeholder="Mail" disabled style="background-color: #2a3038" />
+            </div>
+            <div class="form-group">
+                <label for="Title">Başlık</label>
+                <input type="text" class="form-control" asp-for="CommentTitle" placeholder="Konu" disabled style="background-color: #2a3038" />
+            </div>
+            <div class="form-group">
+                <label for="Title">Yorum</label>
+                <textarea class="form-control" asp-for="CommentDetail" rows="5" disabled style="background-color: #2a3038"></textarea>
+            </div>
+            <button class="btn btn-info">Geri</button>
+        </form>
+    </div>
+</div>
+

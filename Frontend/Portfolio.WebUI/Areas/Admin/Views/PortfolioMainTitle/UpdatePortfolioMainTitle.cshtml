@@ -5,22 +5,59 @@
     Layout = "~/Areas/Admin/Views/AdminLayout/AdminLayout.cshtml";
 }
 
-<div class="col-lg-12 grid-margin stretch-card" style="background-color: #191c24">
+<div class="col-lg-12 grid-margin stretch-card" style="background-color: #191c24;">
     <div class="card-body">
-        <h4 class="card-title">Ana Başlık</h4>
-        <p class="card-description">Güncelleme Sayfası</p>
-        <form class="forms-sample" method="post">
+        <h4 class="card-title text-white">Ana Başlık</h4>
+        <p class="card-description text-white">Güncelleme Sayfası</p>
+
+        <form class="forms-sample" method="post" enctype="multipart/form-data">
             <input type="hidden" asp-for="PortfolioMainTitleId" />
+
             <div class="form-group">
-                <label for="Title">Başlık</label>
+                <label for="Title" class="text-white">Başlık</label>
                 <input type="text" class="form-control" asp-for="Title" placeholder="Başlık" />
             </div>
+
             <div class="form-group">
-                <label for="Title">Açıklama</label>
+                <label for="Description" class="text-white">Açıklama</label>
                 <input type="text" class="form-control" asp-for="Description" placeholder="Açıklama" />
             </div>
+
+            <div class="form-group">
+                <label for="Image" class="text-white">Resim (.png)</label>
+
+                <div class="input-group">
+                    <input type="file" asp-for="Image" class="form-control file-upload-default" accept=".png" />
+                    <input type="text" class="form-control file-upload-info" disabled placeholder="@Model.Image" />
+                    <span class="input-group-append">
+                        <button class="btn btn-primary" type="button" onclick="document.getElementById('Image').click()">Yükle</button>
+                    </span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="Description" class="text-white">Buton Adı</label>
+                    <input type="text" class="form-control" asp-for="ButtonName1" placeholder="Buton Adı" />
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="Description" class="text-white">Yol</label>
+                    <input type="text" class="form-control" asp-for="Button1Href" placeholder="Yol" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="Description" class="text-white">Buton Adı</label>
+                    <input type="text" class="form-control" asp-for="ButtonName2" placeholder="Buton Adı" />
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="Description" class="text-white">Yol</label>
+                    <input type="text" class="form-control" asp-for="Button2Href" placeholder="Yol" />
+                </div>
+            </div>
+
             <button type="submit" class="btn btn-primary mr-2">Güncelle</button>
-            <button class="btn btn-dark">Geri</button>
+            <button type="button" class="btn btn-dark">Geri</button>
         </form>
     </div>
 </div>

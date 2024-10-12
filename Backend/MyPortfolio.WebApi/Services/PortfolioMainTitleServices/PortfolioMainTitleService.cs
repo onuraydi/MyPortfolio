@@ -17,10 +17,10 @@ namespace MyPortfolio.WebApi.Services.PortfolioMainTitleServices
             _mapper = mapper;
         }
 
-        public async Task<GetPortfolioMainTitleDto> GetPortfolioMainTitleAsync()
+        public async Task<List<GetPortfolioMainTitleDto>> GetPortfolioMainTitleAsync()
         {
-            var values = await _context.PortfolioMainTitles.FirstOrDefaultAsync();
-            return _mapper.Map<GetPortfolioMainTitleDto>(values);
+            var values = await _context.PortfolioMainTitles.ToListAsync();
+            return _mapper.Map<List<GetPortfolioMainTitleDto>>(values);
         }
 
         public async Task<GetPortfolioMainTitleByPortfolioMainTitleIdDto> GetPortfolioMainTitleByPortfolioMainTitleIdAsync(int id)

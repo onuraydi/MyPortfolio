@@ -17,5 +17,6 @@ namespace Portfolio.WebUI.ViewComponents.HomeViewComponents
             var values = await _portfolioMainTitleService.GetPortfolioMainTitleAsync();
             return View(values);
         }
+
     }
 }
