@@ -42,5 +42,23 @@ namespace MyPortfolio.WebApi.Services.PortfolioBlogCommentServices
             var values = await _context.PortfolioComments.FindAsync(id);
             return _mapper.Map<GetPortfolioBlogCommentByPortfolioBlogCommentIdDto>(values);
         }
+
+        public async Task<List<GetPortfolioBlogCommentByPortfolioBlogIdDto>> GetPortfolioBlogCommentByPortfolioBlogIdAsync(int id)
+        {
+            
+            var values = await _context.PortfolioComments.Where(x => x.portfolioBlogId == id).Include(x => x.PortfolioBlog).ToListAsync();
+            var values2 = values.Select(y => new GetPortfolioBlogCommentByPortfolioBlogIdDto
+            {
+                PortfolioBlogCommentId = y.PortfolioBlogCommentId,
+                Name = y.Name,
+                Surname = y.Surname,
+                CommentDetail = y.CommentDetail,
+                CommentRate = y.CommentRate,
+                CommentTitle = y.CommentTitle,
+                portfolioBlogId = y.portfolioBlogId
+            }).ToList();
+            return _mapper.Map<List<GetPortfolioBlogCommentByPortfolioBlogIdDto>>(values2);
+            
+        }
     }
 }

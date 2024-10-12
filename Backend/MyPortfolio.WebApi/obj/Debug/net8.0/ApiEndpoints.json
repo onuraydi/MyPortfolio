@@ -100,6 +100,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioBlogCommentsController",
+    "Method": "GetPortfolioBlogCommentByPortfolioBlogId",
+    "RelativePath": "api/PortfolioBlogComments/GetPortfolioBlogCommentByPortfolioBlogId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioBlogsController",
     "Method": "GetAllPortfolioBlog",
     "RelativePath": "api/PortfolioBlogs",

@@ -8,5 +8,6 @@ namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogCommentService
         Task CreatePortfolioBlogCommentAsync(CreatePortfolioBlogCommentDto createPortfolioBlogCommentDto);
         Task DeletePortfolioBlogCommentAsync(int id);
         Task<GetPortfolioBlogCommentByPortfolioBlogCommentIdDto> GetPortfolioBlogCommentByPortfolioBlogCommentIdAsync(int id);
+        Task<List<GetPortfolioBlogCommentByPortfolioBlogIdDto>> GetPortfolioBlogCommentByPortfolioBlogIdAsync(int id);
     }
 }

@@ -1,6 +1,12 @@
-﻿namespace MyPortfolio.WebApi.Entites
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Portfolio.DtoLayer.PortfolioDtos.PortfolioBlogCommentDtos
 {
-    public class PortfolioBlogComment
+    public class GetPortfolioBlogCommentByPortfolioBlogIdDto
     {
         public int PortfolioBlogCommentId { get; set; }
         public string CommentTitle { get; set; }
@@ -8,8 +14,6 @@
         public double CommentRate { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }  // ilerde user olarak alınabilir
-        public PortfolioBlog PortfolioBlog { get; set; }
         public int portfolioBlogId { get; set; }
-        
     }
 }

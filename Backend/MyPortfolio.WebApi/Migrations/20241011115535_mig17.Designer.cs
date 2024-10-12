@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyPortfolio.WebApi.Context;
 
@@ -11,9 +12,11 @@ using MyPortfolio.WebApi.Context;
 namespace MyPortfolio.WebApi.Migrations
 {
     [DbContext(typeof(PortfolioContext))]
-    partial class PortfolioContextModelSnapshot : ModelSnapshot
+    [Migration("20241011115535_mig17")]
+    partial class mig17
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -102,7 +105,7 @@ namespace MyPortfolio.WebApi.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("portfolioBlogId")
+                    b.Property<int?>("portfolioBlogId")
                         .HasColumnType("int");
 
                     b.HasKey("PortfolioBlogCommentId");
@@ -359,9 +362,7 @@ namespace MyPortfolio.WebApi.Migrations
                 {
                     b.HasOne("MyPortfolio.WebApi.Entites.PortfolioBlog", "PortfolioBlog")
                         .WithMany()
-                        .HasForeignKey("portfolioBlogId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("portfolioBlogId");
 
                     b.Navigation("PortfolioBlog");
                 });

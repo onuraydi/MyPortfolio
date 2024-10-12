@@ -1,4 +1,5 @@
-﻿using Portfolio.DtoLayer.PortfolioDtos.PortfolioBlogCommentDtos;
+﻿using Newtonsoft.Json;
+using Portfolio.DtoLayer.PortfolioDtos.PortfolioBlogCommentDtos;
 
 namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogCommentServices
 {
@@ -32,6 +33,14 @@ namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogCommentService
         {
             var responseMessage = await _httpClient.GetAsync("portfolioblogcomments/" + id);
             var values = await responseMessage.Content.ReadFromJsonAsync<GetPortfolioBlogCommentByPortfolioBlogCommentIdDto>();
+            return values;
+        }
+
+        public async Task<List<GetPortfolioBlogCommentByPortfolioBlogIdDto>> GetPortfolioBlogCommentByPortfolioBlogIdAsync(int id)
+        {
+            var responseMessage = await _httpClient.GetAsync($"portfolioblogcomments/GetPortfolioBlogCommentByPortfolioBlogId/{id}");
+            var jsonData = await responseMessage.Content.ReadAsStringAsync();
+            var values = JsonConvert.DeserializeObject<List<GetPortfolioBlogCommentByPortfolioBlogIdDto>>(jsonData);
             return values;
         }
     }

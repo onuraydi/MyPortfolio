@@ -43,5 +43,12 @@ namespace MyPortfolio.WebApi.Controllers
             await _portfolioBlogCommentService.DeletePortfolioBlogCommentAsync(id);
             return Ok("Yorum silme işlemi başarılı");
         }
+
+        [HttpGet("GetPortfolioBlogCommentByPortfolioBlogId/{id}")]
+        public async Task<IActionResult> GetPortfolioBlogCommentByPortfolioBlogId(int id)
+        {
+            var values = await _portfolioBlogCommentService.GetPortfolioBlogCommentByPortfolioBlogIdAsync(id);
+            return Ok(values);
+        }
     }
 }

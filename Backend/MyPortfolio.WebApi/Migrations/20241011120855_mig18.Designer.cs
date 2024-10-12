@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyPortfolio.WebApi.Context;
 
@@ -11,9 +12,11 @@ using MyPortfolio.WebApi.Context;
 namespace MyPortfolio.WebApi.Migrations
 {
     [DbContext(typeof(PortfolioContext))]
-    partial class PortfolioContextModelSnapshot : ModelSnapshot
+    [Migration("20241011120855_mig18")]
+    partial class mig18
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -107,7 +110,8 @@ namespace MyPortfolio.WebApi.Migrations
 
                     b.HasKey("PortfolioBlogCommentId");
 
-                    b.HasIndex("portfolioBlogId");
+                    b.HasIndex("portfolioBlogId")
+                        .IsUnique();
 
                     b.ToTable("PortfolioComments");
                 });
@@ -358,12 +362,18 @@ namespace MyPortfolio.WebApi.Migrations
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioBlogComment", b =>
                 {
                     b.HasOne("MyPortfolio.WebApi.Entites.PortfolioBlog", "PortfolioBlog")
-                        .WithMany()
-                        .HasForeignKey("portfolioBlogId")
+                        .WithOne("portfolioBlogComment")
+                        .HasForeignKey("MyPortfolio.WebApi.Entites.PortfolioBlogComment", "portfolioBlogId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("PortfolioBlog");
+                });
+
+            modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioBlog", b =>
+                {
+                    b.Navigation("portfolioBlogComment")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

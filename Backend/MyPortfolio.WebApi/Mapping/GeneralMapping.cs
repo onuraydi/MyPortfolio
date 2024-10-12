@@ -80,6 +80,7 @@ namespace MyPortfolio.WebApi.Mapping
             CreateMap<PortfolioBlogComment, GetAllPortfolioBlogCommentDto>().ReverseMap();
             CreateMap<PortfolioBlogComment, CreatePortfolioBlogCommentDto>().ReverseMap();
             CreateMap<PortfolioBlogComment, GetPortfolioBlogCommentByPortfolioBlogCommentIdDto>().ReverseMap();
+            CreateMap<PortfolioBlogComment, GetPortfolioBlogCommentByPortfolioBlogIdDto>().ReverseMap();
         }
     }
 }
