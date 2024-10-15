@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lIl13MvPUPWRAiHLmzrB5QFJ5U+Fp+0EksSBiHn1K10=",
+  "Hash": "PCFkVjueW9gWIYHlAv1pEittKrCE/O2SfEIvfcaFK/g=",
   "Source": "Portfolio.WebUI",
   "BasePath": "_content/Portfolio.WebUI",
   "Mode": "Default",
@@ -21943,6 +21943,25 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
+      "Identity": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\37c2ba2c-14d7-4b25-8592-0de7c0a54931.JPG",
+      "SourceId": "Portfolio.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\",
+      "BasePath": "_content/Portfolio.WebUI",
+      "RelativePath": "Uploads/37c2ba2c-14d7-4b25-8592-0de7c0a54931.JPG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\37c2ba2c-14d7-4b25-8592-0de7c0a54931.JPG"
+    },
+    {
       "Identity": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\46dbaf4d-f183-495d-be1b-ae32ba5df433.png",
       "SourceId": "Portfolio.WebUI",
       "SourceType": "Discovered",
@@ -21962,6 +21981,44 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\46dbaf4d-f183-495d-be1b-ae32ba5df433.png"
     },
     {
+      "Identity": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\b36fdf56-0fd5-4c2e-96b7-a63960794bac.jpg",
+      "SourceId": "Portfolio.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\",
+      "BasePath": "_content/Portfolio.WebUI",
+      "RelativePath": "Uploads/b36fdf56-0fd5-4c2e-96b7-a63960794bac.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\b36fdf56-0fd5-4c2e-96b7-a63960794bac.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\cba7ce78-719d-4f0b-9dbb-e99da14f3e41.png",
+      "SourceId": "Portfolio.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\",
+      "BasePath": "_content/Portfolio.WebUI",
+      "RelativePath": "Uploads/cba7ce78-719d-4f0b-9dbb-e99da14f3e41.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\cba7ce78-719d-4f0b-9dbb-e99da14f3e41.png"
+    },
+    {
       "Identity": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\d223b851-f3cf-41b1-a6b2-b62ddf39020a.png",
       "SourceId": "Portfolio.WebUI",
       "SourceType": "Discovered",
@@ -21979,6 +22036,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Uploads\\d223b851-f3cf-41b1-a6b2-b62ddf39020a.png"
+    },
+    {
+      "Identity": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\f6048b92-5e42-4f01-9aab-bf5fa7b86d38.JPG",
+      "SourceId": "Portfolio.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\",
+      "BasePath": "_content/Portfolio.WebUI",
+      "RelativePath": "Uploads/f6048b92-5e42-4f01-9aab-bf5fa7b86d38.JPG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\f6048b92-5e42-4f01-9aab-bf5fa7b86d38.JPG"
     }
   ]
 }

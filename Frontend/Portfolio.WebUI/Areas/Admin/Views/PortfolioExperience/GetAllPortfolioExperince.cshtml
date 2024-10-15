@@ -6,6 +6,15 @@
     int count = 0;
 }
 
+<style>
+    .aciklama {
+        max-width: 300px; /* Genişliği sınırla */
+        white-space: nowrap; /* Satır taşmasını önle */
+        overflow: hidden; /* Taşan kısmı gizle */
+        text-overflow: ellipsis; /* Taşan kısmı üç nokta ile göster */
+    }
+</style>
+
 <div class="col-lg-12 grid-margin stretch-card" style="background-color: #191c24 ">
     <div class="card-body">
         <h4 class="card-title">İş Tecrübeleri</h4>
@@ -33,7 +42,7 @@
                             <td>@item.ExperienceTitle</td>
                             <td>@item.CompanyName</td>
                             <td>@item.ExperienceDate</td>
-                            <td>@item.Description</td>
+                            <td class="aciklama">@item.Description</td>
                             <td><a href="/Admin/PortfolioExperience/UpdatePortfolioExperience/@item.PortfolioExperienceId" class="btn btn-primary">Güncelle</a></td>
                             <td><a href="/Admin/PortfolioExperience/DeletePortfolioExperience/@item.PortfolioExperienceId" class="btn btn-danger">Sil</a></td>
                         </tr>
