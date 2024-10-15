@@ -35,7 +35,7 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        [Route("UpdatePortfolioMainTitle/{id}")]  // burada ID'ye gerek var mı?
+        [Route("UpdatePortfolioMainTitle/{id}")]  
         public async Task<IActionResult> UpdatePortfolioMainTitle(UpdatePortfolioMainTitleDto updatePortfolioMainTitleDto, IFormFile image)
         {
             if (image != null && image.Length > 0)

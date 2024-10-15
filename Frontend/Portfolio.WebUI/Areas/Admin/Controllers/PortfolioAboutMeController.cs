@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Portfolio.DtoLayer.PortfolioDtos.PortfolioAboutMeDtos;
+using Portfolio.WebUI.Services.ImageUploadServices.ImageUploadServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioAboutMeServices;
 
 namespace Portfolio.WebUI.Areas.Admin.Controllers
@@ -9,10 +10,12 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
     public class PortfolioAboutMeController : Controller
     {
         private readonly IPortfolioAboutMeService _portfolioAboutMeService;
+        private readonly IImageUploadService _imageUploadService;
 
-        public PortfolioAboutMeController(IPortfolioAboutMeService portfolioAboutMeService)
+        public PortfolioAboutMeController(IPortfolioAboutMeService portfolioAboutMeService, IImageUploadService imageUploadService)
         {
             _portfolioAboutMeService = portfolioAboutMeService;
+            _imageUploadService = imageUploadService;
         }
 
         [HttpGet]
@@ -33,8 +36,21 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 
         [HttpPost]
         [Route("UpdatePortfolioAboutMe/{id}")]
-        public async Task<IActionResult> UpdatePortfolioAboutMe(UpdatePortfolioAboutMeDto updatePortfolioAboutMeDto)
+        public async Task<IActionResult> UpdatePortfolioAboutMe(UpdatePortfolioAboutMeDto updatePortfolioAboutMeDto,IFormFile image)
         {
+            if(image != null && image.Length > 0)
+            {
+                var uploadedImage = await _imageUploadService.UploadImageAsync(image);
+                updatePortfolioAboutMeDto.Image = uploadedImage;
+            }
+            else
+            {
+                var existingData = await _portfolioAboutMeService.GetPortfolioAboutMeByPortfolioAboutMeIdAsync(updatePortfolioAboutMeDto.PortfolioAboutMeId);
+                if(existingData != null)
+                {
+                    updatePortfolioAboutMeDto.Image = existingData.Image;
+                }
+            }
             await _portfolioAboutMeService.UpdatePortfolioAboutMeAsync(updatePortfolioAboutMeDto);
             return RedirectToAction("GetPortfolioAboutMe", "PortfolioAboutMe", new { area = "Admin" });
         }

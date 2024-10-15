@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WVcNPtu/ZVtGpK+IpaOLnDXRhrjrTdEyNPlehrhFgJs=",
+  "Hash": "lIl13MvPUPWRAiHLmzrB5QFJ5U+Fp+0EksSBiHn1K10=",
   "Source": "Portfolio.WebUI",
   "BasePath": "_content/Portfolio.WebUI",
   "Mode": "Default",
@@ -21943,12 +21943,12 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\fa065981-b584-450f-b62c-caa34a06ca6b.png",
+      "Identity": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\46dbaf4d-f183-495d-be1b-ae32ba5df433.png",
       "SourceId": "Portfolio.WebUI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\",
       "BasePath": "_content/Portfolio.WebUI",
-      "RelativePath": "Uploads/fa065981-b584-450f-b62c-caa34a06ca6b.png",
+      "RelativePath": "Uploads/46dbaf4d-f183-495d-be1b-ae32ba5df433.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -21959,7 +21959,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Uploads\\fa065981-b584-450f-b62c-caa34a06ca6b.png"
+      "OriginalItemSpec": "wwwroot\\Uploads\\46dbaf4d-f183-495d-be1b-ae32ba5df433.png"
+    },
+    {
+      "Identity": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\d223b851-f3cf-41b1-a6b2-b62ddf39020a.png",
+      "SourceId": "Portfolio.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\",
+      "BasePath": "_content/Portfolio.WebUI",
+      "RelativePath": "Uploads/d223b851-f3cf-41b1-a6b2-b62ddf39020a.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\d223b851-f3cf-41b1-a6b2-b62ddf39020a.png"
     }
   ]
 }

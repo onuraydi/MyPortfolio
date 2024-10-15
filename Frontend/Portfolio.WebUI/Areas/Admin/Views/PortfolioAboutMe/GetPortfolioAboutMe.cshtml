@@ -4,10 +4,20 @@
     Layout = "~/Areas/Admin/Views/AdminLayout/AdminLayout.cshtml";
 }
 
+<style>
+    .aciklama {
+        max-width: 300px; /* Genişliği sınırla */
+        white-space: nowrap; /* Satır taşmasını önle */
+        overflow: hidden; /* Taşan kısmı gizle */
+        text-overflow: ellipsis; /* Taşan kısmı üç nokta ile göster */
+    }
+</style>
+
+
 <div class="col-lg-12 grid-margin stretch-card" style="background-color: #191c24 ">
     <div class="card-body">
         <h4 class="card-title">Hakkımda kısmı</h4>
-        <p class="card-description">Resim eklemeyi unuttun! iletişim bilgileri için farklı bir kısım oluşturulabilir geri butonlarını hallet</p>
+        <p class="card-description">Hakkımda kısmı ile ilgili işlemleri buradan yapabilirsiniz</p>
         <div class="table-res">
             <table class="table">
                 <thead>
@@ -16,7 +26,7 @@
                         <th>Başlık</th>
                         <th>Açıklama</th>
                         <th>Resim</th>
-                        <th>Güncelle</th>
+                        <th>Detaylar/Güncelle</th>
                     </tr>
 
                 </thead>
@@ -24,9 +34,9 @@
                     <tr>
                         <td>1</td>
                         <td>@Model.Title</td>
-                        <td>@Model.Description</td>
-                        <td><img src="~/clark-master/images/image_1.jpg" /></td>
-                        <td><a href="/Admin/PortfolioAboutMe/UpdatePortfolioAboutMe/@Model.PortfolioAboutMeId" class="btn btn-primary">Güncelle</a></td>
+                        <td class="aciklama">@Model.Description</td>
+                        <td><img src="@Model.Image" /></td>
+                        <td><a href="/Admin/PortfolioAboutMe/UpdatePortfolioAboutMe/@Model.PortfolioAboutMeId" class="btn btn-primary">Detaylar/Güncelle</a></td>
                     </tr>
                 </tbody>
             </table>

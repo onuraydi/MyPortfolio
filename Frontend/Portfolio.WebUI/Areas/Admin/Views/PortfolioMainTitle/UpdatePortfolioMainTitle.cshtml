@@ -27,7 +27,7 @@
                 <label for="Image" class="text-white">Resim (.png)</label>
 
                 <div class="input-group">
-                    <input type="file" asp-for="Image" class="form-control file-upload-default" accept=".png" />
+                    <input type="file" asp-for="Image"  id="Image" class="form-control file-upload-default" accept=".png" />
                     <input type="text" class="form-control file-upload-info" disabled placeholder="@Model.Image" />
                     <span class="input-group-append">
                         <button class="btn btn-primary" type="button" onclick="document.getElementById('Image').click()">Yükle</button>
