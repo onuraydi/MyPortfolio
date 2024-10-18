@@ -16,7 +16,7 @@
                         <th>#</th>
                         <th>Ad</th>
                         <th>İkon</th>
-                        <th>Güncelle</th>
+                        <th>Detaylar/Güncelle</th>
                         <th>Sil</th>
                     </tr>
 
@@ -28,8 +28,8 @@
                         <tr>
                             <td>@count</td>
                             <td>@item.TechnologyName</td>
-                            <td>@item.IconUrl</td>
-                            <td><a href="/Admin/PortfolioTechnology/UpdatePortfolioTechnology/@item.PortfolioTechnologyId" class="btn btn-primary">Güncelle</a></td>
+                            <td><img src="@item.IconUrl" alt="icon"/></td>
+                            <td><a href="/Admin/PortfolioTechnology/UpdatePortfolioTechnology/@item.PortfolioTechnologyId" class="btn btn-primary">Detaylar/Güncelle</a></td>
                             <td><a href="/Admin/PortfolioTechnology/DeletePortfolioTechnology/@item.PortfolioTechnologyId" class="btn btn-danger">Sil</a></td>
                         </tr>
                     }

@@ -10,14 +10,24 @@
     <div class="card-body">
         <h4 class="card-title">Çalışılan Teknolojiler</h4>
         <p class="card-description">Çalıştığınız Teknolojileri Bu Sayfadan Ekleyebilirsiniz</p>
-        <form class="forms-sample" method="post">
+        <form class="forms-sample" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="Title">Teknoloji Adı</label>
                 <input type="text" class="form-control" asp-for="TechnologyName" placeholder="Teknoloji Adı" />
             </div>
             <div class="form-group">
-                <label for="Title">İkon URL (file upload olacak)</label>
-                <input type="text" class="form-control" asp-for="IconUrl" placeholder="İkon URL" />
+                <label for="image" class="text-white">İkon(.ico)</label>
+                <div class="input-group">
+                    <input type="file" id="image" asp-for="IconUrl" class="form-control file-upload-default" />
+                    <input type="text" class="form-control file-upload-info" disabled placeholder="icon" />
+                    <span class="input-group-append">
+                        <button class="btn btn-primary" type="button" onclick="document.getElementById('image').click()">Yükle</button>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="Title">Bağlantı </label>
+                <input type="text" class="form-control" asp-for="Href" placeholder="Bağlantı" />
             </div>
             <button type="submit" class="btn btn-primary mr-2">Ekle</button>
             <button class="btn btn-info">Geri</button>

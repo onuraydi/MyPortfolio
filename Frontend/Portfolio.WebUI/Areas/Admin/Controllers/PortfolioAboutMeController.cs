@@ -39,7 +39,7 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
         public async Task<IActionResult> UpdatePortfolioAboutMe(UpdatePortfolioAboutMeDto updatePortfolioAboutMeDto,IFormFile image)
         {
             if(image != null && image.Length > 0)
-            {
+            {   
                 var uploadedImage = await _imageUploadService.UploadImageAsync(image);
                 updatePortfolioAboutMeDto.Image = uploadedImage;
             }

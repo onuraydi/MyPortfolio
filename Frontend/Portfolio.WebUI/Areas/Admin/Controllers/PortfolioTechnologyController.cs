@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Portfolio.DtoLayer.PortfolioDtos.PortfolioTechnologyDtos;
+using Portfolio.WebUI.Services.ImageUploadServices.ImageUploadServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioTechnologyServices;
 
 namespace Portfolio.WebUI.Areas.Admin.Controllers
@@ -9,9 +10,11 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
     public class PortfolioTechnologyController : Controller
     {
         private readonly IPortfolioTechnologyService _portfolioTechnologyService;
-        public PortfolioTechnologyController(IPortfolioTechnologyService portfolioTechnologyService)
+        private readonly IImageUploadService _imageUploadService;
+        public PortfolioTechnologyController(IPortfolioTechnologyService portfolioTechnologyService, IImageUploadService imageUploadService)
         {
             _portfolioTechnologyService = portfolioTechnologyService;
+            _imageUploadService = imageUploadService;
         }
 
         [HttpGet]
@@ -31,8 +34,10 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 
         [HttpPost]
         [Route("CreatePortfolioTechnology")]
-        public async Task<IActionResult> CreatePortfolioTechnology(CreatePortfolioTechnologyDto createPortfolioTechnologyDto)
+        public async Task<IActionResult> CreatePortfolioTechnology(CreatePortfolioTechnologyDto createPortfolioTechnologyDto,IFormFile iconUrl)
         {
+            var uplodingImage = await _imageUploadService.UploadImageAsync(iconUrl);
+            createPortfolioTechnologyDto.IconUrl = uplodingImage;
             await _portfolioTechnologyService.CreatePortfolioTechnologyAsync(createPortfolioTechnologyDto);
             return RedirectToAction("GetAllPortfolioTechnology", "PortfolioTechnology", new { area = "Admin" });
         }
@@ -47,8 +52,21 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 
         [HttpPost]
         [Route("UpdatePortfolioTechnology/{id}")]
-        public async Task<IActionResult> UpdatePortfolioTechnology(UpdatePortfolioTechnologyDto updatePortfolioTechnologyDto)
+        public async Task<IActionResult> UpdatePortfolioTechnology(UpdatePortfolioTechnologyDto updatePortfolioTechnologyDto,IFormFile iconUrl)
         {
+            if (iconUrl != null || iconUrl.Length > 0)
+            {
+                var uploadedImage = await _imageUploadService.UploadImageAsync(iconUrl);
+                updatePortfolioTechnologyDto.IconUrl = uploadedImage;
+            }
+            else
+            {
+                var existingData = await _portfolioTechnologyService.GetPortfolioTechnologyByPortfolioTechnologyIdAsync(updatePortfolioTechnologyDto.PortfolioTechnologyId);
+                if (existingData != null)
+                {
+                    updatePortfolioTechnologyDto.IconUrl = existingData.IconUrl;
+                }
+            }
             await _portfolioTechnologyService.UpdatePortfolioTechnologyAsync(updatePortfolioTechnologyDto);
             return RedirectToAction("GetAllPortfolioTechnology", "PortfolioTechnology", new { area = "Admin" });
         }

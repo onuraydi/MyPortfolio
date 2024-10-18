@@ -10,15 +10,28 @@
     <div class="card-body">
         <h4 class="card-title">Çalışılan Teknolojiler</h4>
         <p class="card-description">Çalıştığınız Teknolojileri Bu Sayfadan Güncelleyebilirsin</p>
-        <form class="forms-sample" method="post">
-            <input type="hidden" asp-for="PortfolioTechnologyId"/>
+        <form class="forms-sample" method="post" enctype="multipart/form-data">
+            <input type="hidden" asp-for="PortfolioTechnologyId" />
             <div class="form-group">
                 <label for="Title">Teknoloji Adı</label>
                 <input type="text" class="form-control" asp-for="TechnologyName" placeholder="Teknoloji Adı" />
             </div>
             <div class="form-group">
-                <label for="Title">İkon URL (file upload olacak)</label>
-                <input type="text" class="form-control" asp-for="IconUrl" placeholder="İkon URL" />
+                <label for="Image" class="text-white">Resim (.png)</label>
+
+                <div class="input-group">
+                    <!-- ID eklendi -->
+                    <input type="file" asp-for="IconUrl" id="Image" class="form-control file-upload-default" />
+                    <input type="text" class="form-control file-upload-info" disabled placeholder="@Model.IconUrl" />
+                    <span class="input-group-append">
+                        <!-- ID ile tıklama yapılıyor -->
+                        <button class="btn btn-primary" type="button" onclick="document.getElementById('Image').click()">Yükle</button>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="Title">Bağlantı</label>
+                <input type="text" class="form-control" asp-for="Href" placeholder="Bağlantı" />
             </div>
             <button type="submit" class="btn btn-primary mr-2">Güncelle</button>
             <button class="btn btn-info">Geri</button>

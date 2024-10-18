@@ -19,8 +19,7 @@
                         <th>Detaylar</th>
                         <th>Mezun olunan Tarih</th>
                         <th>Ortalama</th>
-                        <th>Açıklama</th>
-                        <th>Güncelle</th>
+                        <th>Detaylar/Güncelle</th>
                         <th>Sil</th>
                     </tr>
 
@@ -35,8 +34,7 @@
                             <td>@item.EducationDetail</td>
                             <td>@item.EducationDate</td>
                             <td>@item.Average</td>
-                            <td>@item.EducationDescription</td>
-                            <td><a href="/Admin/PortfolioEducation/UpdatePortfolioEducation/@item.PortfolioEducationId" class="btn btn-primary">Güncelle</a></td>
+                            <td><a href="/Admin/PortfolioEducation/UpdatePortfolioEducation/@item.PortfolioEducationId" class="btn btn-primary">Detaylar/Güncelle</a></td>
                             <td><a href="/Admin/PortfolioEducation/DeletePortfolioEducation/@item.PortfolioEducationId" class="btn btn-danger">Sil</a></td>
                         </tr>
                     }
