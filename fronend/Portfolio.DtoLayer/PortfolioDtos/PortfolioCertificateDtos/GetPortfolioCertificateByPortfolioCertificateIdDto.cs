@@ -13,5 +13,6 @@ namespace Portfolio.DtoLayer.PortfolioDtos.PortfolioCertificateDtos
         public string CertificateUrl { get; set; }
         public string CertificateDescription { get; set; }
         public DateTime CertificateDoneDate { get; set; }
+        public string Image { get; set; }
     }
 }

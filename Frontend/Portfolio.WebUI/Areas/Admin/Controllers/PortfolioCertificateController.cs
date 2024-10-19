@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Portfolio.DtoLayer.PortfolioDtos.PortfolioCertificateDtos;
+using Portfolio.WebUI.Services.ImageUploadServices.ImageUploadServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioCertificateServices;
 
 namespace Portfolio.WebUI.Areas.Admin.Controllers
@@ -9,10 +10,11 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
     public class PortfolioCertificateController : Controller
     {
         private readonly IPortfolioCertificateService _portfolioCertificateService;
-
-        public PortfolioCertificateController(IPortfolioCertificateService portfolioCertificateService)
+        private readonly IImageUploadService _imageUploadService;
+        public PortfolioCertificateController(IPortfolioCertificateService portfolioCertificateService, IImageUploadService imageUploadService)
         {
             _portfolioCertificateService = portfolioCertificateService;
+            _imageUploadService = imageUploadService;
         }
 
         [HttpGet]
@@ -32,8 +34,10 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 
         [HttpPost]
         [Route("CreatePortfolioCertificate")]
-        public async Task<IActionResult> CreatePortfolioCertificate(CreatePortfolioCertificateDto createPortfolioCertificateDto)
+        public async Task<IActionResult> CreatePortfolioCertificate(CreatePortfolioCertificateDto createPortfolioCertificateDto, IFormFile image)
         {
+            var uplodingImage = await _imageUploadService.UploadImageAsync(image);
+            createPortfolioCertificateDto.Image = uplodingImage;
             await _portfolioCertificateService.CreatePortfolioCertificateAsync(createPortfolioCertificateDto);
             return RedirectToAction("GetAllPortfolioCertificate", "PortfolioCertificate",new {area="Admin"});
         }
@@ -48,8 +52,21 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 
         [HttpPost]
         [Route("UpdatePortfolioCertificate/{id}")]
-        public async Task<IActionResult> UpdatePortfolioCertificate(UpdatePortfolioCertificateDto updatePortfolioCertificateDto)
+        public async Task<IActionResult> UpdatePortfolioCertificate(UpdatePortfolioCertificateDto updatePortfolioCertificateDto,IFormFile image)
         {
+            if (image != null || image.Length > 0)
+            {
+                var updatedImage = await _imageUploadService.UploadImageAsync(image);
+                updatePortfolioCertificateDto.Image = updatedImage;
+            }
+            else
+            {
+                var exsistingImage = await _portfolioCertificateService.GetPortfolioCertificateByPortfolioCertificateIdAsync(updatePortfolioCertificateDto.PortfolioCertificateId);
+                if (exsistingImage != null)
+                {
+                    updatePortfolioCertificateDto.Image = exsistingImage.Image;
+                }
+            }
             await _portfolioCertificateService.UpdatePortfolioCertificateAsync(updatePortfolioCertificateDto);
             return RedirectToAction("GetAllPortfolioCertificate", "PortfolioCertificate", new { area = "Admin" });
         }

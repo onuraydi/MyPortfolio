@@ -6,7 +6,14 @@
     int count = 0;
 }
 
-
+<style>
+    .aciklama {
+        max-width: 300px; /* Genişliği sınırla */
+        white-space: nowrap; /* Satır taşmasını önle */
+        overflow: hidden; /* Taşan kısmı gizle */
+        text-overflow: ellipsis; /* Taşan kısmı üç nokta ile göster */
+    }
+</style>
 <div class="col-lg-12 grid-margin stretch-card" style="background-color: #191c24 ">
     <div class="card-body">
         <h4 class="card-title">Sertifikalar</h4>
@@ -32,8 +39,8 @@
                         <tr>
                             <td>@count</td>
                             <td>@item.CertificateName</td>
-                            <td>@item.CertificateUrl</td>
-                            <td>@item.CertificateDescription</td>
+                            <td class="aciklama">@item.CertificateUrl</td>
+                            <td class="aciklama">@item.CertificateDescription</td>
                             <td>@item.CertificateDoneDate</td>
                             <td><a href="/Admin/PortfolioCertificate/UpdatePortfolioCertificate/@item.PortfolioCertificateId" class="btn btn-primary">Güncelle</a></td>
                             <td><a href="/Admin/PortfolioCertificate/DeletePortfolioCertificate/@item.PortfolioCertificateId" class="btn btn-danger">Sil</a></td>
