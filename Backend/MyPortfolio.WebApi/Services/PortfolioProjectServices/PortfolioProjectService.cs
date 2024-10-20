@@ -2,7 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using MyPortfolio.WebApi.Context;
 using MyPortfolio.WebApi.Dtos.PortfolioProjectDtos;
+using MyPortfolio.WebApi.Dtos.ProjectImageDtos;
 using MyPortfolio.WebApi.Entites;
+using MyPortfolio.WebApi.Services.ProjectImageServices;
 
 namespace MyPortfolio.WebApi.Services.PortfolioProjectServices
 {
@@ -10,11 +12,14 @@ namespace MyPortfolio.WebApi.Services.PortfolioProjectServices
     {
         private readonly PortfolioContext _context;
         private readonly IMapper _mapper;
+        private readonly IProjectImageService _projectImageService;
 
-        public PortfolioProjectService(PortfolioContext context, IMapper mapper)
+
+        public PortfolioProjectService(PortfolioContext context, IMapper mapper, IProjectImageService projectImageService)
         {
             _context = context;
             _mapper = mapper;
+            _projectImageService = projectImageService;
         }
 
         public async Task CreatePortfolioProjectAsync(CreatePortfolioProjectDto createPortfolioProjectDto)
@@ -41,6 +46,12 @@ namespace MyPortfolio.WebApi.Services.PortfolioProjectServices
         {
             var values = await _context.portfolioProjects.FindAsync(id);
             return _mapper.Map<GetPortfolioProjectByPortfolioProjectIdDto>(values);
+        }
+
+        public async Task<List<GetProjectImageByPortfolioProjectIdDto>> GetProjectImageByPortfolioProjectIdAsync(int id)
+        {
+            var values = await _projectImageService.GetProjectImageByPortfolioProjectIdAsync(id);
+            return _mapper.Map<List<GetProjectImageByPortfolioProjectIdDto>>(values);
         }
 
         public async Task UpdatePortfolioProjectAsync(UpdatePortfolioProjectDto updatePortfolioProjectDto)
