@@ -8,7 +8,6 @@
         public string Image { get; set; }  //CoverImage
         public string ProjectDescription { get; set; }
         public string ProjectStartDate { get; set; }
-        public ProjectImage ProjectImage { get; set; }
-        public int ProjectImageId { get; set; }
+        public ICollection<ProjectImage> Images { get; set; }
     }
 }

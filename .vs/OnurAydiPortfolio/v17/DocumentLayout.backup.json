@@ -7,24 +7,16 @@
       "RelativeMoniker": "D:0:0:{3C38F6BD-F306-4CB4-80C3-164FFC8FD864}|Backend\\MyPortfolio.WebApi\\MyPortfolio.WebApi.csproj|solutionrelative:backend\\myportfolio.webapi\\controllers\\portfolioprojectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C38F6BD-F306-4CB4-80C3-164FFC8FD864}|Backend\\MyPortfolio.WebApi\\MyPortfolio.WebApi.csproj|c:\\users\\onur\\desktop\\onuraydiportfolio\\backend\\myportfolio.webapi\\services\\portfolioprojectservices\\portfolioprojectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C38F6BD-F306-4CB4-80C3-164FFC8FD864}|Backend\\MyPortfolio.WebApi\\MyPortfolio.WebApi.csproj|solutionrelative:backend\\myportfolio.webapi\\services\\portfolioprojectservices\\portfolioprojectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C38F6BD-F306-4CB4-80C3-164FFC8FD864}|Backend\\MyPortfolio.WebApi\\MyPortfolio.WebApi.csproj|c:\\users\\onur\\desktop\\onuraydiportfolio\\backend\\myportfolio.webapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3C38F6BD-F306-4CB4-80C3-164FFC8FD864}|Backend\\MyPortfolio.WebApi\\MyPortfolio.WebApi.csproj|solutionrelative:backend\\myportfolio.webapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C38F6BD-F306-4CB4-80C3-164FFC8FD864}|Backend\\MyPortfolio.WebApi\\MyPortfolio.WebApi.csproj|c:\\users\\onur\\desktop\\onuraydiportfolio\\backend\\myportfolio.webapi\\services\\projectimageservices\\iprojectimageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C38F6BD-F306-4CB4-80C3-164FFC8FD864}|Backend\\MyPortfolio.WebApi\\MyPortfolio.WebApi.csproj|solutionrelative:backend\\myportfolio.webapi\\services\\projectimageservices\\iprojectimageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C38F6BD-F306-4CB4-80C3-164FFC8FD864}|Backend\\MyPortfolio.WebApi\\MyPortfolio.WebApi.csproj|c:\\users\\onur\\desktop\\onuraydiportfolio\\backend\\myportfolio.webapi\\services\\portfolioprojectservices\\iportfolioprojectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C38F6BD-F306-4CB4-80C3-164FFC8FD864}|Backend\\MyPortfolio.WebApi\\MyPortfolio.WebApi.csproj|solutionrelative:backend\\myportfolio.webapi\\services\\portfolioprojectservices\\iportfolioprojectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3C38F6BD-F306-4CB4-80C3-164FFC8FD864}|Backend\\MyPortfolio.WebApi\\MyPortfolio.WebApi.csproj|c:\\users\\onur\\desktop\\onuraydiportfolio\\backend\\myportfolio.webapi\\entites\\portfolioproject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C38F6BD-F306-4CB4-80C3-164FFC8FD864}|Backend\\MyPortfolio.WebApi\\MyPortfolio.WebApi.csproj|solutionrelative:backend\\myportfolio.webapi\\entites\\portfolioproject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C38F6BD-F306-4CB4-80C3-164FFC8FD864}|Backend\\MyPortfolio.WebApi\\MyPortfolio.WebApi.csproj|c:\\users\\onur\\desktop\\onuraydiportfolio\\backend\\myportfolio.webapi\\entites\\projectimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C38F6BD-F306-4CB4-80C3-164FFC8FD864}|Backend\\MyPortfolio.WebApi\\MyPortfolio.WebApi.csproj|solutionrelative:backend\\myportfolio.webapi\\entites\\projectimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C38F6BD-F306-4CB4-80C3-164FFC8FD864}|Backend\\MyPortfolio.WebApi\\MyPortfolio.WebApi.csproj|c:\\users\\onur\\desktop\\onuraydiportfolio\\backend\\myportfolio.webapi\\context\\portfoliocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C38F6BD-F306-4CB4-80C3-164FFC8FD864}|Backend\\MyPortfolio.WebApi\\MyPortfolio.WebApi.csproj|solutionrelative:backend\\myportfolio.webapi\\context\\portfoliocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,47 +26,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "PortfolioProject.cs",
               "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Backend\\MyPortfolio.WebApi\\Entites\\PortfolioProject.cs",
               "RelativeDocumentMoniker": "Backend\\MyPortfolio.WebApi\\Entites\\PortfolioProject.cs",
               "ToolTip": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Backend\\MyPortfolio.WebApi\\Entites\\PortfolioProject.cs",
               "RelativeToolTip": "Backend\\MyPortfolio.WebApi\\Entites\\PortfolioProject.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T11:31:52.987Z",
+              "WhenOpened": "2024-10-20T12:35:44.791Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PortfolioProjectService.cs",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Backend\\MyPortfolio.WebApi\\Services\\PortfolioProjectServices\\PortfolioProjectService.cs",
-              "RelativeDocumentMoniker": "Backend\\MyPortfolio.WebApi\\Services\\PortfolioProjectServices\\PortfolioProjectService.cs",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Backend\\MyPortfolio.WebApi\\Services\\PortfolioProjectServices\\PortfolioProjectService.cs",
-              "RelativeToolTip": "Backend\\MyPortfolio.WebApi\\Services\\PortfolioProjectServices\\PortfolioProjectService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABDAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ProjectImage.cs",
+              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Backend\\MyPortfolio.WebApi\\Entites\\ProjectImage.cs",
+              "RelativeDocumentMoniker": "Backend\\MyPortfolio.WebApi\\Entites\\ProjectImage.cs",
+              "ToolTip": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Backend\\MyPortfolio.WebApi\\Entites\\ProjectImage.cs",
+              "RelativeToolTip": "Backend\\MyPortfolio.WebApi\\Entites\\ProjectImage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T11:50:29.266Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IPortfolioProjectService.cs",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Backend\\MyPortfolio.WebApi\\Services\\PortfolioProjectServices\\IPortfolioProjectService.cs",
-              "RelativeDocumentMoniker": "Backend\\MyPortfolio.WebApi\\Services\\PortfolioProjectServices\\IPortfolioProjectService.cs",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Backend\\MyPortfolio.WebApi\\Services\\PortfolioProjectServices\\IPortfolioProjectService.cs",
-              "RelativeToolTip": "Backend\\MyPortfolio.WebApi\\Services\\PortfolioProjectServices\\IPortfolioProjectService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T11:50:29.986Z",
+              "WhenOpened": "2024-10-20T12:32:43.144Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
@@ -86,36 +64,27 @@
               "RelativeDocumentMoniker": "Backend\\MyPortfolio.WebApi\\Controllers\\PortfolioProjectsController.cs",
               "ToolTip": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Backend\\MyPortfolio.WebApi\\Controllers\\PortfolioProjectsController.cs",
               "RelativeToolTip": "Backend\\MyPortfolio.WebApi\\Controllers\\PortfolioProjectsController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwCcAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T06:52:58.175Z",
+              "WhenOpened": "2024-10-20T13:29:14.795Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "IProjectImageService.cs",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Backend\\MyPortfolio.WebApi\\Services\\ProjectImageServices\\IProjectImageService.cs",
-              "RelativeDocumentMoniker": "Backend\\MyPortfolio.WebApi\\Services\\ProjectImageServices\\IProjectImageService.cs",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Backend\\MyPortfolio.WebApi\\Services\\ProjectImageServices\\IProjectImageService.cs",
-              "RelativeToolTip": "Backend\\MyPortfolio.WebApi\\Services\\ProjectImageServices\\IProjectImageService.cs",
+              "Title": "PortfolioContext.cs",
+              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Backend\\MyPortfolio.WebApi\\Context\\PortfolioContext.cs",
+              "RelativeDocumentMoniker": "Backend\\MyPortfolio.WebApi\\Context\\PortfolioContext.cs",
+              "ToolTip": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Backend\\MyPortfolio.WebApi\\Context\\PortfolioContext.cs",
+              "RelativeToolTip": "Backend\\MyPortfolio.WebApi\\Context\\PortfolioContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T06:44:24.199Z",
+              "WhenOpened": "2024-10-20T13:26:50.11Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Backend\\MyPortfolio.WebApi\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Backend\\MyPortfolio.WebApi\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Backend\\MyPortfolio.WebApi\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Backend\\MyPortfolio.WebApi\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-20T06:40:05.254Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             }
           ]
         }

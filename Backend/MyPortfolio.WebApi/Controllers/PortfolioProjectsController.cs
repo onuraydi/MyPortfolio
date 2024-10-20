@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 using MyPortfolio.WebApi.Dtos.PortfolioProjectDtos;
 using MyPortfolio.WebApi.Dtos.ProjectImageDtos;
 using MyPortfolio.WebApi.Services.PortfolioProjectServices;
-using MyPortfolio.WebApi.Services.ProjectImageServices;
 
 namespace MyPortfolio.WebApi.Controllers
 {

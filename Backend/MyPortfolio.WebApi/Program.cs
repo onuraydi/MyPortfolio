@@ -11,7 +11,6 @@ using MyPortfolio.WebApi.Services.PortfolioMainTitleServices;
 using MyPortfolio.WebApi.Services.PortfolioProjectServices;
 using MyPortfolio.WebApi.Services.PortfolioSkillServices;
 using MyPortfolio.WebApi.Services.PortfolioTechnologyServices;
-using MyPortfolio.WebApi.Services.ProjectImageServices;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -36,7 +35,6 @@ builder.Services.AddScoped<IPortfolioTechnologyService, PortfolioTechnologyServi
 builder.Services.AddScoped<IPortfolioBlogService, PortfolioBlogService>();
 builder.Services.AddScoped<IPortfolioContactService, PortfolioContactService>();
 builder.Services.AddScoped<IPortfolioBlogCommentService, PortfolioBlogCommentService>();
-builder.Services.AddScoped<IProjectImageService, ProjectImageService>();
 
 
 

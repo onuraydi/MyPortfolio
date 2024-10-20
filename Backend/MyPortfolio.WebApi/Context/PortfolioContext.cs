@@ -19,5 +19,14 @@ namespace MyPortfolio.WebApi.Context
         public DbSet<PortfolioBlogComment> PortfolioComments { get; set; }
         public DbSet<PortfolioContact> portfolioContacts { get; set; }
         public DbSet<ProjectImage> ProjectImages { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<PortfolioProject>()
+                .HasMany(x => x.Images)
+                .WithOne(y => y.PortfolioProject)
+                .HasForeignKey(z => z.PortfolioProjectId)
+                .IsRequired(true);
+        }
     }
 }
