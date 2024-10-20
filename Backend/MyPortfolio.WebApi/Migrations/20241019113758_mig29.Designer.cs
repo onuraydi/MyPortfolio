@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyPortfolio.WebApi.Context;
 
@@ -11,9 +12,11 @@ using MyPortfolio.WebApi.Context;
 namespace MyPortfolio.WebApi.Migrations
 {
     [DbContext(typeof(PortfolioContext))]
-    partial class PortfolioContextModelSnapshot : ModelSnapshot
+    [Migration("20241019113758_mig29")]
+    partial class mig29
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -326,9 +329,6 @@ namespace MyPortfolio.WebApi.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ProjectImageId")
-                        .HasColumnType("int");
-
                     b.Property<string>("ProjectName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -342,8 +342,6 @@ namespace MyPortfolio.WebApi.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("PortfolioProjectId");
-
-                    b.HasIndex("ProjectImageId");
 
                     b.ToTable("portfolioProjects");
                 });
@@ -420,17 +418,6 @@ namespace MyPortfolio.WebApi.Migrations
                         .IsRequired();
 
                     b.Navigation("PortfolioBlog");
-                });
-
-            modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioProject", b =>
-                {
-                    b.HasOne("MyPortfolio.WebApi.Entites.ProjectImage", "ProjectImage")
-                        .WithMany()
-                        .HasForeignKey("ProjectImageId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("ProjectImage");
                 });
 #pragma warning restore 612, 618
         }

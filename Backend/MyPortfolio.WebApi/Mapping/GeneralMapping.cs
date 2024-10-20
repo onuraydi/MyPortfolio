@@ -10,6 +10,7 @@ using MyPortfolio.WebApi.Dtos.PortfolioMainTitleDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioProjectDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioSkillDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioTechnologyDtos;
+using MyPortfolio.WebApi.Dtos.ProjectImageDtos;
 using MyPortfolio.WebApi.Entites;
 
 namespace MyPortfolio.WebApi.Mapping
@@ -81,6 +82,11 @@ namespace MyPortfolio.WebApi.Mapping
             CreateMap<PortfolioBlogComment, CreatePortfolioBlogCommentDto>().ReverseMap();
             CreateMap<PortfolioBlogComment, GetPortfolioBlogCommentByPortfolioBlogCommentIdDto>().ReverseMap();
             CreateMap<PortfolioBlogComment, GetPortfolioBlogCommentByPortfolioBlogIdDto>().ReverseMap();
+
+            // Project Image
+            CreateMap<ProjectImage, GetProjectImageByPortfolioProjectIdDto>().ReverseMap();
+            CreateMap<ProjectImage, CreateProjectImageDto>().ReverseMap();
+            CreateMap<ProjectImage, UpdateProjectImageDto>().ReverseMap();
         }
     }
 }
