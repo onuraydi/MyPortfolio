@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Portfolio.DtoLayer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62ea05edbe4ba71b30f3908eb628ed89eb44e838")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88cd5b0ae70adc325467819890eaa97139dfa99e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Portfolio.DtoLayer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Portfolio.DtoLayer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using MyPortfolio.WebApi.Dtos.PortfolioProjectDtos;
 using MyPortfolio.WebApi.Dtos.ProjectImageDtos;
 using MyPortfolio.WebApi.Services.PortfolioProjectServices;
@@ -33,14 +31,14 @@ namespace MyPortfolio.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreatePortfolioProject(CreatePortfolioProjectDto createPortfolioProjectDto,CreateProjectImageDto createProjectImageDto)
+        public async Task<IActionResult> CreatePortfolioProject(CreatePortfolioProjectDto createPortfolioProjectDto )
         {
             await _portfolioProjectService.CreatePortfolioProjectAsync(createPortfolioProjectDto);
             return Ok("Proje başarıyla eklendi");
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdatePortfolioProject(UpdatePortfolioProjectDto updatePortfolioProjectDto)
+        public async Task<IActionResult> UpdatePortfolioProject(UpdatePortfolioProjectDto updatePortfolioProjectDto )
         {
             await _portfolioProjectService.UpdatePortfolioProjectAsync(updatePortfolioProjectDto);
             return Ok("Proje başarıyla güncellendi");

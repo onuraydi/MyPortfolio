@@ -33,7 +33,7 @@ namespace MyPortfolio.WebApi.Services.PortfolioMainTitleServices
         {
             var values = _mapper.Map<PortfolioMainTitle>(updatePortfoiloMainTitleDto);
             _context.PortfolioMainTitles.Update(values);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
     }
 }

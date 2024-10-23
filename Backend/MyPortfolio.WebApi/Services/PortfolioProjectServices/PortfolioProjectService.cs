@@ -2,7 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using MyPortfolio.WebApi.Context;
 using MyPortfolio.WebApi.Dtos.PortfolioProjectDtos;
+using MyPortfolio.WebApi.Dtos.ProjectImageDtos;
 using MyPortfolio.WebApi.Entites;
+using MyPortfolio.WebApi.Services.ProjectImagesServices;
 
 namespace MyPortfolio.WebApi.Services.PortfolioProjectServices
 {
@@ -10,7 +12,6 @@ namespace MyPortfolio.WebApi.Services.PortfolioProjectServices
     {
         private readonly PortfolioContext _context;
         private readonly IMapper _mapper;
-
 
         public PortfolioProjectService(PortfolioContext context, IMapper mapper)
         {
@@ -22,7 +23,7 @@ namespace MyPortfolio.WebApi.Services.PortfolioProjectServices
         {
             var values = _mapper.Map<PortfolioProject>(createPortfolioProjectDto);
             await _context.portfolioProjects.AddAsync(values);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
         public async Task DeletePortfolioProjectAsync(int id)
@@ -32,15 +33,16 @@ namespace MyPortfolio.WebApi.Services.PortfolioProjectServices
             _context.SaveChanges();
         }
 
-        public async Task<List<GetAllPortfolioProjectDto>> GetAllPortfolioProjectAsync()
+
+        public async Task<List<GetAllPortfolioProjectDto>> GetAllPortfolioProjectAsync()  
         {
-            var values = await _context.portfolioProjects.ToListAsync();
+            var values = await _context.portfolioProjects.Include(x => x.Images).ToListAsync();
             return _mapper.Map<List<GetAllPortfolioProjectDto>>(values);
         }
 
         public async Task<GetPortfolioProjectByPortfolioProjectIdDto> GetAllPortfolioProjectByPortfolioProjectIdAsync(int id)
         {
-            var values = await _context.portfolioProjects.FindAsync(id);
+            var values = await _context.portfolioProjects.Include(x => x.Images).FirstOrDefaultAsync(y => y.PortfolioProjectId == id);
             return _mapper.Map<GetPortfolioProjectByPortfolioProjectIdDto>(values);
         }
 

@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 using MyPortfolio.WebApi.Context;
 using MyPortfolio.WebApi.Services.PortfolioAboutMeServices;
 using MyPortfolio.WebApi.Services.PortfolioBlogCommentServices;
@@ -11,6 +12,7 @@ using MyPortfolio.WebApi.Services.PortfolioMainTitleServices;
 using MyPortfolio.WebApi.Services.PortfolioProjectServices;
 using MyPortfolio.WebApi.Services.PortfolioSkillServices;
 using MyPortfolio.WebApi.Services.PortfolioTechnologyServices;
+using MyPortfolio.WebApi.Services.ProjectImagesServices;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -35,7 +37,7 @@ builder.Services.AddScoped<IPortfolioTechnologyService, PortfolioTechnologyServi
 builder.Services.AddScoped<IPortfolioBlogService, PortfolioBlogService>();
 builder.Services.AddScoped<IPortfolioContactService, PortfolioContactService>();
 builder.Services.AddScoped<IPortfolioBlogCommentService, PortfolioBlogCommentService>();
-
+builder.Services.AddScoped<IProjectImageService,ProjectImageService>();
 
 
 
@@ -45,7 +47,11 @@ builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+});
+
 
 var app = builder.Build();
 

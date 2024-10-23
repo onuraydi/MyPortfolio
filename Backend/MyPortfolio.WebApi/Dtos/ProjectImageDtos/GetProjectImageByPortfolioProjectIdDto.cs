@@ -4,5 +4,6 @@
     {
         public int ProjectImageId { get; set; }
         public string Image { get; set; }
+        public int PortfolioProjectId { get; set; }
     }
 }

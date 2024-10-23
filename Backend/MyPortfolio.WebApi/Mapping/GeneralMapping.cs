@@ -54,10 +54,10 @@ namespace MyPortfolio.WebApi.Mapping
             CreateMap<PortfolioEducation, GetPortfolioEducationByPortfolioEducationId>().ReverseMap();
 
             // Project
-            CreateMap<PortfolioProject, GetAllPortfolioProjectDto>().ReverseMap();
-            CreateMap<PortfolioProject, CreatePortfolioProjectDto>().ReverseMap();
-            CreateMap<PortfolioProject, UpdatePortfolioProjectDto>().ReverseMap();
-            CreateMap<PortfolioProject, GetPortfolioProjectByPortfolioProjectIdDto>().ReverseMap();
+            CreateMap<PortfolioProject, GetAllPortfolioProjectDto>().ForMember(x => x.projectImages, opt => opt.MapFrom(src => src.Images)).ReverseMap();
+            CreateMap<PortfolioProject, CreatePortfolioProjectDto>().ForMember(x => x.projectImages, opt => opt.MapFrom(src => src.Images)).ReverseMap();
+            CreateMap<PortfolioProject, UpdatePortfolioProjectDto>().ForMember(x => x.projectImages, opt => opt.MapFrom(src => src.Images)).ReverseMap();
+            CreateMap<PortfolioProject, GetPortfolioProjectByPortfolioProjectIdDto>().ForMember(x => x.projectImages, opt => opt.MapFrom(src => src.Images)).ReverseMap(); 
 
             // Technology
             CreateMap<PortfolioTechnology, GetAllPortfolioTechnologyDto>().ReverseMap();

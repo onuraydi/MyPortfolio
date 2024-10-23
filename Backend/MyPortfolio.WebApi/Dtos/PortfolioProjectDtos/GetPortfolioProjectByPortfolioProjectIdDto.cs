@@ -1,4 +1,7 @@
-﻿namespace MyPortfolio.WebApi.Dtos.PortfolioProjectDtos
+﻿using MyPortfolio.WebApi.Dtos.ProjectImageDtos;
+using MyPortfolio.WebApi.Entites;
+
+namespace MyPortfolio.WebApi.Dtos.PortfolioProjectDtos
 {
     public class GetPortfolioProjectByPortfolioProjectIdDto
     {
@@ -8,5 +11,6 @@
         public string Image { get; set; }  //CoverImage
         public string ProjectDescription { get; set; }
         public string ProjectStartDate { get; set; }
+        public List<GetProjectImageByPortfolioProjectIdDto> projectImages { get; set; } = new List<GetProjectImageByPortfolioProjectIdDto>();
     }
 }
