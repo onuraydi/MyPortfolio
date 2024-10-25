@@ -11,6 +11,7 @@ namespace MyPortfolio.WebApi.Dtos.PortfolioProjectDtos
         public string Image { get; set; }  //CoverImage
         public string ProjectDescription { get; set; }
         public string ProjectStartDate { get; set; }
+        public string ProjectFinishDate { get; set; }
         public List<UpdateProjectImageDto> projectImages { get; set; } = new List<UpdateProjectImageDto>();
     }
 }

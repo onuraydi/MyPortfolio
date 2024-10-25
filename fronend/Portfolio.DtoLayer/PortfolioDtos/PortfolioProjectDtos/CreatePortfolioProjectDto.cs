@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Portfolio.DtoLayer.PortfolioDtos.ProjectImageDtos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,5 +14,7 @@ namespace Portfolio.DtoLayer.PortfolioDtos.PortfolioProjectDtos
         public string Image { get; set; }  //CoverImage
         public string ProjectDescription { get; set; }
         public string ProjectStartDate { get; set; }
+        public string ProjectFinishDate { get; set; }
+        public List<CreateProjectImageDto> projectImages { get; set; } = new List<CreateProjectImageDto>();
     }
 }

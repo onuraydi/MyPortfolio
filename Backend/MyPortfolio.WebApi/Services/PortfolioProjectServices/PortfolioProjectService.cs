@@ -4,7 +4,6 @@ using MyPortfolio.WebApi.Context;
 using MyPortfolio.WebApi.Dtos.PortfolioProjectDtos;
 using MyPortfolio.WebApi.Dtos.ProjectImageDtos;
 using MyPortfolio.WebApi.Entites;
-using MyPortfolio.WebApi.Services.ProjectImagesServices;
 
 namespace MyPortfolio.WebApi.Services.PortfolioProjectServices
 {

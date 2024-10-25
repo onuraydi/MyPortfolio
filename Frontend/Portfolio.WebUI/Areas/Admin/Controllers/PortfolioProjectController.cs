@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Portfolio.DtoLayer.PortfolioDtos.PortfolioProjectDtos;
+using Portfolio.WebUI.Services.ImageUploadServices.ImageUploadServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioProjectServices;
 
 namespace Portfolio.WebUI.Areas.Admin.Controllers
@@ -9,10 +10,12 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
     public class PortfolioProjectController : Controller
     {
         private readonly IPortfolioProjectService _portfolioProjectService;
+        private readonly IImageUploadService _imageUploadService;
 
-        public PortfolioProjectController(IPortfolioProjectService portfolioProjectService)
+        public PortfolioProjectController(IPortfolioProjectService portfolioProjectService, IImageUploadService imageUploadService)
         {
             _portfolioProjectService = portfolioProjectService;
+            _imageUploadService = imageUploadService;
         }
 
         [HttpGet]
@@ -32,8 +35,10 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 
         [HttpPost]
         [Route("CreatePortfolioProject")]
-        public async Task<IActionResult> CreatePortfolioProject(CreatePortfolioProjectDto createPortfolioProjectDto)
+        public async Task<IActionResult> CreatePortfolioProject(CreatePortfolioProjectDto createPortfolioProjectDto,List<IFormFile> projectImages)
         {
+            var uploadingImages = await _imageUploadService.UploadManyImageAsync(projectImages);
+            createPortfolioProjectDto.projectImages = uploadingImages;
             await _portfolioProjectService.CreatePortfolioProjectAsync(createPortfolioProjectDto);
             return RedirectToAction("GetAllPortfolioProject", "PortfolioProject", new { area = "Admin" });
         }

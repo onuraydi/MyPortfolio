@@ -8,6 +8,7 @@
         public string Image { get; set; }  //CoverImage
         public string ProjectDescription { get; set; }
         public string ProjectStartDate { get; set; }
+        public string ProjectFinishDate { get; set; }
         public List<ProjectImage> Images { get; set; }
 
         public PortfolioProject() 
