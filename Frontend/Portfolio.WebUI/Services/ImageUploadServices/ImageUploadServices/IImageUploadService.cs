@@ -6,5 +6,6 @@ namespace Portfolio.WebUI.Services.ImageUploadServices.ImageUploadServices
     {
         Task<string> UploadImageAsync(IFormFile image);
         Task<List<CreateProjectImageDto>> UploadManyImageAsync(List<IFormFile> images);   
+        Task<List<UpdateProjectImageDto>> UpdateManyImageAsync(List<IFormFile> images);
     }
 }

@@ -30,10 +30,10 @@ namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioProjectServices
             return values;
         }
 
-        public async Task<GetPortfolioProjectByPortfolioProjectIdDto> GetAllPortfolioProjectByPortfolioProjectIdAsync(int id)
+        public async Task<UpdatePortfolioProjectDto> GetAllPortfolioProjectByPortfolioProjectIdAsync(int id)
         {
             var responseMessage = await _httpClient.GetAsync("portfolioprojects/" + id);
-            var values = await responseMessage.Content.ReadFromJsonAsync<GetPortfolioProjectByPortfolioProjectIdDto>();
+            var values = await responseMessage.Content.ReadFromJsonAsync<UpdatePortfolioProjectDto>();
             return values;
         }
 

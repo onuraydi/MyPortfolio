@@ -12,6 +12,38 @@ namespace Portfolio.WebUI.Services.ImageUploadServices.ImageUploadServices
             _webHostEnvironment = webHostEnvironment;
         }
 
+        public async Task<List<UpdateProjectImageDto>> UpdateManyImageAsync(List<IFormFile> images)
+        {
+            var uploadPath = Path.Combine(_webHostEnvironment.WebRootPath, "ProjectUploads");
+            if (!Directory.Exists(uploadPath))
+            {
+                Directory.CreateDirectory(uploadPath);
+            }
+
+            var imagePaths = new List<UpdateProjectImageDto>();
+
+            foreach (var image in images)
+            {
+
+                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(image.FileName);
+                var filePath = Path.Combine(uploadPath, fileName);
+
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await image.CopyToAsync(fileStream);
+                }
+
+                var imagesDto = new UpdateProjectImageDto()
+                {
+                    Image = Path.Combine("/projectuploads/", fileName),
+                };
+
+                imagePaths.Add(imagesDto);
+            }
+
+            return imagePaths;
+        }
+
         public async Task<string> UploadImageAsync(IFormFile image)
         {
             var uploadPath = Path.Combine(_webHostEnvironment.WebRootPath, "Uploads");

@@ -60,8 +60,38 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 
         [HttpPost]
         [Route("UpdatePortfolioProject/{id}")]
-        public async Task<IActionResult> UpdatePortfolioProject(UpdatePortfolioProjectDto updatePortfolioProjectDto)
+        public async Task<IActionResult> UpdatePortfolioProject(UpdatePortfolioProjectDto updatePortfolioProjectDto,List<IFormFile> projectImages, IFormFile image)
         {
+            if (image != null && image.Length > 0)
+            {
+                var uploadedImage = await _imageUploadService.UploadImageAsync(image);
+                updatePortfolioProjectDto.Image = uploadedImage;
+            }
+
+            else
+            {
+                var existingData = await _portfolioProjectService.GetAllPortfolioProjectByPortfolioProjectIdAsync(updatePortfolioProjectDto.PortfolioProjectId);
+                if (existingData != null)
+                {
+                    updatePortfolioProjectDto.Image = existingData.Image;
+                }
+            }
+
+
+            if(projectImages != null)
+            {
+                var uploadedImages = await _imageUploadService.UpdateManyImageAsync(projectImages);
+                updatePortfolioProjectDto.projectImages.AddRange(uploadedImages);
+            }
+            else
+            {
+                var existingData = await _portfolioProjectService.GetAllPortfolioProjectByPortfolioProjectIdAsync(updatePortfolioProjectDto.PortfolioProjectId);
+                if(existingData != null)
+                {
+                    updatePortfolioProjectDto.projectImages = existingData.projectImages;
+                }
+            }
+
             await _portfolioProjectService.UpdatePortfolioProjectAsync(updatePortfolioProjectDto);
             return RedirectToAction("GetAllPortfolioProject", "PortfolioProject",new {area="Admin"});
         }

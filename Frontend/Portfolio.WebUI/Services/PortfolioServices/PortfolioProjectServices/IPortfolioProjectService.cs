@@ -8,6 +8,6 @@ namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioProjectServices
         Task CreatePortfolioProjectAsync(CreatePortfolioProjectDto createPortfolioProjectDto);
         Task UpdatePortfolioProjectAsync(UpdatePortfolioProjectDto updatePortfolioProjectDto);
         Task DeletePortfolioProjectAsync(int id);
-        Task<GetPortfolioProjectByPortfolioProjectIdDto> GetAllPortfolioProjectByPortfolioProjectIdAsync(int id);
+        Task<UpdatePortfolioProjectDto> GetAllPortfolioProjectByPortfolioProjectIdAsync(int id);
     }
 }
