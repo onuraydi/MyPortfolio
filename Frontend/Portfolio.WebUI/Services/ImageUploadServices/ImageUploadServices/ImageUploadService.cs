@@ -34,7 +34,7 @@ namespace Portfolio.WebUI.Services.ImageUploadServices.ImageUploadServices
 
         public async Task<List<CreateProjectImageDto>> UploadManyImageAsync(List<IFormFile> images)
         {
-            var uploadPath = Path.Combine(_webHostEnvironment.WebRootPath,"Uploads");
+            var uploadPath = Path.Combine(_webHostEnvironment.WebRootPath,"ProjectUploads");
             if (!Directory.Exists(uploadPath))
             {
                 Directory.CreateDirectory(uploadPath);
@@ -55,7 +55,7 @@ namespace Portfolio.WebUI.Services.ImageUploadServices.ImageUploadServices
 
                 var imagesDto = new CreateProjectImageDto()
                 {
-                    Image = Path.Combine("/uploads/", fileName),
+                    Image = Path.Combine("/projectuploads/", fileName),
                 };
 
                 imagePaths.Add(imagesDto);

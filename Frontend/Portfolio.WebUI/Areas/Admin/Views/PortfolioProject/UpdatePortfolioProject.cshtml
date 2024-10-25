@@ -7,9 +7,9 @@
 <div class="col-lg-12 grid-margin stretch-card" style="background-color: #191c24">
     <div class="card-body">
         <h4 class="card-title">Projeler</h4>
-        <p class="card-description">Proje Ekleme Sayfası</p>
-        <form class="forms-sample" method="post">
-            <input type="hidden" asp-for="PortfolioProjectId"/>
+        <p class="card-description">Proje Güncelleme Sayfası</p>
+        <form class="forms-sample" method="post" enctype="multipart/form-data">
+            <input type="hidden" asp-for="PortfolioProjectId" />
             <div class="form-group">
                 <label for="Title">Proje Adı</label>
                 <input type="text" class="form-control" asp-for="ProjectName" placeholder="Proje Adı" />
@@ -19,16 +19,35 @@
                 <input type="text" class="form-control" asp-for="ProjectRole" placeholder="Projedeki Rol" />
             </div>
             <div class="form-group">
+                <label for="Title">Kapak Resmi</label>
+                <input type="text" class="form-control" asp-for="Image" placeholder="Kapak Resmi" />
+            </div>
+            <div class="form-group">
                 <label for="Title">Projeye Başlama Tarihi</label>
                 <input type="text" class="form-control" asp-for="ProjectStartDate" placeholder="Projeye Başlama Tarihi" />
+            </div>
+            <div class="form-group">
+                <label for="Title">Projeye Bitiş Tarihi</label>
+                <input type="text" class="form-control" asp-for="ProjectFinishDate" placeholder="Projeye Bitiş Tarihi" />
             </div>
             <div class="form-group">
                 <label for="Title">Proje Açıklaması</label>
                 <textarea class="form-control" asp-for="ProjectDescription" rows="5" placeholder="Proje Açıklaması"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary mr-2">Ekle</button>
+
+            <!-- bu kısımda resimleri göstermeli ve teker teker güncelletmeli -->
+            <div class="form-group">
+                <label for="image" class="text-white">Proje Resimleri(Birden fazla yüklenebilir)</label>
+                <div class="input-group">
+                    <input type="file" id="image" asp-for="projectImages" class="form-control file-upload-default" multiple />
+                    <input type="text" class="form-control file-upload-info" disabled placeholder="Projeye ait Resimler" />
+                    <span class="input-group-append">
+                        <button class="btn btn-primary" type="button" onclick="document.getElementById('image').click()">Yükle</button>
+                    </span>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary mr-2">Güncelle</button>
             <button class="btn btn-info">Geri</button>
         </form>
     </div>
 </div>
-
