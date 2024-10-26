@@ -1,4 +1,5 @@
 ﻿using Portfolio.DtoLayer.PortfolioDtos.PortfolioProjectDtos;
+using Portfolio.DtoLayer.PortfolioDtos.ProjectImageDtos;
 
 namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioProjectServices
 {

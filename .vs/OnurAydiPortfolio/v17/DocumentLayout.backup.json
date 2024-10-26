@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\onuraydiportfolio\\frontend\\portfolio.webui\\areas\\admin\\controllers\\portfolioprojectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\areas\\admin\\controllers\\portfolioprojectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\onuraydiportfolio\\frontend\\portfolio.webui\\areas\\admin\\views\\portfolioproject\\updateportfolioproject.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\areas\\admin\\views\\portfolioproject\\updateportfolioproject.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\onuraydiportfolio\\frontend\\portfolio.webui\\areas\\admin\\controllers\\portfolioprojectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\areas\\admin\\controllers\\portfolioprojectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\onuraydiportfolio\\frontend\\portfolio.webui\\services\\imageuploadservices\\imageuploadservices\\imageuploadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\services\\imageuploadservices\\imageuploadservices\\imageuploadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 238,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,26 +34,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "ImageUploadService.cs",
+              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Services\\ImageUploadServices\\ImageUploadServices\\ImageUploadService.cs",
+              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Services\\ImageUploadServices\\ImageUploadServices\\ImageUploadService.cs",
+              "ToolTip": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Services\\ImageUploadServices\\ImageUploadServices\\ImageUploadService.cs",
+              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Services\\ImageUploadServices\\ImageUploadServices\\ImageUploadService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T13:30:02.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "UpdatePortfolioProject.cshtml",
               "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Areas\\Admin\\Views\\PortfolioProject\\UpdatePortfolioProject.cshtml",
               "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Areas\\Admin\\Views\\PortfolioProject\\UpdatePortfolioProject.cshtml",
               "ToolTip": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Areas\\Admin\\Views\\PortfolioProject\\UpdatePortfolioProject.cshtml",
               "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Areas\\Admin\\Views\\PortfolioProject\\UpdatePortfolioProject.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAqwDUAAAB3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-25T12:08:29.819Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "PortfolioProjectController.cs",
               "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Areas\\Admin\\Controllers\\PortfolioProjectController.cs",
               "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Areas\\Admin\\Controllers\\PortfolioProjectController.cs",
               "ToolTip": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Areas\\Admin\\Controllers\\PortfolioProjectController.cs",
               "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Areas\\Admin\\Controllers\\PortfolioProjectController.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAADgvyYAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAowFQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T12:21:31.26Z",
               "EditorCaption": ""

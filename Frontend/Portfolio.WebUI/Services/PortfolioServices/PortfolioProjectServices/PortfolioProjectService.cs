@@ -41,5 +41,6 @@ namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioProjectServices
         {
             await _httpClient.PutAsJsonAsync("portfolioprojects", updatePortfolioProjectDto);
         }
+
     }
 }

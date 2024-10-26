@@ -14,7 +14,7 @@ namespace Portfolio.WebUI.Services.ImageUploadServices.ImageUploadServices
 
         public async Task<List<UpdateProjectImageDto>> UpdateManyImageAsync(List<IFormFile> images)
         {
-            var uploadPath = Path.Combine(_webHostEnvironment.WebRootPath, "ProjectUploads");
+            var uploadPath = Path.Combine(_webHostEnvironment.WebRootPath, "Uploads");
             if (!Directory.Exists(uploadPath))
             {
                 Directory.CreateDirectory(uploadPath);
@@ -35,7 +35,7 @@ namespace Portfolio.WebUI.Services.ImageUploadServices.ImageUploadServices
 
                 var imagesDto = new UpdateProjectImageDto()
                 {
-                    Image = Path.Combine("/projectuploads/", fileName),
+                    Image = Path.Combine("/uploads/", fileName),
                 };
 
                 imagePaths.Add(imagesDto);
@@ -66,7 +66,7 @@ namespace Portfolio.WebUI.Services.ImageUploadServices.ImageUploadServices
 
         public async Task<List<CreateProjectImageDto>> UploadManyImageAsync(List<IFormFile> images)
         {
-            var uploadPath = Path.Combine(_webHostEnvironment.WebRootPath,"ProjectUploads");
+            var uploadPath = Path.Combine(_webHostEnvironment.WebRootPath, "Uploads");
             if (!Directory.Exists(uploadPath))
             {
                 Directory.CreateDirectory(uploadPath);
@@ -87,7 +87,7 @@ namespace Portfolio.WebUI.Services.ImageUploadServices.ImageUploadServices
 
                 var imagesDto = new CreateProjectImageDto()
                 {
-                    Image = Path.Combine("/projectuploads/", fileName),
+                    Image = Path.Combine("/uploads/", fileName),
                 };
 
                 imagePaths.Add(imagesDto);

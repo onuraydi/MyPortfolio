@@ -49,7 +49,6 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
             return RedirectToAction("GetAllPortfolioProject", "PortfolioProject", new { area = "Admin" });
         }
 
-
         [HttpGet]
         [Route("UpdatePortfolioProject/{id}")]
         public async Task<IActionResult> UpdatePortfolioProject(int id)
@@ -57,10 +56,10 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
             var values = await _portfolioProjectService.GetAllPortfolioProjectByPortfolioProjectIdAsync(id);
             return View(values);
         }
-
+        
         [HttpPost]
         [Route("UpdatePortfolioProject/{id}")]
-        public async Task<IActionResult> UpdatePortfolioProject(UpdatePortfolioProjectDto updatePortfolioProjectDto,List<IFormFile> projectImages, IFormFile image)
+        public async Task<IActionResult> UpdatePortfolioProject(UpdatePortfolioProjectDto updatePortfolioProjectDto,List<IFormFile> projectImages, IFormFile image, int projectImageId)
         {
             if (image != null && image.Length > 0)
             {
@@ -78,7 +77,7 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
             }
 
 
-            if(projectImages != null)
+            if(projectImages != null && projectImages.Count > 0) 
             {
                 var uploadedImages = await _imageUploadService.UpdateManyImageAsync(projectImages);
                 updatePortfolioProjectDto.projectImages.AddRange(uploadedImages);
@@ -91,7 +90,6 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
                     updatePortfolioProjectDto.projectImages = existingData.projectImages;
                 }
             }
-
             await _portfolioProjectService.UpdatePortfolioProjectAsync(updatePortfolioProjectDto);
             return RedirectToAction("GetAllPortfolioProject", "PortfolioProject",new {area="Admin"});
         }
