@@ -10,5 +10,9 @@ namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioProjectServices
         Task UpdatePortfolioProjectAsync(UpdatePortfolioProjectDto updatePortfolioProjectDto);
         Task DeletePortfolioProjectAsync(int id);
         Task<UpdatePortfolioProjectDto> GetAllPortfolioProjectByPortfolioProjectIdAsync(int id);
+
+        Task DeleteProjectImagesByProjectImageIdAsync(int id);
+        Task UpdateProjectImageAsync(GetProjectImageByPortfolioProjectIdDto getProjectImageByPortfolioProjectIdDto);
+        Task<List<GetProjectImageByPortfolioProjectIdDto>> GetProjectImageByPortfolioProjectIdAsync(int id);
     }
 }

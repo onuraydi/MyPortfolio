@@ -56,10 +56,11 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
             var values = await _portfolioProjectService.GetAllPortfolioProjectByPortfolioProjectIdAsync(id);
             return View(values);
         }
-        
+
+
         [HttpPost]
         [Route("UpdatePortfolioProject/{id}")]
-        public async Task<IActionResult> UpdatePortfolioProject(UpdatePortfolioProjectDto updatePortfolioProjectDto,List<IFormFile> projectImages, IFormFile image, int projectImageId)
+        public async Task<IActionResult> UpdatePortfolioProject(UpdatePortfolioProjectDto updatePortfolioProjectDto, IFormFile image)
         {
             if (image != null && image.Length > 0)
             {
@@ -75,31 +76,60 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
                     updatePortfolioProjectDto.Image = existingData.Image;
                 }
             }
-
-
-            if(projectImages != null && projectImages.Count > 0) 
-            {
-                var uploadedImages = await _imageUploadService.UpdateManyImageAsync(projectImages);
-                updatePortfolioProjectDto.projectImages.AddRange(uploadedImages);
-            }
-            else
-            {
-                var existingData = await _portfolioProjectService.GetAllPortfolioProjectByPortfolioProjectIdAsync(updatePortfolioProjectDto.PortfolioProjectId);
-                if(existingData != null)
-                {
-                    updatePortfolioProjectDto.projectImages = existingData.projectImages;
-                }
-            }
             await _portfolioProjectService.UpdatePortfolioProjectAsync(updatePortfolioProjectDto);
-            return RedirectToAction("GetAllPortfolioProject", "PortfolioProject",new {area="Admin"});
+            return RedirectToAction("GetAllPortfolioProject", "PortfolioProject", new { area = "Admin" });
         }
 
-        [HttpDelete("{id}")]
+        
+        [HttpGet]
+        [Route("UpdateProjectImages/{id}")]
+        public async Task<IActionResult> UpdateProjectImages(int id)
+        {
+            var values = await _portfolioProjectService.GetProjectImageByPortfolioProjectIdAsync(id);
+            ViewBag.projectid = id;
+            return View(values);
+        }
+
+
+        [HttpPost]
+        [Route("UpdateProjectImages/{id}")]
+        public async Task<IActionResult> UpdateProjectImages(GetProjectImageByPortfolioProjectIdDto updateProjectImageDto, IFormFile projectImages, int ProjectImageId, int PortfolioProjectId)
+        {
+            if (projectImages != null && projectImages.Length > 0)
+            {
+                var uploadedImages = await _imageUploadService.UpdateManyImageAsync(projectImages);
+                uploadedImages.PortfolioProjectId = PortfolioProjectId;
+                uploadedImages.ProjectImageId = ProjectImageId;
+                updateProjectImageDto = uploadedImages;
+            }
+            await _portfolioProjectService.UpdateProjectImageAsync(updateProjectImageDto);
+            return RedirectToAction("UpdateProjectImages", "PortfolioProject", new { area = "Admin" });
+
+            //else
+            //{
+            //    var existingData = await _portfolioProjectService.GetAllPortfolioProjectByPortfolioProjectIdAsync(updateProjectImageDto.PortfolioProjectId);
+            //    if (existingData != null)
+            //    {
+            //        updatePortfolioProjectDto.projectImages = existingData.projectImages;
+            //    }
+            //}
+        }
+
+        [HttpDelete("PortfolioProject/{id}")]
         [Route("DeletePortfolioProject/{id}")]
         public async Task<IActionResult> DeletePortfolioProject(int id)
         {
             await _portfolioProjectService.DeletePortfolioProjectAsync(id);
             return RedirectToAction("GetAllPortfolioProject", "PortfolioProject", new { area = "Admin" });
         }
+
+        [HttpDelete("ProjectImage/{id}")]
+        [Route("DeleteProjectImage/{id}")]
+        public async Task<IActionResult> DeleteProjectImage(int id)
+        {
+            await _portfolioProjectService.DeleteProjectImagesByProjectImageIdAsync(id); 
+            return RedirectToAction("UpdateProjectImages", "PortfolioProject", new { area = "Admin" });
+        }
+
     }
 }

@@ -1,0 +1,33 @@
+﻿@model List<Portfolio.DtoLayer.PortfolioDtos.ProjectImageDtos.GetProjectImageByPortfolioProjectIdDto>
+
+@{
+    ViewData["Title"] = "UpdateProjectImages";
+    Layout = "~/Areas/Admin/Views/AdminLayout/AdminLayout.cshtml";
+}
+
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    @foreach (var item in Model)
+            {
+        <form method="post" enctype="multipart/form-data" name="UpdatePortfolioProject">
+            <div class="col stretch-card mb-4">
+                <div class="card" style="background-color: #191c24 ">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="hidden" name="ProjectImageId" asp-for="@item.ProjectImageId" />
+                                <input type="hidden" name="PortfolioProjectId" asp-for="@item.PortfolioProjectId" />
+                                <img src="@item.Image" alt="güncellenecek resim" style="width:300px;height:200px; display:block; margin: 0 auto" />
+                            </div>
+                            <input type="file" id="projectImages" name="projectImages" asp-for="@item.Image" class="form-control" />
+                            <button type="submit" class="btn btn-primary">Güncelle</button>
+                            <a href="/Admin/PortfolioProject/DeleteProjectImage/@item.ProjectImageId" class="btn btn-danger">Sil</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    }
+    
+</div>
+<a href="/Admin/PortfolioProject/UpdatePortfolioProject/@ViewBag.projectid" class="btn btn-info">Geri</a>

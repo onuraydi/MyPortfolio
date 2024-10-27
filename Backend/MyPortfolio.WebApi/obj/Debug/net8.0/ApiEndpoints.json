@@ -780,5 +780,53 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.ProjectImagesController",
+    "Method": "DeleteProjectImagesByProjectImageId",
+    "RelativePath": "api/ProjectImages",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.ProjectImagesController",
+    "Method": "UpdateProjectImage",
+    "RelativePath": "api/ProjectImages",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateProjectImageDto",
+        "Type": "MyPortfolio.WebApi.Dtos.ProjectImageDtos.UpdateProjectImageDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.ProjectImagesController",
+    "Method": "GetProjectImagesByPortfolioProjectId",
+    "RelativePath": "api/ProjectImages/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

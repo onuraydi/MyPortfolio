@@ -1,0 +1,1 @@
+image için backendde servis yaz sonra onu kullanarak hallet

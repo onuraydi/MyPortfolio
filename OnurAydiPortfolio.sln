@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{0061BE88-18F3-4A98-9FFE-71D017338101}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fronend", "Fronend", "{C90D1C5B-FC52-426A-9A0E-51CEDBE09D79}"
+	ProjectSection(SolutionItems) = preProject
+		TextFile1.txt = TextFile1.txt
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyPortfolio.WebApi", "Backend\MyPortfolio.WebApi\MyPortfolio.WebApi.csproj", "{3C38F6BD-F306-4CB4-80C3-164FFC8FD864}"
 EndProject

@@ -12,36 +12,29 @@ namespace Portfolio.WebUI.Services.ImageUploadServices.ImageUploadServices
             _webHostEnvironment = webHostEnvironment;
         }
 
-        public async Task<List<UpdateProjectImageDto>> UpdateManyImageAsync(List<IFormFile> images)
+        public async Task<GetProjectImageByPortfolioProjectIdDto> UpdateManyImageAsync(IFormFile image)
         {
             var uploadPath = Path.Combine(_webHostEnvironment.WebRootPath, "Uploads");
+
             if (!Directory.Exists(uploadPath))
             {
                 Directory.CreateDirectory(uploadPath);
             }
 
-            var imagePaths = new List<UpdateProjectImageDto>();
+            var fileName = Guid.NewGuid().ToString() + Path.GetExtension(image.FileName);
+            var filePath = Path.Combine(uploadPath, fileName);
 
-            foreach (var image in images)
+            using (var filestream = new FileStream(filePath, FileMode.Create))
             {
-
-                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(image.FileName);
-                var filePath = Path.Combine(uploadPath, fileName);
-
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
-                {
-                    await image.CopyToAsync(fileStream);
-                }
-
-                var imagesDto = new UpdateProjectImageDto()
-                {
-                    Image = Path.Combine("/uploads/", fileName),
-                };
-
-                imagePaths.Add(imagesDto);
+                await image.CopyToAsync(filestream);
             }
 
-            return imagePaths;
+            var result = new GetProjectImageByPortfolioProjectIdDto
+            {
+                Image = Path.Combine("/uploads/", fileName) // DTO'nun ImagePath veya uygun alanını ayarlayın.
+            };
+
+            return result;
         }
 
         public async Task<string> UploadImageAsync(IFormFile image)
