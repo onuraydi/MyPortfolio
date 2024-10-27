@@ -6,16 +6,16 @@
     <div class="container">
         <div class="row justify-content-center pb-5">
             <div class="col-md-12 heading-section text-center ftco-animate">
-                <h1 class="big big-2">Projects</h1>
-                <h2 class="mb-4">Our Projects</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                <h1 class="big big-2">Projelerim</h1>
+                <h2 class="mb-4">Rol aldığım Projeler</h2>
+                <p>Bu kısımda rol aldığım ve tek başıma yaptığım projeler yer alıyor. (İlerleyen Zamanlarda projeye ait diğer detayların gösterilmesi adına blog kısmı gibi bir kısım oluşturulup projenin resimleri ve diğer detayları eklenecek)</p>
             </div>
         </div>
         <div class="row">
             @foreach (var item in Model)
             {
                 <div class="col-md-6">
-                    <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url('@Url.Content("~/clark-master/images/project-4.jpg")');">
+                    <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url('@Url.Content(item.Image)');">
                         <div class="overlay"></div>
                         <div class="text text-center p-4">
                             <h3><a href="#">@item.ProjectName</a></h3>
@@ -27,3 +27,5 @@
         </div>
     </div>
 </section>
+
+<!--  Daha sonraki zamanlarda proje detayları kısmı oluşturularak orada diğer detaylar ve projeye ait resimler gözükecek  -->
