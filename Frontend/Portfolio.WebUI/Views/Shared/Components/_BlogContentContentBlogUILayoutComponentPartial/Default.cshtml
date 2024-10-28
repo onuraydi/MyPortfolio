@@ -1,11 +1,22 @@
 ﻿@model GetPortfolioBlogByPortfolioBlogIdDto
 
+<link href="~/css/quill.css" rel="stylesheet" />
 
-
+<style>
+    /* Yalnızca kod bloklarının görünümünü değiştirmek için */
+    .ql-syntax {
+        background-color: #2e3440;
+        color: #d8dee9;
+        padding: 12px;
+        border-radius: 6px;
+        font-family: monospace;
+        font-size: 14px;
+    }
+</style>
 
 <div>
     <h2 class="mb-3">@Model.Title</h2>
-    <div id="blog-content">@Html.Raw(Model.Content)</div>
+    <div id="blog-content" class="content">@Html.Raw(Model.Content)</div>
         
     
     <div class="tag-widget post-tag-container mb-5 mt-5">

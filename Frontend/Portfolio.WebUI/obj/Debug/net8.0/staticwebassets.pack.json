@@ -4417,6 +4417,10 @@
       "PackagePath": "staticwebassets\\clark-master\\single.html"
     },
     {
+      "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\css\\quill.css",
+      "PackagePath": "staticwebassets\\css\\quill.css"
+    },
+    {
       "Id": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
