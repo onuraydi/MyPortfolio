@@ -45,7 +45,6 @@
 </div>
 
 
-
 <script>
     // Yazı tipi ve boyut seçeneklerini tanımla
 
@@ -68,7 +67,7 @@
         [{ 'color': [] }, { 'background': [] }],
         [{ 'script': 'sub' }, { 'script': 'super' }],
         [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-        ['blockquote', 'code-block',],
+        ['blockquote', 'code-block'],
         [{ 'list': 'ordered' }, { 'list': 'bullet' }],
         [{ 'indent': '-1' }, { 'indent': '+1' }],
         [{ 'direction': 'rtl' }],
@@ -86,8 +85,12 @@
         theme: 'snow'
     });
 
-    // Quill'e mevcut içerik ile doldurma
-    quill.root.innerHTML = '@Html.Raw(Model.Content)'; // Mevcut içeriği Quill editörüne yükle
+
+    // Eğer veritabanından gelen içeriği doğrudan kullanıyorsanız
+    var contentFromModel = '@Html.Raw(Model.Content)';
+    quill.root.innerHTML = contentFromModel;
+
+   
 
 
     document.getElementById('submitBtn').addEventListener('click', function () {

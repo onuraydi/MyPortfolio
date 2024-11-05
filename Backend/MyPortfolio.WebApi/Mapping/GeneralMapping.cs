@@ -1,4 +1,8 @@
 ﻿using AutoMapper;
+using MyPortfolio.WebApi.Dtos.LibraryDtos.AuthorDtos;
+using MyPortfolio.WebApi.Dtos.LibraryDtos.BookDtos;
+using MyPortfolio.WebApi.Dtos.LibraryDtos.CategoryDtos;
+using MyPortfolio.WebApi.Dtos.LibraryDtos.PublisherDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioAboutMeDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioBlogCommentDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioBlogDtos;
@@ -12,6 +16,7 @@ using MyPortfolio.WebApi.Dtos.PortfolioSkillDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioTechnologyDtos;
 using MyPortfolio.WebApi.Dtos.ProjectImageDtos;
 using MyPortfolio.WebApi.Entites;
+using MyPortfolio.WebApi.Entites.LibraryEntities;
 
 namespace MyPortfolio.WebApi.Mapping
 {
@@ -87,6 +92,33 @@ namespace MyPortfolio.WebApi.Mapping
             CreateMap<ProjectImage, GetProjectImageByPortfolioProjectIdDto>().ReverseMap();
             CreateMap<ProjectImage, CreateProjectImageDto>().ReverseMap();
             CreateMap<ProjectImage, UpdateProjectImageDto>().ReverseMap();
+
+
+            // Library parts
+            //Book
+            CreateMap<Book, GetAllBookDto>().ReverseMap();
+            CreateMap<Book, CreateBookDto>().ReverseMap();
+            CreateMap<Book, UpdateBookDto>().ReverseMap();
+            CreateMap<Book, GetBookByBookIdDto>().ReverseMap();
+
+            // Category
+            CreateMap<Category, GetAllCategoryDto>().ReverseMap();
+            CreateMap<Category, CreateCategoryDto>().ReverseMap();
+            CreateMap<Category, UpdateCategroyDto>().ReverseMap();
+            CreateMap<Category, GetCategoryByCategoryIdDto>().ReverseMap();
+
+            // Author
+            CreateMap<Author, GetAllAuthorDto>().ReverseMap();
+            CreateMap<Author, CreateAuthorDto>().ReverseMap();
+            CreateMap<Author, UpdateAuthorDto>().ReverseMap();
+            CreateMap<Author, GetAuthorByAuthorIdDto>().ReverseMap();
+
+            // Publisher
+            CreateMap<Publisher, GetAllPublisherDto>().ReverseMap();
+            CreateMap<Publisher, CreatePublisherDto>().ReverseMap();
+            CreateMap<Publisher, UpdatePublisherDto>().ReverseMap();
+            CreateMap<Publisher, GetPublisherByPublisherIdDto>().ReverseMap();
+
         }
     }
 }

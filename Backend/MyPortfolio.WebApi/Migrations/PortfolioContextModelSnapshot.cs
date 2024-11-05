@@ -22,6 +22,115 @@ namespace MyPortfolio.WebApi.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("MyPortfolio.WebApi.Entites.LibraryEntities.Author", b =>
+                {
+                    b.Property<int>("AuthorId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AuthorId"));
+
+                    b.Property<string>("AuthorName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AuthorSurname")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AuthorId");
+
+                    b.ToTable("Authors");
+                });
+
+            modelBuilder.Entity("MyPortfolio.WebApi.Entites.LibraryEntities.Book", b =>
+                {
+                    b.Property<int>("BookId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BookId"));
+
+                    b.Property<int>("AuthorId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("BookImage")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("BookLink")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("BookName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PageCount")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PublisherId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Subject")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("BookId");
+
+                    b.HasIndex("AuthorId");
+
+                    b.HasIndex("CategoryId");
+
+                    b.HasIndex("PublisherId");
+
+                    b.ToTable("Books");
+                });
+
+            modelBuilder.Entity("MyPortfolio.WebApi.Entites.LibraryEntities.Category", b =>
+                {
+                    b.Property<int>("CategoryId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryId"));
+
+                    b.Property<string>("CategoryName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CategoryId");
+
+                    b.ToTable("Categories");
+                });
+
+            modelBuilder.Entity("MyPortfolio.WebApi.Entites.LibraryEntities.Publisher", b =>
+                {
+                    b.Property<int>("PublisherId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PublisherId"));
+
+                    b.Property<string>("PublisherName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("PublisherId");
+
+                    b.ToTable("Publishers");
+                });
+
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioAboutMe", b =>
                 {
                     b.Property<int>("PortfolioAboutMeId")
@@ -415,6 +524,33 @@ namespace MyPortfolio.WebApi.Migrations
                     b.ToTable("ProjectImages");
                 });
 
+            modelBuilder.Entity("MyPortfolio.WebApi.Entites.LibraryEntities.Book", b =>
+                {
+                    b.HasOne("MyPortfolio.WebApi.Entites.LibraryEntities.Author", "Author")
+                        .WithMany("Book")
+                        .HasForeignKey("AuthorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MyPortfolio.WebApi.Entites.LibraryEntities.Category", "Category")
+                        .WithMany("Book")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MyPortfolio.WebApi.Entites.LibraryEntities.Publisher", "Publisher")
+                        .WithMany("Book")
+                        .HasForeignKey("PublisherId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Author");
+
+                    b.Navigation("Category");
+
+                    b.Navigation("Publisher");
+                });
+
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioBlogComment", b =>
                 {
                     b.HasOne("MyPortfolio.WebApi.Entites.PortfolioBlog", "PortfolioBlog")
@@ -435,6 +571,21 @@ namespace MyPortfolio.WebApi.Migrations
                         .IsRequired();
 
                     b.Navigation("PortfolioProject");
+                });
+
+            modelBuilder.Entity("MyPortfolio.WebApi.Entites.LibraryEntities.Author", b =>
+                {
+                    b.Navigation("Book");
+                });
+
+            modelBuilder.Entity("MyPortfolio.WebApi.Entites.LibraryEntities.Category", b =>
+                {
+                    b.Navigation("Book");
+                });
+
+            modelBuilder.Entity("MyPortfolio.WebApi.Entites.LibraryEntities.Publisher", b =>
+                {
+                    b.Navigation("Book");
                 });
 
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioProject", b =>

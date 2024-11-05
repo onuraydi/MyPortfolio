@@ -1,6 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Portfolio.DtoLayer.PortfolioDtos.PortfolioBlogDtos;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogServices;
+using System.Reflection;
+using System.Web;
+using System.Net;
+using Newtonsoft.Json;
 
 namespace Portfolio.WebUI.Areas.Admin.Controllers
 {
@@ -43,6 +48,7 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
         public async Task<IActionResult> UpdatePortfolioBlog(int id)
         {
             var values = await _portfolioBlogService.GetPortfolioBlogByPortfolioBlogIdAsync(id);
+
             return View(values);
         }
 

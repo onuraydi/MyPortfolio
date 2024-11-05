@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using MyPortfolio.WebApi.Context;
+using MyPortfolio.WebApi.Services.LibraryServices.BookServices;
 using MyPortfolio.WebApi.Services.PortfolioAboutMeServices;
 using MyPortfolio.WebApi.Services.PortfolioBlogCommentServices;
 using MyPortfolio.WebApi.Services.PortfolioBlogServices;
@@ -38,6 +39,10 @@ builder.Services.AddScoped<IPortfolioBlogService, PortfolioBlogService>();
 builder.Services.AddScoped<IPortfolioContactService, PortfolioContactService>();
 builder.Services.AddScoped<IPortfolioBlogCommentService, PortfolioBlogCommentService>();
 builder.Services.AddScoped<IProjectImageService, ProjectImageService>();
+
+
+builder.Services.AddScoped<IBookService, BookService>();
+
 
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());

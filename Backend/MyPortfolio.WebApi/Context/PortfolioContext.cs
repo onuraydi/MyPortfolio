@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MyPortfolio.WebApi.Entites;
+using MyPortfolio.WebApi.Entites.LibraryEntities;
 
 namespace MyPortfolio.WebApi.Context
 {
@@ -20,12 +21,33 @@ namespace MyPortfolio.WebApi.Context
         public DbSet<PortfolioContact> portfolioContacts { get; set; }
         public DbSet<ProjectImage> ProjectImages { get; set; }
 
+        // Library parts
+        public DbSet<Book> Books {  get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Author> Authors { get; set; }
+        public DbSet<Publisher> Publishers { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<PortfolioProject>()
                 .HasMany(x => x.Images)
                 .WithOne(y => y.PortfolioProject)
                 .HasForeignKey(z => z.PortfolioProjectId)
+                .IsRequired(true);
+            modelBuilder.Entity<Book>()
+                .HasOne(x => x.Author)
+                .WithMany(y => y.Book)
+                .HasForeignKey(z => z.AuthorId)
+                .IsRequired(true);
+            modelBuilder.Entity<Book>()
+                .HasOne(x => x.Category)
+                .WithMany(y => y.Book)
+                .HasForeignKey(z => z.CategoryId)
+                .IsRequired(true);
+            modelBuilder.Entity<Book>()
+                .HasOne(x => x.Publisher)
+                .WithMany(y => y.Book)
+                .HasForeignKey(z => z.PublisherId)
                 .IsRequired(true);
         }
     }
