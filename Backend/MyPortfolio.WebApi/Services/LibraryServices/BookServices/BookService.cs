@@ -33,7 +33,7 @@ namespace MyPortfolio.WebApi.Services.LibraryServices.BookServices
 
         public async Task<List<GetAllBookDto>> GetAllBookAsync()
         {
-            var values = await _context.Books.ToListAsync();
+            var values = await _context.Books.Include(x => x.Author).ToListAsync();
             return _mapper.Map<List<GetAllBookDto>>(values);
         }
 

@@ -4,6 +4,7 @@
     Layout = "~/Areas/Admin/Views/AdminLayout/AdminLayout.cshtml";
 }
 
+
 <link href="~/css/quill.css" rel="stylesheet" />
 
 <link href="https://fonts.googleapis.com/css2?family=Arial&family=Courier+New&family=Georgia&family=Times+New+Roman&family=Verdana&family=Trebuchet+MS&family=Comic+Sans+MS&family=Impact&family=Tahoma&family=Helvetica&display=swap" rel="stylesheet">
@@ -53,117 +54,165 @@
 
 
 <script>
-    // Yazı tipi ve boyut seçeneklerini tanımla
+        // Yazı tipi ve boyut seçeneklerini tanımla
 
-    const fontSizeArr = ['8px', '9px', '10px', '12px', '14px', '16px', '20px', '24px', '32px', '42px', '54px', '68px', '84px', '98px'];
+        const fontSizeArr = ['8px', '9px', '10px', '12px', '14px', '16px', '20px', '24px', '32px', '42px', '54px', '68px', '84px', '98px'];
 
-    const fontFamilyArr = [
-        'Arial',
-        'Courier New',
-        'Georgia',
-        'Times New Roman',
-        'Verdana',
-        'Trebuchet MS',
-        'Comic Sans MS',
-        'Impact',
-        'Tahoma',
-        'Helvetica'
-    ];
+        const fontFamilyArr = [
+            'Arial',
+            'Courier New',
+            'Georgia',
+            'Times New Roman',
+            'Verdana',
+            'Trebuchet MS',
+            'Comic Sans MS',
+            'Impact',
+            'Tahoma',
+            'Helvetica'
+        ];
 
 
-    var Font = Quill.import('attributors/style/font');
-    Font.whitelist = fontFamilyArr;
-    Quill.register(Font, true);
+        var Font = Quill.import('attributors/style/font');
+        Font.whitelist = fontFamilyArr;
+        Quill.register(Font, true);
 
-    var Size = Quill.import('attributors/style/size');
-    Size.whitelist = fontSizeArr;
-    Quill.register(Size, true);
-    // Fonksiyonu çağırın
+        var Size = Quill.import('attributors/style/size');
+        Size.whitelist = fontSizeArr;
+        Quill.register(Size, true);
+        // Fonksiyonu çağırın
 
-    // Toolbar ayarları
-    var toolbarOptions = [
-        [{ 'font': fontFamilyArr },],
-        [{ 'size': fontSizeArr}],
-        ['bold', 'italic', 'underline', 'strike'],
-        [{ 'color': [] }, { 'background': [] }],
-        [{ 'script': 'sub'}, { 'script': 'super' }],
-        [{ 'header': [1, 2, 3, 4, 5, 6,false] }],
-        ['blockquote', 'code-block'],
-        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-        [{ 'indent': '-1'}, { 'indent': '+1' }],
-        [{ 'direction': 'rtl' }],
-        [{ 'align': [] }],
-        ['link', 'image', 'video'],
-        ['clean']
-    ];
+        // Toolbar ayarları
+        var toolbarOptions = [
+            [{ 'font': fontFamilyArr },],
+            [{ 'size': fontSizeArr}],
+            ['bold', 'italic', 'underline', 'strike'],
+            [{ 'color': [] }, { 'background': [] }],
+            [{ 'script': 'sub'}, { 'script': 'super' }],
+            [{ 'header': [1, 2, 3, 4, 5, 6,false] }],
+            ['blockquote', 'code-block'],
+            [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+            [{ 'indent': '-1'}, { 'indent': '+1' }],
+            [{ 'direction': 'rtl' }],
+            [{ 'align': [] }],
+            ['link', 'image', 'video'],
+            ['clean']
+        ];
 
-    // Quill'i başlat
-    var quill = new Quill('#editor-container', {
-        modules: {
-            toolbar: toolbarOptions,
-            imageResize: {}
-        },
-        theme: 'snow'
-    });
+        // Quill'i başlat
+        var quill = new Quill('#editor-container', {
+            modules: {
+                toolbar: toolbarOptions,
+                imageResize: {}
+            },
+            theme: 'snow'
+        });
 
-    // Yazı tipi seçimini güncelle
-    quill.on('selection-change', function(range, oldRange, source) {
-        if (range) {
-            var font = quill.getFormat(range).font;
-            if (font) {
-                quill.root.style.fontFamily = font;
+        // Yazı tipi seçimini güncelle
+        quill.on('selection-change', function(range, oldRange, source) {
+            if (range) {
+                var font = quill.getFormat(range).font;
+                if (font) {
+                    quill.root.style.fontFamily = font;
+                }
             }
-        }
-    });
+        });
 
 
+        // AJAX ile formu gönder
     // AJAX ile formu gönder
-// AJAX ile formu gönder
-document.getElementById('submitBtn').addEventListener('click', function (event) {
-    event.preventDefault(); // Varsayılan davranışı engelle
+    document.getElementById('submitBtn').addEventListener('click', function (event) {
+        event.preventDefault(); // Varsayılan davranışı engelle
 
-    var content = quill.root.innerHTML; // Quill editör içeriğini al
-    var title = document.getElementById('title').value; // Başlık verisini al
-    var subContent = document.getElementById('SubContent').value; // Kısa açıklamayı al
-    var coverImage = document.getElementById('CoverImage').value; // Kapak resmi URL'sini al
-    var publishDate = document.getElementById('PublishDate').value; // Yayımlanma tarihini al
+        var content = quill.root.innerHTML; // Quill editör içeriğini al
+        var title = document.getElementById('title').value; // Başlık verisini al
+        var subContent = document.getElementById('SubContent').value; // Kısa açıklamayı al
+        var coverImage = document.getElementById('CoverImage').value; // Kapak resmi URL'sini al
+        var publishDate = document.getElementById('PublishDate').value; // Yayımlanma tarihini al
 
-    // FormData objesi oluştur
-    var formData = new FormData();
-    formData.append("Title", title);
-    formData.append("SubContent", subContent);
-    formData.append("CoverImage", coverImage);
-    formData.append("PublishDate", publishDate);
-    formData.append("Content", content);
+        // FormData objesi oluştur
+        var formData = new FormData();
+        formData.append("Title", title);
+        formData.append("SubContent", subContent);
+        formData.append("CoverImage", coverImage);
+        formData.append("PublishDate", publishDate);
+        formData.append("Content", content);
 
-    // Gönderilecek veriyi kontrol et
-    console.log("Gönderilecek veri:", {
-        Title: title,
-        SubContent: subContent,
-        CoverImage: coverImage,
-        PublishDate: publishDate,
-        Content: content
+        // Gönderilecek veriyi kontrol et
+        console.log("Gönderilecek veri:", {
+            Title: title,
+            SubContent: subContent,
+            CoverImage: coverImage,
+            PublishDate: publishDate,
+            Content: content
+        });
+
+        // AJAX POST isteği ile veriyi gönder
+        $.ajax({
+            url: '@Url.Action("CreatePortfolioBlog", "PortfolioBlog")',
+            type: 'POST',
+            processData: false,  // FormData için bu gerekli
+            contentType: false,  // FormData için bu gerekli
+            data: formData,
+            success: function(response) {
+                console.log("Başarılı yanıt:", response); // Başarı yanıtını kontrol et
+                window.location.href = '@Url.Action("GetAllPortfolioBlog", "PortfolioBlog", new { area = "Admin" })';
+            },
+            error: function(xhr, status, error) {
+                console.error("Hata: ", error);
+                alert("Ekleme işlemi başarısız oldu. Lütfen tekrar deneyin.");
+            }
+        });
     });
-
-    // AJAX POST isteği ile veriyi gönder
-    $.ajax({
-        url: '@Url.Action("CreatePortfolioBlog", "PortfolioBlog")',
-        type: 'POST',
-        processData: false,  // FormData için bu gerekli
-        contentType: false,  // FormData için bu gerekli
-        data: formData,
-        success: function(response) {
-            console.log("Başarılı yanıt:", response); // Başarı yanıtını kontrol et
-            window.location.href = '@Url.Action("GetAllPortfolioBlog", "PortfolioBlog", new { area = "Admin" })';
-        },
-        error: function(xhr, status, error) {
-            console.error("Hata: ", error);
-            alert("Ekleme işlemi başarısız oldu. Lütfen tekrar deneyin.");
-        }
-    });
-});
 
 
 
 </script>
+
+@*<link href="~/ckeditor5/ckeditor5.css" rel="stylesheet" />
+    <script src="~/ckeditor5/ckeditor5.js"></script>
+    <script src="~/ckeditor5/ckeditor5.umd.js"></script>
+
+
+    <div class="col-lg-12 grid-margin stretch-card" style="background-color: #191c24">
+        <div class="card-body">
+            <h4 class="card-title">Blog</h4>
+            <p class="card-description">Blog Yazma/Ekleme Sayfası</p>
+            <form id="blogForm" class="forms-sample">
+                <div class="form-group">
+                    <label for="Title">Başlık</label>
+                    <input type="text" class="form-control" id="title" placeholder="Başlık" />
+                </div>
+                <div class="form-group">
+                    <label for="SubContent">Kısa Açıklama</label>
+                    <input type="text" class="form-control" id="SubContent" placeholder="Kısa Açıklama" />
+                </div>
+                <div class="form-group">
+                    <label for="CoverImage">Kapak Resmi</label>
+                    <input type="text" class="form-control" id="CoverImage" placeholder="Kapak Resmi" />
+                </div>
+                <div class="form-group">
+                    <label for="PublishDate">Yayımlanma Tarihi</label>
+                    <input type="date" class="form-control" id="PublishDate" placeholder="Yayımlanma Tarihi" />
+                </div>
+                <div>
+                    <label for="PublishDate">İçerik</label>
+                    <textarea id="editor" name="content" >ck edi</textarea>
+                </div>
+                <br />
+                <button type="button" class="btn btn-primary mr-2" id="submitBtn">Ekle</button>
+                <button type="button" class="btn btn-info" onclick="history.back()">Geri</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor'))
+            .then(editor => {
+                console.log(editor);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>*@
 

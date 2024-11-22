@@ -33,8 +33,7 @@ namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogServices
         public async Task<GetPortfolioBlogByPortfolioBlogIdDto> GetPortfolioBlogByPortfolioBlogIdAsync(int id)
         {
             var responseMessage = await _httpClient.GetAsync("portfolioblogs/" + id);
-            var jsonData = await responseMessage.Content.ReadAsStringAsync();
-            var values = JsonConvert.DeserializeObject<GetPortfolioBlogByPortfolioBlogIdDto>(jsonData);
+            var values = await responseMessage.Content.ReadFromJsonAsync<GetPortfolioBlogByPortfolioBlogIdDto>();
             return values;
         }
 
