@@ -4,8 +4,9 @@
     {
         public string CommentTitle { get; set; }
         public string CommentDetail { get; set; }
-        public double CommentRate { get; set; }
+        public string email { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
+        public int portfolioBlogId { get; set; }
     }
 }

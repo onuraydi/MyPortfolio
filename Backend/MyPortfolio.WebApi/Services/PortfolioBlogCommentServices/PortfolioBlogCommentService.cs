@@ -17,11 +17,12 @@ namespace MyPortfolio.WebApi.Services.PortfolioBlogCommentServices
             _mapper = mapper;
         }
 
-        public async Task CreatePortfolioBlogCommentAsync(CreatePortfolioBlogCommentDto createPortfolioBlogCommentDto)
+        public async Task<CreatePortfolioBlogCommentDto> CreatePortfolioBlogCommentAsync(CreatePortfolioBlogCommentDto createPortfolioBlogCommentDto)
         {
             var values = _mapper.Map<PortfolioBlogComment>(createPortfolioBlogCommentDto);
             await _context.PortfolioComments.AddAsync(values);
             _context.SaveChanges();
+            return _mapper.Map<CreatePortfolioBlogCommentDto>(createPortfolioBlogCommentDto);
         }
 
         public async Task DeletePortfolioBlogCommentAsync(int id)
@@ -53,7 +54,7 @@ namespace MyPortfolio.WebApi.Services.PortfolioBlogCommentServices
                 Name = y.Name,
                 Surname = y.Surname,
                 CommentDetail = y.CommentDetail,
-                CommentRate = y.CommentRate,
+                email = y.email,
                 CommentTitle = y.CommentTitle,
                 portfolioBlogId = y.portfolioBlogId
             }).ToList();

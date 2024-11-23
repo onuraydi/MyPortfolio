@@ -33,8 +33,8 @@ namespace MyPortfolio.WebApi.Controllers
         [HttpPost]
         public async Task<IActionResult> CreatePortfolioBlogComment(CreatePortfolioBlogCommentDto createPortfolioBlogCommentDto)
         {
-            await _portfolioBlogCommentService.CreatePortfolioBlogCommentAsync(createPortfolioBlogCommentDto);
-            return Ok("Yorum yapma işlemi başarılı");
+            var values = await _portfolioBlogCommentService.CreatePortfolioBlogCommentAsync(createPortfolioBlogCommentDto);
+            return Ok(values);
         }
 
         [HttpDelete]

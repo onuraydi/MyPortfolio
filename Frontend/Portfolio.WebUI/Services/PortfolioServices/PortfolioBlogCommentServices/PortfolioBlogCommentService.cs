@@ -12,9 +12,12 @@ namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogCommentService
             _httpClient = httpClient;
         }
 
-        public async Task CreatePortfolioBlogCommentAsync(CreatePortfolioBlogCommentDto createPortfolioBlogCommentDto)
+        public async Task<CreatePortfolioBlogCommentDto> CreatePortfolioBlogCommentAsync(CreatePortfolioBlogCommentDto createPortfolioBlogCommentDto)
         {
-            await _httpClient.PostAsJsonAsync("portfolioblogcomments", createPortfolioBlogCommentDto);
+            var responseMessage = await _httpClient.PostAsJsonAsync("portfolioblogcomments", createPortfolioBlogCommentDto);
+            var jsonData = await responseMessage.Content.ReadAsStringAsync();
+            var values = JsonConvert.DeserializeObject<CreatePortfolioBlogCommentDto>(jsonData);
+            return values;
         }
 
         public async Task DeletePortfolioBlogCommentAsync(int id)
