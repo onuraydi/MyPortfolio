@@ -224,6 +224,9 @@ namespace MyPortfolio.WebApi.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PortfolioBlogCommentId"));
 
+                    b.Property<DateTime>("CommentDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("CommentDetail")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

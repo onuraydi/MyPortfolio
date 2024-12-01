@@ -43,5 +43,16 @@ namespace Portfolio.WebUI.Controllers
             ViewData["id"] = blogsView.CreateComment.portfolioBlogId;
             return RedirectToAction("GetBlogDetail", new { id = blogsView.CreateComment.portfolioBlogId });
         }
+
+        public async Task<IActionResult> AddReply(BlogsViewModel blogsView)
+        {
+            
+            var values = await _portfolioBlogCommentService.CreatePortfolioBlogCommentAsync(blogsView.CreateComment);
+            var blogsViewModel = new BlogsViewModel()
+            {
+                CreateComment = values
+            };
+            return RedirectToAction("GetBlogDetail", new { id = blogsView.CreateComment.portfolioBlogId });
+        }
     }
 }

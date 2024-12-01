@@ -1,7 +1,27 @@
 ﻿<!--Yorum Listesi-->
 @model BlogsViewModel
-
-default bi foto ata
+@*<div>
+    @if (Model.BlogComments.Count() != 0)
+    {
+        <h3 class="mb-5">Yorumlar</h3>
+        <ul class="comment-list">
+            @foreach (var item in Model.BlogComments)
+            {
+                <li class="comment">
+                    <div class="vcard bio">
+                        <img src="~/clark-master/images/foto.png" style="background-color:aliceblue" alt="Image placeholder">
+                    </div>
+                    <div class="comment-body">
+                        <h3>@item.Name @item.Surname</h3>
+                        <div class="meta">@item.CommentDate.ToString("dd MMMM yyyy - HH:mm")</div>
+                        <h3>@item.CommentTitle</h3>
+                        <p>@item.CommentDetail</p>
+                        <p><a href="javascript:void(0);" class="reply" data-id="@item.PortfolioBlogCommentId">Yanıtla</a></p>
+                    </div>
+                </li>
+            }
+        </ul>
+    }*@
 
 <div>
     @if (Model.BlogComments.Count() != 0)
@@ -16,70 +36,197 @@ default bi foto ata
                     </div>
                     <div class="comment-body">
                         <h3>@item.Name @item.Surname</h3>
-                        <div class="meta">Tarih gelecek</div>
+                        <div class="meta">@item.CommentDate.ToString("dd MMMM yyyy - HH:mm")</div>
+                        <h3>@item.CommentTitle</h3>
                         <p>@item.CommentDetail</p>
-                        <p><a href="#" class="reply">Yanıtla</a></p>
+                        <p><a href="javascript:void(0);" class="reply" data-id="@item.PortfolioBlogCommentId">Yanıtla</a></p>
+
+                        <!-- Hidden reply modal for each comment -->
+                        <div class="reply-modal" id="replyModal-@item.PortfolioBlogCommentId">
+                            <h2>Cevabınız</h2>
+                            <input type="text" id="replyName-@item.PortfolioBlogCommentId" placeholder="Adınız" />
+                            <input type="text" id="replySurname-@item.PortfolioBlogCommentId" placeholder="Soyadınız" />
+                            <input type="email" id="replyEmail-@item.PortfolioBlogCommentId" placeholder="E-posta" />
+                            <input type="text" id="replyTitle-@item.PortfolioBlogCommentId" placeholder="Başlık" />
+                            <textarea id="replyText-@item.PortfolioBlogCommentId" placeholder="Cevabınızı buraya yazınız..."></textarea>
+                            <button class="submitReply" data-id="@item.PortfolioBlogCommentId">Gönder</button>
+                            <button class="cancelReply" data-id="@item.PortfolioBlogCommentId">Vazgeç</button>
+                        </div>
                     </div>
                 </li>
             }
         </ul>
     }
 
+    <script>
+        // Tüm "Yanıtla" linklerine tıklanma olayını ekleyin
+        var replyLinks = document.querySelectorAll('.reply');
+        replyLinks.forEach(function (link) {
+            link.onclick = function () {
+                var commentId = this.getAttribute('data-id');
+                var modal = document.getElementById('replyModal-' + commentId);
+                modal.style.display = "block"; // İlgili modal'ı aç
+            };
+        });
+
+        // "Gönder" butonuna tıklama olayını ekleyin
+        var submitButtons = document.querySelectorAll('.submitReply');
+        submitButtons.forEach(function (button) {
+            button.onclick = function () {
+                var commentId = this.getAttribute('data-id');
+                var replyText = document.getElementById('replyText-' + commentId).value;
+                var replyName = document.getElementById('replyName-' + commentId).value;
+                var replySurname = document.getElementById('replySurname-' + commentId).value;
+                var replyEmail = document.getElementById('replyEmail-' + commentId).value;
+                var replyTitle = document.getElementById('replyTitle-' + commentId).value;
+
+                // Burada verilerinizi backend'e gönderin
+                if (replyText.trim() === '') {
+                    alert('Lütfen bir cevap yazın.');
+                } else {
+                    // Cevap formunu backend'e gönderme işlemi yapılabilir
+                    // Simülasyon olarak modal'ı kapatıyoruz
+                    document.getElementById('replyModal-' + commentId).style.display = "none";
+                    // Cevap alanını temizle
+                    document.getElementById('replyText-' + commentId).value = '';
+                    document.getElementById('replyName-' + commentId).value = '';
+                    document.getElementById('replySurname-' + commentId).value = '';
+                    document.getElementById('replyEmail-' + commentId).value = '';
+                    document.getElementById('replyTitle-' + commentId).value = '';
+                }
+            };
+        });
+
+        // "Vazgeç" butonuna tıklama olayını ekleyin
+        var cancelButtons = document.querySelectorAll('.cancelReply');
+        cancelButtons.forEach(function (button) {
+            button.onclick = function () {
+                var commentId = this.getAttribute('data-id');
+                // Modal'ı gizle ve textarea'yı temizle
+                document.getElementById('replyModal-' + commentId).style.display = "none";
+                document.getElementById('replyText-' + commentId).value = '';
+                document.getElementById('replyName-' + commentId).value = '';
+                document.getElementById('replySurname-' + commentId).value = '';
+                document.getElementById('replyEmail-' + commentId).value = '';
+                document.getElementById('replyTitle-' + commentId).value = '';
+            };
+        });
+
+        // Modal'ı dışarıya tıklanarak kapatmak için
+        window.onclick = function (event) {
+            if (event.target.classList.contains('reply-modal')) {
+                event.target.style.display = "none"; // Modal'ı gizle
+            }
+        };
+    </script>
+
+    <style>
+        /* Modal'ı yorumun altında gösterecek şekilde stil */
+        .reply-modal {
+            display: none; /* Başlangıçta gizli */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+            .reply-modal h2 {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            .reply-modal textarea,
+            .reply-modal input {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+                font-size: 14px;
+            }
+
+            .reply-modal button {
+                margin-top: 10px;
+                padding: 8px 15px;
+                background-color: #28a745;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+                .reply-modal button:hover {
+                    background-color: #218838;
+                }
+
+        .cancelReply {
+            background-color: #dc3545; /* Kırmızı */
+            margin-left: 10px;
+        }
+
+            .cancelReply:hover {
+                background-color: #c82333;
+            }
+    </style>
+</div>
 
 
-            @*<li class="comment">
-                    <div class="vcard bio">
-                        <img src="images/person_1.jpg" alt="Image placeholder">
-                    </div>
-                    <div class="comment-body">
-                        <h3>John Doe</h3>
-                        <div class="meta">June 20, 2019 at 2:21pm</div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                        <p><a href="#" class="reply">Reply</a></p>
-                    </div>
-
-                    <ul class="children">
-                        <li class="comment">
-                            <div class="vcard bio">
-                                <img src="images/person_1.jpg" alt="Image placeholder">
-                            </div>
-                            <div class="comment-body">
-                                <h3>John Doe</h3>
-                                <div class="meta">June 20, 2019 at 2:21pm</div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                                <p><a href="#" class="reply">Reply</a></p>
-                            </div>
 
 
-                            <ul class="children">
-                                <li class="comment">
-                                    <div class="vcard bio">
-                                        <img src="images/person_1.jpg" alt="Image placeholder">
-                                    </div>
-                                    <div class="comment-body">
-                                        <h3>John Doe</h3>
-                                        <div class="meta">June 20, 2019 at 2:21pm</div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                                        <p><a href="#" class="reply">Reply</a></p>
-                                    </div>
+@*<li class="comment">
+        <div class="vcard bio">
+            <img src="images/person_1.jpg" alt="Image placeholder">
+        </div>
+        <div class="comment-body">
+            <h3>John Doe</h3>
+            <div class="meta">June 20, 2019 at 2:21pm</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+            <p><a href="#" class="reply">Reply</a></p>
+        </div>
 
-                                    <ul class="children">
-                                        <li class="comment">
-                                            <div class="vcard bio">
-                                                <img src="images/person_1.jpg" alt="Image placeholder">
-                                            </div>
-                                            <div class="comment-body">
-                                                <h3>John Doe</h3>
-                                                <div class="meta">June 20, 2019 at 2:21pm</div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                                                <p><a href="#" class="reply">Reply</a></p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>*@
+        <ul class="children">
+            <li class="comment">
+                <div class="vcard bio">
+                    <img src="images/person_1.jpg" alt="Image placeholder">
+                </div>
+                <div class="comment-body">
+                    <h3>John Doe</h3>
+                    <div class="meta">June 20, 2019 at 2:21pm</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                    <p><a href="#" class="reply">Reply</a></p>
+                </div>
+
+
+                <ul class="children">
+                    <li class="comment">
+                        <div class="vcard bio">
+                            <img src="images/person_1.jpg" alt="Image placeholder">
+                        </div>
+                        <div class="comment-body">
+                            <h3>John Doe</h3>
+                            <div class="meta">June 20, 2019 at 2:21pm</div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                            <p><a href="#" class="reply">Reply</a></p>
+                        </div>
+
+                        <ul class="children">
+                            <li class="comment">
+                                <div class="vcard bio">
+                                    <img src="images/person_1.jpg" alt="Image placeholder">
+                                </div>
+                                <div class="comment-body">
+                                    <h3>John Doe</h3>
+                                    <div class="meta">June 20, 2019 at 2:21pm</div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                                    <p><a href="#" class="reply">Reply</a></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
         </ul>
-    </div>
+    </li>*@

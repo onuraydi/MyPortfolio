@@ -51,12 +51,13 @@ namespace MyPortfolio.WebApi.Services.PortfolioBlogCommentServices
             var values2 = values.Select(y => new GetPortfolioBlogCommentByPortfolioBlogIdDto
             {
                 PortfolioBlogCommentId = y.PortfolioBlogCommentId,
+                CommentDate = y.CommentDate,
                 Name = y.Name,
                 Surname = y.Surname,
                 CommentDetail = y.CommentDetail,
                 email = y.email,
                 CommentTitle = y.CommentTitle,
-                portfolioBlogId = y.portfolioBlogId
+                portfolioBlogId = y.portfolioBlogId,
             }).ToList();
             return _mapper.Map<List<GetPortfolioBlogCommentByPortfolioBlogIdDto>>(values2);
             

@@ -8,6 +8,7 @@ namespace Portfolio.DtoLayer.PortfolioDtos.PortfolioBlogCommentDtos
 {
     public class GetAllPortfolioBlogCommentDto
     {
+        public DateTime CommentDate { get; set; }
         public int PortfolioBlogCommentId { get; set; }
         public string CommentTitle { get; set; }
         public string CommentDetail { get; set; }
@@ -15,5 +16,6 @@ namespace Portfolio.DtoLayer.PortfolioDtos.PortfolioBlogCommentDtos
         public string Name { get; set; }
         public string Surname { get; set; }
         public int portfolioBlogId { get; set; }
+        public int? ParentCommentId { get; set; }
     }
 }

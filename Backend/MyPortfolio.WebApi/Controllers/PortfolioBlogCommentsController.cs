@@ -33,6 +33,7 @@ namespace MyPortfolio.WebApi.Controllers
         [HttpPost]
         public async Task<IActionResult> CreatePortfolioBlogComment(CreatePortfolioBlogCommentDto createPortfolioBlogCommentDto)
         {
+            createPortfolioBlogCommentDto.CommentDate = Convert.ToDateTime(DateTime.Now.ToString("dd MMMM yyyy HH:mm"));
             var values = await _portfolioBlogCommentService.CreatePortfolioBlogCommentAsync(createPortfolioBlogCommentDto);
             return Ok(values);
         }
