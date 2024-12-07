@@ -301,6 +301,142 @@
         }
       }
     },
+    "/api/PortfolioBlogTags": {
+      "get": {
+        "tags": [
+          "PortfolioBlogTags"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "PortfolioBlogTags"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePortfolioBlogTagDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePortfolioBlogTagDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePortfolioBlogTagDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "PortfolioBlogTags"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePortfolioBlogTagDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePortfolioBlogTagDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePortfolioBlogTagDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "PortfolioBlogTags"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/PortfolioBlogTags/{id}": {
+      "get": {
+        "tags": [
+          "PortfolioBlogTags"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/PortfolioBlogTags/GetPortfolioBlogByPortfolioBlogTagId/{id}": {
+      "get": {
+        "tags": [
+          "PortfolioBlogTags"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/PortfolioCertificates": {
       "get": {
         "tags": [
@@ -1340,6 +1476,23 @@
           "publishDate": {
             "type": "string",
             "format": "date-time"
+          },
+          "portfolioBlogTags": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetAllPortfolioBlogTagDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreatePortfolioBlogTagDto": {
+        "type": "object",
+        "properties": {
+          "tagName": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1538,6 +1691,20 @@
         },
         "additionalProperties": false
       },
+      "GetAllPortfolioBlogTagDto": {
+        "type": "object",
+        "properties": {
+          "portfolioBlogTagId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tagName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "UpdatePortfoiloMainTitleDto": {
         "type": "object",
         "properties": {
@@ -1652,6 +1819,27 @@
           "publishDate": {
             "type": "string",
             "format": "date-time"
+          },
+          "portfolioBlogTags": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetAllPortfolioBlogTagDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdatePortfolioBlogTagDto": {
+        "type": "object",
+        "properties": {
+          "portfolioBlogTagId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tagName": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

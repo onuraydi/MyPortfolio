@@ -1,0 +1,41 @@
+﻿@model List<GetAllPortfolioBlogTagDto>
+
+@{
+    ViewData["Title"] = "GetAllPortfolioBlogTag";
+    Layout = "~/Areas/Admin/Views/AdminLayout/AdminLayout.cshtml";
+    int count = 0;
+}
+
+<div class="col-lg-12 grid-margin stretch-card" style="background-color: #191c24 ">
+    <div class="card-body">
+        <h4 class="card-title">Taglar</h4>
+        <p class="card-description">Bloglarda belirtmek üzere Taglar ile ilgili işlmeleri içerir</p>
+        <div class="table-res">
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Tagın Ad</th>
+                        <th>Detaylar/Güncelle</th>
+                        <th>Sil</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        count += 1;
+                        <tr>
+                            <td>@count</td>
+                            <td>@item.TagName</td>
+                            <td><a href="/Admin/PortfolioBlogTag/UpdatePortfolioBlogTag/@item.PortfolioBlogTagId" class="btn btn-primary">Detaylar/Güncelle</a></td>
+                            <td><a href="/Admin/PortfolioBlogTag/DeletePortfolioBlogTag/@item.PortfolioBlogTagId" class="btn btn-danger">Sil</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <br />
+            <a href="/Admin/PortfolioBlogTag/CreatePortfolioBlogTag/" class="btn btn-success">Tag Ekle</a>
+        </div>
+    </div>
+</div>

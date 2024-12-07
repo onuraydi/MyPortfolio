@@ -17,10 +17,25 @@ namespace MyPortfolio.WebApi.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.8")
+                .HasAnnotation("ProductVersion", "8.0.11")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("BlogsTags", b =>
+                {
+                    b.Property<int>("PortfolioBlogId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PortfolioBlogTagId")
+                        .HasColumnType("int");
+
+                    b.HasKey("PortfolioBlogId", "PortfolioBlogTagId");
+
+                    b.HasIndex("PortfolioBlogTagId");
+
+                    b.ToTable("BlogsTags");
+                });
 
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.LibraryEntities.Author", b =>
                 {
@@ -255,6 +270,23 @@ namespace MyPortfolio.WebApi.Migrations
                     b.HasIndex("portfolioBlogId");
 
                     b.ToTable("PortfolioComments");
+                });
+
+            modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioBlogTag", b =>
+                {
+                    b.Property<int>("PortfolioBlogTagId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PortfolioBlogTagId"));
+
+                    b.Property<string>("TagName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("PortfolioBlogTagId");
+
+                    b.ToTable("PortfolioBlogTags");
                 });
 
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioCertificate", b =>
@@ -526,6 +558,21 @@ namespace MyPortfolio.WebApi.Migrations
                     b.HasIndex("PortfolioProjectId");
 
                     b.ToTable("ProjectImages");
+                });
+
+            modelBuilder.Entity("BlogsTags", b =>
+                {
+                    b.HasOne("MyPortfolio.WebApi.Entites.PortfolioBlog", null)
+                        .WithMany()
+                        .HasForeignKey("PortfolioBlogId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MyPortfolio.WebApi.Entites.PortfolioBlogTag", null)
+                        .WithMany()
+                        .HasForeignKey("PortfolioBlogTagId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.LibraryEntities.Book", b =>

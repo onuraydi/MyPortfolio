@@ -33,7 +33,7 @@ namespace MyPortfolio.WebApi.Services.PortfolioBlogServices
 
         public async Task<List<GetAllPortfolioBlogDto>> GetAllPortfolioBlogAsync()
         {
-            var values = await _context.portfolioBlogs.ToListAsync();
+            var values = await _context.portfolioBlogs.Include(x =>x.PortfolioBlogTags).ToListAsync();
             return _mapper.Map<List<GetAllPortfolioBlogDto>>(values);
         }
 

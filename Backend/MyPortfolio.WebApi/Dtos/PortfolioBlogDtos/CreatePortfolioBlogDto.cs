@@ -1,4 +1,7 @@
-﻿namespace MyPortfolio.WebApi.Dtos.PortfolioBlogDtos
+﻿using MyPortfolio.WebApi.Dtos.PortfolioBlogTagDtos;
+using MyPortfolio.WebApi.Entites;
+
+namespace MyPortfolio.WebApi.Dtos.PortfolioBlogDtos
 {
     public class CreatePortfolioBlogDto
     {
@@ -7,5 +10,6 @@
         public string Content { get; set; }
         public string CoverImage { get; set; }
         public DateTime PublishDate { get; set; }
+        public List<GetAllPortfolioBlogTagDto> PortfolioBlogTags { get; set; } = new List<GetAllPortfolioBlogTagDto>();
     }
 }

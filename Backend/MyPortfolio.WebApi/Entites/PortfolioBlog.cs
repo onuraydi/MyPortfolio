@@ -9,7 +9,10 @@ namespace MyPortfolio.WebApi.Entites
         public string Content { get; set; }
         public string CoverImage { get; set; }
         public DateTime PublishDate { get; set; }
+
+        public List<PortfolioBlogTag> PortfolioBlogTags { get; set; } = new();
+
         //public PortfolioBlogComment portfolioBlogComment { get; set; }
-        
+
     }
 }

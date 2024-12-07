@@ -2,6 +2,7 @@ using Portfolio.WebUI.Services.ImageUploadServices.ImageUploadServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioAboutMeServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogCommentServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogServices;
+using Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogTagServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioCertificateServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioContactServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioEducationServices;
@@ -88,6 +89,10 @@ builder.Services.AddHttpClient<IPortfolioBlogCommentService, PortfolioBlogCommen
 
 
 
+builder.Services.AddHttpClient<IPortfolioBlogTagServices, PortfolioBlogTagServices>(opt =>
+{
+    opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
+});
 
 
 

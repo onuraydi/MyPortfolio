@@ -5,6 +5,7 @@ using MyPortfolio.WebApi.Services.LibraryServices.BookServices;
 using MyPortfolio.WebApi.Services.PortfolioAboutMeServices;
 using MyPortfolio.WebApi.Services.PortfolioBlogCommentServices;
 using MyPortfolio.WebApi.Services.PortfolioBlogServices;
+using MyPortfolio.WebApi.Services.PortfolioBlogTagServices;
 using MyPortfolio.WebApi.Services.PortfolioCertificateServices;
 using MyPortfolio.WebApi.Services.PortfolioContactServices;
 using MyPortfolio.WebApi.Services.PortfolioEducationServices;
@@ -39,6 +40,7 @@ builder.Services.AddScoped<IPortfolioBlogService, PortfolioBlogService>();
 builder.Services.AddScoped<IPortfolioContactService, PortfolioContactService>();
 builder.Services.AddScoped<IPortfolioBlogCommentService, PortfolioBlogCommentService>();
 builder.Services.AddScoped<IProjectImageService, ProjectImageService>();
+builder.Services.AddScoped<IPortfolioBlogTagService, PortfolioBlogTagService>();
 
 
 builder.Services.AddScoped<IBookService, BookService>();

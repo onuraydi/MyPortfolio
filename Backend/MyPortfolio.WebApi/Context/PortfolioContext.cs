@@ -20,6 +20,7 @@ namespace MyPortfolio.WebApi.Context
         public DbSet<PortfolioBlogComment> PortfolioComments { get; set; }
         public DbSet<PortfolioContact> portfolioContacts { get; set; }
         public DbSet<ProjectImage> ProjectImages { get; set; }
+        public DbSet<PortfolioBlogTag> PortfolioBlogTags { get; set; }
 
         // Library parts
         public DbSet<Book> Books {  get; set; }
@@ -34,6 +35,15 @@ namespace MyPortfolio.WebApi.Context
                 .WithOne(y => y.PortfolioProject)
                 .HasForeignKey(z => z.PortfolioProjectId)
                 .IsRequired(true);
+            modelBuilder.Entity<PortfolioBlog>()
+                .HasMany(x => x.PortfolioBlogTags)
+                .WithMany(y => y.PortfolioBlogs)
+                .UsingEntity(
+                    "BlogsTags",
+                    l => l.HasOne(typeof(PortfolioBlogTag)).WithMany().HasForeignKey("PortfolioBlogTagId").HasPrincipalKey(nameof(PortfolioBlogTag.PortfolioBlogTagId)),
+                    m => m.HasOne(typeof(PortfolioBlog)).WithMany().HasForeignKey("PortfolioBlogId").HasPrincipalKey(nameof(PortfolioBlog.PortfolioBlogId)),
+                    n => n.HasKey("PortfolioBlogId", "PortfolioBlogTagId")
+                );
             modelBuilder.Entity<Book>()
                 .HasOne(x => x.Author)
                 .WithMany(y => y.Book)

@@ -200,6 +200,96 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioBlogTagsController",
+    "Method": "GetAllPortfolioBlogTag",
+    "RelativePath": "api/PortfolioBlogTags",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioBlogTagsController",
+    "Method": "CreatePortfolioBlogTag",
+    "RelativePath": "api/PortfolioBlogTags",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createPortfolioBlogTagDto",
+        "Type": "MyPortfolio.WebApi.Dtos.PortfolioBlogTagDtos.CreatePortfolioBlogTagDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioBlogTagsController",
+    "Method": "UpdatePortfolioBlogTag",
+    "RelativePath": "api/PortfolioBlogTags",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updatePortfolioBlogTagDto",
+        "Type": "MyPortfolio.WebApi.Dtos.PortfolioBlogTagDtos.UpdatePortfolioBlogTagDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioBlogTagsController",
+    "Method": "DeletePortfolioBlogTag",
+    "RelativePath": "api/PortfolioBlogTags",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioBlogTagsController",
+    "Method": "GetPortfolioBlogTagByPortfolioBlogTagId",
+    "RelativePath": "api/PortfolioBlogTags/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioBlogTagsController",
+    "Method": "GetPortfolioBlogByPortfolioBlogTagId",
+    "RelativePath": "api/PortfolioBlogTags/GetPortfolioBlogByPortfolioBlogTagId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioCertificatesController",
     "Method": "GetAllPortfolioCertificate",
     "RelativePath": "api/PortfolioCertificates",
