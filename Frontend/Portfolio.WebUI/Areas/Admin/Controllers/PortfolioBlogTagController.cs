@@ -40,7 +40,7 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        [Route("UpdatePortfolioBlogTag")]
+        [Route("UpdatePortfolioBlogTag/{id}")]
         public async Task<IActionResult> UpdatePortfolioBlogTag(int id)
         {
             var values = await _portfolioBlogTagServices.GetPortfolioBlogTagByPortfolioBlogTagIdAsync(id);
@@ -48,7 +48,7 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        [Route("UpdatePortfolioBlogTag")]
+        [Route("UpdatePortfolioBlogTag/{id}")]
         public async Task<IActionResult> UpdatePortfolioBlogTag(UpdatePortfolioBlogTagDto updatePortfolioBlogTagDto)
         {
             await _portfolioBlogTagServices.UpdatePortfolioBlogTagAsync(updatePortfolioBlogTagDto);
