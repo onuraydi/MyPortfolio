@@ -290,6 +290,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioBlogTagsController",
+    "Method": "GetPortfolioBlogTagsByPortfolioBlogId",
+    "RelativePath": "api/PortfolioBlogTags/GetPortfolioBlogTagsByPortfolioBlogId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioCertificatesController",
     "Method": "GetAllPortfolioCertificate",
     "RelativePath": "api/PortfolioCertificates",

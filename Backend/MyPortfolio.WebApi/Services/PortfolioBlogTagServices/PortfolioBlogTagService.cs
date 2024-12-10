@@ -57,6 +57,12 @@ namespace MyPortfolio.WebApi.Services.PortfolioBlogTagServices
             return _mapper.Map<GetPortfolioBlogTagByPortfolioBlogTagId>(values);
         }
 
+        public async Task<GetPortfolioBlogTagsByPortfolioBlogId> GetPortfolioBlogTagsByPortfolioBlogIdAsync(int id)
+        {
+            var values = await _context.portfolioBlogs.Include(x => x.PortfolioBlogTags).FirstOrDefaultAsync(y => y.PortfolioBlogId == id);
+            return _mapper.Map<GetPortfolioBlogTagsByPortfolioBlogId>(values);
+        }
+
         public async Task UpdatePortfolioBlogTagAsync(UpdatePortfolioBlogTagDto updatePortfolioBlogTagDto)
         {
             var values = _mapper.Map<PortfolioBlogTag>(updatePortfolioBlogTagDto);

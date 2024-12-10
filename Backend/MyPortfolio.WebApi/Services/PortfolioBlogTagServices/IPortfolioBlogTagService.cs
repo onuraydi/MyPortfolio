@@ -11,5 +11,6 @@ namespace MyPortfolio.WebApi.Services.PortfolioBlogTagServices
         Task DeletePortfolioBlogTagAsync(int id);
         Task<GetPortfolioBlogTagByPortfolioBlogTagId> GetPortfolioBlogTagByPortfolioBlogTagIdAsync(int id);
         Task<List<GetPortfolioBlogsByPortfolioBlogTagsIdDto>> GetPortfolioBlogByPortfolioBlogTagIdAsync(int id);
+        Task<GetPortfolioBlogTagsByPortfolioBlogId> GetPortfolioBlogTagsByPortfolioBlogIdAsync(int id);
     }
 }

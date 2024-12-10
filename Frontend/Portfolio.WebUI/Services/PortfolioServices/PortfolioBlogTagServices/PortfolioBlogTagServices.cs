@@ -1,4 +1,6 @@
-﻿using Portfolio.DtoLayer.PortfolioDtos.PortfolioBlogTagDtos;
+﻿using AspNetCoreGeneratedDocument;
+using Portfolio.DtoLayer.PortfolioDtos.PortfolioBlogDtos;
+using Portfolio.DtoLayer.PortfolioDtos.PortfolioBlogTagDtos;
 
 namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogTagServices
 {
@@ -34,7 +36,7 @@ namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogTagServices
             return values;
         }
 
-        public async Task<List<GetPortfolioBlogsByPortfolioTagId>> GetPortfolioBlogTagsByPortfolioBlogTagIdAsync(int id)
+        public async Task<List<GetPortfolioBlogsByPortfolioTagId>> GetPortfolioBlogsByPortfolioBlogTagIdAsync(int id)
         {
             var responseMessage = await _httpClient.GetAsync("portfolioblogtags/" + id);
             var values = await responseMessage.Content.ReadFromJsonAsync<List<GetPortfolioBlogsByPortfolioTagId>>();
@@ -44,6 +46,13 @@ namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogTagServices
         public async Task UpdatePortfolioBlogTagAsync(UpdatePortfolioBlogTagDto updatePortfolioBlogTagDto)
         {
             await _httpClient.PutAsJsonAsync("portfolioblogtags", updatePortfolioBlogTagDto);
+        }
+
+        public async Task<GetPortfolioBlogTagsByPortfolioBlogIdDto> GetPortfolioBlogTagsByPortfolioBlogIdAsync(int id)
+        {
+            var responseMessage = await _httpClient.GetAsync("portfolioblogtags/GetPortfolioBlogTagsByPortfolioBlogId/" + id);
+            var values = await responseMessage.Content.ReadFromJsonAsync<GetPortfolioBlogTagsByPortfolioBlogIdDto>();
+            return values;
         }
     }
 }

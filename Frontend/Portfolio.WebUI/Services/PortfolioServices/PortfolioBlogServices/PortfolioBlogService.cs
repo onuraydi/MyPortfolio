@@ -1,15 +1,18 @@
 ﻿using Newtonsoft.Json;
 using Portfolio.DtoLayer.PortfolioDtos.PortfolioBlogDtos;
+using Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogTagServices;
 
 namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogServices
 {
     public class PortfolioBlogService : IPortfolioBlogService
     {
         private readonly HttpClient _httpClient;
+        private readonly IPortfolioBlogTagServices _portfolioBlogTagServices;
 
-        public PortfolioBlogService(HttpClient httpClient)
+        public PortfolioBlogService(HttpClient httpClient, IPortfolioBlogTagServices portfolioBlogTagServices)
         {
             _httpClient = httpClient;
+            _portfolioBlogTagServices = portfolioBlogTagServices;
         }
 
         public async Task CreatePortfolioBlogAsync(CreatePortfolioBlogDto createPortfolioBlogDto)
@@ -34,6 +37,8 @@ namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogServices
         {
             var responseMessage = await _httpClient.GetAsync("portfolioblogs/" + id);
             var values = await responseMessage.Content.ReadFromJsonAsync<GetPortfolioBlogByPortfolioBlogIdDto>();
+            var tagValues = await _portfolioBlogTagServices.GetPortfolioBlogTagsByPortfolioBlogIdAsync(id);
+            values.PortfolioBlogTags.AddRange(tagValues.PortfolioBlogTags);
             return values;
         }
 

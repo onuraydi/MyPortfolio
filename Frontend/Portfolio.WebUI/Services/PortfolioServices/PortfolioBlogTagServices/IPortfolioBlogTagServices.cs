@@ -1,4 +1,5 @@
-﻿using Portfolio.DtoLayer.PortfolioDtos.PortfolioBlogTagDtos;
+﻿using Portfolio.DtoLayer.PortfolioDtos.PortfolioBlogDtos;
+using Portfolio.DtoLayer.PortfolioDtos.PortfolioBlogTagDtos;
 
 namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogTagServices
 {
@@ -9,6 +10,7 @@ namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogTagServices
         Task UpdatePortfolioBlogTagAsync(UpdatePortfolioBlogTagDto updatePortfolioBlogTagDto);
         Task DeletePortfolioBlogTagAsync(int id);
         Task<GetPortfolioBlogTagByPortfolioBlogTagIdDto> GetPortfolioBlogTagByPortfolioBlogTagIdAsync(int id);
-        Task<List<GetPortfolioBlogsByPortfolioTagId>> GetPortfolioBlogTagsByPortfolioBlogTagIdAsync(int id);
+        Task<List<GetPortfolioBlogsByPortfolioTagId>> GetPortfolioBlogsByPortfolioBlogTagIdAsync(int id);
+        Task<GetPortfolioBlogTagsByPortfolioBlogIdDto> GetPortfolioBlogTagsByPortfolioBlogIdAsync(int id);
     }
 }

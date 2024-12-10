@@ -69,12 +69,16 @@ namespace MyPortfolio.WebApi.Mapping
             CreateMap<PortfolioBlogTag, GetAllPortfolioBlogTagDto>().ReverseMap();
             CreateMap<PortfolioBlogTag, CreatePortfolioBlogTagDto>().ForMember(x => x.TagName, opt => opt.MapFrom(src => src.TagName)).ReverseMap();
             CreateMap<PortfolioBlogTag, UpdatePortfolioBlogTagDto>().ForMember(x => x.TagName, opt => opt.MapFrom(src => src.TagName)).ReverseMap();
+
+            CreateMap<PortfolioBlog, GetPortfolioBlogTagsByPortfolioBlogId>()
+                       .ForMember(dest => dest.PortfolioBlogId, opt => opt.MapFrom(src => src.PortfolioBlogId))
+                       .ForMember(dest => dest.PortfolioBlogTags, opt => opt.MapFrom(src => src.PortfolioBlogTags));
+
+
             CreateMap<PortfolioBlogTag, GetPortfolioBlogTagByPortfolioBlogTagId>().ForMember(x => x.TagName, opt => opt.MapFrom(src => src.TagName)).ReverseMap();
             //CreateMap<PortfolioBlogTag, GetPortfolioBlogsByPortfolioBlogTagsIdDto>().ForMember(x => x.PortfolioBlogTags, opt => opt.MapFrom(src => src.PortfolioBlogs)).ReverseMap();
-            CreateMap<PortfolioBlog, GetPortfolioBlogsByPortfolioBlogTagsIdDto>()
-    .ForMember(dto => dto.PortfolioBlogTags,
-               opt => opt.MapFrom(src => src.PortfolioBlogTags)) // Tagleri eşle
-    .ReverseMap();
+            CreateMap<PortfolioBlog, GetPortfolioBlogsByPortfolioBlogTagsIdDto>().ForMember(dto => dto.PortfolioBlogTags,opt => opt.MapFrom(src => src.PortfolioBlogTags)).ReverseMap();
+
 
 
 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Portfolio.WebUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d506880fbf30f16f4488668e6ae1c629e0c37985")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad70e37fdaf5a3becfc2ea5da0f5e634e40f6efc")]
 [assembly: System.Reflection.AssemblyProductAttribute("Portfolio.WebUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Portfolio.WebUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,15 +1,12 @@
 ﻿<!--Taglar-->
+@model List<Portfolio.DtoLayer.PortfolioDtos.PortfolioBlogTagDtos.GetAllPortfolioBlogTagDto>
 
 <div class="sidebar-box ftco-animate">
-    <h3 class="heading-sidebar">Tag Cloud</h3>
+    <h3 class="heading-sidebar">Taglar</h3>
     <div class="tagcloud">
-        <a href="#" class="tag-cloud-link">house</a>
-        <a href="#" class="tag-cloud-link">office</a>
-        <a href="#" class="tag-cloud-link">building</a>
-        <a href="#" class="tag-cloud-link">land</a>
-        <a href="#" class="tag-cloud-link">table</a>
-        <a href="#" class="tag-cloud-link">interior</a>
-        <a href="#" class="tag-cloud-link">exterior</a>
-        <a href="#" class="tag-cloud-link">industrial</a>
+        @foreach (var item in Model)
+        {
+            <a href="#" class="tag-cloud-link">@item.TagName</a>
+        }
     </div>
 </div>

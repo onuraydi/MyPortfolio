@@ -37,6 +37,13 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
+        [HttpGet("GetPortfolioBlogTagsByPortfolioBlogId/{id}")]
+        public async Task<IActionResult> GetPortfolioBlogTagsByPortfolioBlogId(int id)
+        {
+            var values = await _portfolioBlogTagService.GetPortfolioBlogTagsByPortfolioBlogIdAsync(id);
+            return Ok(values);
+        }
+
         [HttpPost]
         public async Task<IActionResult> CreatePortfolioBlogTag(CreatePortfolioBlogTagDto createPortfolioBlogTagDto)
         {
