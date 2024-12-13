@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "5wIwapcYPcE=",
+=======
+  "dgSpecHash": "9EqI0G7jP9k=",
+>>>>>>> Stashed changes
   "success": true,
   "projectFilePath": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\fronend\\Portfolio.DtoLayer\\Portfolio.DtoLayer.csproj",
   "expectedPackageFiles": [],

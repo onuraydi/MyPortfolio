@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "Ra1KF/w8D28=",
+=======
+  "dgSpecHash": "5yDQImwQKHI=",
+>>>>>>> Stashed changes
   "success": true,
   "projectFilePath": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj",
   "expectedPackageFiles": [

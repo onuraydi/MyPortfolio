@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "/mDSmQypqyE=",
+=======
+  "dgSpecHash": "ATb3AqVlGo0=",
+>>>>>>> Stashed changes
   "success": true,
   "projectFilePath": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\ApiGateway\\Portfolio.OcelotGateway\\Portfolio.OcelotGateway.csproj",
   "expectedPackageFiles": [

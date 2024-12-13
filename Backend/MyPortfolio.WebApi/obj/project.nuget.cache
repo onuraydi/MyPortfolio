@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "QJ4ljxUF1iE=",
+=======
+  "dgSpecHash": "zD1Xni/Jf6I=",
+>>>>>>> Stashed changes
   "success": true,
   "projectFilePath": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Backend\\MyPortfolio.WebApi\\MyPortfolio.WebApi.csproj",
   "expectedPackageFiles": [
