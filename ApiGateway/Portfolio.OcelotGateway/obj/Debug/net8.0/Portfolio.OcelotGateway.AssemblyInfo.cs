@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Portfolio.OcelotGateway")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< Updated upstream
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79bea1c42846a99457f501e9759755e163b3fa9d")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d3cd8189030f6dc6b76b83ad68e9cb2e884eced")]
->>>>>>> Stashed changes
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1fb09563091f342aff2a4c58e42285041a6c0187")]
 [assembly: System.Reflection.AssemblyProductAttribute("Portfolio.OcelotGateway")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Portfolio.OcelotGateway")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
