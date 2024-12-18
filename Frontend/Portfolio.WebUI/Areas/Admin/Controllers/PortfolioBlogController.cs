@@ -6,6 +6,9 @@ using System.Reflection;
 using System.Web;
 using System.Net;
 using Newtonsoft.Json;
+using Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogTagServices;
+using Portfolio.WebUI.Models;
+using Portfolio.DtoLayer.PortfolioDtos.PortfolioBlogTagDtos;
 
 namespace Portfolio.WebUI.Areas.Admin.Controllers
 {
@@ -14,10 +17,12 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
     public class PortfolioBlogController : Controller
     {
         private readonly IPortfolioBlogService _portfolioBlogService;
+        private readonly IPortfolioBlogTagServices _portfolioBlogTagService;
 
-        public PortfolioBlogController(IPortfolioBlogService portfolioBlogService)
+        public PortfolioBlogController(IPortfolioBlogService portfolioBlogService, IPortfolioBlogTagServices portfolioBlogTagService)
         {
             _portfolioBlogService = portfolioBlogService;
+            _portfolioBlogTagService = portfolioBlogTagService;
         }
 
         [HttpGet]
@@ -30,18 +35,42 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 
         [HttpGet]
         [Route("CreatePortfolioBlog")]
-        public IActionResult CreatePortfolioBlog()
+        public async Task<IActionResult> CreatePortfolioBlog()
         {
-            return View();
+            var values = await _portfolioBlogTagService.GetAllPortfolioBlogTagAsync();
+            return View(values);
         }
+
+
 
         [HttpPost]
         [Route("CreatePortfolioBlog")]
-        public async Task<IActionResult> CreatePortfolioBlog(CreatePortfolioBlogDto createPortfolioBlogDto)
+        public async Task<IActionResult> CreatePortfolioBlog(CreatePortfolioBlogDto createPortfolioBlogDto, GetAllPortfolioBlogTagDto getAllPortfolioBlogTagDto)
         {
-            await _portfolioBlogService.CreatePortfolioBlogAsync(createPortfolioBlogDto);
+            var tagModel = new BlogTagsViewModel()
+            {
+                BlogCreate = createPortfolioBlogDto,
+                BlogTags = getAllPortfolioBlogTagDto
+            };
+            var values = await _portfolioBlogService.CreatePortfolioBlogAsync(tagModel.BlogCreate);
+
+            values.PortfolioBlogTags.Add(tagModel.BlogTags);
+
             return Json(new { redirectToUrl = Url.Action("GetAllPortfolioBlog", "PortfolioBlog", new { area = "Admin" }) });
         }
+
+
+        [HttpGet]
+        [Route("AddTagPortfolioBlog/{id}")]
+        public async Task<IActionResult> AddTagPortfolioBlog(int id)
+        {
+            var values = await _portfolioBlogService.GetPortfolioBlogByPortfolioBlogIdAsync(id);
+            return View(values);
+        }
+
+
+
+
 
         [HttpGet]
         [Route("UpdatePortfolioBlog/{id}")]

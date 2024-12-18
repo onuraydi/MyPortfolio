@@ -26,6 +26,7 @@
                         <th>Başlık</th>
                         <th>Açıklama</th>
                         <th>Kapak Resmi</th>
+                        <th>Tagla</th>
                         <th>Güncelle</th>
                         <th>Sil</th>
                     </tr>
@@ -40,6 +41,7 @@
                             <td class="aciklama">@item.Title</td>
                             <td class="aciklama">@item.SubContent</td>
                             <td>@item.CoverImage</td>
+                            <td><a href="/Admin/PortfolioBlog/AddTagPortfolioBlog/@item.PortfolioBlogId" class="btn btn-primary">Tagla</a></td>
                             <td><a href="/Admin/PortfolioBlog/UpdatePortfolioBlog/@item.PortfolioBlogId" class="btn btn-primary">Güncelle</a></td>
                             <td><a href="/Admin/PortfolioBlog/DeletePortfolioBlog/@item.PortfolioBlogId" class="btn btn-danger">Sil</a></td>
                         </tr>

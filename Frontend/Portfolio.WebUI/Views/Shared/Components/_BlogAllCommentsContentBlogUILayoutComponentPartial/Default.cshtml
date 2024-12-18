@@ -23,6 +23,10 @@
         </ul>
     }*@
 
+
+
+
+
 <div>
     @if (Model.BlogComments.Count() != 0)
     {
@@ -40,8 +44,6 @@
                         <h3>@item.CommentTitle</h3>
                         <p>@item.CommentDetail</p>
                         <p><a href="javascript:void(0);" class="reply" data-id="@item.PortfolioBlogCommentId">Yanıtla</a></p>
-
-                        <!-- Hidden reply modal for each comment -->
                         <div class="reply-modal" id="replyModal-@item.PortfolioBlogCommentId">
                             <h2>Cevabınız</h2>
                             <input type="text" id="replyName-@item.PortfolioBlogCommentId" placeholder="Adınız" />
@@ -176,57 +178,65 @@
 
 
 
+
+
+
+
+
+
+
+
 @*<li class="comment">
-        <div class="vcard bio">
-            <img src="images/person_1.jpg" alt="Image placeholder">
-        </div>
-        <div class="comment-body">
-            <h3>John Doe</h3>
-            <div class="meta">June 20, 2019 at 2:21pm</div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-            <p><a href="#" class="reply">Reply</a></p>
-        </div>
+    <div class="vcard bio">
+        <img src="images/person_1.jpg" alt="Image placeholder">
+    </div>
+    <div class="comment-body">
+        <h3>John Doe</h3>
+        <div class="meta">June 20, 2019 at 2:21pm</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+        <p><a href="#" class="reply">Reply</a></p>
+    </div>
 
-        <ul class="children">
-            <li class="comment">
-                <div class="vcard bio">
-                    <img src="images/person_1.jpg" alt="Image placeholder">
-                </div>
-                <div class="comment-body">
-                    <h3>John Doe</h3>
-                    <div class="meta">June 20, 2019 at 2:21pm</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                    <p><a href="#" class="reply">Reply</a></p>
-                </div>
+    <ul class="children">
+        <li class="comment">
+            <div class="vcard bio">
+                <img src="images/person_1.jpg" alt="Image placeholder">
+            </div>
+            <div class="comment-body">
+                <h3>John Doe</h3>
+                <div class="meta">June 20, 2019 at 2:21pm</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                <p><a href="#" class="reply">Reply</a></p>
+            </div>
 
 
-                <ul class="children">
-                    <li class="comment">
-                        <div class="vcard bio">
-                            <img src="images/person_1.jpg" alt="Image placeholder">
-                        </div>
-                        <div class="comment-body">
-                            <h3>John Doe</h3>
-                            <div class="meta">June 20, 2019 at 2:21pm</div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                            <p><a href="#" class="reply">Reply</a></p>
-                        </div>
+            <ul class="children">
+                <li class="comment">
+                    <div class="vcard bio">
+                        <img src="images/person_1.jpg" alt="Image placeholder">
+                    </div>
+                    <div class="comment-body">
+                        <h3>John Doe</h3>
+                        <div class="meta">June 20, 2019 at 2:21pm</div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                        <p><a href="#" class="reply">Reply</a></p>
+                    </div>
 
-                        <ul class="children">
-                            <li class="comment">
-                                <div class="vcard bio">
-                                    <img src="images/person_1.jpg" alt="Image placeholder">
-                                </div>
-                                <div class="comment-body">
-                                    <h3>John Doe</h3>
-                                    <div class="meta">June 20, 2019 at 2:21pm</div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                                    <p><a href="#" class="reply">Reply</a></p>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </li>*@
+                    <ul class="children">
+                        <li class="comment">
+                            <div class="vcard bio">
+                                <img src="images/person_1.jpg" alt="Image placeholder">
+                            </div>
+                            <div class="comment-body">
+                                <h3>John Doe</h3>
+                                <div class="meta">June 20, 2019 at 2:21pm</div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                                <p><a href="#" class="reply">Reply</a></p>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</li>*@

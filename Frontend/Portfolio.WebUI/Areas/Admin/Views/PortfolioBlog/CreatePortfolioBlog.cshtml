@@ -1,4 +1,4 @@
-﻿@model CreatePortfolioBlogDto
+﻿@model Portfolio.WebUI.Models.BlogTagsViewModel
 @{
     ViewData["Title"] = "CreatePortfolioBlog";
     Layout = "~/Areas/Admin/Views/AdminLayout/AdminLayout.cshtml";
@@ -67,12 +67,13 @@
             <!-- Taglar kısmı -->
             <div class="form-group">
                 <label>Etiketler</label>
-                <div id="tagList" class="tag-container">
-                    <!-- Etiketler buraya dinamik olarak eklenecek -->
-                    <span class="tag" data-tag="Teknoloji">Teknoloji</span>
-                    <span class="tag" data-tag="Yazılım">Yazılım</span>
-                    <span class="tag" data-tag="Blog">Blog</span>
-                    <span class="tag" data-tag="Design">Design</span>
+                <div id="PortfolioBlogTags" class="tag-container">
+                    @*@foreach (var item in Model.BlogTags)
+        {
+            <span class="tag" data-tag="@item.TagName" data-id="@item.PortfolioBlogTagId">@item.TagName</span>
+        }*@
+                    <span class="tag" data-tag="@Model.BlogTags.TagName" data-id="@Model.BlogTags.PortfolioBlogTagId">@Model.BlogTags.TagName</span>
+
                 </div>
                 <div id="tagLimitMessage" class="tag-limit-message" style="display: none;">Maksimum 4 etiket ekleyebilirsiniz!</div>
             </div>
@@ -86,35 +87,40 @@
     </div>
 </div>
 
+
 <script>
-    // Etiket ekleme kısmı
     document.addEventListener("DOMContentLoaded", function () {
-        const tagContainer = document.getElementById("tagList");
+        const tagContainer = document.getElementById("PortfolioBlogTags");
         const tagLimitMessage = document.getElementById("tagLimitMessage");
         const maxTags = 4;
         let selectedTags = [];
 
         // Etiket tıklama olayları
         tagContainer.addEventListener("click", function (event) {
-            const tag = event.target;
-            if (tag.classList.contains("tag")) {
-                const tagName = tag.getAttribute("data-tag");
+            const clickedTag = event.target;
 
-                // Etiket zaten seçildiyse, çıkar
-                if (tag.classList.contains("selected")) {
-                    tag.classList.remove("selected");
-                    selectedTags = selectedTags.filter(t => t !== tagName);
+            // Tıklanan elemanın "tag" sınıfında olup olmadığını kontrol et
+            if (clickedTag.classList.contains("tag")) {
+                const tagName = clickedTag.getAttribute("data-tag");
+                const tagId = clickedTag.getAttribute("data-id");
+
+                // Seçili etiket kaldırma
+                if (clickedTag.classList.contains("selected")) {
+                    clickedTag.classList.remove("selected");
+                    selectedTags = selectedTags.filter(t => t.PortfolioBlogTagId !== tagId);
                 }
-                // Etiket seçilmediyse, ekle
+                // Yeni etiket ekleme
                 else {
-                    // 4 etiketi geçtiyse, yeni etiket eklenmesine izin verme
                     if (selectedTags.length < maxTags) {
-                        tag.classList.add("selected");
-                        selectedTags.push(tagName);
+                        clickedTag.classList.add("selected");
+                        selectedTags.push({
+                            PortfolioBlogTagId: tagId,
+                            TagName: tagName
+                        });
                     }
                 }
 
-                // 4 etiket limitini kontrol et
+                // Etiket limiti kontrolü
                 if (selectedTags.length >= maxTags) {
                     tagLimitMessage.style.display = "block";
                 } else {
@@ -125,16 +131,16 @@
 
         // Form submit işlemi
         document.getElementById("submitBtn").addEventListener("click", function (event) {
-            event.preventDefault(); // Varsayılan davranışı engelle
+            event.preventDefault();
 
-            var content = quill.root.innerHTML; // Quill editör içeriğini al
-            var title = document.getElementById('title').value; // Başlık verisini al
-            var subContent = document.getElementById('SubContent').value; // Kısa açıklamayı al
-            var coverImage = document.getElementById('CoverImage').value; // Kapak resmi URL'sini al
-            var publishDate = document.getElementById('PublishDate').value; // Yayımlanma tarihini al
+            var content = quill.root.innerHTML;
+            var title = document.getElementById('title').value;
+            var subContent = document.getElementById('SubContent').value;
+            var coverImage = document.getElementById('CoverImage').value;
+            var publishDate = document.getElementById('PublishDate').value;
 
-            // Etiket verisini al
-            var tags = selectedTags.join(', '); // Seçilen etiketleri virgülle ayırarak al
+            // Seçili etiketler
+            var tags = selectedTags;
 
             // FormData objesi oluştur
             var formData = new FormData();
@@ -143,38 +149,33 @@
             formData.append("CoverImage", coverImage);
             formData.append("PublishDate", publishDate);
             formData.append("Content", content);
-            formData.append("Tags", tags); // Etiketleri ekle
+            formData.append("PortfolioBlogTags", JSON.stringify(tags)); // Seçilen etiketleri JSON olarak gönder
 
-            // Gönderilecek veriyi kontrol et
             console.log("Gönderilecek veri:", {
                 Title: title,
                 SubContent: subContent,
                 CoverImage: coverImage,
                 PublishDate: publishDate,
                 Content: content,
-                Tags: tags
+                PortfolioBlogTags: tags
             });
 
-            // AJAX POST isteği ile veriyi gönder
+            // AJAX POST isteği
             $.ajax({
                 url: '@Url.Action("CreatePortfolioBlog", "PortfolioBlog")',
                 type: 'POST',
-                processData: false,  // FormData için bu gerekli
-                contentType: false,  // FormData için bu gerekli
+                processData: false,
+                contentType: false,
                 data: formData,
-                success: function(response) {
-                    console.log("Başarılı yanıt:", response); // Başarı yanıtını kontrol et
+                success: function (response) {
+                    console.log("Başarılı yanıt:", response);
                     window.location.href = '@Url.Action("GetAllPortfolioBlog", "PortfolioBlog", new { area = "Admin" })';
                 },
-                error: function(xhr, status, error) {
-                    console.error("Hata: ", error);
-                    alert("Ekleme işlemi başarısız oldu. Lütfen tekrar deneyin.");
-                }
             });
         });
     });
 
-    // Quill JS düzenleyici başlatma
+    // Quill JS başlatma
     const fontSizeArr = ['8px', '9px', '10px', '12px', '14px', '16px', '20px', '24px', '32px', '42px', '54px', '68px', '84px', '98px'];
     const fontFamilyArr = ['Arial', 'Courier New', 'Georgia', 'Times New Roman', 'Verdana', 'Trebuchet MS', 'Comic Sans MS', 'Impact', 'Tahoma', 'Helvetica'];
 
@@ -210,6 +211,16 @@
         theme: 'snow'
     });
 </script>
+
+
+
+
+
+
+
+
+
+
 
 
 

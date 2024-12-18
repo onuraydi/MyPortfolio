@@ -17,11 +17,12 @@ namespace MyPortfolio.WebApi.Services.PortfolioBlogServices
             _mapper = mapper;
         }
 
-        public async Task CreatePortfolioBlogAsync(CreatePortfolioBlogDto createPortfolioBlogDto)
+        public async Task<CreatePortfolioBlogDto> CreatePortfolioBlogAsync(CreatePortfolioBlogDto createPortfolioBlogDto)
         {
             var values = _mapper.Map<PortfolioBlog>(createPortfolioBlogDto);
             await _context.portfolioBlogs.AddAsync(values);
             _context.SaveChanges();
+            return _mapper.Map<CreatePortfolioBlogDto>(values);
         }
 
         public async Task DeletePortfolioBlogAsync(int id)

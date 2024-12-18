@@ -33,8 +33,8 @@ namespace MyPortfolio.WebApi.Controllers
         [HttpPost]
         public async Task<IActionResult> CreatePortfolioBlog([FromBody] CreatePortfolioBlogDto createPortfolioBlogDto)
         {
-            await _portfolioBlogService.CreatePortfolioBlogAsync(createPortfolioBlogDto);
-            return Ok("Blog ekleme işlemi başarılı");
+            var values = await _portfolioBlogService.CreatePortfolioBlogAsync(createPortfolioBlogDto);
+            return Ok(values);
         }
 
         [HttpPut]

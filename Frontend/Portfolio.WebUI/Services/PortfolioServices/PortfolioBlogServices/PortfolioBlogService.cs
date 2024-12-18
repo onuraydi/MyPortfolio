@@ -15,9 +15,12 @@ namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogServices
             _portfolioBlogTagServices = portfolioBlogTagServices;
         }
 
-        public async Task CreatePortfolioBlogAsync(CreatePortfolioBlogDto createPortfolioBlogDto)
+        public async Task<CreatePortfolioBlogDto> CreatePortfolioBlogAsync(CreatePortfolioBlogDto createPortfolioBlogDto)
         {
-            await _httpClient.PostAsJsonAsync("portfolioblogs", createPortfolioBlogDto);
+            var responseMessage = await _httpClient.PostAsJsonAsync("portfolioblogs", createPortfolioBlogDto);
+            var jsonData = await responseMessage.Content.ReadAsStringAsync();
+            var values = JsonConvert.DeserializeObject<CreatePortfolioBlogDto>(jsonData);
+            return values;
         }
 
         public async Task DeletePortfolioBlogAsync(int id)
