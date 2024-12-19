@@ -13,6 +13,7 @@ using MyPortfolio.WebApi.Services.PortfolioExperienceServices;
 using MyPortfolio.WebApi.Services.PortfolioMainTitleServices;
 using MyPortfolio.WebApi.Services.PortfolioProjectServices;
 using MyPortfolio.WebApi.Services.PortfolioSkillServices;
+using MyPortfolio.WebApi.Services.PortfolioSocialMediaFooterServices;
 using MyPortfolio.WebApi.Services.PortfolioTechnologyServices;
 using MyPortfolio.WebApi.Services.ProjectImageServices;
 using System.Reflection;
@@ -41,7 +42,7 @@ builder.Services.AddScoped<IPortfolioContactService, PortfolioContactService>();
 builder.Services.AddScoped<IPortfolioBlogCommentService, PortfolioBlogCommentService>();
 builder.Services.AddScoped<IProjectImageService, ProjectImageService>();
 builder.Services.AddScoped<IPortfolioBlogTagService, PortfolioBlogTagService>();
-
+builder.Services.AddScoped<IPortfolioSocialMediaFooterService, PortfolioSocialMediaFooterService>();
 
 builder.Services.AddScoped<IBookService, BookService>();
 

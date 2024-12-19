@@ -1248,6 +1248,119 @@
         }
       }
     },
+    "/api/PortfolioSocialMediaFooters": {
+      "get": {
+        "tags": [
+          "PortfolioSocialMediaFooters"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "PortfolioSocialMediaFooters"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePortfolioSocialMediaFooterDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePortfolioSocialMediaFooterDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePortfolioSocialMediaFooterDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "PortfolioSocialMediaFooters"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePortfolioSocialMediaFooterDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePortfolioSocialMediaFooterDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePortfolioSocialMediaFooterDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "PortfolioSocialMediaFooters"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/PortfolioSocialMediaFooters/{id}": {
+      "get": {
+        "tags": [
+          "PortfolioSocialMediaFooters"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/PortfolioTechnologies": {
       "get": {
         "tags": [
@@ -1686,6 +1799,24 @@
         },
         "additionalProperties": false
       },
+      "CreatePortfolioSocialMediaFooterDto": {
+        "type": "object",
+        "properties": {
+          "footerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "footerLink": {
+            "type": "string",
+            "nullable": true
+          },
+          "footerIcon": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CreatePortfolioTechnologyDto": {
         "type": "object",
         "properties": {
@@ -2035,6 +2166,28 @@
             "nullable": true
           },
           "skillPercent": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdatePortfolioSocialMediaFooterDto": {
+        "type": "object",
+        "properties": {
+          "portfolioSocialMediaFooterId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "footerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "footerLink": {
+            "type": "string",
+            "nullable": true
+          },
+          "footerIcon": {
             "type": "string",
             "nullable": true
           }

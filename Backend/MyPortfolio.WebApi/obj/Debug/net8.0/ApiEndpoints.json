@@ -824,6 +824,80 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioSocialMediaFootersController",
+    "Method": "GetAllPortfolioSocialMediaFooter",
+    "RelativePath": "api/PortfolioSocialMediaFooters",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioSocialMediaFootersController",
+    "Method": "CreatePortfolioSocialMediaFooter",
+    "RelativePath": "api/PortfolioSocialMediaFooters",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createPortfolioSocialMediaFooterDto",
+        "Type": "MyPortfolio.WebApi.Dtos.PortfolioSocialMediaFooter.CreatePortfolioSocialMediaFooterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioSocialMediaFootersController",
+    "Method": "UpdatePortfolioSocialMediaFooter",
+    "RelativePath": "api/PortfolioSocialMediaFooters",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updatePortfolioSocialMediaFooterDto",
+        "Type": "MyPortfolio.WebApi.Dtos.PortfolioSocialMediaFooter.UpdatePortfolioSocialMediaFooterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioSocialMediaFootersController",
+    "Method": "DeletePortfolioSocialMediaFooter",
+    "RelativePath": "api/PortfolioSocialMediaFooters",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioSocialMediaFootersController",
+    "Method": "GetPortfolioSocialMediaFooterById",
+    "RelativePath": "api/PortfolioSocialMediaFooters/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioTechnologiesController",
     "Method": "GetAllPortfolioTechnology",
     "RelativePath": "api/PortfolioTechnologies",

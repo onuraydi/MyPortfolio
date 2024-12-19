@@ -513,6 +513,31 @@ namespace MyPortfolio.WebApi.Migrations
                     b.ToTable("portfolioSkills");
                 });
 
+            modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioSocialMediaFooter", b =>
+                {
+                    b.Property<int>("PortfolioSocialMediaFooterId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PortfolioSocialMediaFooterId"));
+
+                    b.Property<string>("FooterIcon")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FooterLink")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FooterName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("PortfolioSocialMediaFooterId");
+
+                    b.ToTable("PortfolioSocialMediaFooters");
+                });
+
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioTechnology", b =>
                 {
                     b.Property<int>("PortfolioTechnologyId")
