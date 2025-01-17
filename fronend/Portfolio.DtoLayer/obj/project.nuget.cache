@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0WmR3WXUTVU=",
+  "dgSpecHash": "ivL6R4930Io=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\fronend\\Portfolio.DtoLayer\\Portfolio.DtoLayer.csproj",
+  "projectFilePath": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\fronend\\Portfolio.DtoLayer\\Portfolio.DtoLayer.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\fronend\\Portfolio.DtoLayer\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

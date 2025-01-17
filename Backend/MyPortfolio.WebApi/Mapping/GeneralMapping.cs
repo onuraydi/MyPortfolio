@@ -11,6 +11,7 @@ using MyPortfolio.WebApi.Dtos.PortfolioCertificateDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioContactDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioEducationDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioExperienceDtos;
+using MyPortfolio.WebApi.Dtos.PortfolioFreelanceDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioMainTitleDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioProjectDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioSkillDtos;
@@ -118,6 +119,16 @@ namespace MyPortfolio.WebApi.Mapping
             CreateMap<PortfolioSocialMediaFooter, CreatePortfolioSocialMediaFooterDto>().ReverseMap();
             CreateMap<PortfolioSocialMediaFooter, UpdatePortfolioSocialMediaFooterDto>().ReverseMap();
             CreateMap<PortfolioSocialMediaFooter, GetPortfolioSocialMediaFooterByIdDto>().ReverseMap();
+
+
+            // freelance
+            CreateMap<PortfolioFreelance, GetAllPortfolioFreelanceDto>().ReverseMap();
+            CreateMap<PortfolioFreelance, CreatePortfolioFreelanceDto>().ReverseMap();
+            CreateMap<PortfolioFreelance, UpdatePortfolioFreelanceDto>().ReverseMap();
+            CreateMap<PortfolioFreelance, GetPortfolioFreelanceByPortfolioFreelanceIdDto>().ReverseMap();
+
+
+
 
             // Library parts
             //Book

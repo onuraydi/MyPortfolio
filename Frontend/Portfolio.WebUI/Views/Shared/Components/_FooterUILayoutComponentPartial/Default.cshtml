@@ -1,16 +1,21 @@
-﻿
+﻿@model List<Portfolio.DtoLayer.PortfolioDtos.PortfolioSocialMediaFooterDtos.GetAllPortfolioSocialMediaFooterDto>
 
 <footer class="ftco-footer ftco-section">
     <div class="container">
         <div class="row mb-5">
             <div class="col-md">
-                <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">About</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                <div class="ftco-footer-widget mb-4 ml-md-4">
+                    <h2 class="ftco-heading-2">Sosyal Medya</h2>
+                    <ul class="list-unstyled">
+                        @foreach (var item in Model)
+                        {
+                            <li class="ftco-animate">
+                                <a href="@item.FooterLink" style="display: flex; align-items: center; text-decoration: none;">
+                                    <img src="@item.FooterIcon" alt="Resim Açıklaması" style="width: 24px; height: 24px; background-color: aliceblue; margin-right: 8px;">
+                                    <p style="margin: 0; color: inherit;">@item.FooterName</p>
+                                </a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>

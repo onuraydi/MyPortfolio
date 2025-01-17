@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using MyPortfolio.WebApi.Context;
 using MyPortfolio.WebApi.Services.LibraryServices.BookServices;
+using MyPortfolio.WebApi.Services.PorfolioFreelanceServices;
 using MyPortfolio.WebApi.Services.PortfolioAboutMeServices;
 using MyPortfolio.WebApi.Services.PortfolioBlogCommentServices;
 using MyPortfolio.WebApi.Services.PortfolioBlogServices;
@@ -43,6 +44,7 @@ builder.Services.AddScoped<IPortfolioBlogCommentService, PortfolioBlogCommentSer
 builder.Services.AddScoped<IProjectImageService, ProjectImageService>();
 builder.Services.AddScoped<IPortfolioBlogTagService, PortfolioBlogTagService>();
 builder.Services.AddScoped<IPortfolioSocialMediaFooterService, PortfolioSocialMediaFooterService>();
+builder.Services.AddScoped<IPortfolioFreelanceService, PortfolioFreelanceServices>();
 
 builder.Services.AddScoped<IBookService, BookService>();
 

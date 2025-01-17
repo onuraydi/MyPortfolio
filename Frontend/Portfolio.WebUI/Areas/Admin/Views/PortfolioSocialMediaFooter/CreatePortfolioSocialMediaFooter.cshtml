@@ -1,0 +1,31 @@
+﻿@model CreatePortfolioSocialMediaFooterDto
+
+
+@{
+    ViewData["Title"] = "CreatePortfolioSocialMediaFooter";
+    Layout = "~/Areas/Admin/Views/AdminLayout/AdminLayout.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card" style="background-color: #191c24">
+    <div class="card-body">
+        <h4 class="card-title">Sosyal Medya Hesapları</h4>
+        <p class="card-description">Sosyal Medya Footer Ekleme Sayfası</p>
+        <form class="forms-sample" method="post">
+            <div class="form-group">
+                <label for="Title">Footer Adı</label>
+                <input type="text" class="form-control" asp-for="FooterName" placeholder="Footer Adı" />
+            </div>
+            <div class="form-group">
+                <label for="Title">Footer Linki</label>
+                <input type="url" class="form-control" asp-for="FooterLink" placeholder="Footer Linki" />
+            </div>
+            <div class="form-group">
+                <label for="Title">Footer Icon</label>
+                <input type="text" class="form-control" asp-for="FooterIcon" placeholder="Footer Icon/ image upload" />
+            </div>
+            <button type="submit" class="btn btn-primary mr-2">Ekle</button>
+            <button class="btn btn-info">Geri</button>
+        </form>
+    </div>
+</div>
+

@@ -10,3 +10,15 @@ C:\Users\ONUR\Desktop\OnurAydiPortfolio\fronend\Portfolio.DtoLayer\obj\Debug\net
 C:\Users\ONUR\Desktop\OnurAydiPortfolio\fronend\Portfolio.DtoLayer\obj\Debug\net8.0\refint\Portfolio.DtoLayer.dll
 C:\Users\ONUR\Desktop\OnurAydiPortfolio\fronend\Portfolio.DtoLayer\obj\Debug\net8.0\Portfolio.DtoLayer.pdb
 C:\Users\ONUR\Desktop\OnurAydiPortfolio\fronend\Portfolio.DtoLayer\obj\Debug\net8.0\ref\Portfolio.DtoLayer.dll
+C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\fronend\Portfolio.DtoLayer\bin\Debug\net8.0\Portfolio.DtoLayer.deps.json
+C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\fronend\Portfolio.DtoLayer\bin\Debug\net8.0\Portfolio.DtoLayer.dll
+C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\fronend\Portfolio.DtoLayer\bin\Debug\net8.0\Portfolio.DtoLayer.pdb
+C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\fronend\Portfolio.DtoLayer\obj\Debug\net8.0\Portfolio.DtoLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\fronend\Portfolio.DtoLayer\obj\Debug\net8.0\Portfolio.DtoLayer.AssemblyInfoInputs.cache
+C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\fronend\Portfolio.DtoLayer\obj\Debug\net8.0\Portfolio.DtoLayer.AssemblyInfo.cs
+C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\fronend\Portfolio.DtoLayer\obj\Debug\net8.0\Portfolio.DtoLayer.csproj.CoreCompileInputs.cache
+C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\fronend\Portfolio.DtoLayer\obj\Debug\net8.0\Portfolio.DtoLayer.sourcelink.json
+C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\fronend\Portfolio.DtoLayer\obj\Debug\net8.0\Portfolio.DtoLayer.dll
+C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\fronend\Portfolio.DtoLayer\obj\Debug\net8.0\refint\Portfolio.DtoLayer.dll
+C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\fronend\Portfolio.DtoLayer\obj\Debug\net8.0\Portfolio.DtoLayer.pdb
+C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\fronend\Portfolio.DtoLayer\obj\Debug\net8.0\ref\Portfolio.DtoLayer.dll

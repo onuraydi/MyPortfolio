@@ -1,0 +1,45 @@
+﻿@model List<GetAllPortfolioSocialMediaFooterDto>
+
+@{
+    ViewData["Title"] = "GetAllPortfolioSocialMediaFooter";
+    Layout = "~/Areas/Admin/Views/AdminLayout/AdminLayout.cshtml";
+    int count = 0;
+}
+
+<div class="col-lg-12 grid-margin stretch-card" style="background-color: #191c24 ">
+    <div class="card-body">
+        <h4 class="card-title">Sosyal Medya Footerları</h4>
+        <p class="card-description">Sosyal Medya hesaplarının sitenin alt bilgisinde görünmesi ile ilgili işlemleri içerir. /// daha sonra upload image yapılacak</p>
+        <div class="table-res">
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Footer Adı</th>
+                        <th>Link</th>
+                        <th>Icon</th>
+                        <th>Detaylar/Güncelle</th>
+                        <th>Sil</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        count += 1;
+                        <tr>
+                            <td>@count</td>
+                            <td>@item.FooterName</td>
+                            <td>@item.FooterLink</td>
+                            <td>@item.FooterIcon</td>
+                            <td><a href="/Admin/PortfolioSocialMediaFooter/UpdatePortfolioSocialMediaFooter/@item.PortfolioSocialMediaFooterId" class="btn btn-primary">Detaylar/Güncelle</a></td>
+                            <td><a href="/Admin/PortfolioSocialMediaFooter/DeletePortfolioSocialMediaFooter/@item.PortfolioSocialMediaFooterId" class="btn btn-danger">Sil</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <br />
+            <a href="/Admin/PortfolioSocialMediaFooter/CreatePortfolioSocialMediaFooter/" class="btn btn-success">Hesap Ekle</a>
+        </div>
+    </div>
+</div>

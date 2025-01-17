@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VGPPsI3pA9M=",
+  "dgSpecHash": "dRx2QaKnPdg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\ApiGateway\\Portfolio.OcelotGateway\\Portfolio.OcelotGateway.csproj",
+  "projectFilePath": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\ApiGateway\\Portfolio.OcelotGateway\\Portfolio.OcelotGateway.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ONUR\\.nuget\\packages\\fluentvalidation\\11.10.0\\fluentvalidation.11.10.0.nupkg.sha512",
     "C:\\Users\\ONUR\\.nuget\\packages\\ipaddressrange\\6.0.0\\ipaddressrange.6.0.0.nupkg.sha512",
@@ -24,12 +24,5 @@
     "C:\\Users\\ONUR\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
     "C:\\Users\\ONUR\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\ApiGateway\\Portfolio.OcelotGateway\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

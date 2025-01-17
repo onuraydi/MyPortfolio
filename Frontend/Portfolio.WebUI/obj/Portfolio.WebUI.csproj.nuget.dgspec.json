@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj": {}
+    "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\fronend\\Portfolio.DtoLayer\\Portfolio.DtoLayer.csproj": {
+    "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\fronend\\Portfolio.DtoLayer\\Portfolio.DtoLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\fronend\\Portfolio.DtoLayer\\Portfolio.DtoLayer.csproj",
+        "projectUniqueName": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\fronend\\Portfolio.DtoLayer\\Portfolio.DtoLayer.csproj",
         "projectName": "Portfolio.DtoLayer",
-        "projectPath": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\fronend\\Portfolio.DtoLayer\\Portfolio.DtoLayer.csproj",
+        "projectPath": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\fronend\\Portfolio.DtoLayer\\Portfolio.DtoLayer.csproj",
         "packagesPath": "C:\\Users\\ONUR\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\fronend\\Portfolio.DtoLayer\\obj\\",
+        "outputPath": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\fronend\\Portfolio.DtoLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -69,14 +69,14 @@
         }
       }
     },
-    "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj": {
+    "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj",
+        "projectUniqueName": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj",
         "projectName": "Portfolio.WebUI",
-        "projectPath": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj",
+        "projectPath": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj",
         "packagesPath": "C:\\Users\\ONUR\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\obj\\",
+        "outputPath": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -98,8 +98,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\fronend\\Portfolio.DtoLayer\\Portfolio.DtoLayer.csproj": {
-                "projectPath": "C:\\Users\\ONUR\\Desktop\\OnurAydiPortfolio\\fronend\\Portfolio.DtoLayer\\Portfolio.DtoLayer.csproj"
+              "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\fronend\\Portfolio.DtoLayer\\Portfolio.DtoLayer.csproj": {
+                "projectPath": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\fronend\\Portfolio.DtoLayer\\Portfolio.DtoLayer.csproj"
               }
             }
           }

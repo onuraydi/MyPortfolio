@@ -72,7 +72,10 @@
         {
             <span class="tag" data-tag="@item.TagName" data-id="@item.PortfolioBlogTagId">@item.TagName</span>
         }*@
-                    <span class="tag" data-tag="@Model.BlogTags.TagName" data-id="@Model.BlogTags.PortfolioBlogTagId">@Model.BlogTags.TagName</span>
+                    @foreach (var item in Model.BlogTags)
+                    {
+                        <span class="tag" data-tag="@item.TagName" data-id="@item.PortfolioBlogTagId">@item.TagName</span>
+                    }
 
                 </div>
                 <div id="tagLimitMessage" class="tag-limit-message" style="display: none;">Maksimum 4 etiket ekleyebilirsiniz!</div>

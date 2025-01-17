@@ -414,6 +414,31 @@ namespace MyPortfolio.WebApi.Migrations
                     b.ToTable("portfolioExperiences");
                 });
 
+            modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioFreelance", b =>
+                {
+                    b.Property<int>("PortfolioFreelanceId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PortfolioFreelanceId"));
+
+                    b.Property<string>("ButtonHref")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("PortfolioFreelanceId");
+
+                    b.ToTable("PortfolioFreelances");
+                });
+
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioMainTitle", b =>
                 {
                     b.Property<int>("PortfolioMainTitleId")

@@ -22,6 +22,7 @@ namespace MyPortfolio.WebApi.Context
         public DbSet<ProjectImage> ProjectImages { get; set; }
         public DbSet<PortfolioBlogTag> PortfolioBlogTags { get; set; }
         public DbSet<PortfolioSocialMediaFooter> PortfolioSocialMediaFooters { get; set; }
+        public DbSet<PortfolioFreelance> PortfolioFreelances { get; set; }
 
         // Library parts
         public DbSet<Book> Books {  get; set; }
