@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\views\\shared\\components\\_askmequestionviewcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\views\\shared\\components\\_askmequestionviewcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\views\\bloguilayout\\_bloguilayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\views\\bloguilayout\\_bloguilayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\views\\uilayout\\_uilayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\views\\uilayout\\_uilayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\viewcomponents\\footerviewcomponents\\_askmequestionviewcomponentpartial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\viewcomponents\\footerviewcomponents\\_askmequestionviewcomponentpartial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,7 +28,7 @@
               "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Views\\UILayout\\_UILayout.cshtml",
               "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Views\\UILayout\\_UILayout.cshtml",
               "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Views\\UILayout\\_UILayout.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAADIAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADIAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-18T07:36:35.891Z",
               "IsPinned": true,
@@ -41,27 +37,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_AskMeQuestionViewComponentPartial\\Default.cshtml",
-              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_AskMeQuestionViewComponentPartial\\Default.cshtml",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_AskMeQuestionViewComponentPartial\\Default.cshtml",
-              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_AskMeQuestionViewComponentPartial\\Default.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAKAAAAAAAAAA==",
+              "Title": "_BlogUILayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Views\\BlogUILayout\\_BlogUILayout.cshtml",
+              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Views\\BlogUILayout\\_BlogUILayout.cshtml",
+              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Views\\BlogUILayout\\_BlogUILayout.cshtml",
+              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Views\\BlogUILayout\\_BlogUILayout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-18T11:30:23.157Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_AskMeQuestionViewComponentPartial.cs",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\ViewComponents\\FooterViewComponents\\_AskMeQuestionViewComponentPartial.cs",
-              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\ViewComponents\\FooterViewComponents\\_AskMeQuestionViewComponentPartial.cs",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\ViewComponents\\FooterViewComponents\\_AskMeQuestionViewComponentPartial.cs",
-              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\ViewComponents\\FooterViewComponents\\_AskMeQuestionViewComponentPartial.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-18T11:26:34.388Z",
+              "WhenOpened": "2025-01-18T11:38:19.843Z",
               "EditorCaption": ""
             }
           ]
