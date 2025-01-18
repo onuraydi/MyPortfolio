@@ -1135,6 +1135,119 @@
         }
       }
     },
+    "/api/PortfolioProjectFooters": {
+      "get": {
+        "tags": [
+          "PortfolioProjectFooters"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "PortfolioProjectFooters"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePortfolioProjectFooterDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePortfolioProjectFooterDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePortfolioProjectFooterDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "PortfolioProjectFooters"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePortfolioProjectFooterDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePortfolioProjectFooterDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePortfolioProjectFooterDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "PortfolioProjectFooters"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/PortfolioProjectFooters/{id}": {
+      "get": {
+        "tags": [
+          "PortfolioProjectFooters"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/PortfolioProjects": {
       "get": {
         "tags": [
@@ -2029,6 +2142,20 @@
         },
         "additionalProperties": false
       },
+      "CreatePortfolioProjectFooterDto": {
+        "type": "object",
+        "properties": {
+          "projectName": {
+            "type": "string",
+            "nullable": true
+          },
+          "projectLink": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CreatePortfolioRoutingFooterDto": {
         "type": "object",
         "properties": {
@@ -2429,6 +2556,24 @@
             "items": {
               "$ref": "#/components/schemas/UpdateProjectImageDto"
             },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdatePortfolioProjectFooterDto": {
+        "type": "object",
+        "properties": {
+          "portfolioProjectFooterId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "projectName": {
+            "type": "string",
+            "nullable": true
+          },
+          "projectLink": {
+            "type": "string",
             "nullable": true
           }
         },

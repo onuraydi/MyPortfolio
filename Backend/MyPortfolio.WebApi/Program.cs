@@ -12,6 +12,7 @@ using MyPortfolio.WebApi.Services.PortfolioContactServices;
 using MyPortfolio.WebApi.Services.PortfolioEducationServices;
 using MyPortfolio.WebApi.Services.PortfolioExperienceServices;
 using MyPortfolio.WebApi.Services.PortfolioMainTitleServices;
+using MyPortfolio.WebApi.Services.PortfolioProjectFooterServices;
 using MyPortfolio.WebApi.Services.PortfolioProjectServices;
 using MyPortfolio.WebApi.Services.PortfolioRoutingFooterServices;
 using MyPortfolio.WebApi.Services.PortfolioSkillServices;
@@ -47,6 +48,7 @@ builder.Services.AddScoped<IPortfolioBlogTagService, PortfolioBlogTagService>();
 builder.Services.AddScoped<IPortfolioSocialMediaFooterService, PortfolioSocialMediaFooterService>();
 builder.Services.AddScoped<IPortfolioFreelanceService, PortfolioFreelanceServices>();
 builder.Services.AddScoped<IPortfolioRoutingFooterService, PortfolioRoutingFooterService>();
+builder.Services.AddScoped<IPortfolioProjectFooterService, PortfolioProjectFooterService>();
 
 builder.Services.AddScoped<IBookService, BookService>();
 
