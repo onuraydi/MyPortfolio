@@ -824,6 +824,80 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioRoutingFootersController",
+    "Method": "GetAllPortfolioRoutingFooter",
+    "RelativePath": "api/PortfolioRoutingFooters",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioRoutingFootersController",
+    "Method": "CreatePortfolioRoutingFooter",
+    "RelativePath": "api/PortfolioRoutingFooters",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createPortfolioRoutingFooterDto",
+        "Type": "MyPortfolio.WebApi.Dtos.PortfolioRoutingFooterDtos.CreatePortfolioRoutingFooterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioRoutingFootersController",
+    "Method": "UpdatePortfolioRoutingFooter",
+    "RelativePath": "api/PortfolioRoutingFooters",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updatePortfolioRoutingFooterDto",
+        "Type": "MyPortfolio.WebApi.Dtos.PortfolioRoutingFooterDtos.UpdatePortfolioRoutingFooterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioRoutingFootersController",
+    "Method": "DeletePortfolioRoutingFooter",
+    "RelativePath": "api/PortfolioRoutingFooters",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioRoutingFootersController",
+    "Method": "GetPortfolioRoutingFooterByPortfolioRoutingFooterId",
+    "RelativePath": "api/PortfolioRoutingFooters/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioSkillsController",
     "Method": "GetAllPortfolioSkill",
     "RelativePath": "api/PortfolioSkills",

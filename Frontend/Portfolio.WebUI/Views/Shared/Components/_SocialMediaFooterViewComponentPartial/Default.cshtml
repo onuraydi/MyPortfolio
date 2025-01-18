@@ -1,0 +1,18 @@
+﻿@model List<GetAllPortfolioSocialMediaFooterDto>
+
+<div class="col-md">
+    <div class="ftco-footer-widget mb-4 ml-md-4">
+        <h2 class="ftco-heading-2">Sosyal Medya</h2>
+        <ul class="list-unstyled">
+            @foreach (var item in Model)
+            {
+                <li class="ftco-animate">
+                    <a href="@item.FooterLink" style="display: flex; align-items: center; text-decoration: none;">
+                        <img src="@item.FooterIcon" alt="Resim Açıklaması" style="width: 24px; height: 24px; background-color: aliceblue; margin-right: 8px;">
+                        <p style="margin: 0; color: inherit;">@item.FooterName</p>
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

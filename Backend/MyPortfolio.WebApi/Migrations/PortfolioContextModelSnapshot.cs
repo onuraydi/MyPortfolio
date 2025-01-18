@@ -517,6 +517,27 @@ namespace MyPortfolio.WebApi.Migrations
                     b.ToTable("portfolioProjects");
                 });
 
+            modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioRoutingFooter", b =>
+                {
+                    b.Property<int>("PortfolioRoutingFooterId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PortfolioRoutingFooterId"));
+
+                    b.Property<string>("pageHref")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("pageName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("PortfolioRoutingFooterId");
+
+                    b.ToTable("PortfolioRoutingFooters");
+                });
+
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioSkill", b =>
                 {
                     b.Property<int>("PortfolioSkillId")

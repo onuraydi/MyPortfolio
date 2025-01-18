@@ -14,6 +14,7 @@ using MyPortfolio.WebApi.Dtos.PortfolioExperienceDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioFreelanceDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioMainTitleDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioProjectDtos;
+using MyPortfolio.WebApi.Dtos.PortfolioRoutingFooterDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioSkillDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioSocialMediaFooter;
 using MyPortfolio.WebApi.Dtos.PortfolioTechnologyDtos;
@@ -127,7 +128,11 @@ namespace MyPortfolio.WebApi.Mapping
             CreateMap<PortfolioFreelance, UpdatePortfolioFreelanceDto>().ReverseMap();
             CreateMap<PortfolioFreelance, GetPortfolioFreelanceByPortfolioFreelanceIdDto>().ReverseMap();
 
-
+            // Routing
+            CreateMap<PortfolioRoutingFooter, GetAllPortfolioRoutingFooterDto>().ReverseMap();
+            CreateMap<PortfolioRoutingFooter, CreatePortfolioRoutingFooterDto>().ReverseMap();
+            CreateMap<PortfolioRoutingFooter, UpdatePortfolioRoutingFooterDto>().ReverseMap();
+            CreateMap<PortfolioRoutingFooter, GetPortfolioRoutingFooterByPortfolioRoutingFooterIdDto>().ReverseMap();
 
 
             // Library parts

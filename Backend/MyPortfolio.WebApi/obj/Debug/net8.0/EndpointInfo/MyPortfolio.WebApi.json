@@ -1248,6 +1248,119 @@
         }
       }
     },
+    "/api/PortfolioRoutingFooters": {
+      "get": {
+        "tags": [
+          "PortfolioRoutingFooters"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "PortfolioRoutingFooters"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePortfolioRoutingFooterDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePortfolioRoutingFooterDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePortfolioRoutingFooterDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "PortfolioRoutingFooters"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePortfolioRoutingFooterDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePortfolioRoutingFooterDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePortfolioRoutingFooterDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "PortfolioRoutingFooters"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/PortfolioRoutingFooters/{id}": {
+      "get": {
+        "tags": [
+          "PortfolioRoutingFooters"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/PortfolioSkills": {
       "get": {
         "tags": [
@@ -1916,6 +2029,20 @@
         },
         "additionalProperties": false
       },
+      "CreatePortfolioRoutingFooterDto": {
+        "type": "object",
+        "properties": {
+          "pageName": {
+            "type": "string",
+            "nullable": true
+          },
+          "pageHref": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CreatePortfolioSkillDto": {
         "type": "object",
         "properties": {
@@ -2302,6 +2429,24 @@
             "items": {
               "$ref": "#/components/schemas/UpdateProjectImageDto"
             },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdatePortfolioRoutingFooterDto": {
+        "type": "object",
+        "properties": {
+          "portfolioRoutingFooterId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageName": {
+            "type": "string",
+            "nullable": true
+          },
+          "pageHref": {
+            "type": "string",
             "nullable": true
           }
         },

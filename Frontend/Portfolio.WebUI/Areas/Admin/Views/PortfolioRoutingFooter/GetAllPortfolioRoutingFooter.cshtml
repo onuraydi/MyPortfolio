@@ -1,0 +1,52 @@
+﻿@model List<GetAllPortfolioRoutingFooterDto>
+
+@{
+    ViewData["Title"] = "GetAllPortfolioRoutingFooter";
+    Layout = "~/Areas/Admin/Views/AdminLayout/AdminLayout.cshtml";
+    int count = 0;
+}
+
+<style>
+    .aciklama {
+        max-width: 300px; /* Genişliği sınırla */
+        white-space: nowrap; /* Satır taşmasını önle */
+        overflow: hidden; /* Taşan kısmı gizle */
+        text-overflow: ellipsis; /* Taşan kısmı üç nokta ile göster */
+    }
+</style>
+
+<div class="col-lg-12 grid-margin stretch-card" style="background-color: #191c24 ">
+    <div class="card-body">
+        <h4 class="card-title">Linkler</h4>
+        <p class="card-description">Footer kısmında yer verilecek olan linklerin ve yönlendirmelerin yönetildiği sayfa</p>
+        <div class="table-res">
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Link Adı</th>
+                        <th>Link Adresi</th>
+                        <th>Detaylar/Güncelle</th>
+                        <th>Sil</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        count += 1;
+                        <tr>
+                            <td>@count</td>
+                            <td>@item.pageName</td>
+                            <td class="aciklama">@item.pageHref</td>
+                            <td><a href="/Admin/PortfolioRoutingFooter/UpdatePortfolioRoutingFooter/@item.PortfolioRoutingFooterId" class="btn btn-primary">Detaylar/Güncelle</a></td>
+                            <td><a href="/Admin/PortfolioRoutingFooter/DeletePortfolioRoutingFooter/@item.PortfolioRoutingFooterId" class="btn btn-danger">Sil</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <br />
+            <a href="/Admin/PortfolioRoutingFooter/CreatePortfolioRoutingFooter/" class="btn btn-success">Link Ekle</a>
+        </div>
+    </div>
+</div>

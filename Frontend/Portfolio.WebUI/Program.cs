@@ -10,6 +10,7 @@ using Portfolio.WebUI.Services.PortfolioServices.PortfolioExperienceServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioFreelanceServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioMainTitleServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioProjectServices;
+using Portfolio.WebUI.Services.PortfolioServices.PortfolioRoutingFooterServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioSkillServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioSocialMediaFooterServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioTechnologyServices;
@@ -102,6 +103,11 @@ builder.Services.AddHttpClient<IPortfolioSocialMediaFooterService, PortfolioSoci
 });
 
 builder.Services.AddHttpClient<IPortfolioFreelanceService, PortfolioFreelanceService>(opt =>
+{
+    opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
+});
+
+builder.Services.AddHttpClient<IPortfolioRoutingFooterService, PortfolioRoutingFooterService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
 });

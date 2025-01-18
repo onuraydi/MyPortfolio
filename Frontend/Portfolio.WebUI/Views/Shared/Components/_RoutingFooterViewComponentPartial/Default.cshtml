@@ -1,0 +1,13 @@
+﻿@model List<GetAllPortfolioRoutingFooterDto>
+
+<div class="col-md">
+    <div class="ftco-footer-widget mb-4 ml-md-4">
+        <h2 class="ftco-heading-2">Linkler</h2>
+        <ul class="list-unstyled">
+            @foreach (var item in Model)
+            {
+                <li><a href="@item.pageHref"><span class="icon-long-arrow-right mr-2"></span>@item.pageName</a></li>
+            }
+        </ul>
+    </div>
+</div>
