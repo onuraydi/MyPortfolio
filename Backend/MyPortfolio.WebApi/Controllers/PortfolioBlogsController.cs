@@ -17,9 +17,9 @@ namespace MyPortfolio.WebApi.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllPortfolioBlog()
+        public async Task<IActionResult> GetAllPortfolioBlog(string query = "")
         {
-            var values = await _portfolioBlogService.GetAllPortfolioBlogAsync();
+            var values = await _portfolioBlogService.GetAllPortfolioBlogAsync(query);
             return Ok(values);
         }
 

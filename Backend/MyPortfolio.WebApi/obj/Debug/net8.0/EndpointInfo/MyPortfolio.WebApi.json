@@ -193,6 +193,16 @@
         "tags": [
           "PortfolioBlogs"
         ],
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Success"

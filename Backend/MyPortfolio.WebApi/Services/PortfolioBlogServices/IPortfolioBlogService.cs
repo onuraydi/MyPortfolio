@@ -4,7 +4,7 @@ namespace MyPortfolio.WebApi.Services.PortfolioBlogServices
 {
     public interface IPortfolioBlogService
     {
-        Task<List<GetAllPortfolioBlogDto>> GetAllPortfolioBlogAsync();
+        Task<List<GetAllPortfolioBlogDto>> GetAllPortfolioBlogAsync(string query = "");
         Task<CreatePortfolioBlogDto> CreatePortfolioBlogAsync(CreatePortfolioBlogDto createPortfolioBlogDto);
         Task UpdatePortfolioBlogAsync(UpdatePortfolioBlogDto updatePortfolioBlogDto);
         Task DeletePortfolioBlogAsync(int id);

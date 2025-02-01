@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using MyPortfolio.WebApi.Context;
 using MyPortfolio.WebApi.Dtos.PortfolioBlogDtos;
 using MyPortfolio.WebApi.Entites;
+using static System.Reflection.Metadata.BlobBuilder;
 
 namespace MyPortfolio.WebApi.Services.PortfolioBlogServices
 {
@@ -32,10 +33,21 @@ namespace MyPortfolio.WebApi.Services.PortfolioBlogServices
             _context.SaveChanges();
         }
 
-        public async Task<List<GetAllPortfolioBlogDto>> GetAllPortfolioBlogAsync()
+        public async Task<List<GetAllPortfolioBlogDto>> GetAllPortfolioBlogAsync(string query = "")
         {
-            var values = await _context.portfolioBlogs.Include(x =>x.PortfolioBlogTags).ToListAsync();
-            return _mapper.Map<List<GetAllPortfolioBlogDto>>(values);
+            var values = await _context.portfolioBlogs.Include(x => x.PortfolioBlogTags).ToListAsync();
+            if (string.IsNullOrEmpty(query))
+            {
+                return _mapper.Map<List<GetAllPortfolioBlogDto>>(values);
+            }
+            else
+            {
+                var result = values.Where(b => b.Title.Contains(query, StringComparison.OrdinalIgnoreCase) ||
+                               b.PortfolioBlogTags.Any(tag => tag.TagName.Contains(query, StringComparison.OrdinalIgnoreCase)))
+                   .ToList();
+
+                return _mapper.Map<List<GetAllPortfolioBlogDto>>(result);
+            }
         }
 
         public async Task<GetPortfolioBlogByPortfolioBlogIdDto> GetPortfolioBlogByPortfolioBlogIdAsync(int id)

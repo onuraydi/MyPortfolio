@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\views\\bloguilayout\\_bloguilayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\views\\bloguilayout\\_bloguilayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\views\\shared\\components\\_blogsearchbarcontentbloguilayoutcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\views\\shared\\components\\_blogsearchbarcontentbloguilayoutcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\views\\uilayout\\_uilayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\views\\uilayout\\_uilayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{75DF9660-2FF1-4F15-BE91-9508C3BA3F22}|fronend\\Portfolio.DtoLayer\\Portfolio.DtoLayer.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\fronend\\portfolio.dtolayer\\portfoliodtos\\portfolioblogdtos\\getallportfolioblogdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75DF9660-2FF1-4F15-BE91-9508C3BA3F22}|fronend\\Portfolio.DtoLayer\\Portfolio.DtoLayer.csproj|solutionrelative:fronend\\portfolio.dtolayer\\portfoliodtos\\portfolioblogdtos\\getallportfolioblogdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,28 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "_UILayout.cshtml",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Views\\UILayout\\_UILayout.cshtml",
-              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Views\\UILayout\\_UILayout.cshtml",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Views\\UILayout\\_UILayout.cshtml",
-              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Views\\UILayout\\_UILayout.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADIAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-18T07:36:35.891Z",
-              "IsPinned": true,
+              "Title": "GetAllPortfolioBlogDto.cs",
+              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\fronend\\Portfolio.DtoLayer\\PortfolioDtos\\PortfolioBlogDtos\\GetAllPortfolioBlogDto.cs",
+              "RelativeDocumentMoniker": "fronend\\Portfolio.DtoLayer\\PortfolioDtos\\PortfolioBlogDtos\\GetAllPortfolioBlogDto.cs",
+              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\fronend\\Portfolio.DtoLayer\\PortfolioDtos\\PortfolioBlogDtos\\GetAllPortfolioBlogDto.cs",
+              "RelativeToolTip": "fronend\\Portfolio.DtoLayer\\PortfolioDtos\\PortfolioBlogDtos\\GetAllPortfolioBlogDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T08:50:16.268Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_BlogUILayout.cshtml",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Views\\BlogUILayout\\_BlogUILayout.cshtml",
-              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Views\\BlogUILayout\\_BlogUILayout.cshtml",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Views\\BlogUILayout\\_BlogUILayout.cshtml",
-              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Views\\BlogUILayout\\_BlogUILayout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_BlogSearchBarContentBlogUILayoutComponentPartial\\Default.cshtml",
+              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_BlogSearchBarContentBlogUILayoutComponentPartial\\Default.cshtml",
+              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_BlogSearchBarContentBlogUILayoutComponentPartial\\Default.cshtml",
+              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_BlogSearchBarContentBlogUILayoutComponentPartial\\Default.cshtml",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAAAFsAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-18T11:38:19.843Z",
+              "WhenOpened": "2025-02-01T07:45:46.465Z",
               "EditorCaption": ""
             }
           ]

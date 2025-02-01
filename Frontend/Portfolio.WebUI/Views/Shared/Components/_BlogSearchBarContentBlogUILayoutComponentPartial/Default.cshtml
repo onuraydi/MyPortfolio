@@ -1,0 +1,165 @@
+﻿@*<div class="sidebar-box">
+        <form action="#" class="search-form">
+            <div class="form-group">
+                <span class="icon icon-search"></span>
+                <input type="text" id="searchInput" class="form-control" placeholder="Bloglarda Arama yapınız..." onkeyup="searchBlogs()">
+                <div id="searchResults" class="search-results"></div>
+            </div>
+        </form>
+    </div>*@
+
+<!--<div class="sidebar-box">
+    <div class="form-group">-->
+@*<span class="icon icon-search"></span>*@
+<!--<input type="text" id="searchInput" class="form-control" placeholder="Bloglarda Arama yapınız..." onkeyup="searchBlogs()">
+        <div id="searchResults" class="search-results"></div>
+    </div>
+    <div id="blogContainer"></div>
+    <script src="scripts.js"></script>
+</div>-->
+
+
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+
+    .search-container {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    #searchInput {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+
+    .search-results {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        right: 0;
+        background: white;
+        border: 1px solid #ddd;
+        max-height: 300px;
+        overflow-y: auto;
+        z-index: 1000;
+    }
+
+    .no-results {
+        padding: 10px;
+        color: #777;
+    }
+
+    .blog-post {
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+        .blog-post h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .blog-post p {
+            margin: 5px 0;
+        }
+
+        .blog-post .tags {
+            margin-top: 5px;
+        }
+
+            .blog-post .tags span {
+                display: inline-block;
+                background: #eee;
+                border: 1px solid #ccc;
+                padding: 2px 5px;
+                margin-right: 5px;
+                font-size: 12px;
+                border-radius: 3px;
+            }
+</style>
+
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Blogları arayın..." onkeyup="searchBlogs()">
+    <div id="searchResults" class="search-results"></div>
+</div>
+<div id="blogContainer"></div>
+
+<script>
+    let blogs = [];
+
+    document.addEventListener('DOMContentLoaded', () => {
+        fetchBlogs();
+    });
+
+    function fetchBlogs(query = '') {
+        fetch(`https://localhost:7301/api/PortfolioBlogs?query=${encodeURIComponent(query)}`)
+            .then(response => {
+                // Yanıtın başarılı olup olmadığını kontrol edin
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Fetched data:', data); // API'den gelen veriyi loglayın
+                blogs = data;
+                displayBlogs(blogs);
+            })
+            .catch(error => {
+                console.error('Error fetching blogs:', error);
+                displayErrorMessage('Bloglar yüklenirken bir hata oluştu.');
+            });
+    }
+
+    function displayBlogs(blogList) {
+        const searchResults = document.getElementById('searchResults');
+        searchResults.innerHTML = '';
+
+        if (blogList.length === 0) {
+            const noResults = document.createElement('div');
+            noResults.className = 'no-results';
+            noResults.textContent = 'Aradığınız blog bulunamadı.';
+            searchResults.appendChild(noResults);
+        } else {
+            blogList.forEach(blog => {
+                console.log('Blog:', blog); // Görüntülenen blogları loglayın
+                const blogDiv = document.createElement('div');
+                blogDiv.className = 'blog-post';
+                blogDiv.innerHTML = `
+                <h2 style="color:black">${blog.Title || 'Başlık Bulunamadı'}</h2>
+                <p>${blog.SubContent || 'Alt Başlık Bulunamadı'}</p>
+                <p>Publish Date: ${blog.PublishDate ? new Date(blog.PublishDate).toLocaleDateString() : 'Tarih Bulunamadı'}</p>
+                ${blog.PortfolioBlogTags?.length ?
+                        `<div class="tags">${blog.PortfolioBlogTags.map(tag => `<span>${tag.Name}</span>`).join('')}</div>`
+                        : 'Etiket Bulunamadı'}
+            `;
+                searchResults.appendChild(blogDiv);
+            });
+        }
+    }
+
+    function searchBlogs() {
+        let input = document.getElementById('searchInput').value.toLowerCase();
+        fetchBlogs(input);
+    }
+
+    function displayErrorMessage(message) {
+        const searchResults = document.getElementById('searchResults');
+        searchResults.innerHTML = '';
+
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'error-message';
+        errorDiv.textContent = message;
+        searchResults.appendChild(errorDiv);
+    }
+</script>
+
+
+

@@ -24,6 +24,20 @@ using System.Reflection;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddCors(opt =>
+{
+    opt.AddPolicy("AllowAllOrigins",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+        });
+});
+
+{
+
+}
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
@@ -82,7 +96,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseCors("AllowAllOrigins"); // CORS politikasýný uygulayýn
 app.UseAuthorization();
 
 app.MapControllers();
