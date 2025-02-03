@@ -1,31 +1,14 @@
-﻿@*<div class="sidebar-box">
-        <form action="#" class="search-form">
-            <div class="form-group">
-                <span class="icon icon-search"></span>
-                <input type="text" id="searchInput" class="form-control" placeholder="Bloglarda Arama yapınız..." onkeyup="searchBlogs()">
-                <div id="searchResults" class="search-results"></div>
-            </div>
-        </form>
-    </div>*@
+﻿@model List<GetAllPortfolioBlogDto>
 
-<!--<div class="sidebar-box">
-    <div class="form-group">-->
-@*<span class="icon icon-search"></span>*@
-<!--<input type="text" id="searchInput" class="form-control" placeholder="Bloglarda Arama yapınız..." onkeyup="searchBlogs()">
-        <div id="searchResults" class="search-results"></div>
-    </div>
-    <div id="blogContainer"></div>
-    <script src="scripts.js"></script>
-</div>-->
 
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Blogları arayın..." onkeyup="searchBlogs()">
+    <div id="searchResults" class="search-results"></div>
+</div>
+<div id="blogContainer"></div>
 
 
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        padding: 20px;
-    }
-
     .search-container {
         position: relative;
         margin-bottom: 20px;
@@ -85,81 +68,246 @@
             }
 </style>
 
-<div class="search-container">
-    <input type="text" id="searchInput" placeholder="Blogları arayın..." onkeyup="searchBlogs()">
-    <div id="searchResults" class="search-results"></div>
-</div>
-<div id="blogContainer"></div>
-
 <script>
-    let blogs = [];
+        const blogs = [];
 
-    document.addEventListener('DOMContentLoaded', () => {
-        fetchBlogs();
-    });
-
-    function fetchBlogs(query = '') {
-        fetch(`https://localhost:7301/api/PortfolioBlogs?query=${encodeURIComponent(query)}`)
-            .then(response => {
-                // Yanıtın başarılı olup olmadığını kontrol edin
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log('Fetched data:', data); // API'den gelen veriyi loglayın
-                blogs = data;
-                displayBlogs(blogs);
-            })
-            .catch(error => {
-                console.error('Error fetching blogs:', error);
-                displayErrorMessage('Bloglar yüklenirken bir hata oluştu.');
+        @foreach (var blog in Model)
+        {
+            <text>
+            blogs.push({
+                PortfolioBlogId: @blog.PortfolioBlogId,
+                Title: "@blog.Title",
+                SubContent: "@blog.SubContent",
+                Content: "@blog.Content",
+                CoverImage: "@blog.CoverImage",
+                PublishDate: new Date("@blog.PublishDate"),
+                PortfolioBlogTags: [
+                    @foreach (var tag in blog.PortfolioBlogTags)
+                    {
+                        <text>
+                        { Name: "@tag.TagName" },
+                        </text>
+                    }
+                ]
             });
-    }
-
-    function displayBlogs(blogList) {
-        const searchResults = document.getElementById('searchResults');
-        searchResults.innerHTML = '';
-
-        if (blogList.length === 0) {
-            const noResults = document.createElement('div');
-            noResults.className = 'no-results';
-            noResults.textContent = 'Aradığınız blog bulunamadı.';
-            searchResults.appendChild(noResults);
-        } else {
-            blogList.forEach(blog => {
-                console.log('Blog:', blog); // Görüntülenen blogları loglayın
-                const blogDiv = document.createElement('div');
-                blogDiv.className = 'blog-post';
-                blogDiv.innerHTML = `
-                <h2 style="color:black">${blog.Title || 'Başlık Bulunamadı'}</h2>
-                <p>${blog.SubContent || 'Alt Başlık Bulunamadı'}</p>
-                <p>Publish Date: ${blog.PublishDate ? new Date(blog.PublishDate).toLocaleDateString() : 'Tarih Bulunamadı'}</p>
-                ${blog.PortfolioBlogTags?.length ?
-                        `<div class="tags">${blog.PortfolioBlogTags.map(tag => `<span>${tag.Name}</span>`).join('')}</div>`
-                        : 'Etiket Bulunamadı'}
-            `;
-                searchResults.appendChild(blogDiv);
-            });
+            </text>
         }
-    }
 
-    function searchBlogs() {
-        let input = document.getElementById('searchInput').value.toLowerCase();
-        fetchBlogs(input);
-    }
+        document.addEventListener('click', function(event) {
+            const searchInput = document.getElementById('searchInput');
+            const searchResults = document.getElementById('searchResults');
+            if (!searchInput.contains(event.target) && !searchResults.contains(event.target)) {
+                searchResults.style.display = 'none';
+            }
+        });
 
-    function displayErrorMessage(message) {
-        const searchResults = document.getElementById('searchResults');
-        searchResults.innerHTML = '';
+        function searchBlogs() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const searchResults = document.getElementById('searchResults');
+            if (input.trim() === '') {
+                searchResults.innerHTML = '';
+                searchResults.style.display = 'none';
+                return;
+            }
+            const results = blogs.filter(blog => {
+                const matchesTitle = blog.Title.toLowerCase().includes(input);
+                const matchesSubContent = blog.SubContent.toLowerCase().includes(input);
+                const matchesTags = blog.PortfolioBlogTags.some(tag => tag.Name.toLowerCase().includes(input));
+                return matchesTitle || matchesSubContent || matchesTags;
+            });
+            displayBlogs(results);
+        }
 
-        const errorDiv = document.createElement('div');
-        errorDiv.className = 'error-message';
-        errorDiv.textContent = message;
-        searchResults.appendChild(errorDiv);
-    }
+        function restoreSearchResults() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            if (input.trim() !== '') {
+                searchBlogs(); // Mevcut arama sonuçlarını yeniden göster
+            }
+        }
+
+        function displayBlogs(blogList) {
+            const searchResults = document.getElementById('searchResults');
+            searchResults.innerHTML = '';
+            searchResults.style.display = 'block';
+
+            if (blogList.length === 0) {
+                const noResults = document.createElement('div');
+                noResults.className = 'no-results';
+                noResults.textContent = 'Aradığınız blog bulunamadı.';
+                searchResults.appendChild(noResults);
+            } else {
+                blogList.forEach(blog => {
+                    const blogDiv = document.createElement('div');
+                    blogDiv.className = 'blog-post';
+                    blogDiv.innerHTML = `
+                    <h2 style="color:black">${blog.Title || 'Başlık Bulunamadı'}</h2>
+                    <p>${blog.SubContent || 'Alt Başlık Bulunamadı'}</p>
+                    <p>Publish Date: ${blog.PublishDate ? new Date(blog.PublishDate).toLocaleDateString('tr-TR', { day: '2-digit', month: '2-digit', year: 'numeric' }) : 'Tarih Bulunamadı'}</p>
+                    ${blog.PortfolioBlogTags?.length ?
+                            `<div class="tags">${blog.PortfolioBlogTags.map(tag => `<span>${tag.Name}</span>`).join('')}</div>`
+                            : 'Etiket Bulunamadı'}
+                `;
+                    blogDiv.addEventListener('click', function() {
+                        window.location.href = `https://localhost:7006/BlogDetail/GetBlogDetail/${blog.PortfolioBlogId}`;
+                    });
+                    searchResults.appendChild(blogDiv);
+                });
+            }
+        }
 </script>
+@*<script>
+        let blogs = [];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchBlogs();
+        });
+
+        function fetchBlogs(query = '') {
+            const apiUrl = `https://localhost:7301/api/PortfolioBlogs?query=${encodeURIComponent(query)}`;
+
+            fetch(apiUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('API Yanıtı:', data); // API yanıtını detaylı loglayın
+                    blogs = data;
+                    displayBlogs(blogs);
+                })
+                .catch(error => {
+                    console.error('Error fetching blogs:', error);
+                    displayErrorMessage('Bloglar yüklenirken bir hata oluştu.');
+                });
+        }
 
 
 
+        function displayBlogs(blogList) {
+            const searchResults = document.getElementById('searchResults');
+            searchResults.innerHTML = '';
+
+            if (blogList.length === 0) {
+                const noResults = document.createElement('div');
+                noResults.className = 'no-results';
+                noResults.textContent = 'Aradığınız blog bulunamadı.';
+                searchResults.appendChild(noResults);
+            } else {
+                blogList.forEach(blog => {
+                    console.log('Blog:', blog); // Görüntülenen blogları loglayın
+
+                    // Verilerin boş olup olmadığını kontrol edin
+                    const title = blog?.Title || 'Başlık Bulunamadı';
+                    const subContent = blog?.SubContent || 'Alt Başlık Bulunamadı';
+                    const publishDate = blog?.PublishDate ? new Date(blog.PublishDate).toLocaleDateString() : 'Tarih Bulunamadı';
+                    const tags = blog?.PortfolioBlogTags?.length ?
+                        blog.PortfolioBlogTags.map(tag => `<span>${tag?.Name}</span>`).join('') :
+                        'Etiket Bulunamadı';
+
+                    const blogDiv = document.createElement('div');
+                    blogDiv.className = 'blog-post';
+                    blogDiv.innerHTML = `
+                        <h2 style="color:black">${title}</h2>
+                        <p>${subContent}</p>
+                        <p>Publish Date: ${publishDate}</p>
+                        <div class="tags">${tags}</div>
+                    `;
+                    searchResults.appendChild(blogDiv);
+                });
+            }
+        }
+
+        function searchBlogs() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            fetchBlogs(input);
+        }
+
+        function displayErrorMessage(message) {
+            const searchResults = document.getElementById('searchResults');
+            searchResults.innerHTML = '';
+
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'error-message';
+            errorDiv.textContent = message;
+            searchResults.appendChild(errorDiv);
+        }
+    </script>*@
+
+
+
+
+
+
+
+@*<script>
+        let blogs = [];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchBlogs();
+        });
+
+        function fetchBlogs(query = '') {
+            const apiUrl = `https://localhost:7301/api/PortfolioBlogs?query=${encodeURIComponent(query)}`;
+
+            fetch(apiUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Fetched data:', data);
+                    blogs = data;
+                    displayBlogs(blogs);
+                })
+                .catch(error => {
+                    console.error('Error fetching blogs:', error);
+                    displayErrorMessage('Bloglar yüklenirken bir hata oluştu.');
+                });
+        }
+
+        function displayBlogs(blogList) {
+            const searchResults = document.getElementById('searchResults');
+            searchResults.innerHTML = '';
+
+            if (blogList.length === 0) {
+                const noResults = document.createElement('div');
+                noResults.className = 'no-results';
+                noResults.textContent = 'Aradığınız blog bulunamadı.';
+                searchResults.appendChild(noResults);
+            } else {
+                blogList.forEach(blog => {
+                    console.log('Blog:', blog); // Blog verisini loglayın
+                    const blogDiv = document.createElement('div');
+                    blogDiv.className = 'blog-post';
+                    blogDiv.innerHTML = `
+                    <h2 style="color:black">${blog.Title || 'Başlık Bulunamadı'}</h2>
+                    <p>${blog.SubContent || 'Alt Başlık Bulunamadı'}</p>
+                    <p>Publish Date: ${blog.PublishDate ? new Date(blog.PublishDate).toLocaleDateString() : 'Tarih Bulunamadı'}</p>
+                    ${blog.PortfolioBlogTags?.length ?
+                            `<div class="tags">${blog.PortfolioBlogTags.map(tag => `<span>${tag.Name}</span>`).join('')}</div>`
+                            : 'Etiket Bulunamadı'}
+                `;
+                    searchResults.appendChild(blogDiv);
+                });
+            }
+        }
+
+        function searchBlogs() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            fetchBlogs(input);
+        }
+
+        function displayErrorMessage(message) {
+            const searchResults = document.getElementById('searchResults');
+            searchResults.innerHTML = '';
+
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'error-message';
+            errorDiv.textContent = message;
+            searchResults.appendChild(errorDiv);
+        }
+    </script>*@
