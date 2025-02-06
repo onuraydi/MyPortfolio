@@ -6,7 +6,7 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Route("Admin/PortfolioRoutingFooter")]
-    public class PortfolioRoutingFooterController : Controller
+    public class PortfolioRoutingFooterController : AdminBaseController
     {
         private readonly IPortfolioRoutingFooterService _portfolioRoutingFooterService;
 

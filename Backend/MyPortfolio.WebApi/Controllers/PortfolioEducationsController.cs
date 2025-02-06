@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MyPortfolio.WebApi.Dtos.PortfolioEducationDtos;
 using MyPortfolio.WebApi.Services.PortfolioEducationServices;
@@ -22,8 +23,10 @@ namespace MyPortfolio.WebApi.Controllers
         {
             var values = await _portfolioEducationService.GetAllPortfolioEducationAsync();
             return Ok(values);
-        } 
+        }
 
+        // Ana sayfada eğitim detayına gitme gibi bir olay olursa bu kısımdan olası hata çıkar
+        [Authorize(Roles = "Admin")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPortfolioEducationByPortfolioEducationId(int id)
         {
@@ -31,6 +34,7 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> CreatePortfolioEducation(CreatePortfolioEducationDto createPortfolioEducationDto)
         {
@@ -38,6 +42,7 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok("Eğitim başarıyla eklendi");
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPut]
         public async Task<IActionResult> UpdatePortfolioEducation(UpdatePortfolioEducationDto updatePortfolioEducationDto)
         {
@@ -45,6 +50,7 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok("Eğitim başarıyla güncellendi");
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete]
         public async Task<IActionResult> DeletePortfolioEducation(int id)
         {

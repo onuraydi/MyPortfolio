@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MyPortfolio.WebApi.Dtos.ProjectImageDtos;
 using MyPortfolio.WebApi.Services.ProjectImageServices;
@@ -16,20 +17,23 @@ namespace MyPortfolio.WebApi.Controllers
             _projectImageService = projectImageService;
         }
 
+
+        // buradan bir hata gelebilir.
+        [Authorize(Roles = "Admin")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetProjectImagesByPortfolioProjectId(int id)
         {
             var values = await _projectImageService.GetProjectImagesByPortfolioProjectIdAsync(id);
             return Ok(values);
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpDelete]
         public async Task<IActionResult> DeleteProjectImagesByProjectImageId(int id)
         {
             await _projectImageService.DeleteProjectImageByProjectImageIdAsync(id);
             return Ok("Resmi silme işlemi başarılı");
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpPut]
         public async Task<IActionResult> UpdateProjectImage(UpdateProjectImageDto updateProjectImageDto)
         {

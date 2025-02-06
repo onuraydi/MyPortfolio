@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters.Xml;
 using MyPortfolio.WebApi.Dtos.PortfolioRoutingFooterDtos;
@@ -24,27 +25,28 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPortfolioRoutingFooterByPortfolioRoutingFooterId(int id)
         {
             var values = await _portfolioRoutingFooterService.GetPortfolioRoutingFooterByPortfolioRoutingFooterIdAsync(id);
             return Ok(values);
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> CreatePortfolioRoutingFooter(CreatePortfolioRoutingFooterDto createPortfolioRoutingFooterDto)
         {
             await _portfolioRoutingFooterService.CreatePortfolioRoutingFooterAsync(createPortfolioRoutingFooterDto);
             return Ok("Ekleme işlemi Başarılı");
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpPut]
         public async Task<IActionResult> UpdatePortfolioRoutingFooter(UpdatePortfolioRoutingFooterDto updatePortfolioRoutingFooterDto)
         {
             await _portfolioRoutingFooterService.UpdatePortfolioRoutingFooterAsync(updatePortfolioRoutingFooterDto);
             return Ok("Güncelleme işlemi başarılı");
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpDelete]
         public async Task<IActionResult> DeletePortfolioRoutingFooter(int id)
         {

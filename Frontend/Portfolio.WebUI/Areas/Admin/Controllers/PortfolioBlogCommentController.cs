@@ -5,7 +5,7 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Route("Admin/PortfolioBlogComment")]
-    public class PortfolioBlogCommentController : Controller
+    public class PortfolioBlogCommentController : AdminBaseController
     {
         private readonly IPortfolioBlogCommentService _portfolioBlogCommentService;
 

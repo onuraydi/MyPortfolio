@@ -5,7 +5,7 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Route("Admin/PortfolioContact")]
-    public class PortfolioContactController : Controller
+    public class PortfolioContactController : AdminBaseController
     {
         private readonly IPortfolioContactService _portfolioContactService;
 

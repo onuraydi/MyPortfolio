@@ -7,7 +7,7 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Route("Admin/PortfolioTechnology")]
-    public class PortfolioTechnologyController : Controller
+    public class PortfolioTechnologyController : AdminBaseController
     {
         private readonly IPortfolioTechnologyService _portfolioTechnologyService;
         private readonly IImageUploadService _imageUploadService;

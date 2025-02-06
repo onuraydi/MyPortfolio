@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MyPortfolio.WebApi.Dtos.PortfolioProjectDtos;
 using MyPortfolio.WebApi.Dtos.ProjectImageDtos;
 using MyPortfolio.WebApi.Services.PortfolioProjectServices;
@@ -23,6 +24,8 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
+        // proje detayına gitme gibi bir durum olursa buradan hata verir
+        [Authorize(Roles = "Admin")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPortfolioProjectByPortfolioProjectId(int id)
         {
@@ -30,6 +33,8 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
+
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> CreatePortfolioProject(CreatePortfolioProjectDto createPortfolioProjectDto )
         {
@@ -37,6 +42,7 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok("Proje başarıyla eklendi");
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPut]
         public async Task<IActionResult> UpdatePortfolioProject(UpdatePortfolioProjectDto updatePortfolioProjectDto )
         {
@@ -44,6 +50,7 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok("Proje başarıyla güncellendi");
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete]
         public async Task<IActionResult> DeletePortfolioProject(int id)
         {

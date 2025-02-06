@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MyPortfolio.WebApi.Dtos.PortfolioCertificateDtos;
 using MyPortfolio.WebApi.Services.PortfolioCertificateServices;
@@ -23,6 +24,8 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
+        // Ana sayfada sertifikanın detayına gitme gibi birşey olursa buradan hata çıkar
+        [Authorize(Roles = "Admin")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPortfolioCertificateByPortfolioCertificateId(int id)
         {
@@ -30,6 +33,7 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> CreatePortfolioCertificate(CreatePortfolioCertificateDto createPortfolioCertificateDto)
         {
@@ -37,6 +41,7 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok("Sertifika başarıyla eklendi");
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPut]
         public async Task<IActionResult> UpdatePortfolioCertificate(UpdatePortfolioCertificateDto updatePortfolioCertificateDto)
         {
@@ -44,6 +49,7 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok("Sertifika başarıyla güncellendi");
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete]
         public async Task<IActionResult> DeletePortfolioCertificate(int id)
         {

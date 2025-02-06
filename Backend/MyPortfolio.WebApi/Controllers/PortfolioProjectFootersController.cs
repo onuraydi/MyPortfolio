@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MyPortfolio.WebApi.Dtos.PortfolioProjectFooterDtos;
 using MyPortfolio.WebApi.Services.PortfolioProjectFooterServices;
@@ -23,6 +24,7 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPortfolioProjectFooterByPortfolioProjectFooterId(int id)
         {
@@ -30,6 +32,7 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> CreatePortfolioProjectFooter(CreatePortfolioProjectFooterDto createPortfolioProjectFooterDto)
         {
@@ -37,13 +40,14 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok("Ekleme işlemi başarılı");
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPut]
         public async Task<IActionResult> UpdatePortfolioProjectFooter(UpdatePortfolioProjectFooterDto updatePortfolioProjectFooterDto)
         {
             await _portfolioProjectFooterService.UpdatePortfolioProjectFooterAsync(updatePortfolioProjectFooterDto);
             return Ok("Güncelleme işlemi başarılı");
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpDelete]
         public async Task<IActionResult> DeletePortfolioProjectFooter(int id)
         {

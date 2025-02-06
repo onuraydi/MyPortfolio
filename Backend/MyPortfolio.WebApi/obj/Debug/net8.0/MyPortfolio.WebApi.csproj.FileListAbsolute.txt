@@ -290,3 +290,9 @@ C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Backend\MyPortfolio.WebA
 C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Backend\MyPortfolio.WebApi\obj\Debug\net8.0\MyPortfolio.WebApi.pdb
 C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Backend\MyPortfolio.WebApi\obj\Debug\net8.0\MyPortfolio.WebApi.genruntimeconfig.cache
 C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Backend\MyPortfolio.WebApi\obj\Debug\net8.0\ref\MyPortfolio.WebApi.dll
+C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Backend\MyPortfolio.WebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Backend\MyPortfolio.WebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Backend\MyPortfolio.WebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Backend\MyPortfolio.WebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Backend\MyPortfolio.WebApi\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Backend\MyPortfolio.WebApi\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll

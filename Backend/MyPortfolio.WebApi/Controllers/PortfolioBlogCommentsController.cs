@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MyPortfolio.WebApi.Dtos.PortfolioBlogCommentDtos;
 using MyPortfolio.WebApi.Services.PortfolioBlogCommentServices;
@@ -15,7 +16,7 @@ namespace MyPortfolio.WebApi.Controllers
         {
             _portfolioBlogCommentService = portfolioBlogCommentService;
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> GetAllPortfolioBlogComment()
         {
@@ -23,6 +24,8 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
+        // buradan bir 401 gelebilir
+        [Authorize(Roles = "Admin")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPortfolioBlogCommentByPortfolioBlogCommentId(int id)
         {
@@ -38,13 +41,14 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete]
         public async Task<IActionResult> DeletePortfolioBlogComment(int id)
         {
             await _portfolioBlogCommentService.DeletePortfolioBlogCommentAsync(id);
             return Ok("Yorum silme işlemi başarılı");
         }
-
+        // Bloğa göre yorum getirme
         [HttpGet("GetPortfolioBlogCommentByPortfolioBlogId/{id}")]
         public async Task<IActionResult> GetPortfolioBlogCommentByPortfolioBlogId(int id)
         {

@@ -6,7 +6,7 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Route("Admin/PortfolioSkill")]
-    public class PortfolioSkillController : Controller
+    public class PortfolioSkillController : AdminBaseController
     {
         private readonly IPortfolioSkillService _portfolioSkillService;
 

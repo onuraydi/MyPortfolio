@@ -1,6 +1,11 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using MyPortfolio.WebApi.Context;
+using MyPortfolio.WebApi.Entites.Identity;
 using MyPortfolio.WebApi.Services.LibraryServices.BookServices;
 using MyPortfolio.WebApi.Services.PorfolioFreelanceServices;
 using MyPortfolio.WebApi.Services.PortfolioAboutMeServices;
@@ -20,10 +25,22 @@ using MyPortfolio.WebApi.Services.PortfolioSocialMediaFooterServices;
 using MyPortfolio.WebApi.Services.PortfolioTechnologyServices;
 using MyPortfolio.WebApi.Services.ProjectImageServices;
 using System.Reflection;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<PortfolioContext>(opt =>
+{
+    opt.UseSqlServer(connectionString);
+});
+
+
+
+
 builder.Services.AddCors(opt =>
 {
     opt.AddPolicy("AllowAllOrigins",
@@ -35,16 +52,35 @@ builder.Services.AddCors(opt =>
         });
 });
 
+
+
+
+
+builder.Services.AddIdentity<User, Role>()
+    .AddEntityFrameworkStores<PortfolioContext>()
+    .AddDefaultTokenProviders();
+
+
+builder.Services.AddAuthentication(opt =>
 {
-
-}
-
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-
-builder.Services.AddDbContext<PortfolioContext>(opt =>
-{
-    opt.UseSqlServer(connectionString);
-});
+    opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+    .AddJwtBearer(options =>
+    {
+        options.RequireHttpsMetadata = false;
+        options.SaveToken = true;
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["JWT:ValidIssuer"],
+            ValidAudience = builder.Configuration["JWT:ValidAudience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Secret"]))
+        };
+    });
 
 builder.Services.AddScoped<IPortfolioMainTitleService, PortfolioMainTitleService>();
 builder.Services.AddScoped<IPortfolioAboutMeService, PortfolioAboutMeService>();
@@ -98,7 +134,21 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseCors("AllowAllOrigins"); // CORS politikasýný uygulayýn
 app.UseAuthorization();
-
+app.UseAuthentication();
 app.MapControllers();
+
+using (var scope = app.Services.CreateScope())
+{
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<Role>>();
+    var roles = new[] { "Admin", "Visitor" };
+
+    foreach (var role in roles)
+    {
+        if (!await roleManager.RoleExistsAsync(role))
+        {
+            await roleManager.CreateAsync(new Role { Name = role });
+        }
+    }
+}
 
 app.Run();

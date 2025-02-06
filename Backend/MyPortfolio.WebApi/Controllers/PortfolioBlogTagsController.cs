@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MyPortfolio.WebApi.Dtos.PortfolioBlogTagDtos;
 using MyPortfolio.WebApi.Services.PortfolioBlogTagServices;
@@ -15,7 +16,7 @@ namespace MyPortfolio.WebApi.Controllers
         {
             _portfolioBlogTagService = portfolioBlogTagService;
         }
-
+        // bu sayfada kullanılacak o yüzden authentication eklenmemeli
         [HttpGet]
         public async Task<IActionResult> GetAllPortfolioBlogTag()
         {
@@ -23,6 +24,8 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
+        //Olası Hata
+        [Authorize(Roles = "Admin")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPortfolioBlogTagByPortfolioBlogTagId(int id)
         {
@@ -30,6 +33,7 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
+        // taga göre blog getirme 
         [HttpGet("GetPortfolioBlogByPortfolioBlogTagId/{id}")]
         public async Task<IActionResult> GetPortfolioBlogByPortfolioBlogTagId(int id)
         {
@@ -37,6 +41,7 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
+        // Blog'a ait tagları getirme
         [HttpGet("GetPortfolioBlogTagsByPortfolioBlogId/{id}")]
         public async Task<IActionResult> GetPortfolioBlogTagsByPortfolioBlogId(int id)
         {
@@ -44,6 +49,7 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> CreatePortfolioBlogTag(CreatePortfolioBlogTagDto createPortfolioBlogTagDto)
         {
@@ -51,6 +57,7 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok("Tag ekleme başarılı");
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPut]
         public async Task<IActionResult> UpdatePortfolioBlogTag(UpdatePortfolioBlogTagDto updatePortfolioBlogTagDto)
         {
@@ -58,6 +65,7 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok("Tag güncelleme başarılı");
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete]
         public async Task<IActionResult> DeletePortfolioBlogTag(int id)
         {

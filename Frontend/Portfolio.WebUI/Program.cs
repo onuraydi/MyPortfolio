@@ -1,3 +1,4 @@
+using Portfolio.WebUI.Services.AuthenticationServices;
 using Portfolio.WebUI.Services.ImageUploadServices.ImageUploadServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioAboutMeServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogCommentServices;
@@ -25,6 +26,12 @@ builder.Services.AddScoped<IImageUploadService, ImageUploadService>();
 
 var values = builder.Configuration.GetSection("ServiceApiSettings").Get<ServiceApiSettings>();
 
+
+// ?
+builder.Services.AddHttpClient<HttpClientService>(client =>
+{
+    client.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
+});
 
 builder.Services.AddHttpClient<IPortfolioMainTitleService, PortfolioMainTitleService>(opt =>
 {
@@ -134,7 +141,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
