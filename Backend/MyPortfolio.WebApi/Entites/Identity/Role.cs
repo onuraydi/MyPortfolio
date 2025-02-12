@@ -2,7 +2,7 @@
 
 namespace MyPortfolio.WebApi.Entites.Identity
 {
-    public class Role:IdentityRole
+    public class Role:IdentityRole<Guid>
     {
     }
 }

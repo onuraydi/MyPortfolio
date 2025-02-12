@@ -5,9 +5,10 @@ using MyPortfolio.WebApi.Services.LibraryServices.BookServices;
 
 namespace MyPortfolio.WebApi.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class BooksController : ControllerBase
     {
         private readonly IBookService _bookService;
@@ -16,7 +17,7 @@ namespace MyPortfolio.WebApi.Controllers
         {
             _bookService = bookService;
         }
-
+        
         [HttpGet]
         public async Task<IActionResult> GetAllBook()
         {

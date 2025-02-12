@@ -6,7 +6,7 @@ using MyPortfolio.WebApi.Entites.LibraryEntities;
 
 namespace MyPortfolio.WebApi.Context
 {
-    public class PortfolioContext:IdentityDbContext<User,Role,string>
+    public class PortfolioContext:IdentityDbContext<User,Role,Guid>
     {
         public PortfolioContext(DbContextOptions<PortfolioContext> options):base(options) { }
 

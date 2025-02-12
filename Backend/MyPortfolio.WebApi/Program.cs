@@ -1,11 +1,15 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Identity.Client;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using MyPortfolio.WebApi.Context;
 using MyPortfolio.WebApi.Entites.Identity;
+using MyPortfolio.WebApi.Services.AuthServices;
 using MyPortfolio.WebApi.Services.LibraryServices.BookServices;
 using MyPortfolio.WebApi.Services.PorfolioFreelanceServices;
 using MyPortfolio.WebApi.Services.PortfolioAboutMeServices;
@@ -24,8 +28,11 @@ using MyPortfolio.WebApi.Services.PortfolioSkillServices;
 using MyPortfolio.WebApi.Services.PortfolioSocialMediaFooterServices;
 using MyPortfolio.WebApi.Services.PortfolioTechnologyServices;
 using MyPortfolio.WebApi.Services.ProjectImageServices;
+using MyPortfolio.WebApi.Services.TokenServices;
+using System.IdentityModel.Tokens.Jwt;
 using System.Reflection;
 using System.Text;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,6 +45,21 @@ builder.Services.AddDbContext<PortfolioContext>(opt =>
     opt.UseSqlServer(connectionString);
 });
 
+var requireAuthorizePolicy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Remove("sub");
+
+
+builder.Services.AddIdentityCore<User>(opt =>
+{
+    opt.Password.RequireNonAlphanumeric = false;
+    opt.Password.RequiredLength = 2;
+    opt.Password.RequireLowercase = false;
+    opt.Password.RequireUppercase = false;
+    opt.Password.RequireDigit = false;
+    opt.SignIn.RequireConfirmedEmail = false;
+})
+    .AddRoles<Role>()
+    .AddEntityFrameworkStores<PortfolioContext>();
 
 
 
@@ -56,31 +78,55 @@ builder.Services.AddCors(opt =>
 
 
 
-builder.Services.AddIdentity<User, Role>()
-    .AddEntityFrameworkStores<PortfolioContext>()
-    .AddDefaultTokenProviders();
+//builder.Services.AddIdentity<User, Role>()
+//    .AddEntityFrameworkStores<PortfolioContext>()
+//    .AddDefaultTokenProviders();
 
+
+//builder.Services.AddAuthentication(opt =>
+//{
+//    opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+//    opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+//})
+//    .AddJwtBearer(options =>
+//    {
+//        options.RequireHttpsMetadata = false;
+//        options.SaveToken = true;
+//        options.TokenValidationParameters = new TokenValidationParameters
+//        {
+//            ValidateIssuer = true,
+//            ValidateAudience = true,
+//            ValidateLifetime = true,
+//            ValidateIssuerSigningKey = true,
+//            ValidIssuer = builder.Configuration["JWT:ValidIssuer"],
+//            ValidAudience = builder.Configuration["JWT:ValidAudience"],
+//            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Secret"]))
+//        };
+//    });
+
+var jwtcon = builder.Configuration.GetSection("JWT");
+
+builder.Services.Configure<TokenSettings>(jwtcon);
 
 builder.Services.AddAuthentication(opt =>
 {
     opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-})
-    .AddJwtBearer(options =>
+}).AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, opt =>
+{
+    opt.SaveToken = true;
+    opt.TokenValidationParameters = new TokenValidationParameters()
     {
-        options.RequireHttpsMetadata = false;
-        options.SaveToken = true;
-        options.TokenValidationParameters = new TokenValidationParameters
-        {
-            ValidateIssuer = true,
-            ValidateAudience = true,
-            ValidateLifetime = true,
-            ValidateIssuerSigningKey = true,
-            ValidIssuer = builder.Configuration["JWT:ValidIssuer"],
-            ValidAudience = builder.Configuration["JWT:ValidAudience"],
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Secret"]))
-        };
-    });
+        ValidateIssuer = false,
+        ValidateAudience = false,
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Secret"])),
+        ValidateLifetime = false,
+        ValidIssuer = builder.Configuration["JWT:Issuer"],
+        ValidAudience = builder.Configuration["JWT:Audience"],
+        ClockSkew = TimeSpan.Zero,
+    };
+});
 
 builder.Services.AddScoped<IPortfolioMainTitleService, PortfolioMainTitleService>();
 builder.Services.AddScoped<IPortfolioAboutMeService, PortfolioAboutMeService>();
@@ -100,11 +146,17 @@ builder.Services.AddScoped<IPortfolioFreelanceService, PortfolioFreelanceService
 builder.Services.AddScoped<IPortfolioRoutingFooterService, PortfolioRoutingFooterService>();
 builder.Services.AddScoped<IPortfolioProjectFooterService, PortfolioProjectFooterService>();
 
+builder.Services.AddTransient<ITokenService, TokenService>();
+
+builder.Services.AddScoped<IRegisterService, RegisterService>();
+builder.Services.AddScoped<ILoginService, LoginService>();
+
+
 builder.Services.AddScoped<IBookService, BookService>();
 
 
-
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
 
 
 builder.Services.AddControllers().AddJsonOptions(options =>
@@ -116,6 +168,29 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Description = "Bearer yazýp boþluk býrakýp tokeni girebilirsiniz",
+    });
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement()
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
 });
 
 
@@ -137,18 +212,18 @@ app.UseAuthorization();
 app.UseAuthentication();
 app.MapControllers();
 
-using (var scope = app.Services.CreateScope())
-{
-    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<Role>>();
-    var roles = new[] { "Admin", "Visitor" };
+//using (var scope = app.Services.CreateScope())
+//{
+//    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<Role>>();
+//    var roles = new[] { "Admin", "Visitor" };
 
-    foreach (var role in roles)
-    {
-        if (!await roleManager.RoleExistsAsync(role))
-        {
-            await roleManager.CreateAsync(new Role { Name = role });
-        }
-    }
-}
+//    foreach (var role in roles)
+//    {
+//        if (!await roleManager.RoleExistsAsync(role))
+//        {
+//            await roleManager.CreateAsync(new Role { Name = role });
+//        }
+//    }
+//}
 
 app.Run();
