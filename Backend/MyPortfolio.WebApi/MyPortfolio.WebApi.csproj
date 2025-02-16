@@ -25,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Entites\Identity\" />
     <Folder Include="Services\LibraryServices\AuthorServices\" />
     <Folder Include="Services\LibraryServices\CategoryServices\" />
     <Folder Include="Services\LibraryServices\PublisherServices\" />

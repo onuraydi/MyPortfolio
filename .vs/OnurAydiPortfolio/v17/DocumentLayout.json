@@ -3,11 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\",
   "Documents": [
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{3C38F6BD-F306-4CB4-80C3-164FFC8FD864}|Backend\\MyPortfolio.WebApi\\MyPortfolio.WebApi.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\backend\\myportfolio.webapi\\controllers\\projectimagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C38F6BD-F306-4CB4-80C3-164FFC8FD864}|Backend\\MyPortfolio.WebApi\\MyPortfolio.WebApi.csproj|solutionrelative:backend\\myportfolio.webapi\\controllers\\projectimagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A92B13E2-C8F5-4A40-8019-20B8025917A5}|..\\..\\Identity\\Identity.csproj|c:\\users\\onur\\desktop\\identity\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{3C38F6BD-F306-4CB4-80C3-164FFC8FD864}|Backend\\MyPortfolio.WebApi\\MyPortfolio.WebApi.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\backend\\myportfolio.webapi\\context\\portfoliocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C38F6BD-F306-4CB4-80C3-164FFC8FD864}|Backend\\MyPortfolio.WebApi\\MyPortfolio.WebApi.csproj|solutionrelative:backend\\myportfolio.webapi\\context\\portfoliocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> Stashed changes
     }
   ],
   "DocumentGroupContainers": [
@@ -22,6 +27,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< Updated upstream
               "Title": "ProjectImagesController.cs",
               "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Backend\\MyPortfolio.WebApi\\Controllers\\ProjectImagesController.cs",
               "RelativeDocumentMoniker": "Backend\\MyPortfolio.WebApi\\Controllers\\ProjectImagesController.cs",
@@ -43,6 +49,16 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAChAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-16T09:03:41.122Z",
+=======
+              "Title": "PortfolioContext.cs",
+              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Backend\\MyPortfolio.WebApi\\Context\\PortfolioContext.cs",
+              "RelativeDocumentMoniker": "Backend\\MyPortfolio.WebApi\\Context\\PortfolioContext.cs",
+              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Backend\\MyPortfolio.WebApi\\Context\\PortfolioContext.cs",
+              "RelativeToolTip": "Backend\\MyPortfolio.WebApi\\Context\\PortfolioContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T18:50:28.761Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             }
           ]
