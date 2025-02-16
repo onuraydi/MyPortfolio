@@ -6,6 +6,7 @@ using MyPortfolio.WebApi.Services.PortfolioAboutMeServices;
 
 namespace MyPortfolio.WebApi.Controllers
 {
+    [Authorize(Policy = "ResourcePortfolioAdmin")]
     [Route("api/[controller]")]
     [ApiController]
     public class PortfolioAboutMeApiController : ControllerBase
@@ -17,6 +18,7 @@ namespace MyPortfolio.WebApi.Controllers
             _portfolioAboutMeService = portfolioAboutMeService;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetPortfolioAboutMe()
         {
@@ -24,7 +26,6 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
-        [Authorize(Roles = "Admin")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPortfolioAboutMeByPortfolioAboutMeId(int id)
         {
@@ -32,7 +33,6 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
-        [Authorize(Roles = "Admin")]
         [HttpPut]
         public async Task<IActionResult> UpdatePortfolioAboutMe(UpdatePortfolioAboutMeDto updatePortfolioAboutMeDto)
         {

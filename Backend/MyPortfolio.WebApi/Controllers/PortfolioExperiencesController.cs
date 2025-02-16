@@ -6,6 +6,7 @@ using MyPortfolio.WebApi.Services.PortfolioExperienceServices;
 
 namespace MyPortfolio.WebApi.Controllers
 {
+    [Authorize(Policy = "ResourcePortfolioAdmin")]
     [Route("api/[controller]")]
     [ApiController]
     public class PortfolioExperiencesController : ControllerBase
@@ -17,6 +18,7 @@ namespace MyPortfolio.WebApi.Controllers
             _portfolioExperienceService = portfolioExperienceService;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetAllPortfolioExperience()
         {
@@ -26,7 +28,7 @@ namespace MyPortfolio.WebApi.Controllers
 
 
         // Ana sayfada Tecrübelerin detayına gitme gibi bir durum olursa buradan hata verir
-        [Authorize(Roles = "Admin")]
+        
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPortfolioExperienceByPortfolioExperienceId(int id)
         {
@@ -34,21 +36,20 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
-        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> CreatePortfolioExperience(CreatePortfolioExperienceDto createPortfolioExperienceDto)
         {
             await _portfolioExperienceService.CreatePortfolioExperienceAsync(createPortfolioExperienceDto);
             return Ok("İş tecrübesi başarıyla eklendi");
         }
-        [Authorize(Roles = "Admin")]
+        
         [HttpPut]
         public async Task<IActionResult> UpdatePortfolioExperience(UpdatePortfolioExperienceDto updatePortfolioExperienceDto)
         {
             await _portfolioExperienceService.UpdatePortfolioExperienceAsync(updatePortfolioExperienceDto);
             return Ok("İş tecrübesi başarıyla güncellendi");
         }
-        [Authorize(Roles = "Admin")]
+        
         [HttpDelete]
         public async Task<IActionResult> DeletePortfolioExperience(int id)
         {

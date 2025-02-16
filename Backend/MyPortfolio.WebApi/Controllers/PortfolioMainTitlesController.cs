@@ -6,6 +6,7 @@ using MyPortfolio.WebApi.Services.PortfolioMainTitleServices;
 
 namespace MyPortfolio.WebApi.Controllers
 {
+    [Authorize(Policy = "ResourcePortfolioAdmin")]
     [Route("api/[controller]")]
     [ApiController]
     public class PortfolioMainTitlesController : ControllerBase
@@ -17,20 +18,21 @@ namespace MyPortfolio.WebApi.Controllers
             _portfolioMainTitleService = portfolioMainTitleService;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetPortfolioMainTitle()
         {
             var values = await _portfolioMainTitleService.GetPortfolioMainTitleAsync();
             return Ok(values);
         }
-        [Authorize(Roles = "Admin")]
+        
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPortfolioMainTitleByPortfolioMainTitleId(int id)
         {
             var values = await _portfolioMainTitleService.GetPortfolioMainTitleByPortfolioMainTitleIdAsync(id);
             return Ok(values);
         }
-        [Authorize(Roles = "Admin")]
+       
         [HttpPut]
         public async Task<IActionResult> UpdatePortfolioMainTitle(UpdatePortfoiloMainTitleDto updatePortfoiloMainTitleDto)
         {

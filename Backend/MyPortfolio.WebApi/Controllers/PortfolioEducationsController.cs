@@ -7,6 +7,7 @@ using MyPortfolio.WebApi.Services.PortfolioEducationServices;
 
 namespace MyPortfolio.WebApi.Controllers
 {
+    [Authorize(Policy = "ResourcePortfolioAdmin")]
     [Route("api/[controller]")]
     [ApiController]
     public class PortfolioEducationsController : ControllerBase
@@ -17,7 +18,7 @@ namespace MyPortfolio.WebApi.Controllers
         {
             _portfolioEducationService = portfolioEducationService;
         }
-
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetAllPortfolioEducation()
         {
@@ -25,8 +26,8 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
-        // Ana sayfada eğitim detayına gitme gibi bir olay olursa bu kısımdan olası hata çıkar
-        [Authorize(Roles = "Admin")]
+        // Ana sayfada eğitim detayına gitme gibi bir olay olursa bu kısımdan olası hata çıkar allow ekle
+        
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPortfolioEducationByPortfolioEducationId(int id)
         {
@@ -34,7 +35,7 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
-        [Authorize(Roles = "Admin")]
+        
         [HttpPost]
         public async Task<IActionResult> CreatePortfolioEducation(CreatePortfolioEducationDto createPortfolioEducationDto)
         {
@@ -42,7 +43,7 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok("Eğitim başarıyla eklendi");
         }
 
-        [Authorize(Roles = "Admin")]
+        
         [HttpPut]
         public async Task<IActionResult> UpdatePortfolioEducation(UpdatePortfolioEducationDto updatePortfolioEducationDto)
         {
@@ -50,7 +51,7 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok("Eğitim başarıyla güncellendi");
         }
 
-        [Authorize(Roles = "Admin")]
+        
         [HttpDelete]
         public async Task<IActionResult> DeletePortfolioEducation(int id)
         {

@@ -1,12 +1,11 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MyPortfolio.WebApi.Entites;
-using MyPortfolio.WebApi.Entites.Identity;
 using MyPortfolio.WebApi.Entites.LibraryEntities;
 
 namespace MyPortfolio.WebApi.Context
 {
-    public class PortfolioContext:IdentityDbContext<User,Role,string>
+    public class PortfolioContext:DbContext
     {
         public PortfolioContext(DbContextOptions<PortfolioContext> options):base(options) { }
 

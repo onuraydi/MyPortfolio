@@ -6,6 +6,7 @@ using MyPortfolio.WebApi.Services.PortfolioBlogServices;
 
 namespace MyPortfolio.WebApi.Controllers
 {
+    [Authorize(Policy = "ResourcePortfolioAdmin")]
     [Route("api/[controller]")]
     [ApiController]
     public class PortfolioBlogsController : ControllerBase
@@ -16,34 +17,35 @@ namespace MyPortfolio.WebApi.Controllers
         {
             _portfolioBlogService = portfolioBlogService;
         }
-
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetAllPortfolioBlog(string query = "")
         {
             var values = await _portfolioBlogService.GetAllPortfolioBlogAsync(query);
             return Ok(values);
         }
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPortfolioBlogByPortfolioBlogId(int id)
         {
             var values = await _portfolioBlogService.GetPortfolioBlogByPortfolioBlogIdAsync(id);
             return Ok(values);
         }
-        [Authorize(Roles = "Admin")]
+        
         [HttpPost]
         public async Task<IActionResult> CreatePortfolioBlog([FromBody] CreatePortfolioBlogDto createPortfolioBlogDto)
         {
             var values = await _portfolioBlogService.CreatePortfolioBlogAsync(createPortfolioBlogDto);
             return Ok(values);
         }
-        [Authorize(Roles = "Admin")]
+        
         [HttpPut]
         public async Task<IActionResult> UpdatePortfolioBlog(UpdatePortfolioBlogDto updatePortfolioBlogDto)
         {
             await _portfolioBlogService.UpdatePortfolioBlogAsync(updatePortfolioBlogDto);
             return Ok("Blog güncelleme işlemi başarılı");
         }
-        [Authorize(Roles = "Admin")]
+        
         [HttpDelete]
         public async Task<IActionResult> DeletePortfolioBlog(int id)
         {

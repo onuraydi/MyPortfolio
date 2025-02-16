@@ -5,7 +5,6 @@ using Microsoft.Identity.Client;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using MyPortfolio.WebApi.Context;
-using MyPortfolio.WebApi.Entites.Identity;
 using MyPortfolio.WebApi.Services.LibraryServices.BookServices;
 using MyPortfolio.WebApi.Services.PorfolioFreelanceServices;
 using MyPortfolio.WebApi.Services.PortfolioAboutMeServices;
@@ -54,33 +53,55 @@ builder.Services.AddCors(opt =>
 
 
 
+#region
+
+//builder.Services.AddIdentity<User, Role>()
+//    .AddEntityFrameworkStores<PortfolioContext>()
+//    .AddDefaultTokenProviders();
 
 
-builder.Services.AddIdentity<User, Role>()
-    .AddEntityFrameworkStores<PortfolioContext>()
-    .AddDefaultTokenProviders();
+//builder.Services.AddAuthentication(opt =>
+//{
+//    opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+//    opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+//})
+//    .AddJwtBearer(options =>
+//    {
+//        options.RequireHttpsMetadata = false;
+//        options.SaveToken = true;
+//        options.TokenValidationParameters = new TokenValidationParameters
+//        {
+//            ValidateIssuer = true,
+//            ValidateAudience = true,
+//            ValidateLifetime = true,
+//            ValidateIssuerSigningKey = true,
+//            ValidIssuer = builder.Configuration["JWT:ValidIssuer"],
+//            ValidAudience = builder.Configuration["JWT:ValidAudience"],
+//            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Secret"]))
+//        };
+//    });
+
+#endregion
 
 
-builder.Services.AddAuthentication(opt =>
+
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
 {
-    opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-})
-    .AddJwtBearer(options =>
-    {
-        options.RequireHttpsMetadata = false;
-        options.SaveToken = true;
-        options.TokenValidationParameters = new TokenValidationParameters
-        {
-            ValidateIssuer = true,
-            ValidateAudience = true,
-            ValidateLifetime = true,
-            ValidateIssuerSigningKey = true,
-            ValidIssuer = builder.Configuration["JWT:ValidIssuer"],
-            ValidAudience = builder.Configuration["JWT:ValidAudience"],
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Secret"]))
-        };
-    });
+    opt.Authority = builder.Configuration["IdentityServerUrl"];
+    opt.Audience = "ResourcePortfolio";
+    opt.Audience = "ResourcePortfolioAdmin";
+});
+
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("ResourcePortfolioAdmin", policy =>
+        policy.RequireAssertion(context =>
+            context.User.HasClaim(c => c.Type == "aud" && (c.Value == "ResourcePortfolioAdmin" || c.Value == "ResourcePortfolio"))
+        ));
+});
+
 
 builder.Services.AddScoped<IPortfolioMainTitleService, PortfolioMainTitleService>();
 builder.Services.AddScoped<IPortfolioAboutMeService, PortfolioAboutMeService>();
@@ -133,22 +154,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseCors("AllowAllOrigins"); // CORS politikasýný uygulayýn
-app.UseAuthorization();
 app.UseAuthentication();
+app.UseAuthorization();
+
 app.MapControllers();
 
-using (var scope = app.Services.CreateScope())
-{
-    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<Role>>();
-    var roles = new[] { "Admin", "Visitor" };
-
-    foreach (var role in roles)
-    {
-        if (!await roleManager.RoleExistsAsync(role))
-        {
-            await roleManager.CreateAsync(new Role { Name = role });
-        }
-    }
-}
 
 app.Run();

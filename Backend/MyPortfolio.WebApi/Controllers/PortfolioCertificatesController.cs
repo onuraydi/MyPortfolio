@@ -6,6 +6,7 @@ using MyPortfolio.WebApi.Services.PortfolioCertificateServices;
 
 namespace MyPortfolio.WebApi.Controllers
 {
+    [Authorize(Policy = "ResourcePortfolioAdmin")]
     [Route("api/[controller]")]
     [ApiController]
     public class PortfolioCertificatesController : ControllerBase
@@ -17,6 +18,7 @@ namespace MyPortfolio.WebApi.Controllers
             _portfolioCertificateService = portfolioCertificateService;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetAllPortfolioCertificate()
         {
@@ -25,7 +27,7 @@ namespace MyPortfolio.WebApi.Controllers
         }
 
         // Ana sayfada sertifikanın detayına gitme gibi birşey olursa buradan hata çıkar
-        [Authorize(Roles = "Admin")]
+        
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPortfolioCertificateByPortfolioCertificateId(int id)
         {
@@ -33,7 +35,7 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
-        [Authorize(Roles = "Admin")]
+        
         [HttpPost]
         public async Task<IActionResult> CreatePortfolioCertificate(CreatePortfolioCertificateDto createPortfolioCertificateDto)
         {
@@ -41,7 +43,7 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok("Sertifika başarıyla eklendi");
         }
 
-        [Authorize(Roles = "Admin")]
+        
         [HttpPut]
         public async Task<IActionResult> UpdatePortfolioCertificate(UpdatePortfolioCertificateDto updatePortfolioCertificateDto)
         {
@@ -49,7 +51,7 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok("Sertifika başarıyla güncellendi");
         }
 
-        [Authorize(Roles = "Admin")]
+        
         [HttpDelete]
         public async Task<IActionResult> DeletePortfolioCertificate(int id)
         {

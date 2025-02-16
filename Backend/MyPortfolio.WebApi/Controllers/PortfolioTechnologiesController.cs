@@ -6,6 +6,7 @@ using MyPortfolio.WebApi.Services.PortfolioTechnologyServices;
 
 namespace MyPortfolio.WebApi.Controllers
 {
+    [Authorize(Policy = "ResourcePortfolioAdmin")]
     [Route("api/[controller]")]
     [ApiController]
     public class PortfolioTechnologiesController : ControllerBase
@@ -16,35 +17,35 @@ namespace MyPortfolio.WebApi.Controllers
         {
             _portfolioTechnologyService = portfolioTechnologyService;
         }
-
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetAllPortfolioTechnology()
         {
             var values = await _portfolioTechnologyService.GetAllPortfolioTechnologyAsync();
             return Ok(values);
         }
-        [Authorize(Roles = "Admin")]
+        
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPortfolioTechnologyByPortfolioTechnologyId(int id)
         {
             var values = await _portfolioTechnologyService.GetPortfolioTechnologyByPortfolioTechnologyIdAsync(id);
             return Ok(values);
         }
-        [Authorize(Roles = "Admin")]
+        
         [HttpPost]
         public async Task<IActionResult> CreatePortfolioTechnology(CreatePortfolioTechnologyDto createPortfolioTechnologyDto)
         {
             await _portfolioTechnologyService.CreatePortfolioTechnologyAsync(createPortfolioTechnologyDto);
             return Ok("Teknoloji başarıyla eklendi");
         }
-        [Authorize(Roles = "Admin")]
+       
         [HttpPut]
         public async Task<IActionResult> UpdatePortfolioTechnology(UpdatePortfolioTechnologyDto updatePortfolioTechnologyDto)
         {
             await _portfolioTechnologyService.UpdatePortfolioTechnologyAsync(updatePortfolioTechnologyDto);
             return Ok("Teknoloji başarıyla güncellendi");
         }
-        [Authorize(Roles = "Admin")]
+        
         [HttpDelete]
         public async Task<IActionResult> DeletePortfolioTechnology(int id)
         {

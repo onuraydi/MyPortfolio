@@ -5,7 +5,7 @@ using MyPortfolio.WebApi.Services.LibraryServices.BookServices;
 
 namespace MyPortfolio.WebApi.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize(Policy = "ResourcePortfolioAdmin")]
     [Route("api/[controller]")]
     [ApiController]
     public class BooksController : ControllerBase

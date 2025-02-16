@@ -6,6 +6,7 @@ using MyPortfolio.WebApi.Services.PorfolioFreelanceServices;
 
 namespace MyPortfolio.WebApi.Controllers
 {
+    [Authorize(Policy = "ResourcePortfolioAdmin")]
     [Route("api/[controller]")]
     [ApiController]
     public class PortfolioFreelancesController : ControllerBase
@@ -21,7 +22,7 @@ namespace MyPortfolio.WebApi.Controllers
         //genel olarak Olası hata
 
 
-        
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetAllPortfolioFreelance()
         {
@@ -29,14 +30,14 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
-        [Authorize(Roles = "Admin")]
+        
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPortfolioFreelanceByPortfolioFreelanceId(int id)
         {
             var values = await _portfolioFreelanceService.GetPortfolioFreelanceByPortfolioFreelanceIdAsync(id);
             return Ok(values);
         }
-        [Authorize(Roles = "Admin")]
+        
         [HttpPost]
         public async Task<IActionResult> CreatePortfolioFreelance(CreatePortfolioFreelanceDto createPortfolioFreelanceDto)
         {
@@ -44,7 +45,7 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok("Ekleme işlemi başarılı");
         }
 
-        [Authorize(Roles = "Admin")]
+        
         [HttpPut]
         public async Task<IActionResult> UpdatePortfolioFreelance(UpdatePortfolioFreelanceDto updatePortfolioFreelanceDto)
         {
@@ -52,7 +53,7 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok("Güncelleme işlemi başarılı");
         }
 
-        [Authorize(Roles = "Admin")]
+        
         [HttpDelete]
         public async Task<IActionResult> DeletePortfolioFreelance(int id)
         {

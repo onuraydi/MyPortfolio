@@ -6,6 +6,7 @@ using MyPortfolio.WebApi.Services.PortfolioBlogCommentServices;
 
 namespace MyPortfolio.WebApi.Controllers
 {
+    [Authorize(Policy = "ResourcePortfolioAdmin")]
     [Route("api/[controller]")]
     [ApiController]
     public class PortfolioBlogCommentsController : ControllerBase
@@ -16,7 +17,7 @@ namespace MyPortfolio.WebApi.Controllers
         {
             _portfolioBlogCommentService = portfolioBlogCommentService;
         }
-        [Authorize(Roles = "Admin")]
+
         [HttpGet]
         public async Task<IActionResult> GetAllPortfolioBlogComment()
         {
@@ -24,8 +25,7 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
-        // buradan bir 401 gelebilir
-        [Authorize(Roles = "Admin")]
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPortfolioBlogCommentByPortfolioBlogCommentId(int id)
         {
@@ -33,6 +33,7 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
+        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> CreatePortfolioBlogComment(CreatePortfolioBlogCommentDto createPortfolioBlogCommentDto)
         {
@@ -41,7 +42,6 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
-        [Authorize(Roles = "Admin")]
         [HttpDelete]
         public async Task<IActionResult> DeletePortfolioBlogComment(int id)
         {
@@ -49,6 +49,7 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok("Yorum silme işlemi başarılı");
         }
         // Bloğa göre yorum getirme
+        [AllowAnonymous]
         [HttpGet("GetPortfolioBlogCommentByPortfolioBlogId/{id}")]
         public async Task<IActionResult> GetPortfolioBlogCommentByPortfolioBlogId(int id)
         {

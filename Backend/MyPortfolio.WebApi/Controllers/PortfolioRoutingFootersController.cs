@@ -7,6 +7,7 @@ using MyPortfolio.WebApi.Services.PortfolioRoutingFooterServices;
 
 namespace MyPortfolio.WebApi.Controllers
 {
+    [Authorize(Policy = "ResourcePortfolioAdmin")]
     [Route("api/[controller]")]
     [ApiController]
     public class PortfolioRoutingFootersController : ControllerBase
@@ -17,7 +18,7 @@ namespace MyPortfolio.WebApi.Controllers
         {
             _portfolioRoutingFooterService = portfolioRoutingFooterService;
         }
-
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetAllPortfolioRoutingFooter()
         {
@@ -25,28 +26,28 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
-        [Authorize(Roles = "Admin")]
+      
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPortfolioRoutingFooterByPortfolioRoutingFooterId(int id)
         {
             var values = await _portfolioRoutingFooterService.GetPortfolioRoutingFooterByPortfolioRoutingFooterIdAsync(id);
             return Ok(values);
         }
-        [Authorize(Roles = "Admin")]
+    
         [HttpPost]
         public async Task<IActionResult> CreatePortfolioRoutingFooter(CreatePortfolioRoutingFooterDto createPortfolioRoutingFooterDto)
         {
             await _portfolioRoutingFooterService.CreatePortfolioRoutingFooterAsync(createPortfolioRoutingFooterDto);
             return Ok("Ekleme işlemi Başarılı");
         }
-        [Authorize(Roles = "Admin")]
+       
         [HttpPut]
         public async Task<IActionResult> UpdatePortfolioRoutingFooter(UpdatePortfolioRoutingFooterDto updatePortfolioRoutingFooterDto)
         {
             await _portfolioRoutingFooterService.UpdatePortfolioRoutingFooterAsync(updatePortfolioRoutingFooterDto);
             return Ok("Güncelleme işlemi başarılı");
         }
-        [Authorize(Roles = "Admin")]
+       
         [HttpDelete]
         public async Task<IActionResult> DeletePortfolioRoutingFooter(int id)
         {
