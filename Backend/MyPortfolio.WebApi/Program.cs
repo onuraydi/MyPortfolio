@@ -208,8 +208,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseCors("AllowAllOrigins"); // CORS politikasýný uygulayýn
-app.UseAuthorization();
 app.UseAuthentication();
+app.UseAuthorization();
 app.MapControllers();
 
 //using (var scope = app.Services.CreateScope())

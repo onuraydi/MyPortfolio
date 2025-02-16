@@ -1,4 +1,4 @@
-using Portfolio.WebUI.Services.AuthenticationServices;
+
 using Portfolio.WebUI.Services.ImageUploadServices.ImageUploadServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioAboutMeServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogCommentServices;
@@ -28,10 +28,10 @@ var values = builder.Configuration.GetSection("ServiceApiSettings").Get<ServiceA
 
 
 // ?
-builder.Services.AddHttpClient<HttpClientService>(client =>
-{
-    client.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
-});
+//builder.Services.AddHttpClient<HttpClientService>(client =>
+//{
+//    client.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
+//});
 
 builder.Services.AddHttpClient<IPortfolioMainTitleService, PortfolioMainTitleService>(opt =>
 {

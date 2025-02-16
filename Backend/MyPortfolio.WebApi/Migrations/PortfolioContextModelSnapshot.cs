@@ -34,7 +34,7 @@ namespace MyPortfolio.WebApi.Migrations
 
                     b.HasIndex("PortfolioBlogTagId");
 
-                    b.ToTable("BlogsTags");
+                    b.ToTable("BlogsTags", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
@@ -261,7 +261,7 @@ namespace MyPortfolio.WebApi.Migrations
 
                     b.HasKey("AuthorId");
 
-                    b.ToTable("Authors");
+                    b.ToTable("Authors", (string)null);
                 });
 
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.LibraryEntities.Book", b =>
@@ -316,7 +316,7 @@ namespace MyPortfolio.WebApi.Migrations
 
                     b.HasIndex("PublisherId");
 
-                    b.ToTable("Books");
+                    b.ToTable("Books", (string)null);
                 });
 
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.LibraryEntities.Category", b =>
@@ -333,7 +333,7 @@ namespace MyPortfolio.WebApi.Migrations
 
                     b.HasKey("CategoryId");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.LibraryEntities.Publisher", b =>
@@ -350,7 +350,7 @@ namespace MyPortfolio.WebApi.Migrations
 
                     b.HasKey("PublisherId");
 
-                    b.ToTable("Publishers");
+                    b.ToTable("Publishers", (string)null);
                 });
 
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioAboutMe", b =>
@@ -403,7 +403,7 @@ namespace MyPortfolio.WebApi.Migrations
 
                     b.HasKey("PortfolioAboutMeId");
 
-                    b.ToTable("portfolioAboutMe");
+                    b.ToTable("portfolioAboutMe", (string)null);
                 });
 
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioBlog", b =>
@@ -435,7 +435,7 @@ namespace MyPortfolio.WebApi.Migrations
 
                     b.HasKey("PortfolioBlogId");
 
-                    b.ToTable("portfolioBlogs");
+                    b.ToTable("portfolioBlogs", (string)null);
                 });
 
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioBlogComment", b =>
@@ -476,7 +476,7 @@ namespace MyPortfolio.WebApi.Migrations
 
                     b.HasIndex("portfolioBlogId");
 
-                    b.ToTable("PortfolioComments");
+                    b.ToTable("PortfolioComments", (string)null);
                 });
 
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioBlogTag", b =>
@@ -493,7 +493,7 @@ namespace MyPortfolio.WebApi.Migrations
 
                     b.HasKey("PortfolioBlogTagId");
 
-                    b.ToTable("PortfolioBlogTags");
+                    b.ToTable("PortfolioBlogTags", (string)null);
                 });
 
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioCertificate", b =>
@@ -525,7 +525,7 @@ namespace MyPortfolio.WebApi.Migrations
 
                     b.HasKey("PortfolioCertificateId");
 
-                    b.ToTable("portfolioCertificates");
+                    b.ToTable("portfolioCertificates", (string)null);
                 });
 
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioContact", b =>
@@ -557,7 +557,7 @@ namespace MyPortfolio.WebApi.Migrations
 
                     b.HasKey("PortfolioContactId");
 
-                    b.ToTable("portfolioContacts");
+                    b.ToTable("portfolioContacts", (string)null);
                 });
 
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioEducation", b =>
@@ -589,7 +589,7 @@ namespace MyPortfolio.WebApi.Migrations
 
                     b.HasKey("PortfolioEducationId");
 
-                    b.ToTable("portfolioEducations");
+                    b.ToTable("portfolioEducations", (string)null);
                 });
 
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioExperience", b =>
@@ -618,7 +618,7 @@ namespace MyPortfolio.WebApi.Migrations
 
                     b.HasKey("PortfolioExperienceId");
 
-                    b.ToTable("portfolioExperiences");
+                    b.ToTable("portfolioExperiences", (string)null);
                 });
 
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioFreelance", b =>
@@ -643,7 +643,7 @@ namespace MyPortfolio.WebApi.Migrations
 
                     b.HasKey("PortfolioFreelanceId");
 
-                    b.ToTable("PortfolioFreelances");
+                    b.ToTable("PortfolioFreelances", (string)null);
                 });
 
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioMainTitle", b =>
@@ -684,7 +684,7 @@ namespace MyPortfolio.WebApi.Migrations
 
                     b.HasKey("PortfolioMainTitleId");
 
-                    b.ToTable("PortfolioMainTitles");
+                    b.ToTable("PortfolioMainTitles", (string)null);
                 });
 
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioProject", b =>
@@ -721,7 +721,7 @@ namespace MyPortfolio.WebApi.Migrations
 
                     b.HasKey("PortfolioProjectId");
 
-                    b.ToTable("portfolioProjects");
+                    b.ToTable("portfolioProjects", (string)null);
                 });
 
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioProjectFooter", b =>
@@ -742,7 +742,7 @@ namespace MyPortfolio.WebApi.Migrations
 
                     b.HasKey("PortfolioProjectFooterId");
 
-                    b.ToTable("PortfolioProjectFooters");
+                    b.ToTable("PortfolioProjectFooters", (string)null);
                 });
 
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioRoutingFooter", b =>
@@ -763,7 +763,7 @@ namespace MyPortfolio.WebApi.Migrations
 
                     b.HasKey("PortfolioRoutingFooterId");
 
-                    b.ToTable("PortfolioRoutingFooters");
+                    b.ToTable("PortfolioRoutingFooters", (string)null);
                 });
 
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioSkill", b =>
@@ -784,7 +784,7 @@ namespace MyPortfolio.WebApi.Migrations
 
                     b.HasKey("PortfolioSkillId");
 
-                    b.ToTable("portfolioSkills");
+                    b.ToTable("portfolioSkills", (string)null);
                 });
 
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioSocialMediaFooter", b =>
@@ -809,7 +809,7 @@ namespace MyPortfolio.WebApi.Migrations
 
                     b.HasKey("PortfolioSocialMediaFooterId");
 
-                    b.ToTable("PortfolioSocialMediaFooters");
+                    b.ToTable("PortfolioSocialMediaFooters", (string)null);
                 });
 
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioTechnology", b =>
@@ -834,7 +834,7 @@ namespace MyPortfolio.WebApi.Migrations
 
                     b.HasKey("PortfolioTechnologyId");
 
-                    b.ToTable("portfolioTechnologies");
+                    b.ToTable("portfolioTechnologies", (string)null);
                 });
 
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.ProjectImage", b =>
@@ -856,7 +856,7 @@ namespace MyPortfolio.WebApi.Migrations
 
                     b.HasIndex("PortfolioProjectId");
 
-                    b.ToTable("ProjectImages");
+                    b.ToTable("ProjectImages", (string)null);
                 });
 
             modelBuilder.Entity("BlogsTags", b =>
