@@ -38,8 +38,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddCo
     opt.Cookie.Name = "PortfolioJWTCookie";
 });
 
-builder.Services.AddHttpContextAccessor();
-
 
 
 builder.Services.AddHttpClient<IPortfolioMainTitleService, PortfolioMainTitleService>(opt =>
