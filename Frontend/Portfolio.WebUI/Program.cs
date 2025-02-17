@@ -1,5 +1,6 @@
-using Portfolio.WebUI.Services.AuthenticationServices;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Portfolio.WebUI.Services.ImageUploadServices.ImageUploadServices;
+using Portfolio.WebUI.Services.PortfolioServices.LoginServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioAboutMeServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogCommentServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogServices;
@@ -27,11 +28,19 @@ builder.Services.AddScoped<IImageUploadService, ImageUploadService>();
 var values = builder.Configuration.GetSection("ServiceApiSettings").Get<ServiceApiSettings>();
 
 
-// ?
-builder.Services.AddHttpClient<HttpClientService>(client =>
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddCookie(JwtBearerDefaults.AuthenticationScheme,opt =>
 {
-    client.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
+    opt.LoginPath = "/Login/Login";
+    opt.LogoutPath = "/deneme/index";
+    opt.AccessDeniedPath = "/Login/Login";  // eriþimi olmayan sayfaya eriþmeye çalýþýrsa
+    opt.Cookie.SameSite = SameSiteMode.Strict;
+    opt.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
+    opt.Cookie.Name = "PortfolioJWTCookie";
 });
+
+builder.Services.AddHttpContextAccessor();
+
+
 
 builder.Services.AddHttpClient<IPortfolioMainTitleService, PortfolioMainTitleService>(opt =>
 {
@@ -124,6 +133,14 @@ builder.Services.AddHttpClient<IPortfolioProjectFooterService, PortfolioProjectF
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
 });
+
+//builder.Services.AddHttpClient<IloginServices, LoginServices>(opt =>
+//{
+//    opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
+//});
+builder.Services.AddHttpClient<IloginServices, LoginServices>();
+
+
 
 
 var app = builder.Build();
