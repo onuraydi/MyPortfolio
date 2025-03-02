@@ -12,6 +12,10 @@
       "UpstreamPathTemplate": "/Backend/{everything}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
       "UpstreamScheme": "https"
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "OcelotAuthenticationScheme",
+      //  "AllowedScopes": [ "PortfolioFullPermission" ]
+      //}
     }
   ],
   "GlobalConfiguration": {

@@ -4,6 +4,6 @@ namespace Portfolio.WebUI.Services.PortfolioServices.LoginServices
 {
     public interface IloginServices
     {
-        Task<string> Login(LoginDto loginDto);
+        public string GetUserId { get; }
     }
 }

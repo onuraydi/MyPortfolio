@@ -121,6 +121,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Duende.IdentityServer.Storage": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            },
+            "IdentityModel.AspNetCore.OAuth2Introspection": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.11, )"
@@ -145,6 +153,10 @@
               "target": "Package",
               "version": "[8.0.7, )"
             },
+            "ScottBrady.IdentityModel.AspNetCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "System.Net.Http": {
               "target": "Package",
               "version": "[4.3.4, )"
@@ -164,6 +176,14 @@
             "System.Text.RegularExpressions": {
               "target": "Package",
               "version": "[4.3.1, )"
+            },
+            "Volo.Abp.Http.Client.IdentityModel": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Volo.Abp.IdentityModel": {
+              "target": "Package",
+              "version": "[8.0.1, )"
             }
           },
           "imports": [

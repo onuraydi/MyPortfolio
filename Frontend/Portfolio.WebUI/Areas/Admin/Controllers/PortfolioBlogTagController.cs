@@ -1,12 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Portfolio.DtoLayer.PortfolioDtos.PortfolioBlogTagDtos;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogTagServices;
 
 namespace Portfolio.WebUI.Areas.Admin.Controllers
 {
+    [Authorize]
     [Area("Admin")]
     [Route("Admin/PortfolioBlogTag")]
-    public class PortfolioBlogTagController : AdminBaseController
+    public class PortfolioBlogTagController : Controller
     {
         private readonly IPortfolioBlogTagServices _portfolioBlogTagServices;
 

@@ -17,279 +17,383 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Portfolio.WebUI
 build_property.RootNamespace = Portfolio.WebUI
-build_property.ProjectDir = C:\Users\ONUR\Desktop\OnurAydiPortfolio\Frontend\Portfolio.WebUI\
+build_property.ProjectDir = C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Frontend\Portfolio.WebUI\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\ONUR\Desktop\OnurAydiPortfolio\Frontend\Portfolio.WebUI
+build_property.MSBuildProjectDirectory = C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Frontend\Portfolio.WebUI
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/AdminLayout/AdminLayout.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/AdminLayout/AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5MYXlvdXRcQWRtaW5MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioAboutMe/GetPortfolioAboutMe.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioAboutMe/GetPortfolioAboutMe.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvQWJvdXRNZVxHZXRQb3J0Zm9saW9BYm91dE1lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioAboutMe/UpdatePortfolioAboutMe.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioAboutMe/UpdatePortfolioAboutMe.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvQWJvdXRNZVxVcGRhdGVQb3J0Zm9saW9BYm91dE1lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioBlog/CreatePortfolioBlog.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioBlogComment/GetAllPortfolioBlogComment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvQmxvZ0NvbW1lbnRcR2V0QWxsUG9ydGZvbGlvQmxvZ0NvbW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioBlogComment/GetByIdPortfolioBlogComment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvQmxvZ0NvbW1lbnRcR2V0QnlJZFBvcnRmb2xpb0Jsb2dDb21tZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioBlogTag/CreatePortfolioBlogTag.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvQmxvZ1RhZ1xDcmVhdGVQb3J0Zm9saW9CbG9nVGFnLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioBlogTag/GetAllPortfolioBlogTag.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvQmxvZ1RhZ1xHZXRBbGxQb3J0Zm9saW9CbG9nVGFnLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioBlogTag/UpdatePortfolioBlogTag.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvQmxvZ1RhZ1xVcGRhdGVQb3J0Zm9saW9CbG9nVGFnLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioBlog/AddTagPortfolioBlog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvQmxvZ1xBZGRUYWdQb3J0Zm9saW9CbG9nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioBlog/CreatePortfolioBlog.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvQmxvZ1xDcmVhdGVQb3J0Zm9saW9CbG9nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioBlog/GetAllPortfolioBlog.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioBlog/GetAllPortfolioBlog.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvQmxvZ1xHZXRBbGxQb3J0Zm9saW9CbG9nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioBlog/UpdatePortfolioBlog.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioBlog/UpdatePortfolioBlog.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvQmxvZ1xVcGRhdGVQb3J0Zm9saW9CbG9nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioCertificate/CreatePortfolioCertificate.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioCertificate/CreatePortfolioCertificate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvQ2VydGlmaWNhdGVcQ3JlYXRlUG9ydGZvbGlvQ2VydGlmaWNhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioCertificate/GetAllPortfolioCertificate.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioCertificate/GetAllPortfolioCertificate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvQ2VydGlmaWNhdGVcR2V0QWxsUG9ydGZvbGlvQ2VydGlmaWNhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioCertificate/UpdatePortfolioCertificate.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioCertificate/UpdatePortfolioCertificate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvQ2VydGlmaWNhdGVcVXBkYXRlUG9ydGZvbGlvQ2VydGlmaWNhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioEducation/CreatePortfolioEducation.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioContact/GetAllPortfolioContact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvQ29udGFjdFxHZXRBbGxQb3J0Zm9saW9Db250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioContact/GetByIdPortfolioContact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvQ29udGFjdFxHZXRCeUlkUG9ydGZvbGlvQ29udGFjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioEducation/CreatePortfolioEducation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvRWR1Y2F0aW9uXENyZWF0ZVBvcnRmb2xpb0VkdWNhdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioEducation/GetAllPortfolioEducation.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioEducation/GetAllPortfolioEducation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvRWR1Y2F0aW9uXEdldEFsbFBvcnRmb2xpb0VkdWNhdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioEducation/UpdatePortfolioEducation.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioEducation/UpdatePortfolioEducation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvRWR1Y2F0aW9uXFVwZGF0ZVBvcnRmb2xpb0VkdWNhdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioExperience/CreatePortfolioExperience.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioExperience/CreatePortfolioExperience.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvRXhwZXJpZW5jZVxDcmVhdGVQb3J0Zm9saW9FeHBlcmllbmNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioExperience/GetAllPortfolioExperince.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioExperience/GetAllPortfolioExperince.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvRXhwZXJpZW5jZVxHZXRBbGxQb3J0Zm9saW9FeHBlcmluY2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioExperience/UpdatePortfolioExperience.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioExperience/UpdatePortfolioExperience.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvRXhwZXJpZW5jZVxVcGRhdGVQb3J0Zm9saW9FeHBlcmllbmNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioMainTitle/GetPortfolioMainTitle.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioFreelance/GetAllPortfolioFreelance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvRnJlZWxhbmNlXEdldEFsbFBvcnRmb2xpb0ZyZWVsYW5jZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioFreelance/UpdatePortfolioFreelance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvRnJlZWxhbmNlXFVwZGF0ZVBvcnRmb2xpb0ZyZWVsYW5jZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioMainTitle/GetPortfolioMainTitle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvTWFpblRpdGxlXEdldFBvcnRmb2xpb01haW5UaXRsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioMainTitle/UpdatePortfolioMainTitle.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioMainTitle/UpdatePortfolioMainTitle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvTWFpblRpdGxlXFVwZGF0ZVBvcnRmb2xpb01haW5UaXRsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioProject/CreatePortfolioProject.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioProjectFooter/CreatePortfolioProjectFooter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvUHJvamVjdEZvb3RlclxDcmVhdGVQb3J0Zm9saW9Qcm9qZWN0Rm9vdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioProjectFooter/GetAllPortfolioProjectFooter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvUHJvamVjdEZvb3RlclxHZXRBbGxQb3J0Zm9saW9Qcm9qZWN0Rm9vdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioProjectFooter/UpdatePortfolioProjectFooter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvUHJvamVjdEZvb3RlclxVcGRhdGVQb3J0Zm9saW9Qcm9qZWN0Rm9vdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioProject/CreatePortfolioProject.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvUHJvamVjdFxDcmVhdGVQb3J0Zm9saW9Qcm9qZWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioProject/GetAllPortfolioProject.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioProject/GetAllPortfolioProject.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvUHJvamVjdFxHZXRBbGxQb3J0Zm9saW9Qcm9qZWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioProject/UpdatePortfolioProject.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioProject/UpdatePortfolioProject.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvUHJvamVjdFxVcGRhdGVQb3J0Zm9saW9Qcm9qZWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioSkill/CreatePortfolioSkill.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioProject/UpdateProjectImages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvUHJvamVjdFxVcGRhdGVQcm9qZWN0SW1hZ2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioRoutingFooter/CreatePortfolioRoutingFooter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvUm91dGluZ0Zvb3RlclxDcmVhdGVQb3J0Zm9saW9Sb3V0aW5nRm9vdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioRoutingFooter/GetAllPortfolioRoutingFooter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvUm91dGluZ0Zvb3RlclxHZXRBbGxQb3J0Zm9saW9Sb3V0aW5nRm9vdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioRoutingFooter/UpdatePortfolioRoutingFooter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvUm91dGluZ0Zvb3RlclxVcGRhdGVQb3J0Zm9saW9Sb3V0aW5nRm9vdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioSkill/CreatePortfolioSkill.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvU2tpbGxcQ3JlYXRlUG9ydGZvbGlvU2tpbGwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioSkill/GetAllPortfolioSkill.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioSkill/GetAllPortfolioSkill.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvU2tpbGxcR2V0QWxsUG9ydGZvbGlvU2tpbGwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioSkill/UpdatePortfolioSkill.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioSkill/UpdatePortfolioSkill.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvU2tpbGxcVXBkYXRlUG9ydGZvbGlvU2tpbGwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioTechnology/CreatePortfolioTechnology.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioSocialMediaFooter/CreatePortfolioSocialMediaFooter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvU29jaWFsTWVkaWFGb290ZXJcQ3JlYXRlUG9ydGZvbGlvU29jaWFsTWVkaWFGb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioSocialMediaFooter/GetAllPortfolioSocialMediaFooter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvU29jaWFsTWVkaWFGb290ZXJcR2V0QWxsUG9ydGZvbGlvU29jaWFsTWVkaWFGb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioSocialMediaFooter/UpdatePortfolioSocialMediaFooter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvU29jaWFsTWVkaWFGb290ZXJcVXBkYXRlUG9ydGZvbGlvU29jaWFsTWVkaWFGb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioTechnology/CreatePortfolioTechnology.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvVGVjaG5vbG9neVxDcmVhdGVQb3J0Zm9saW9UZWNobm9sb2d5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioTechnology/GetAllPortfolioTechnology.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioTechnology/GetAllPortfolioTechnology.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvVGVjaG5vbG9neVxHZXRBbGxQb3J0Zm9saW9UZWNobm9sb2d5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioTechnology/UpdatePortfolioTechnology.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/PortfolioTechnology/UpdatePortfolioTechnology.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9ydGZvbGlvVGVjaG5vbG9neVxVcGRhdGVQb3J0Zm9saW9UZWNobm9sb2d5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/Shared/Components/_AdminLayoutHeadComponentPartial/Default.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/Shared/Components/_AdminLayoutHeadComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0FkbWluTGF5b3V0SGVhZENvbXBvbmVudFBhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/Shared/Components/_AdminLayoutNavbarComponentPartial/Default.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/Shared/Components/_AdminLayoutNavbarComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0FkbWluTGF5b3V0TmF2YmFyQ29tcG9uZW50UGFydGlhbFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/Shared/Components/_AdminLayoutSidebarComponentPartial/Default.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/Shared/Components/_AdminLayoutSidebarComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0FkbWluTGF5b3V0U2lkZWJhckNvbXBvbmVudFBhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/_ViewImports.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/BlogUILayout/_BlogUILayout.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/BlogDetail/GetBlogDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ0RldGFpbFxHZXRCbG9nRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/BlogDetail/ReplyComment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ0RldGFpbFxSZXBseUNvbW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/BlogUILayout/_BlogUILayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1VJTGF5b3V0XF9CbG9nVUlMYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/deneme2/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZGVuZW1lMlxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/deneme/Index.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/deneme/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZGVuZW1lXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Home/Index.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Home/Privacy.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_AboutViewComponentPartial/Default.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_AboutViewComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Fib3V0Vmlld0NvbXBvbmVudFBhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_BlogAllCommentsContentBlogUILayoutComponentPartial/Default.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_AskMeQuestionViewComponentPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Fza01lUXVlc3Rpb25WaWV3Q29tcG9uZW50UGFydGlhbFxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_BlogAllCommentsContentBlogUILayoutComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Jsb2dBbGxDb21tZW50c0NvbnRlbnRCbG9nVUlMYXlvdXRDb21wb25lbnRQYXJ0aWFsXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_BlogBlogTagsContentBlogUILayoutComponentPartial/Default.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_BlogBlogTagsContentBlogUILayoutComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Jsb2dCbG9nVGFnc0NvbnRlbnRCbG9nVUlMYXlvdXRDb21wb25lbnRQYXJ0aWFsXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_BlogCategoryContentBlogUILayoutComponentPartial/Default.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_BlogCategoryContentBlogUILayoutComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Jsb2dDYXRlZ29yeUNvbnRlbnRCbG9nVUlMYXlvdXRDb21wb25lbnRQYXJ0aWFsXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_BlogContentContentBlogUILayoutComponentPartial/Default.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_BlogContentContentBlogUILayoutComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Jsb2dDb250ZW50Q29udGVudEJsb2dVSUxheW91dENvbXBvbmVudFBhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_BlogLeaveCommentContentBlogUILayoutComponentPartial/Default.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_BlogLeaveCommentContentBlogUILayoutComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Jsb2dMZWF2ZUNvbW1lbnRDb250ZW50QmxvZ1VJTGF5b3V0Q29tcG9uZW50UGFydGlhbFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_BlogOtherBlogContentBlogUILayoutComponentPartial/Default.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_BlogOtherBlogContentBlogUILayoutComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Jsb2dPdGhlckJsb2dDb250ZW50QmxvZ1VJTGF5b3V0Q29tcG9uZW50UGFydGlhbFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_BlogPublisherContentBlogUILayoutComponentPartial/Default.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_BlogPublisherContentBlogUILayoutComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Jsb2dQdWJsaXNoZXJDb250ZW50QmxvZ1VJTGF5b3V0Q29tcG9uZW50UGFydGlhbFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_BlogSubParagraphContentBlogUILayoutComponentPartial/Default.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_BlogSearchBarContentBlogUILayoutComponentPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Jsb2dTZWFyY2hCYXJDb250ZW50QmxvZ1VJTGF5b3V0Q29tcG9uZW50UGFydGlhbFxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_BlogSubParagraphContentBlogUILayoutComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Jsb2dTdWJQYXJhZ3JhcGhDb250ZW50QmxvZ1VJTGF5b3V0Q29tcG9uZW50UGFydGlhbFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_BlogViewComponentPartial/Default.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_BlogViewComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Jsb2dWaWV3Q29tcG9uZW50UGFydGlhbFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_CertificateViewComponentPartial/Default.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_CertificateViewComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0NlcnRpZmljYXRlVmlld0NvbXBvbmVudFBhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_ContactViewComponentPartial/Default.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_ContactViewComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0NvbnRhY3RWaWV3Q29tcG9uZW50UGFydGlhbFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_ContentBlogUILayoutComponentPartial/Default.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_ContentBlogUILayoutComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0NvbnRlbnRCbG9nVUlMYXlvdXRDb21wb25lbnRQYXJ0aWFsXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_ExperienceViewComponentPartial/Default.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_EducationViewComponentPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0VkdWNhdGlvblZpZXdDb21wb25lbnRQYXJ0aWFsXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_ExperienceViewComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0V4cGVyaWVuY2VWaWV3Q29tcG9uZW50UGFydGlhbFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_FooterBlogUILayoutComponentPartial/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Zvb3RlckJsb2dVSUxheW91dENvbXBvbmVudFBhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_FooterUILayoutComponentPartial/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Zvb3RlclVJTGF5b3V0Q29tcG9uZW50UGFydGlhbFxEZWZhdWx0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_FreelanceViewComponentPartial/Default.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_FreelanceViewComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0ZyZWVsYW5jZVZpZXdDb21wb25lbnRQYXJ0aWFsXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_HeadBlogUILayoutComponentPartial/Default.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_HeadBlogUILayoutComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0hlYWRCbG9nVUlMYXlvdXRDb21wb25lbnRQYXJ0aWFsXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_HeadUILayoutComponentPartial/Default.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_HeadUILayoutComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0hlYWRVSUxheW91dENvbXBvbmVudFBhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_HomeBlogUILayoutComponentPartial/Default.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_HomeBlogUILayoutComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0hvbWVCbG9nVUlMYXlvdXRDb21wb25lbnRQYXJ0aWFsXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_HomeViewComponentPartial/Default.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_HomeViewComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0hvbWVWaWV3Q29tcG9uZW50UGFydGlhbFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_NavbarBlogUILayoutComponentPartial/Default.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_NavbarBlogUILayoutComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX05hdmJhckJsb2dVSUxheW91dENvbXBvbmVudFBhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_NavbarUILayoutComponentPartial/Default.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_NavbarUILayoutComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX05hdmJhclVJTGF5b3V0Q29tcG9uZW50UGFydGlhbFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_ProjectViewComponentPartial/Default.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_ProjectFooterViewComponentPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX1Byb2plY3RGb290ZXJWaWV3Q29tcG9uZW50UGFydGlhbFxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_ProjectViewComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX1Byb2plY3RWaWV3Q29tcG9uZW50UGFydGlhbFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_SkillViewComponentPartial/Default.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_RoutingFooterViewComponentPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX1JvdXRpbmdGb290ZXJWaWV3Q29tcG9uZW50UGFydGlhbFxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_SkillViewComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX1NraWxsVmlld0NvbXBvbmVudFBhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_TechnologiesViewComponentPartial/Default.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_SocialMediaFooterViewComponentPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX1NvY2lhbE1lZGlhRm9vdGVyVmlld0NvbXBvbmVudFBhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_TechnologiesViewComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX1RlY2hub2xvZ2llc1ZpZXdDb21wb25lbnRQYXJ0aWFsXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Error.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/UILayout/_UILayout.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/UILayout/_UILayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVUlMYXlvdXRcX1VJTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/_ViewImports.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/_ViewStart.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/_Layout.cshtml]
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-qm9wmbc4d5

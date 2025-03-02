@@ -73,7 +73,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.12": {
+      "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.11": {
         "type": "package",
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "7.1.2"
@@ -1304,10 +1304,10 @@
         "nupkg-icon.png"
       ]
     },
-    "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.12": {
-      "sha512": "Th1bIoe3lgQCtkZRzYpU3YruTIaa/C5jI6yJ7djXihtvHGc6WFl823Uh01P2ESbn2eIpgiEbwRw/szlPSPowDA==",
+    "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.11": {
+      "sha512": "9KhRuywosM24BPf1R5erwsvIkpRUu1+btVyOPlM3JgrhFVP4pq5Fuzi3vjP01OHXfbCtNhWa+HGkZeqaWdcO5w==",
       "type": "package",
-      "path": "microsoft.aspnetcore.authentication.jwtbearer/8.0.12",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/8.0.11",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1315,7 +1315,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll",
         "lib/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
-        "microsoft.aspnetcore.authentication.jwtbearer.8.0.12.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.jwtbearer.8.0.11.nupkg.sha512",
         "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
       ]
     },
@@ -3290,7 +3290,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.12",
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.11",
       "Microsoft.AspNetCore.OpenApi >= 8.0.8",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.11",
       "Ocelot >= 23.3.4",
@@ -3350,7 +3350,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
-            "version": "[8.0.12, )"
+            "version": "[8.0.11, )"
           },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",

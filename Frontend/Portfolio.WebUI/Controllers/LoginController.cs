@@ -1,16 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Portfolio.DtoLayer.PortfolioDtos.LoginDtos;
+using Portfolio.WebUI.Services.IdentityServices.Abstract;
 using Portfolio.WebUI.Services.PortfolioServices.LoginServices;
 
 namespace Portfolio.WebUI.Controllers
 {
     public class LoginController : Controller
     {
-        private readonly IloginServices _loginServices;
+        private readonly IIdentityService _identityService;
+        private readonly IHttpClientFactory _httpClientFactory;
 
-        public LoginController(IloginServices loginServices)
+        public LoginController(IIdentityService identityService, IHttpClientFactory httpClientFactory)
         {
-            _loginServices = loginServices;
+            _identityService = identityService;
+            _httpClientFactory = httpClientFactory;
         }
 
         [HttpGet]
@@ -20,11 +23,16 @@ namespace Portfolio.WebUI.Controllers
         }
 
 
-        [HttpPost]
+        //[HttpPost]
         public async Task<IActionResult> Login(LoginDto loginDto)
         {
-            var values = await _loginServices.Login(loginDto);
-            return RedirectToAction("GetPortfolioAboutMe", "PortfolioAboutMe", new { area = "Admin" });
+            var values = await _identityService.SignIn(loginDto);
+
+            if(values == true)
+            {
+                return RedirectToAction("GetPortfolioAboutMe", "PortfolioAboutMe", new { area = "Admin" });
+            }
+            return View();  // 401 vb. bir sayfa gidecek 
         }
     }
 }

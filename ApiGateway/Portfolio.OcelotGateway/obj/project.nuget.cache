@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "U1E9EyvJuUk=",
+  "dgSpecHash": "tNBJGF9c9Fc=",
   "success": true,
   "projectFilePath": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\ApiGateway\\Portfolio.OcelotGateway\\Portfolio.OcelotGateway.csproj",
   "expectedPackageFiles": [
@@ -8,7 +8,7 @@
     "C:\\Users\\ONUR\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\ONUR\\.nuget\\packages\\fluentvalidation\\11.10.0\\fluentvalidation.11.10.0.nupkg.sha512",
     "C:\\Users\\ONUR\\.nuget\\packages\\ipaddressrange\\6.0.0\\ipaddressrange.6.0.0.nupkg.sha512",
-    "C:\\Users\\ONUR\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.12\\microsoft.aspnetcore.authentication.jwtbearer.8.0.12.nupkg.sha512",
+    "C:\\Users\\ONUR\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.11\\microsoft.aspnetcore.authentication.jwtbearer.8.0.11.nupkg.sha512",
     "C:\\Users\\ONUR\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\8.0.8\\microsoft.aspnetcore.jsonpatch.8.0.8.nupkg.sha512",
     "C:\\Users\\ONUR\\.nuget\\packages\\microsoft.aspnetcore.middlewareanalysis\\8.0.8\\microsoft.aspnetcore.middlewareanalysis.8.0.8.nupkg.sha512",
     "C:\\Users\\ONUR\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\8.0.8\\microsoft.aspnetcore.mvc.newtonsoftjson.8.0.8.nupkg.sha512",

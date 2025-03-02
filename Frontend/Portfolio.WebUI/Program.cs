@@ -1,4 +1,8 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Portfolio.WebUI.Handlers;
+using Portfolio.WebUI.Services.IdentityServices.Abstract;
+using Portfolio.WebUI.Services.IdentityServices.Concrete;
 using Portfolio.WebUI.Services.ImageUploadServices.ImageUploadServices;
 using Portfolio.WebUI.Services.PortfolioServices.LoginServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioAboutMeServices;
@@ -19,16 +23,15 @@ using Portfolio.WebUI.Services.PortfolioServices.PortfolioSocialMediaFooterServi
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioTechnologyServices;
 using Portfolio.WebUI.Settings;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IImageUploadService, ImageUploadService>();
 
-var values = builder.Configuration.GetSection("ServiceApiSettings").Get<ServiceApiSettings>();
 
-
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddCookie(JwtBearerDefaults.AuthenticationScheme,opt =>
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddCookie(JwtBearerDefaults.AuthenticationScheme, opt =>
 {
     opt.LoginPath = "/Login/Login";
     opt.LogoutPath = "/deneme/index";
@@ -38,6 +41,38 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddCo
     opt.Cookie.Name = "PortfolioJWTCookie";
 });
 
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, opt =>
+{
+    opt.LoginPath = "/Login/Login/";
+    //opt.LogoutPath = "/deneme/index/";
+    opt.ExpireTimeSpan = TimeSpan.FromDays(1);
+    opt.Cookie.Name = "PortfolioCookie";
+    opt.SlidingExpiration = true;
+
+});
+
+
+builder.Services.AddHttpClient();
+builder.Services.AddHttpContextAccessor();
+
+
+builder.Services.Configure<ServiceApiSettings>(builder.Configuration.GetSection("ServiceApiSettings"));
+
+var values = builder.Configuration.GetSection("ServiceApiSettings").Get<ServiceApiSettings>();
+
+builder.Services.Configure<ClientSettings>(builder.Configuration.GetSection("ClientSettings"));
+
+
+
+
+
+builder.Services.AddHttpContextAccessor();
+
+
+builder.Services.AddScoped<ClientCredentialTokenHandler>();
+
+builder.Services.AddScoped<ResourceOwnerPasswordTokenHandler>();
 
 
 builder.Services.AddHttpClient<IPortfolioMainTitleService, PortfolioMainTitleService>(opt =>
@@ -136,8 +171,34 @@ builder.Services.AddHttpClient<IPortfolioProjectFooterService, PortfolioProjectF
 //{
 //    opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
 //});
-builder.Services.AddHttpClient<IloginServices, LoginServices>();
 
+//builder.Services.AddHttpClient<IIdentityService, IdentityServices>(opt =>
+//{
+//    opt.BaseAddress = new Uri($"{values.IdentityServerUrl}");
+//}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
+
+
+builder.Services.AddHttpClient<IClientCredentialTokenService, ClientCredentialTokenService>(opt =>
+{
+    opt.BaseAddress = new Uri($"{values.IdentityServerUrl}");
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
+
+
+builder.Services.AddScoped<IloginServices, LoginServices>();
+
+
+
+
+builder.Services.AddHttpClient<IIdentityService, IdentityServices>();
+
+
+
+//builder.Services.AddHttpClient<IUserService, UserService>();
+
+
+//builder.Services.AddHttpClient<IClientCredentialTokenService, ClientCredentialTokenService>();
+
+builder.Services.AddHttpClient();
 
 
 

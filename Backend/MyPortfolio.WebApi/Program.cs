@@ -40,16 +40,16 @@ builder.Services.AddDbContext<PortfolioContext>(opt =>
 
 
 
-builder.Services.AddCors(opt =>
-{
-    opt.AddPolicy("AllowAllOrigins",
-        builder =>
-        {
-            builder.AllowAnyOrigin()
-            .AllowAnyMethod()
-            .AllowAnyHeader();
-        });
-});
+//builder.Services.AddCors(opt =>
+//{
+//    opt.AddPolicy("AllowAllOrigins",
+//        builder =>
+//        {
+//            builder.AllowAnyOrigin()
+//            .AllowAnyMethod()
+//            .AllowAnyHeader();
+//        });
+//});
 
 
 
@@ -85,22 +85,21 @@ builder.Services.AddCors(opt =>
 
 
 
-
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
 {
     opt.Authority = builder.Configuration["IdentityServerUrl"];
-    opt.Audience = "ResourcePortfolio";
     opt.Audience = "ResourcePortfolioAdmin";
+    opt.RequireHttpsMetadata = false;
 });
 
 
-builder.Services.AddAuthorization(options =>
-{
-    options.AddPolicy("ResourcePortfolioAdmin", policy =>
-        policy.RequireAssertion(context =>
-            context.User.HasClaim(c => c.Type == "aud" && (c.Value == "ResourcePortfolioAdmin" || c.Value == "ResourcePortfolio"))
-        ));
-});
+//builder.Services.AddAuthorization(options =>
+//{
+//    options.AddPolicy("ResourcePortfolioAdmin", policy =>
+//        policy.RequireAssertion(context =>
+//            context.User.HasClaim(c => c.Type == "aud" && (c.Value == "ResourcePortfolioAdmin" || c.Value == "ResourcePortfolio"))
+//        ));
+//});
 
 
 builder.Services.AddScoped<IPortfolioMainTitleService, PortfolioMainTitleService>();
