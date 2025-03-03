@@ -9,6 +9,7 @@ using Portfolio.WebUI.Settings;
 using System.Security.Claims;
 using System.Security.Principal;
 using Microsoft.Extensions.Logging;
+using Duende.IdentityServer.Models;
 
 namespace Portfolio.WebUI.Services.IdentityServices.Concrete
 {
@@ -41,6 +42,7 @@ namespace Portfolio.WebUI.Services.IdentityServices.Concrete
                 {
                     ClientId = _clientSettings.AdminClient.ClientId,
                     ClientSecret = _clientSettings.AdminClient.ClientSecret,
+                    GrantType = GrantType.ResourceOwnerPassword,
                     RefreshToken = refreshToken,
                     Address = discoveryEndPoint.TokenEndpoint
                 };
@@ -66,7 +68,8 @@ namespace Portfolio.WebUI.Services.IdentityServices.Concrete
             {
                 ClientId = _clientSettings.AdminClient.ClientId,
                 ClientSecret = _clientSettings.AdminClient.ClientSecret,
-                UserName = loginDto.Email,
+                GrantType = GrantType.ResourceOwnerPassword,
+                UserName = loginDto.Username,
                 Password = loginDto.Password,
                 Address = discoveryEndPoint.TokenEndpoint,
             };

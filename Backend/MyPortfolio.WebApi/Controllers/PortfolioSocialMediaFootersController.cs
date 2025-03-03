@@ -6,7 +6,7 @@ using MyPortfolio.WebApi.Services.PortfolioSocialMediaFooterServices;
 
 namespace MyPortfolio.WebApi.Controllers
 {
-    [Authorize(Policy = "ResourcePortfolioAdmin")]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class PortfolioSocialMediaFootersController : ControllerBase

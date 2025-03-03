@@ -7,7 +7,7 @@ using MyPortfolio.WebApi.Services.PortfolioRoutingFooterServices;
 
 namespace MyPortfolio.WebApi.Controllers
 {
-    [Authorize(Policy = "ResourcePortfolioAdmin")]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class PortfolioRoutingFootersController : ControllerBase

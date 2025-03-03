@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Portfolio.DtoLayer.PortfolioDtos.PortfolioRoutingFooterDtos;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioRoutingFooterServices;
 
@@ -6,7 +7,8 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Route("Admin/PortfolioRoutingFooter")]
-    public class PortfolioRoutingFooterController : AdminBaseController
+    [Authorize]
+    public class PortfolioRoutingFooterController : Controller  
     {
         private readonly IPortfolioRoutingFooterService _portfolioRoutingFooterService;
 

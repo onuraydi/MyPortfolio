@@ -44,13 +44,14 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddCo
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, opt =>
 {
-    opt.LoginPath = "/Login/Login/";
-    //opt.LogoutPath = "/deneme/index/";
+    opt.LoginPath = "/Login/Login";
+    opt.LogoutPath = "/deneme/index/";
     opt.ExpireTimeSpan = TimeSpan.FromDays(1);
     opt.Cookie.Name = "PortfolioCookie";
     opt.SlidingExpiration = true;
 
 });
+
 
 
 builder.Services.AddHttpClient();
@@ -78,94 +79,94 @@ builder.Services.AddScoped<ResourceOwnerPasswordTokenHandler>();
 builder.Services.AddHttpClient<IPortfolioMainTitleService, PortfolioMainTitleService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
-});
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 
 builder.Services.AddHttpClient<IPortfolioAboutMeService, PortfolioAboutMeService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
-});
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 
 builder.Services.AddHttpClient<IPortfolioExperienceService, PortfolioExperienceService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
-});
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 
 builder.Services.AddHttpClient<IPortfolioTechnologyService, PortfolioTechnologyService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
-});
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 
 builder.Services.AddHttpClient<IPortfolioSkillService, PortfolioSkillService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
-});
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 
 builder.Services.AddHttpClient<IPortfolioProjectService, PortfolioProjectService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
-});
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 
 builder.Services.AddHttpClient<IPortfolioBlogService, PortfolioBlogService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
-});
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 
 builder.Services.AddHttpClient<IPortfolioCertificateService, PortfolioCertificateService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
-});
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 
 builder.Services.AddHttpClient<IPortfolioEducationService, PortfolioEducationService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
-});
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 
 builder.Services.AddHttpClient<IPortfolioContactService, PortfolioContactService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
-});
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 
 builder.Services.AddHttpClient<IPortfolioBlogCommentService, PortfolioBlogCommentService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
-});
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 
 
 builder.Services.AddHttpClient<IPortfolioBlogTagServices, PortfolioBlogTagServices>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
-});
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 builder.Services.AddHttpClient<IPortfolioSocialMediaFooterService, PortfolioSocialMediaFooterService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
-});
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 builder.Services.AddHttpClient<IPortfolioFreelanceService, PortfolioFreelanceService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
-});
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 builder.Services.AddHttpClient<IPortfolioRoutingFooterService, PortfolioRoutingFooterService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
-});
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 builder.Services.AddHttpClient<IPortfolioProjectFooterService, PortfolioProjectFooterService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
-});
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 //builder.Services.AddHttpClient<IloginServices, LoginServices>(opt =>
 //{
@@ -178,10 +179,10 @@ builder.Services.AddHttpClient<IPortfolioProjectFooterService, PortfolioProjectF
 //}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 
-builder.Services.AddHttpClient<IClientCredentialTokenService, ClientCredentialTokenService>(opt =>
-{
-    opt.BaseAddress = new Uri($"{values.IdentityServerUrl}");
-}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
+//builder.Services.AddHttpClient<IClientCredentialTokenService, ClientCredentialTokenService>(opt =>
+//{
+//    opt.BaseAddress = new Uri($"{values.IdentityServerUrl}");
+//}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 
 builder.Services.AddScoped<IloginServices, LoginServices>();
@@ -193,10 +194,17 @@ builder.Services.AddHttpClient<IIdentityService, IdentityServices>();
 
 
 
-//builder.Services.AddHttpClient<IUserService, UserService>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 
-//builder.Services.AddHttpClient<IClientCredentialTokenService, ClientCredentialTokenService>();
+builder.Services.AddHttpClient<IClientCredentialTokenService, ClientCredentialTokenService>();
+
+
+
+builder.Services.AddScoped<ClientCredentialTokenHandler>();
+builder.Services.AddScoped<ResourceOwnerPasswordTokenHandler>();
+
+
 
 builder.Services.AddHttpClient();
 

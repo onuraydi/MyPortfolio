@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Portfolio.DtoLayer.PortfolioDtos.PortfolioSocialMediaFooterDtos;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioSocialMediaFooterServices;
 
@@ -6,7 +7,8 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Route("Admin/PortfolioSocialMediaFooter")]
-    public class PortfolioSocialMediaFooterController : AdminBaseController
+    [Authorize]
+    public class PortfolioSocialMediaFooterController : Controller
     {
         private readonly IPortfolioSocialMediaFooterService _portfolioSocialMediaFooterService;
 

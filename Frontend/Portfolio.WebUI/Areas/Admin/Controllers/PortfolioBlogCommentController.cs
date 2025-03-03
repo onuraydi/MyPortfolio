@@ -1,11 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogCommentServices;
 
 namespace Portfolio.WebUI.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Route("Admin/PortfolioBlogComment")]
-    public class PortfolioBlogCommentController : AdminBaseController
+    [Authorize]
+    public class PortfolioBlogCommentController : Controller
     {
         private readonly IPortfolioBlogCommentService _portfolioBlogCommentService;
 

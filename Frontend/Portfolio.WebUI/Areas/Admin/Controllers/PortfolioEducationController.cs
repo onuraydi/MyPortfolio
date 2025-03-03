@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Portfolio.DtoLayer.PortfolioDtos.PortfolioEducationDtos;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioEducationServices;
 
@@ -6,7 +7,8 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Route("Admin/PortfolioEducation")]
-    public class PortfolioEducationController : AdminBaseController
+    [Authorize]
+    public class PortfolioEducationController : Controller
     {
         private readonly IPortfolioEducationService _portfolioEducationService;
 

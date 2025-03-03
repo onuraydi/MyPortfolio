@@ -6,7 +6,7 @@ using MyPortfolio.WebApi.Services.ProjectImageServices;
 
 namespace MyPortfolio.WebApi.Controllers
 {
-    [Authorize(Policy = "ResourcePortfolioAdmin")]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ProjectImagesController : ControllerBase

@@ -1,4 +1,5 @@
 ﻿using Duende.IdentityModel.Client;
+using Duende.IdentityServer.Models;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
 using Portfolio.WebUI.Services.IdentityServices.Abstract;
@@ -41,6 +42,7 @@ namespace Portfolio.WebUI.Services.IdentityServices.Concrete
                 {
                     ClientId = _clientSettings.AdminClient.ClientId,
                     ClientSecret = _clientSettings.AdminClient.ClientSecret,
+                    GrantType = GrantType.ResourceOwnerPassword,
                     Address = discoveryEndPoint.TokenEndpoint,
                 };
 

@@ -544,3 +544,11 @@ C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Frontend\Portfolio.WebUI
 C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Frontend\Portfolio.WebUI\bin\Debug\net8.0\Volo.Abp.Validation.dll
 C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Frontend\Portfolio.WebUI\bin\Debug\net8.0\Volo.Abp.Validation.Abstractions.dll
 C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Frontend\Portfolio.WebUI\bin\Debug\net8.0\Volo.Abp.VirtualFileSystem.dll
+C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Frontend\Portfolio.WebUI\bin\Debug\net8.0\FirebaseAdmin.dll
+C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Frontend\Portfolio.WebUI\bin\Debug\net8.0\Google.Api.Gax.dll
+C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Frontend\Portfolio.WebUI\bin\Debug\net8.0\Google.Api.Gax.Rest.dll
+C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Frontend\Portfolio.WebUI\bin\Debug\net8.0\Google.Apis.dll
+C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Frontend\Portfolio.WebUI\bin\Debug\net8.0\Google.Apis.Auth.dll
+C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Frontend\Portfolio.WebUI\bin\Debug\net8.0\Google.Apis.Core.dll
+C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Frontend\Portfolio.WebUI\bin\Debug\net8.0\System.Management.dll
+C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Frontend\Portfolio.WebUI\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Management.dll

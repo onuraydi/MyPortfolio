@@ -1,11 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioContactServices;
 
 namespace Portfolio.WebUI.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Route("Admin/PortfolioContact")]
-    public class PortfolioContactController : AdminBaseController
+    [Authorize]
+    public class PortfolioContactController : Controller
     {
         private readonly IPortfolioContactService _portfolioContactService;
 

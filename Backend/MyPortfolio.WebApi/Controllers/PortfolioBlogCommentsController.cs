@@ -6,7 +6,7 @@ using MyPortfolio.WebApi.Services.PortfolioBlogCommentServices;
 
 namespace MyPortfolio.WebApi.Controllers
 {
-    [Authorize(Policy = "ResourcePortfolioAdmin")]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class PortfolioBlogCommentsController : ControllerBase
@@ -33,8 +33,9 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
-        [AllowAnonymous]
+
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> CreatePortfolioBlogComment(CreatePortfolioBlogCommentDto createPortfolioBlogCommentDto)
         {
             createPortfolioBlogCommentDto.CommentDate = Convert.ToDateTime(DateTime.Now.ToString("dd MMMM yyyy HH:mm"));
@@ -49,8 +50,9 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok("Yorum silme işlemi başarılı");
         }
         // Bloğa göre yorum getirme
-        [AllowAnonymous]
+
         [HttpGet("GetPortfolioBlogCommentByPortfolioBlogId/{id}")]
+        [AllowAnonymous]
         public async Task<IActionResult> GetPortfolioBlogCommentByPortfolioBlogId(int id)
         {
             var values = await _portfolioBlogCommentService.GetPortfolioBlogCommentByPortfolioBlogIdAsync(id);

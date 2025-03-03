@@ -6,7 +6,7 @@ using MyPortfolio.WebApi.Services.PortfolioBlogServices;
 
 namespace MyPortfolio.WebApi.Controllers
 {
-    [Authorize(Policy = "ResourcePortfolioAdmin")]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class PortfolioBlogsController : ControllerBase
@@ -17,15 +17,17 @@ namespace MyPortfolio.WebApi.Controllers
         {
             _portfolioBlogService = portfolioBlogService;
         }
-        [AllowAnonymous]
+
         [HttpGet]
+        [AllowAnonymous]
         public async Task<IActionResult> GetAllPortfolioBlog(string query = "")
         {
             var values = await _portfolioBlogService.GetAllPortfolioBlogAsync(query);
             return Ok(values);
         }
-        [AllowAnonymous]
+
         [HttpGet("{id}")]
+        [AllowAnonymous]
         public async Task<IActionResult> GetPortfolioBlogByPortfolioBlogId(int id)
         {
             var values = await _portfolioBlogService.GetPortfolioBlogByPortfolioBlogIdAsync(id);

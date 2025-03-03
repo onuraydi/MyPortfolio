@@ -9,12 +9,14 @@ using Newtonsoft.Json;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogTagServices;
 using Portfolio.WebUI.Models;
 using Portfolio.DtoLayer.PortfolioDtos.PortfolioBlogTagDtos;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Portfolio.WebUI.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Route("Admin/PortfolioBlog")]
-    public class PortfolioBlogController : AdminBaseController
+    [Authorize]
+    public class PortfolioBlogController : Controller
     {
         private readonly IPortfolioBlogService _portfolioBlogService;
         private readonly IPortfolioBlogTagServices _portfolioBlogTagService;

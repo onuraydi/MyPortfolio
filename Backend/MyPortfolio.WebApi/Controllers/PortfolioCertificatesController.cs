@@ -6,7 +6,7 @@ using MyPortfolio.WebApi.Services.PortfolioCertificateServices;
 
 namespace MyPortfolio.WebApi.Controllers
 {
-    [Authorize(Policy = "ResourcePortfolioAdmin")]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class PortfolioCertificatesController : ControllerBase

@@ -7,64 +7,20 @@
       "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\services\\identityservices\\concrete\\identityservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\services\\identityservices\\concrete\\identityservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\areas\\admin\\controllers\\portfolioaboutmecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\areas\\admin\\controllers\\portfolioaboutmecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\services\\identityservices\\concrete\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\services\\identityservices\\concrete\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C38F6BD-F306-4CB4-80C3-164FFC8FD864}|Backend\\MyPortfolio.WebApi\\MyPortfolio.WebApi.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\backend\\myportfolio.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3C38F6BD-F306-4CB4-80C3-164FFC8FD864}|Backend\\MyPortfolio.WebApi\\MyPortfolio.WebApi.csproj|solutionrelative:backend\\myportfolio.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\services\\identityservices\\concrete\\identityservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\services\\identityservices\\concrete\\identityservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\services\\identityservices\\concrete\\clientcredentialtokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\services\\identityservices\\concrete\\clientcredentialtokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\models\\jwtresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\models\\jwtresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\models\\userdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\models\\userdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\models\\blogtagsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\models\\blogtagsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\models\\blogsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\models\\blogsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\handlers\\clientcredentialtokenhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\handlers\\clientcredentialtokenhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\handlers\\resourceownerpasswordtokenhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\handlers\\resourceownerpasswordtokenhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\areas\\admin\\controllers\\portfolioblogtagcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\areas\\admin\\controllers\\portfolioblogtagcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\areas\\admin\\controllers\\adminbasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\areas\\admin\\controllers\\adminbasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\areas\\admin\\controllers\\adminlayoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\areas\\admin\\controllers\\adminlayoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -73,7 +29,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 238,
+          "DockedWidth": 200,
           "SelectedChildIndex": 0,
           "Children": [
             {
@@ -82,76 +38,24 @@
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Program.cs",
               "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Program.cs",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Program.cs*",
-              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Program.cs*",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAuwDUAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Program.cs",
+              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Program.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFEAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T08:05:03.99Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Services\\IdentityServices\\Concrete\\UserService.cs",
-              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Services\\IdentityServices\\Concrete\\UserService.cs",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Services\\IdentityServices\\Concrete\\UserService.cs",
-              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Services\\IdentityServices\\Concrete\\UserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T07:50:18.349Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserDetailViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Models\\UserDetailViewModel.cs",
-              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Models\\UserDetailViewModel.cs",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Models\\UserDetailViewModel.cs",
-              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Models\\UserDetailViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T07:49:43.693Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Models\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Models\\ErrorViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T07:49:42.736Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "BlogTagsViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Models\\BlogTagsViewModel.cs",
-              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Models\\BlogTagsViewModel.cs",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Models\\BlogTagsViewModel.cs",
-              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Models\\BlogTagsViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T07:49:41.965Z",
+              "WhenOpened": "2025-03-03T07:14:40.295Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IdentityServices.cs",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Services\\IdentityServices\\Concrete\\IdentityServices.cs",
-              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Services\\IdentityServices\\Concrete\\IdentityServices.cs",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Services\\IdentityServices\\Concrete\\IdentityServices.cs",
-              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Services\\IdentityServices\\Concrete\\IdentityServices.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAEwAAAAMAAAAAAAAAA==",
+              "Title": "PortfolioAboutMeController.cs",
+              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Areas\\Admin\\Controllers\\PortfolioAboutMeController.cs",
+              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Areas\\Admin\\Controllers\\PortfolioAboutMeController.cs",
+              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Areas\\Admin\\Controllers\\PortfolioAboutMeController.cs",
+              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Areas\\Admin\\Controllers\\PortfolioAboutMeController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T07:33:16.866Z",
+              "WhenOpened": "2025-03-03T07:11:52.723Z",
               "EditorCaption": ""
             },
             {
@@ -162,126 +66,35 @@
               "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Controllers\\LoginController.cs",
               "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Controllers\\LoginController.cs",
               "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Controllers\\LoginController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAlwBwAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAIA5wCoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T07:33:01.646Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "JwtResponseModel.cs",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Models\\JwtResponseModel.cs",
-              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Models\\JwtResponseModel.cs",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Models\\JwtResponseModel.cs",
-              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Models\\JwtResponseModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T07:49:44.646Z",
+              "WhenOpened": "2025-03-03T07:06:51.426Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Backend\\MyPortfolio.WebApi\\appsettings.json",
-              "RelativeDocumentMoniker": "Backend\\MyPortfolio.WebApi\\appsettings.json",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Backend\\MyPortfolio.WebApi\\appsettings.json",
-              "RelativeToolTip": "Backend\\MyPortfolio.WebApi\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-02T07:51:20.31Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "ClientCredentialTokenService.cs",
               "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Services\\IdentityServices\\Concrete\\ClientCredentialTokenService.cs",
               "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Services\\IdentityServices\\Concrete\\ClientCredentialTokenService.cs",
               "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Services\\IdentityServices\\Concrete\\ClientCredentialTokenService.cs",
               "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Services\\IdentityServices\\Concrete\\ClientCredentialTokenService.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAQwDwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T07:49:51.373Z",
+              "WhenOpened": "2025-03-03T07:06:07.114Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "BlogsViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Models\\BlogsViewModel.cs",
-              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Models\\BlogsViewModel.cs",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Models\\BlogsViewModel.cs",
-              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Models\\BlogsViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "IdentityServices.cs",
+              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Services\\IdentityServices\\Concrete\\IdentityServices.cs",
+              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Services\\IdentityServices\\Concrete\\IdentityServices.cs",
+              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Services\\IdentityServices\\Concrete\\IdentityServices.cs",
+              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Services\\IdentityServices\\Concrete\\IdentityServices.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAQwGsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T07:49:40.886Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ClientCredentialTokenHandler.cs",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Handlers\\ClientCredentialTokenHandler.cs",
-              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Handlers\\ClientCredentialTokenHandler.cs",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Handlers\\ClientCredentialTokenHandler.cs",
-              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Handlers\\ClientCredentialTokenHandler.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T07:48:55.426Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ResourceOwnerPasswordTokenHandler.cs",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Handlers\\ResourceOwnerPasswordTokenHandler.cs",
-              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Handlers\\ResourceOwnerPasswordTokenHandler.cs",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Handlers\\ResourceOwnerPasswordTokenHandler.cs",
-              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Handlers\\ResourceOwnerPasswordTokenHandler.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T07:48:52.071Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "PortfolioBlogTagController.cs",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Areas\\Admin\\Controllers\\PortfolioBlogTagController.cs",
-              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Areas\\Admin\\Controllers\\PortfolioBlogTagController.cs",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Areas\\Admin\\Controllers\\PortfolioBlogTagController.cs",
-              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Areas\\Admin\\Controllers\\PortfolioBlogTagController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T07:32:41.472Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AdminBaseController.cs",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Areas\\Admin\\Controllers\\AdminBaseController.cs",
-              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Areas\\Admin\\Controllers\\AdminBaseController.cs",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Areas\\Admin\\Controllers\\AdminBaseController.cs",
-              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Areas\\Admin\\Controllers\\AdminBaseController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T07:31:41.449Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AdminLayoutController.cs",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Areas\\Admin\\Controllers\\AdminLayoutController.cs",
-              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Areas\\Admin\\Controllers\\AdminLayoutController.cs",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Areas\\Admin\\Controllers\\AdminLayoutController.cs",
-              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Areas\\Admin\\Controllers\\AdminLayoutController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T14:26:24.956Z",
+              "WhenOpened": "2025-03-03T06:55:28.252Z",
               "EditorCaption": ""
             }
           ]

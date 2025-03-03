@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Portfolio.DtoLayer.PortfolioDtos.PortfolioCertificateDtos;
 using Portfolio.WebUI.Services.ImageUploadServices.ImageUploadServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioCertificateServices;
@@ -7,7 +8,8 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Route("Admin/PortfolioCertificate")]
-    public class PortfolioCertificateController : AdminBaseController
+    [Authorize]
+    public class PortfolioCertificateController : Controller
     {
         private readonly IPortfolioCertificateService _portfolioCertificateService;
         private readonly IImageUploadService _imageUploadService;

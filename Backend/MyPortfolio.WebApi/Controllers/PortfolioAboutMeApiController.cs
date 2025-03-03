@@ -6,7 +6,7 @@ using MyPortfolio.WebApi.Services.PortfolioAboutMeServices;
 
 namespace MyPortfolio.WebApi.Controllers
 {
-    [Authorize(Policy = "ResourcePortfolioAdmin")]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class PortfolioAboutMeApiController : ControllerBase
@@ -18,8 +18,8 @@ namespace MyPortfolio.WebApi.Controllers
             _portfolioAboutMeService = portfolioAboutMeService;
         }
 
-        [AllowAnonymous]
         [HttpGet]
+        [AllowAnonymous]
         public async Task<IActionResult> GetPortfolioAboutMe()
         {
             var values = await _portfolioAboutMeService.GetPortfolioAboutMeAsync();

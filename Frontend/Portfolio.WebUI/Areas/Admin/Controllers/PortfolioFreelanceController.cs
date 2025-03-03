@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Portfolio.DtoLayer.PortfolioDtos.PortfolioFreelanceDtos;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioFreelanceServices;
 
@@ -6,7 +7,8 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Route("Admin/PortfolioFreelance")]
-    public class PortfolioFreelanceController : AdminBaseController
+    [Authorize]
+    public class PortfolioFreelanceController : Controller  
     {
         private readonly IPortfolioFreelanceService _portfolioFreelanceService;
 

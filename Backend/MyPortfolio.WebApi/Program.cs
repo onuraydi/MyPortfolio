@@ -40,16 +40,16 @@ builder.Services.AddDbContext<PortfolioContext>(opt =>
 
 
 
-//builder.Services.AddCors(opt =>
-//{
-//    opt.AddPolicy("AllowAllOrigins",
-//        builder =>
-//        {
-//            builder.AllowAnyOrigin()
-//            .AllowAnyMethod()
-//            .AllowAnyHeader();
-//        });
-//});
+builder.Services.AddCors(opt =>
+{
+    opt.AddPolicy("AllowAllOrigins",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+        });
+});
 
 
 
@@ -93,13 +93,13 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 });
 
 
-//builder.Services.AddAuthorization(options =>
-//{
-//    options.AddPolicy("ResourcePortfolioAdmin", policy =>
-//        policy.RequireAssertion(context =>
-//            context.User.HasClaim(c => c.Type == "aud" && (c.Value == "ResourcePortfolioAdmin" || c.Value == "ResourcePortfolio"))
-//        ));
-//});
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("ResourcePortfolioAdmin", policy =>
+        policy.RequireAssertion(context =>
+            context.User.HasClaim(c => c.Type == "aud" && (c.Value == "ResourcePortfolioAdmin" || c.Value == "ResourcePortfolio"))
+        ));
+});
 
 
 builder.Services.AddScoped<IPortfolioMainTitleService, PortfolioMainTitleService>();

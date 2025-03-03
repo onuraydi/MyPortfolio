@@ -125,6 +125,10 @@
               "target": "Package",
               "version": "[7.1.0, )"
             },
+            "FirebaseAdmin": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
             "IdentityModel.AspNetCore.OAuth2Introspection": {
               "target": "Package",
               "version": "[3.2.0, )"

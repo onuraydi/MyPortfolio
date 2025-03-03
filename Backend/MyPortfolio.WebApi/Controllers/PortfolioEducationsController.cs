@@ -7,7 +7,7 @@ using MyPortfolio.WebApi.Services.PortfolioEducationServices;
 
 namespace MyPortfolio.WebApi.Controllers
 {
-    [Authorize(Policy = "ResourcePortfolioAdmin")]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class PortfolioEducationsController : ControllerBase

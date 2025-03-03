@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Portfolio.DtoLayer.PortfolioDtos.PortfolioProjectDtos;
 using Portfolio.DtoLayer.PortfolioDtos.ProjectImageDtos;
 using Portfolio.WebUI.Services.ImageUploadServices.ImageUploadServices;
@@ -8,7 +9,8 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Route("Admin/PortfolioProject")]
-    public class PortfolioProjectController : AdminBaseController
+    [Authorize]
+    public class PortfolioProjectController : Controller
     {
         private readonly IPortfolioProjectService _portfolioProjectService;
         private readonly IImageUploadService _imageUploadService;

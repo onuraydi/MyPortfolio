@@ -6,7 +6,7 @@ using MyPortfolio.WebApi.Services.PortfolioBlogTagServices;
 
 namespace MyPortfolio.WebApi.Controllers
 {
-    [Authorize(Policy = "ResourcePortfolioAdmin")]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class PortfolioBlogTagsController : ControllerBase
@@ -18,8 +18,9 @@ namespace MyPortfolio.WebApi.Controllers
             _portfolioBlogTagService = portfolioBlogTagService;
         }
         // bu sayfada kullanılacak o yüzden authentication eklenmemeli
-        [AllowAnonymous]
+
         [HttpGet]
+        [AllowAnonymous]
         public async Task<IActionResult> GetAllPortfolioBlogTag()
         {
             var values = await _portfolioBlogTagService.GetAllPortfolioBlogTagAsync();
@@ -36,8 +37,9 @@ namespace MyPortfolio.WebApi.Controllers
         }
 
         // taga göre blog getirme 
-        [AllowAnonymous]
+
         [HttpGet("GetPortfolioBlogByPortfolioBlogTagId/{id}")]
+        [AllowAnonymous]
         public async Task<IActionResult> GetPortfolioBlogByPortfolioBlogTagId(int id)
         {
             var values = await _portfolioBlogTagService.GetPortfolioBlogByPortfolioBlogTagIdAsync(id);
@@ -45,8 +47,8 @@ namespace MyPortfolio.WebApi.Controllers
         }
 
         // Blog'a ait tagları getirme
-        [AllowAnonymous]
         [HttpGet("GetPortfolioBlogTagsByPortfolioBlogId/{id}")]
+        [AllowAnonymous]
         public async Task<IActionResult> GetPortfolioBlogTagsByPortfolioBlogId(int id)
         {
             var values = await _portfolioBlogTagService.GetPortfolioBlogTagsByPortfolioBlogIdAsync(id);
