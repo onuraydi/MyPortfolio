@@ -3,6 +3,7 @@ using MyPortfolio.WebApi.Dtos.LibraryDtos.AuthorDtos;
 using MyPortfolio.WebApi.Dtos.LibraryDtos.BookDtos;
 using MyPortfolio.WebApi.Dtos.LibraryDtos.CategoryDtos;
 using MyPortfolio.WebApi.Dtos.LibraryDtos.PublisherDtos;
+using MyPortfolio.WebApi.Dtos.NotificationDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioAboutMeDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioBlogCommentDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioBlogDtos;
@@ -140,6 +141,11 @@ namespace MyPortfolio.WebApi.Mapping
             CreateMap<PortfolioProjectFooter, CreatePortfolioProjectFooterDto>().ReverseMap();
             CreateMap<PortfolioProjectFooter, UpdatePortfolioProjectFooterDto>().ReverseMap();
             CreateMap<PortfolioProjectFooter, GetPortfolioProjectFooterByPortfolioProjectFooterIdDto>().ReverseMap();
+
+
+            // Notification
+            CreateMap<Notification, GetNotificationDto>().ReverseMap();
+            CreateMap<Notification, AddNotificationDto>().ReverseMap();
 
 
             // Library parts

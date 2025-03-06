@@ -6,6 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using MyPortfolio.WebApi.Context;
 using MyPortfolio.WebApi.Services.LibraryServices.BookServices;
+using MyPortfolio.WebApi.Services.NotificationServices;
 using MyPortfolio.WebApi.Services.PorfolioFreelanceServices;
 using MyPortfolio.WebApi.Services.PortfolioAboutMeServices;
 using MyPortfolio.WebApi.Services.PortfolioBlogCommentServices;
@@ -119,6 +120,7 @@ builder.Services.AddScoped<IPortfolioSocialMediaFooterService, PortfolioSocialMe
 builder.Services.AddScoped<IPortfolioFreelanceService, PortfolioFreelanceServices>();
 builder.Services.AddScoped<IPortfolioRoutingFooterService, PortfolioRoutingFooterService>();
 builder.Services.AddScoped<IPortfolioProjectFooterService, PortfolioProjectFooterService>();
+builder.Services.AddScoped<INotificationService, NotificationService>();
 
 builder.Services.AddScoped<IBookService, BookService>();
 

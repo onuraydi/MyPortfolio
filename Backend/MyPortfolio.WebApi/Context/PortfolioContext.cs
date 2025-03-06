@@ -26,6 +26,7 @@ namespace MyPortfolio.WebApi.Context
         public DbSet<PortfolioFreelance> PortfolioFreelances { get; set; }
         public DbSet<PortfolioRoutingFooter> PortfolioRoutingFooters { get; set; }
         public DbSet<PortfolioProjectFooter> PortfolioProjectFooters { get; set; }
+        public DbSet<Notification> notifications { get; set; }
 
         // Library parts
         public DbSet<Book> Books {  get; set; }
