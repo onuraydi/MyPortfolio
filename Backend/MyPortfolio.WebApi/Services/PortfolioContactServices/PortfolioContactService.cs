@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using MyPortfolio.WebApi.Context;
+using MyPortfolio.WebApi.Dtos.NotificationDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioContactDtos;
 using MyPortfolio.WebApi.Entites;
+using MyPortfolio.WebApi.Services.NotificationServices;
 using System.Data;
 
 namespace MyPortfolio.WebApi.Services.PortfolioContactServices
@@ -11,17 +13,27 @@ namespace MyPortfolio.WebApi.Services.PortfolioContactServices
     {
         private readonly PortfolioContext _context;
         private readonly IMapper _mapper;
+        private readonly INotificationService _notificationService;
 
-        public PortfolioContactService(PortfolioContext context, IMapper mapper)
+        public PortfolioContactService(PortfolioContext context, IMapper mapper, INotificationService notificationService)
         {
             _context = context;
             _mapper = mapper;
+            _notificationService = notificationService;
         }
 
         public async Task CreatePortfolioContactAsync(CreatePortfolioContactDto createPortfolioContactDto)
         {
             var values = _mapper.Map<PortfolioContact>(createPortfolioContactDto);
             await _context.portfolioContacts.AddAsync(values);
+            var notificationDto = new AddNotificationDto
+            {
+                isSeen = false,
+                NotificationName = values.SenderNameSurname + " adlı kişiden bir mesajınız var.",
+                NotificationDescription = "Konu: " + values.MessageSubject,
+                NotificationTime = DateTime.Today.Date,
+            };
+            await _notificationService.AddNotification(notificationDto);
             _context.SaveChanges();
         }
 

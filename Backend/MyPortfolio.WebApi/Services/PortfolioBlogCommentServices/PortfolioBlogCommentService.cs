@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using MyPortfolio.WebApi.Context;
+using MyPortfolio.WebApi.Dtos.NotificationDtos;
 using MyPortfolio.WebApi.Dtos.PortfolioBlogCommentDtos;
 using MyPortfolio.WebApi.Entites;
+using MyPortfolio.WebApi.Services.NotificationServices;
 
 namespace MyPortfolio.WebApi.Services.PortfolioBlogCommentServices
 {
@@ -10,11 +12,12 @@ namespace MyPortfolio.WebApi.Services.PortfolioBlogCommentServices
     {
         private readonly PortfolioContext _context;
         private readonly IMapper _mapper;
-
-        public PortfolioBlogCommentService(PortfolioContext context, IMapper mapper)
+        private readonly INotificationService _notificationService;
+        public PortfolioBlogCommentService(PortfolioContext context, IMapper mapper, INotificationService notificationService)
         {
             _context = context;
             _mapper = mapper;
+            _notificationService = notificationService;
         }
 
         public async Task<CreatePortfolioBlogCommentDto> CreatePortfolioBlogCommentAsync(CreatePortfolioBlogCommentDto createPortfolioBlogCommentDto)
@@ -22,6 +25,15 @@ namespace MyPortfolio.WebApi.Services.PortfolioBlogCommentServices
             var values = _mapper.Map<PortfolioBlogComment>(createPortfolioBlogCommentDto);
             await _context.PortfolioComments.AddAsync(values);
             _context.SaveChanges();
+            var blogName = await _context.portfolioBlogs.Where(x => x.PortfolioBlogId == values.portfolioBlogId).Select(y => y.Title).FirstOrDefaultAsync();
+            var notificationDto = new AddNotificationDto
+            {
+                isSeen = false,
+                NotificationName = values.Name + " adlı kişi " + blogName + " adlı blogunuza yorum yaptı.",
+                NotificationDescription = "Konu: " + values.CommentTitle,
+                NotificationTime = DateTime.Now.Date,
+            };
+            await _notificationService.AddNotification(notificationDto);
             return _mapper.Map<CreatePortfolioBlogCommentDto>(createPortfolioBlogCommentDto);
         }
 
