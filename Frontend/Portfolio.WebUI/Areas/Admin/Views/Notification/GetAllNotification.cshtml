@@ -1,0 +1,91 @@
+﻿@model List<GetNotificationDto>
+@{
+    ViewData["Title"] = "GetAllNotification";
+    Layout = "~/Areas/Admin/Views/AdminLayout/AdminLayout.cshtml";
+    int count = 0;
+}
+
+<style>
+    .aciklama {
+        max-width: 300px; /* Genişliği sınırla */
+        white-space: nowrap; /* Satır taşmasını önle */
+        overflow: hidden; /* Taşan kısmı gizle */
+        text-overflow: ellipsis; /* Taşan kısmı üç nokta ile göster */
+    }
+</style>
+
+<div class="col-lg-12 grid-margin stretch-card" style="background-color: #191c24 ">
+    <div class="card-body">
+        <h4 class="card-title">Bildirimler</h4>
+        <p class="card-description">Bildirimler ile ilgili işlemleri içerir.</p>
+        <div class="col-lg-8 align-content-xl-end">
+            @*<a href="/Admin/Notification/GetNotSeenNotification/" onclick="showUnseenNotifications()" class="btn btn-info">Görülmemiş Bildirimler</a>
+            <a href="/Admin/Notification/GetAllNotification/" onclick="showAllNotifications()" class="btn btn-info">Tüm Bildirimler</a>*@
+            <a href="/Admin/Notification/DeleteAllNotification/" class="btn btn-info">Tüm Bildirimleri Sil</a>
+            <a href="/Admin/Notification/DeleteSeenNotification/" class="btn btn-info">Görülmüş Bildirimleri Sil</a>
+        </div>
+        <br />
+        <div class="table-res">
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Bildirim</th>
+                        <th>Açıklama</th>
+                        <th>Tarih</th>
+                        <th>Görülme Durumu</th>
+                        <th>Bildirimi Görüntüle</th>
+                        <th>Detaya Git</th>
+                        <th>Sil</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        count += 1;
+                        <tr>
+                            <td>@count</td>
+                            <td class="aciklama">@item.NotificationName</td>
+                            <td class="aciklama">@item.NotificationDescription</td>
+                            <td>@item.NotificationTime</td>
+                            @if (item.isSeen == false)
+                            {
+                                <td><a href="/Admin/Notification/MarkAsSeen/@item.NotificationId" class="btn btn-warning">Görüldü Olarak İşaretle</a></td>
+                            }
+                            else
+                            {
+                                <td><a href="/Admin/Notification/MarkAsNotSeen/@item.NotificationId" class="btn btn-success">Görülmedi Olarak İşaretle</a></td>
+                            }
+
+                            <td><a href="/Admin/Notification/GetNotificationById/@item.NotificationId" class="btn btn-primary">Bildirim Detayına Git</a></td>
+                            <td><a href="/Admin/Notification/GoDetail/@item.NotificationId" class="btn btn-info">Detaya Git</a></td>
+                            <td><a href="/Admin/Notification/DeleteNotification/@item.NotificationId" class="btn btn-danger">Sil</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <br />
+        </div>
+    </div>
+</div>
+@*<script>
+    function showUnseenNotifications() {
+        let rows = document.querySelectorAll(".notification-row");
+        rows.forEach(row => {
+            let isSeen = row.getAttribute("data-seen") === "True"; // Eğer MVC "True" olarak döndürüyorsa
+            if (isSeen) {
+                row.style.display = "none"; // Görülmüş bildirimleri gizle
+            } else {
+                row.style.display = "table-row"; // Görülmemişleri göster
+            }
+        });
+    }
+
+    function showAllNotifications() {
+        let rows = document.querySelectorAll(".notification-row");
+        rows.forEach(row => {
+            row.style.display = "table-row"; // Hepsini tekrar göster
+        });
+    }
+</script>*@

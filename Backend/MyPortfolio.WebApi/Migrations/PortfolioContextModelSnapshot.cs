@@ -154,6 +154,9 @@ namespace MyPortfolio.WebApi.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("NotificationId"));
 
+                    b.Property<int>("Href")
+                        .HasColumnType("int");
+
                     b.Property<string>("NotificationDescription")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -165,12 +168,15 @@ namespace MyPortfolio.WebApi.Migrations
                     b.Property<DateTime>("NotificationTime")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("isBlog")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("isSeen")
                         .HasColumnType("bit");
 
                     b.HasKey("NotificationId");
 
-                    b.ToTable("notifications");
+                    b.ToTable("Notifications");
                 });
 
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioAboutMe", b =>

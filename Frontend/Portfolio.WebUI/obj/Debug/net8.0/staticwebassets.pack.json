@@ -257,6 +257,10 @@
       "PackagePath": "staticwebassets\\AdminTemplate\\assets\\images\\faces-clipart\\pic-8.png"
     },
     {
+      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\AdminTemplate\\assets\\images\\faces\\ProfilFotosu.jpg",
+      "PackagePath": "staticwebassets\\AdminTemplate\\assets\\images\\faces\\ProfilFotosu.jpg"
+    },
+    {
       "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\AdminTemplate\\assets\\images\\faces\\face1.jpg",
       "PackagePath": "staticwebassets\\AdminTemplate\\assets\\images\\faces\\face1.jpg"
     },

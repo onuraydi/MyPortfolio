@@ -26,15 +26,18 @@ namespace MyPortfolio.WebApi.Services.PortfolioContactServices
         {
             var values = _mapper.Map<PortfolioContact>(createPortfolioContactDto);
             await _context.portfolioContacts.AddAsync(values);
+            _context.SaveChanges();
             var notificationDto = new AddNotificationDto
             {
                 isSeen = false,
                 NotificationName = values.SenderNameSurname + " adlı kişiden bir mesajınız var.",
                 NotificationDescription = "Konu: " + values.MessageSubject,
                 NotificationTime = DateTime.Today.Date,
+                isBlog = false,
+                Href = values.PortfolioContactId,
             };
             await _notificationService.AddNotification(notificationDto);
-            _context.SaveChanges();
+            
         }
 
         public async Task DeletePortfolioContactAsync(int id)

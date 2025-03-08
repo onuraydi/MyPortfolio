@@ -5,6 +5,7 @@ using Portfolio.WebUI.Services.IdentityServices.Abstract;
 using Portfolio.WebUI.Services.IdentityServices.Concrete;
 using Portfolio.WebUI.Services.ImageUploadServices.ImageUploadServices;
 using Portfolio.WebUI.Services.PortfolioServices.LoginServices;
+using Portfolio.WebUI.Services.PortfolioServices.NotificationServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioAboutMeServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogCommentServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogServices;
@@ -164,6 +165,11 @@ builder.Services.AddHttpClient<IPortfolioRoutingFooterService, PortfolioRoutingF
 }).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
 
 builder.Services.AddHttpClient<IPortfolioProjectFooterService, PortfolioProjectFooterService>(opt =>
+{
+    opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
+}).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();
+
+builder.Services.AddHttpClient<INotificationService, NotificationService>(opt =>
 {
     opt.BaseAddress = new Uri($"{values.OcelotUrl}/{values.Portfolio.Path}");
 }).AddHttpMessageHandler<ResourceOwnerPasswordTokenHandler>();

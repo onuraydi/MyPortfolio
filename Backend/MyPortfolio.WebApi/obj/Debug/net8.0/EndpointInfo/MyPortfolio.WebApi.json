@@ -87,7 +87,7 @@
         }
       }
     },
-    "/api/Notifications/MArkAsNotSeen/{id}": {
+    "/api/Notifications/MarkAsNotSeen/{id}": {
       "post": {
         "tags": [
           "Notifications"

@@ -32,6 +32,8 @@ namespace MyPortfolio.WebApi.Services.PortfolioBlogCommentServices
                 NotificationName = values.Name + " adlı kişi " + blogName + " adlı blogunuza yorum yaptı.",
                 NotificationDescription = "Konu: " + values.CommentTitle,
                 NotificationTime = DateTime.Now.Date,
+                isBlog = true,
+                Href = values.PortfolioBlogCommentId,
             };
             await _notificationService.AddNotification(notificationDto);
             return _mapper.Map<CreatePortfolioBlogCommentDto>(createPortfolioBlogCommentDto);

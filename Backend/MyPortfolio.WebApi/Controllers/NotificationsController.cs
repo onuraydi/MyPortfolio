@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Components.Forms;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MyPortfolio.WebApi.Services.NotificationServices;
@@ -7,6 +8,7 @@ namespace MyPortfolio.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class NotificationsController : ControllerBase
     {
         // burada get ve delete işlemlerini gerçekleştirip bildirim gönderilmesi gerekilen kısımların servislerinde de bildirim ekleme işlemlerini gerçekleştireceğim.
@@ -17,6 +19,7 @@ namespace MyPortfolio.WebApi.Controllers
         {
             _notificationService = notificationService;
         }
+
         [HttpGet("GetAllNotification")]
         public async Task<IActionResult> GetAllNotification()
         {
@@ -56,7 +59,7 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok("Görüldü olarak işaretlendi");
         }
 
-        [HttpPost("MArkAsNotSeen/{id}")]
+        [HttpPost("MarkAsNotSeen/{id}")]
         public async Task<IActionResult> MarkAsNotSeen(int id)
         {
             await _notificationService.MarkAsNotSeenAsync(id);

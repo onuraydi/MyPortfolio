@@ -84,7 +84,7 @@
   {
     "ContainingType": "MyPortfolio.WebApi.Controllers.NotificationsController",
     "Method": "MarkAsNotSeen",
-    "RelativePath": "api/Notifications/MArkAsNotSeen/{id}",
+    "RelativePath": "api/Notifications/MarkAsNotSeen/{id}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
