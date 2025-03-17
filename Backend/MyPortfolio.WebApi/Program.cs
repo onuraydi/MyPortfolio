@@ -5,6 +5,7 @@ using Microsoft.Identity.Client;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using MyPortfolio.WebApi.Context;
+using MyPortfolio.WebApi.Services.BlogCategoryServices;
 using MyPortfolio.WebApi.Services.LibraryServices.BookServices;
 using MyPortfolio.WebApi.Services.NotificationServices;
 using MyPortfolio.WebApi.Services.PorfolioFreelanceServices;
@@ -121,6 +122,7 @@ builder.Services.AddScoped<IPortfolioFreelanceService, PortfolioFreelanceService
 builder.Services.AddScoped<IPortfolioRoutingFooterService, PortfolioRoutingFooterService>();
 builder.Services.AddScoped<IPortfolioProjectFooterService, PortfolioProjectFooterService>();
 builder.Services.AddScoped<INotificationService, NotificationService>();
+builder.Services.AddScoped<IBlogCategoryService, BlogCategoryService>();
 
 builder.Services.AddScoped<IBookService, BookService>();
 

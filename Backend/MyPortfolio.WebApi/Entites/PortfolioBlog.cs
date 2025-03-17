@@ -1,5 +1,4 @@
-﻿
-namespace MyPortfolio.WebApi.Entites
+﻿namespace MyPortfolio.WebApi.Entites
 {
     public class PortfolioBlog
     {
@@ -10,7 +9,7 @@ namespace MyPortfolio.WebApi.Entites
         public string CoverImage { get; set; }
         public DateTime PublishDate { get; set; }
 
-        public List<PortfolioBlogTag> PortfolioBlogTags { get; set; } = new();
+        public virtual ICollection<PortfolioBlogTag> PortfolioBlogTags { get; set; } = new List<PortfolioBlogTag>();
 
         //public PortfolioBlogComment portfolioBlogComment { get; set; }
 

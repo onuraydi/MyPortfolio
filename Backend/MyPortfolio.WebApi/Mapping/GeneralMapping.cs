@@ -26,7 +26,7 @@ using MyPortfolio.WebApi.Entites.LibraryEntities;
 
 namespace MyPortfolio.WebApi.Mapping
 {
-    public class GeneralMapping:Profile
+    public class GeneralMapping : Profile
     {
         public GeneralMapping()
         {
@@ -82,7 +82,7 @@ namespace MyPortfolio.WebApi.Mapping
 
             CreateMap<PortfolioBlogTag, GetPortfolioBlogTagByPortfolioBlogTagId>().ForMember(x => x.TagName, opt => opt.MapFrom(src => src.TagName)).ReverseMap();
             //CreateMap<PortfolioBlogTag, GetPortfolioBlogsByPortfolioBlogTagsIdDto>().ForMember(x => x.PortfolioBlogTags, opt => opt.MapFrom(src => src.PortfolioBlogs)).ReverseMap();
-            CreateMap<PortfolioBlog, GetPortfolioBlogsByPortfolioBlogTagsIdDto>().ForMember(dto => dto.PortfolioBlogTags,opt => opt.MapFrom(src => src.PortfolioBlogTags)).ReverseMap();
+            CreateMap<PortfolioBlog, GetPortfolioBlogsByPortfolioBlogTagsIdDto>().ForMember(dto => dto.PortfolioBlogTags, opt => opt.MapFrom(src => src.PortfolioBlogTags)).ReverseMap();
 
 
 

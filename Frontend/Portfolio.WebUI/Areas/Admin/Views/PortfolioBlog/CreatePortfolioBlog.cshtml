@@ -142,38 +142,35 @@
             var coverImage = document.getElementById('CoverImage').value;
             var publishDate = document.getElementById('PublishDate').value;
 
-            // Seçili etiketler
-            var tags = selectedTags;
+            // Seçili etiketlerin ID'lerini al
+            var selectedTagIds = selectedTags.map(tag => parseInt(tag.PortfolioBlogTagId));
 
             // FormData objesi oluştur
-            var formData = new FormData();
-            formData.append("Title", title);
-            formData.append("SubContent", subContent);
-            formData.append("CoverImage", coverImage);
-            formData.append("PublishDate", publishDate);
-            formData.append("Content", content);
-            formData.append("PortfolioBlogTags", JSON.stringify(tags)); // Seçilen etiketleri JSON olarak gönder
-
-            console.log("Gönderilecek veri:", {
+            var formData = {
                 Title: title,
                 SubContent: subContent,
                 CoverImage: coverImage,
                 PublishDate: publishDate,
                 Content: content,
-                PortfolioBlogTags: tags
-            });
+                TagIds: selectedTagIds
+            };
 
             // AJAX POST isteği
             $.ajax({
                 url: '@Url.Action("CreatePortfolioBlog", "PortfolioBlog")',
                 type: 'POST',
-                processData: false,
-                contentType: false,
-                data: formData,
+                contentType: 'application/json',
+                data: JSON.stringify(formData),
                 success: function (response) {
-                    console.log("Başarılı yanıt:", response);
-                    window.location.href = '@Url.Action("GetAllPortfolioBlog", "PortfolioBlog", new { area = "Admin" })';
+                    if (response.success) {
+                        window.location.href = response.redirectToUrl;
+                    } else {
+                        alert(response.message);
+                    }
                 },
+                error: function (xhr, status, error) {
+                    alert("Bir hata oluştu: " + error);
+                }
             });
         });
     });

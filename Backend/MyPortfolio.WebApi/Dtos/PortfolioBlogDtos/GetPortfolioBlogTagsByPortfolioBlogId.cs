@@ -1,4 +1,5 @@
 ﻿using MyPortfolio.WebApi.Dtos.PortfolioBlogTagDtos;
+using MyPortfolio.WebApi.Entites;
 
 namespace MyPortfolio.WebApi.Dtos.PortfolioBlogDtos
 {

@@ -1,5 +1,79 @@
 [
   {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.BlogCategoriesController",
+    "Method": "GetAllBlogCategory",
+    "RelativePath": "api/BlogCategories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.BlogCategoriesController",
+    "Method": "CreateBlogCategory",
+    "RelativePath": "api/BlogCategories",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addBlogCategoryDto",
+        "Type": "MyPortfolio.WebApi.Dtos.BlogCategoryDtos.AddBlogCategoryDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.BlogCategoriesController",
+    "Method": "UpdateBlogCategory",
+    "RelativePath": "api/BlogCategories",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "getBlogCategoryDto",
+        "Type": "MyPortfolio.WebApi.Dtos.BlogCategoryDtos.GetBlogCategoryDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.BlogCategoriesController",
+    "Method": "GetBlogCategoryById",
+    "RelativePath": "api/BlogCategories/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.BlogCategoriesController",
+    "Method": "DeleteBlogCategory",
+    "RelativePath": "api/BlogCategories/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MyPortfolio.WebApi.Controllers.BooksController",
     "Method": "GetAllBook",
     "RelativePath": "api/Books",

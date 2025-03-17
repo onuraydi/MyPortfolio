@@ -5,6 +5,120 @@
     "version": "v1"
   },
   "paths": {
+    "/api/BlogCategories": {
+      "get": {
+        "tags": [
+          "BlogCategories"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "BlogCategories"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddBlogCategoryDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddBlogCategoryDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddBlogCategoryDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "BlogCategories"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetBlogCategoryDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetBlogCategoryDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetBlogCategoryDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/BlogCategories/{id}": {
+      "get": {
+        "tags": [
+          "BlogCategories"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "BlogCategories"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/Books": {
       "get": {
         "tags": [
@@ -2040,6 +2154,16 @@
   },
   "components": {
     "schemas": {
+      "AddBlogCategoryDto": {
+        "type": "object",
+        "properties": {
+          "categoryName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CreatePortfolioBlogCommentDto": {
         "type": "object",
         "properties": {
@@ -2102,10 +2226,11 @@
             "type": "string",
             "format": "date-time"
           },
-          "portfolioBlogTags": {
+          "tagIds": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GetAllPortfolioBlogTagDto"
+              "type": "integer",
+              "format": "int32"
             },
             "nullable": true
           }
@@ -2380,14 +2505,14 @@
         },
         "additionalProperties": false
       },
-      "GetAllPortfolioBlogTagDto": {
+      "GetBlogCategoryDto": {
         "type": "object",
         "properties": {
-          "portfolioBlogTagId": {
+          "blogCategoryId": {
             "type": "integer",
             "format": "int32"
           },
-          "tagName": {
+          "categoryName": {
             "type": "string",
             "nullable": true
           }
@@ -2509,10 +2634,11 @@
             "type": "string",
             "format": "date-time"
           },
-          "portfolioBlogTags": {
+          "tagIds": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GetAllPortfolioBlogTagDto"
+              "type": "integer",
+              "format": "int32"
             },
             "nullable": true
           }

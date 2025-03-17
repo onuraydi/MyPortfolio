@@ -43,25 +43,21 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
             return View(values);
         }
 
-
-
         [HttpPost]
         [Route("CreatePortfolioBlog")]
-        public async Task<IActionResult> CreatePortfolioBlog(CreatePortfolioBlogDto createPortfolioBlogDto, List<GetAllPortfolioBlogTagDto> getAllPortfolioBlogTagDto)
+        public async Task<IActionResult> CreatePortfolioBlog(CreatePortfolioBlogDto createPortfolioBlogDto, List<int> selectedTagIds)
         {
-            var tagModel = new BlogTagsViewModel()
+            try
             {
-                BlogCreate = createPortfolioBlogDto,
-                BlogTags = getAllPortfolioBlogTagDto
-            };
-
-            var values = await _portfolioBlogService.CreatePortfolioBlogAsync(tagModel.BlogCreate);
-
-            values.PortfolioBlogTags.AddRange(tagModel.BlogTags);
-
-            return Json(new { redirectToUrl = Url.Action("GetAllPortfolioBlog", "PortfolioBlog", new { area = "Admin" }) });
+                createPortfolioBlogDto.TagIds = selectedTagIds;
+                await _portfolioBlogService.CreatePortfolioBlogAsync(createPortfolioBlogDto);
+                return Json(new { success = true, redirectToUrl = Url.Action("GetAllPortfolioBlog", "PortfolioBlog", new { area = "Admin" }) });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = ex.Message });
+            }
         }
-
 
         [HttpGet]
         [Route("AddTagPortfolioBlog/{id}")]
@@ -78,8 +74,6 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
             await _portfolioBlogService.UpdatePortfolioBlogAsync(updatePortfolioBlogDto);
             return RedirectToAction("GetAllPortfolioBlog", "PortfolioBlog", new { area = "Admin" });
         }
-
-
 
         [HttpGet]
         [Route("UpdatePortfolioBlog/{id}")]

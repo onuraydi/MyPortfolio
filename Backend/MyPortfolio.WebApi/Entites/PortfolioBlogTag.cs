@@ -4,6 +4,6 @@
     {
         public int PortfolioBlogTagId { get; set; }
         public string TagName { get; set; }
-        public List<PortfolioBlog> PortfolioBlogs { get; set; } = new();
+        public virtual ICollection<PortfolioBlog> PortfolioBlogs { get; set; } = new List<PortfolioBlog>();
     }
 }

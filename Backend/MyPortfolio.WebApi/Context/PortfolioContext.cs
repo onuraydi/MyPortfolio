@@ -5,9 +5,9 @@ using MyPortfolio.WebApi.Entites.LibraryEntities;
 
 namespace MyPortfolio.WebApi.Context
 {
-    public class PortfolioContext:DbContext
+    public class PortfolioContext : DbContext
     {
-        public PortfolioContext(DbContextOptions<PortfolioContext> options):base(options) { }
+        public PortfolioContext(DbContextOptions<PortfolioContext> options) : base(options) { }
 
         public DbSet<PortfolioMainTitle> PortfolioMainTitles { get; set; }
         public DbSet<PortfolioAboutMe> portfolioAboutMe { get; set; }
@@ -27,9 +27,10 @@ namespace MyPortfolio.WebApi.Context
         public DbSet<PortfolioRoutingFooter> PortfolioRoutingFooters { get; set; }
         public DbSet<PortfolioProjectFooter> PortfolioProjectFooters { get; set; }
         public DbSet<Notification> Notifications { get; set; }
+        public DbSet<BlogCategory> BlogCategories { get; set; }
 
         // Library parts
-        public DbSet<Book> Books {  get; set; }
+        public DbSet<Book> Books { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<Publisher> Publishers { get; set; }
