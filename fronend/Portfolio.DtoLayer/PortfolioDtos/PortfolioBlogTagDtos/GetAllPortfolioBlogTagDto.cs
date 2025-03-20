@@ -11,9 +11,5 @@ namespace Portfolio.DtoLayer.PortfolioDtos.PortfolioBlogTagDtos
         public int PortfolioBlogTagId { get; set; }
         public string TagName { get; set; }
 
-        public static implicit operator List<object>(GetAllPortfolioBlogTagDto v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -61,8 +61,8 @@ namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogServices
         {
             var responseMessage = await _httpClient.GetAsync("portfolioblogs/" + id);
             var values = await responseMessage.Content.ReadFromJsonAsync<GetPortfolioBlogByPortfolioBlogIdDto>();
-            var tagValues = await _portfolioBlogTagServices.GetPortfolioBlogTagsByPortfolioBlogIdAsync(id);
-            values.PortfolioBlogTags.AddRange(tagValues.PortfolioBlogTags);
+            //var tagValues = await _portfolioBlogTagServices.GetPortfolioBlogTagsByPortfolioBlogIdAsync(id);
+            //values.PortfolioBlogTags.AddRange(tagValues.PortfolioBlogTags);
             return values;
         }
 
