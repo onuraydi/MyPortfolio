@@ -17,10 +17,31 @@ namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogServices
 
         public async Task<CreatePortfolioBlogDto> CreatePortfolioBlogAsync(CreatePortfolioBlogDto createPortfolioBlogDto)
         {
-            var responseMessage = await _httpClient.PostAsJsonAsync("portfolioblogs", createPortfolioBlogDto);
-            var jsonData = await responseMessage.Content.ReadAsStringAsync();
-            var values = JsonConvert.DeserializeObject<CreatePortfolioBlogDto>(jsonData);
-            return values;
+            try
+            {
+                var responseMessage = await _httpClient.PostAsJsonAsync("portfolioblogs", new
+                {
+                    Title = createPortfolioBlogDto.Title,
+                    SubContent = createPortfolioBlogDto.SubContent,
+                    Content = createPortfolioBlogDto.Content,
+                    CoverImage = createPortfolioBlogDto.CoverImage,
+                    PublishDate = createPortfolioBlogDto.PublishDate,
+                    TagIds = createPortfolioBlogDto.TagIds
+                });
+
+                if (!responseMessage.IsSuccessStatusCode)
+                {
+                    var errorContent = await responseMessage.Content.ReadAsStringAsync();
+                    throw new Exception($"API hatası: {errorContent}");
+                }
+
+                var jsonData = await responseMessage.Content.ReadAsStringAsync();
+                return createPortfolioBlogDto; // Orijinal DTO'yu geri dön
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Blog oluşturma hatası: {ex.Message}");
+            }
         }
 
         public async Task DeletePortfolioBlogAsync(int id)

@@ -50,18 +50,33 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 
         [HttpPost]
         [Route("CreatePortfolioBlog")]
-        public async Task<IActionResult> CreatePortfolioBlog(CreatePortfolioBlogDto createPortfolioBlogDto, List<int> selectedTagIds)
+        public async Task<IActionResult> CreatePortfolioBlog([FromBody] CreatePortfolioBlogDto createPortfolioBlogDto)
         {
             try
             {
-                createPortfolioBlogDto.TagIds = selectedTagIds;
-                await _portfolioBlogService.CreatePortfolioBlogAsync(createPortfolioBlogDto);
-                return Json(new { success = true, redirectToUrl = Url.Action("GetAllPortfolioBlog", "PortfolioBlog", new { area = "Admin" }) });
+                if (createPortfolioBlogDto == null)
+                {
+                    return Json(new { success = false, message = "Blog verisi boş olamaz." });
+                }
+
+                // Blog'u oluştur
+                var result = await _portfolioBlogService.CreatePortfolioBlogAsync(createPortfolioBlogDto);
+                
+                return Json(new { 
+                    success = true, 
+                    redirectToUrl = Url.Action("GetAllPortfolioBlog", "PortfolioBlog", new { area = "Admin" }) 
+                });
             }
             catch (Exception ex)
             {
                 return Json(new { success = false, message = ex.Message });
             }
+        }
+
+        public class BlogPostModel
+        {
+            public CreatePortfolioBlogDto createPortfolioBlogDto { get; set; }
+            public List<int> selectedTagIds { get; set; }
         }
 
         [HttpGet]

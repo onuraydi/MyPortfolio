@@ -105,20 +105,20 @@
             // Tıklanan elemanın "tag" sınıfında olup olmadığını kontrol et
             if (clickedTag.classList.contains("tag")) {
                 const tagName = clickedTag.getAttribute("data-tag");
-                const tagId = clickedTag.getAttribute("data-id");
+                const tagId = parseInt(clickedTag.getAttribute("data-id")); // ID'yi integer'a çevir
 
                 // Seçili etiket kaldırma
                 if (clickedTag.classList.contains("selected")) {
                     clickedTag.classList.remove("selected");
-                    selectedTags = selectedTags.filter(t => t.PortfolioBlogTagId !== tagId);
+                    selectedTags = selectedTags.filter(t => t.tagId !== tagId);
                 }
                 // Yeni etiket ekleme
                 else {
                     if (selectedTags.length < maxTags) {
                         clickedTag.classList.add("selected");
                         selectedTags.push({
-                            PortfolioBlogTagId: tagId,
-                            TagName: tagName
+                            tagId: tagId,
+                            tagName: tagName
                         });
                     }
                 }
@@ -129,6 +129,8 @@
                 } else {
                     tagLimitMessage.style.display = "none";
                 }
+
+                console.log("Seçili tag'ler:", selectedTags); // Debug için
             }
         });
 
@@ -143,25 +145,29 @@
             var publishDate = document.getElementById('PublishDate').value;
 
             // Seçili etiketlerin ID'lerini al
-            var selectedTagIds = selectedTags.map(tag => parseInt(tag.PortfolioBlogTagId));
+            var tagIds = selectedTags.map(tag => tag.tagId);
+            console.log("Seçili tag ID'leri:", tagIds); // Debug için
 
-            // FormData objesi oluştur
-            var formData = {
+            // Blog verisi oluştur
+            var blogData = {
                 Title: title,
                 SubContent: subContent,
+                Content: content,
                 CoverImage: coverImage,
                 PublishDate: publishDate,
-                Content: content,
-                TagIds: selectedTagIds
+                TagIds: tagIds || [] // Eğer tagIds undefined ise boş array kullan
             };
+
+            console.log('Gönderilen veri:', JSON.stringify(blogData)); // Debug için
 
             // AJAX POST isteği
             $.ajax({
-                url: '@Url.Action("CreatePortfolioBlog", "PortfolioBlog")',
+                url: '@Url.Action("CreatePortfolioBlog", "PortfolioBlog", new { area = "Admin" })',
                 type: 'POST',
                 contentType: 'application/json',
-                data: JSON.stringify(formData),
+                data: JSON.stringify(blogData),
                 success: function (response) {
+                    console.log('Başarılı yanıt:', response); // Debug için
                     if (response.success) {
                         window.location.href = response.redirectToUrl;
                     } else {
@@ -169,6 +175,8 @@
                     }
                 },
                 error: function (xhr, status, error) {
+                    console.log('Hata detayı:', xhr.responseText); // Debug için
+                    console.log('Gönderilen veri:', blogData); // Hata durumunda gönderilen veriyi de logla
                     alert("Bir hata oluştu: " + error);
                 }
             });
