@@ -39,8 +39,13 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
         [Route("CreatePortfolioBlog")]
         public async Task<IActionResult> CreatePortfolioBlog()
         {
-            var values = await _portfolioBlogTagService.GetAllPortfolioBlogTagAsync();
-            return View(values);
+            var tags = await _portfolioBlogTagService.GetAllPortfolioBlogTagAsync();
+            var model = new BlogTagsViewModel
+            {
+                BlogTags = tags,
+                BlogCreate = new CreatePortfolioBlogDto()
+            };
+            return View(model);
         }
 
         [HttpPost]
