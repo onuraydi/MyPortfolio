@@ -28,7 +28,7 @@ namespace MyPortfolio.WebApi.Services.PortfolioBlogServices
                 // Eğer tag ID'leri varsa, ilişkilendirme yap
                 if (createPortfolioBlogDto.TagIds != null && createPortfolioBlogDto.TagIds.Any())
                 {
-                    var existingTags = await _context.portfolioBlogTags
+                    var existingTags = await _context.PortfolioBlogTags
                         .Where(t => createPortfolioBlogDto.TagIds.Contains(t.PortfolioBlogTagId))
                         .ToListAsync();
 
@@ -106,7 +106,7 @@ namespace MyPortfolio.WebApi.Services.PortfolioBlogServices
                 existingBlog.PortfolioBlogTags.Clear();
 
                 // Yeni tag'leri ekle
-                var newTags = await _context.portfolioBlogTags
+                var newTags = await _context.PortfolioBlogTags
                     .Where(t => updatePortfolioBlogDto.TagIds.Contains(t.PortfolioBlogTagId))
                     .ToListAsync();
 

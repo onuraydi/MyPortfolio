@@ -14,6 +14,7 @@ namespace Portfolio.DtoLayer.PortfolioDtos.PortfolioBlogDtos
         public string Content { get; set; }
         public string CoverImage { get; set; }
         public DateTime PublishDate { get; set; }
+        public List<int> TagIds = new List<int>();
         public List<GetAllPortfolioBlogTagDto> PortfolioBlogTags { get; set; } = new List<GetAllPortfolioBlogTagDto>();
     }
 }
