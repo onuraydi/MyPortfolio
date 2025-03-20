@@ -1,4 +1,4 @@
-﻿@model GetPortfolioBlogByPortfolioBlogIdDto
+﻿@model Portfolio.WebUI.Models.BlogTagsViewModel
 @{
     ViewData["Title"] = "UpdatePortfolioBlog";
     Layout = "~/Areas/Admin/Views/AdminLayout/AdminLayout.cshtml";
@@ -8,35 +8,80 @@
 <link href="https://fonts.googleapis.com/css2?family=Arial&family=Courier+New&family=Georgia&family=Times+New+Roman&family=Verdana&family=Trebuchet+MS&family=Comic+Sans+MS&family=Impact&family=Tahoma&family=Helvetica&display=swap" rel="stylesheet">
 <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/quill-image-resize-module@3.0.0/image-resize.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.core.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<style>
+    .tag-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-top: 10px;
+    }
+
+    .tag {
+        background-color: #6c757d;
+        color: white;
+        border-radius: 15px;
+        padding: 5px 10px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .tag:hover {
+        background-color: #5a6268;
+    }
+
+    .tag.selected {
+        background-color: #007bff;
+    }
+
+    .tag-limit-message {
+        color: #ff4d4d;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+</style>
 
 <div class="col-lg-12 grid-margin stretch-card" style="background-color: #191c24">
     <div class="card-body">
         <h4 class="card-title">Blog</h4>
         <p class="card-description">Blog Güncelleme Sayfası</p>
         <form id="blogForm" class="forms-sample">
-            <input type="hidden" asp-for="PortfolioBlogId" id="portfolioBlogId" />
+            <input type="hidden" id="PortfolioBlogId" value="@Model.BlogUpdate.PortfolioBlogId" />
             <div class="form-group">
                 <label for="Title">Başlık</label>
-                <input type="text" class="form-control" id="title" asp-for="Title" placeholder="Başlık" />
+                <input type="text" class="form-control" id="title" value="@Model.BlogUpdate.Title" placeholder="Başlık" />
             </div>
             <div class="form-group">
                 <label for="SubContent">Kısa Açıklama</label>
-                <input type="text" class="form-control" id="SubContent" asp-for="SubContent" placeholder="Kısa Açıklama" />
+                <input type="text" class="form-control" id="SubContent" value="@Model.BlogUpdate.SubContent" placeholder="Kısa Açıklama" />
             </div>
             <div class="form-group">
                 <label for="CoverImage">Kapak Resmi</label>
-                <input type="text" class="form-control" id="CoverImage" asp-for="CoverImage" placeholder="Kapak Resmi" />
+                <input type="text" class="form-control" id="CoverImage" value="@Model.BlogUpdate.CoverImage" placeholder="Kapak Resmi" />
             </div>
             <div class="form-group">
                 <label for="PublishDate">Yayımlanma Tarihi</label>
-                <input type="date" class="form-control" id="PublishDate" asp-for="PublishDate" placeholder="Yayımlanma Tarihi" />
+                <input type="date" class="form-control" id="PublishDate" value="@Model.BlogUpdate.PublishDate.ToString("yyyy-MM-dd")" placeholder="Yayımlanma Tarihi" />
             </div>
             <div class="form-group">
-                <label for="Content">Blog İçeriği</label>
-                <div id="editor-container"></div>
-                <input type="hidden" id="content" name="Content" /> <!-- İçeriği saklayacağımız hidden input -->
+                <label>Etiketler</label>
+                <div id="PortfolioBlogTags" class="tag-container">
+                    @foreach (var item in Model.BlogTags)
+                    {
+                        var isSelected = Model.BlogUpdate.PortfolioBlogTags.Any(t => t.PortfolioBlogTagId == item.PortfolioBlogTagId);
+                        <span class="tag @(isSelected ? "selected" : "")" 
+                              data-tag="@item.TagName" 
+                              data-id="@item.PortfolioBlogTagId">@item.TagName</span>
+                    }
+                </div>
+                <div id="tagLimitMessage" class="tag-limit-message" style="display: none;">Maksimum 4 etiket ekleyebilirsiniz!</div>
             </div>
+            <div id="editor-container">
+                @Html.Raw(Model.BlogUpdate.Content)
+            </div>
+            <br />
             <button type="button" class="btn btn-primary mr-2" id="submitBtn">Güncelle</button>
             <button type="button" class="btn btn-info" onclick="history.back()">Geri</button>
         </form>
@@ -44,7 +89,102 @@
 </div>
 
 <script>
-    // Yazı tipi ve boyut seçeneklerini tanımla
+    // Global değişkenler
+    let selectedTags = [];
+    let quill;
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const tagContainer = document.getElementById("PortfolioBlogTags");
+        const tagLimitMessage = document.getElementById("tagLimitMessage");
+        const maxTags = 4;
+
+        // Başlangıçta seçili olan tag'leri selectedTags array'ine ekle
+        document.querySelectorAll('.tag.selected').forEach(tag => {
+            selectedTags.push({
+                tagId: parseInt(tag.getAttribute('data-id')),
+                tagName: tag.getAttribute('data-tag')
+            });
+        });
+
+        // Etiket tıklama olayları
+        tagContainer.addEventListener("click", function (event) {
+            const clickedTag = event.target;
+
+            if (clickedTag.classList.contains("tag")) {
+                const tagName = clickedTag.getAttribute("data-tag");
+                const tagId = parseInt(clickedTag.getAttribute("data-id"));
+
+                if (clickedTag.classList.contains("selected")) {
+                    clickedTag.classList.remove("selected");
+                    selectedTags = selectedTags.filter(t => t.tagId !== tagId);
+                } else {
+                    if (selectedTags.length < maxTags) {
+                        clickedTag.classList.add("selected");
+                        selectedTags.push({
+                            tagId: tagId,
+                            tagName: tagName
+                        });
+                    }
+                }
+
+                if (selectedTags.length >= maxTags) {
+                    tagLimitMessage.style.display = "block";
+                } else {
+                    tagLimitMessage.style.display = "none";
+                }
+
+                console.log("Seçili tag'ler:", selectedTags);
+            }
+        });
+
+        // Form submit işlemi
+        document.getElementById("submitBtn").addEventListener("click", function (event) {
+            event.preventDefault();
+
+            var content = quill.root.innerHTML;
+            var blogId = document.getElementById('PortfolioBlogId').value;
+            var title = document.getElementById('title').value;
+            var subContent = document.getElementById('SubContent').value;
+            var coverImage = document.getElementById('CoverImage').value;
+            var publishDate = document.getElementById('PublishDate').value;
+
+            var tagIds = selectedTags.map(tag => tag.tagId);
+            console.log("Seçili tag ID'leri:", tagIds);
+
+            var blogData = {
+                PortfolioBlogId: parseInt(blogId),
+                Title: title,
+                SubContent: subContent,
+                Content: content,
+                CoverImage: coverImage,
+                PublishDate: publishDate,
+                TagIds: tagIds
+            };
+
+            console.log('Gönderilen veri:', JSON.stringify(blogData));
+
+            $.ajax({
+                url: '@Url.Action("UpdatePortfolioBlog", "PortfolioBlog", new { area = "Admin", id = Model.BlogUpdate.PortfolioBlogId })',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(blogData),
+                success: function (response) {
+                    console.log('Başarılı yanıt:', response);
+                    if (response.success) {
+                        window.location.href = response.redirectToUrl;
+                    } else {
+                        alert(response.message);
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.log('Hata detayı:', xhr.responseText);
+                    alert("Bir hata oluştu: " + error);
+                }
+            });
+        });
+    });
+
+    // Quill JS başlatma
     const fontSizeArr = ['8px', '9px', '10px', '12px', '14px', '16px', '20px', '24px', '32px', '42px', '54px', '68px', '84px', '98px'];
     const fontFamilyArr = ['Arial', 'Courier New', 'Georgia', 'Times New Roman', 'Verdana', 'Trebuchet MS', 'Comic Sans MS', 'Impact', 'Tahoma', 'Helvetica'];
 
@@ -56,25 +196,23 @@
     Size.whitelist = fontSizeArr;
     Quill.register(Size, true);
 
-    // Toolbar ayarları
     var toolbarOptions = [
         [{ 'font': fontFamilyArr }],
         [{ 'size': fontSizeArr }],
         ['bold', 'italic', 'underline', 'strike'],
         [{ 'color': [] }, { 'background': [] }],
-        [{ 'script': 'sub' }, { 'script': 'super' }],
+        [{ 'script': 'sub'}, { 'script': 'super' }],
         [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
         ['blockquote', 'code-block'],
-        [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-        [{ 'indent': '-1' }, { 'indent': '+1' }],
+        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+        [{ 'indent': '-1'}, { 'indent': '+1' }],
         [{ 'direction': 'rtl' }],
         [{ 'align': [] }],
         ['link', 'image', 'video'],
         ['clean']
     ];
 
-    // Quill'i başlat
-    var quill = new Quill('#editor-container', {
+    quill = new Quill('#editor-container', {
         modules: {
             toolbar: toolbarOptions,
             imageResize: {}
@@ -82,50 +220,19 @@
         theme: 'snow'
     });
 
-    // Veritabanından gelen içeriği modelden almak ve JSON formatındaki tırnak karakterlerini temizlemek
     // Veritabanından gelen içeriği modelden almak
-    var contentFromModel = '@Html.Raw(Json.Serialize(Model.Content))';
+    var contentFromModel = '@Html.Raw(Json.Serialize(Model.BlogUpdate.Content))';
 
     // Baş ve sondaki tırnak işaretlerini temizlemek
-    contentFromModel = contentFromModel.replace(/^"|"$/g, ''); // ^" ile baştaki, "|" ile sondaki tırnağı hedefliyoruz
+    contentFromModel = contentFromModel.replace(/^"|"$/g, '');
 
     // HTML entity'lerini temizlemek
     var contentHTML = contentFromModel
-        .replace(/&quot;/g, '"')    // &quot; yerine "
-        .replace(/&lt;/g, '<')      // &lt; yerine <
-        .replace(/&gt;/g, '>')      // &gt; yerine >
-        .replace(/&amp;/g, '&');    // &amp; yerine &
+        .replace(/&quot;/g, '"')
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&amp;/g, '&');
 
     // Quill editörüne içeriği aktar
     quill.root.innerHTML = contentHTML;
-
-    // Form gönderme işlemi
-    document.getElementById('submitBtn').addEventListener('click', function () {
-        var portfolioBlogId = document.getElementById('portfolioBlogId').value;
-        var content = quill.root.innerHTML;
-        var title = document.getElementById('title').value;
-        var subContent = document.getElementById('SubContent').value;
-        var coverImage = document.getElementById('CoverImage').value;
-        var publishDate = document.getElementById('PublishDate').value;
-
-        // AJAX ile formu gönder
-        $.ajax({
-            url: '@Url.Action("UpdatePortfolioBlog", "PortfolioBlog")',
-            type: 'POST',
-            data: {
-                PortfolioBlogId: portfolioBlogId,
-                Title: title,
-                Content: content,
-                SubContent: subContent,
-                CoverImage: coverImage,
-                PublishDate: publishDate
-            },
-            success: function(response) {
-                window.location.href = '@Url.Action("GetAllPortfolioBlog", "PortfolioBlog", new { area = "Admin" })';
-            },
-            error: function(xhr, status, error) {
-                alert('Güncelleme işlemi başarısız oldu: ' + error);
-            }
-        });
-    });
 </script>

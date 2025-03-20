@@ -7,6 +7,7 @@ namespace Portfolio.WebUI.Models
     {
         public List<GetAllPortfolioBlogTagDto> BlogTags { get; set; }
         public CreatePortfolioBlogDto BlogCreate { get; set; }
+        public GetPortfolioBlogByPortfolioBlogIdDto BlogUpdate { get; set; }
         //public List<GetAllPortfolioBlogDto> getAllPortfolioBlogDtos { get; set; }
     }
 }

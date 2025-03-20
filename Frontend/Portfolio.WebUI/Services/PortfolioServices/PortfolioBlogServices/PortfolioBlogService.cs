@@ -61,14 +61,34 @@ namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogServices
         {
             var responseMessage = await _httpClient.GetAsync("portfolioblogs/" + id);
             var values = await responseMessage.Content.ReadFromJsonAsync<GetPortfolioBlogByPortfolioBlogIdDto>();
-            //var tagValues = await _portfolioBlogTagServices.GetPortfolioBlogTagsByPortfolioBlogIdAsync(id);
-            //values.PortfolioBlogTags.AddRange(tagValues.PortfolioBlogTags);
             return values;
         }
 
         public async Task UpdatePortfolioBlogAsync(UpdatePortfolioBlogDto updatePortfolioBlogDto)
         {
-            await _httpClient.PutAsJsonAsync("portfolioblogs", updatePortfolioBlogDto);
+            try
+            {
+                var responseMessage = await _httpClient.PutAsJsonAsync("portfolioblogs", new
+                {
+                    PortfolioBlogId = updatePortfolioBlogDto.PortfolioBlogId,
+                    Title = updatePortfolioBlogDto.Title,
+                    SubContent = updatePortfolioBlogDto.SubContent,
+                    Content = updatePortfolioBlogDto.Content,
+                    CoverImage = updatePortfolioBlogDto.CoverImage,
+                    PublishDate = updatePortfolioBlogDto.PublishDate,
+                    TagIds = updatePortfolioBlogDto.TagIds
+                });
+
+                if (!responseMessage.IsSuccessStatusCode)
+                {
+                    var errorContent = await responseMessage.Content.ReadAsStringAsync();
+                    throw new Exception($"API hatası: {errorContent}");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Blog güncelleme hatası: {ex.Message}");
+            }
         }
     }
 }

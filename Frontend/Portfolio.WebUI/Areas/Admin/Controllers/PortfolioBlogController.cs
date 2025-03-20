@@ -99,17 +99,40 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
         [Route("UpdatePortfolioBlog/{id}")]
         public async Task<IActionResult> UpdatePortfolioBlog(int id)
         {
-            var values = await _portfolioBlogService.GetPortfolioBlogByPortfolioBlogIdAsync(id);
+            var blog = await _portfolioBlogService.GetPortfolioBlogByPortfolioBlogIdAsync(id);
+            var allTags = await _portfolioBlogTagService.GetAllPortfolioBlogTagAsync();
 
-            return View(values);
+            var model = new BlogTagsViewModel
+            {
+                BlogTags = allTags,
+                BlogUpdate = blog
+            };
+
+            return View(model);
         }
 
         [HttpPost]
         [Route("UpdatePortfolioBlog/{id}")]
-        public async Task<IActionResult> UpdatePortfolioBlog(UpdatePortfolioBlogDto updatePortfolioBlogDto)
+        public async Task<IActionResult> UpdatePortfolioBlog([FromBody] UpdatePortfolioBlogDto updatePortfolioBlogDto)
         {
-            await _portfolioBlogService.UpdatePortfolioBlogAsync(updatePortfolioBlogDto);
-            return RedirectToAction("GetAllPortfolioBlog", "PortfolioBlog", new { area = "Admin" });
+            try
+            {
+                if (updatePortfolioBlogDto == null)
+                {
+                    return Json(new { success = false, message = "Blog verisi boş olamaz." });
+                }
+
+                await _portfolioBlogService.UpdatePortfolioBlogAsync(updatePortfolioBlogDto);
+                
+                return Json(new { 
+                    success = true, 
+                    redirectToUrl = Url.Action("GetAllPortfolioBlog", "PortfolioBlog", new { area = "Admin" }) 
+                });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = ex.Message });
+            }
         }
 
         [HttpDelete("{id}")]
