@@ -501,6 +501,10 @@
       "PackagePath": "staticwebassets\\AdminTemplate\\assets\\images\\file-icons\\64\\008-archive.png"
     },
     {
+      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\AdminTemplate\\assets\\images\\hlogo.png",
+      "PackagePath": "staticwebassets\\AdminTemplate\\assets\\images\\hlogo.png"
+    },
+    {
       "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\AdminTemplate\\assets\\images\\lightbox\\play-button.png",
       "PackagePath": "staticwebassets\\AdminTemplate\\assets\\images\\lightbox\\play-button.png"
     },
@@ -3697,12 +3701,20 @@
       "PackagePath": "staticwebassets\\Uploads\\2a07ec77-c6aa-4563-81ed-ec54bd6f6a67.png"
     },
     {
+      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\34d2c4cf-098c-4336-8d6d-b2c6fa7bfffc.png",
+      "PackagePath": "staticwebassets\\Uploads\\34d2c4cf-098c-4336-8d6d-b2c6fa7bfffc.png"
+    },
+    {
       "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\4d6280fc-6e52-45de-870c-1126fb5f0acb.jpg",
       "PackagePath": "staticwebassets\\Uploads\\4d6280fc-6e52-45de-870c-1126fb5f0acb.jpg"
     },
     {
       "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\607c2505-f0bd-4d59-a4fc-0252d8c12cc2.JPG",
       "PackagePath": "staticwebassets\\Uploads\\607c2505-f0bd-4d59-a4fc-0252d8c12cc2.JPG"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\60e6c8a3-df9a-4c22-a9bc-e188cbb5a6e9.png",
+      "PackagePath": "staticwebassets\\Uploads\\60e6c8a3-df9a-4c22-a9bc-e188cbb5a6e9.png"
     },
     {
       "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\6aee8255-b2e6-41c3-8dff-3f9c83c27dc9.png",
@@ -3731,6 +3743,10 @@
     {
       "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\computer-screens-desk-advanced-server-hub.jpg",
       "PackagePath": "staticwebassets\\Uploads\\computer-screens-desk-advanced-server-hub.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\d3aa8348-3f0c-417e-afca-c8fd075037ff.pdf",
+      "PackagePath": "staticwebassets\\Uploads\\d3aa8348-3f0c-417e-afca-c8fd075037ff.pdf"
     },
     {
       "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\ef0e5abc-fe82-425d-9ed3-2e5a83ed9375.png",

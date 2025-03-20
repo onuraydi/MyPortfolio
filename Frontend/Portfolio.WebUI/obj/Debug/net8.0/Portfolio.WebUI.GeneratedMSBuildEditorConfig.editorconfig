@@ -262,10 +262,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1VJTGF5b3V0XF9CbG9nVUlMYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/deneme/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcZGVuZW1lXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -276,6 +272,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Login/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Portfolio/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9ydGZvbGlvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_AboutViewComponentPartial/Default.cshtml]
