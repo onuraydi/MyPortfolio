@@ -37,6 +37,21 @@ namespace MyPortfolio.WebApi.Migrations
                     b.ToTable("BlogsTags");
                 });
 
+            modelBuilder.Entity("CategoryBlog", b =>
+                {
+                    b.Property<int>("PortfolioBlogId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("BlogCategoryId")
+                        .HasColumnType("int");
+
+                    b.HasKey("PortfolioBlogId", "BlogCategoryId");
+
+                    b.HasIndex("BlogCategoryId");
+
+                    b.ToTable("CategoryBlog");
+                });
+
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.BlogCategory", b =>
                 {
                     b.Property<int>("BlogCategoryId")
@@ -257,9 +272,6 @@ namespace MyPortfolio.WebApi.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PortfolioBlogId"));
 
-                    b.Property<int?>("BlogCategoryId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Content")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -280,8 +292,6 @@ namespace MyPortfolio.WebApi.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("PortfolioBlogId");
-
-                    b.HasIndex("BlogCategoryId");
 
                     b.ToTable("portfolioBlogs");
                 });
@@ -722,6 +732,21 @@ namespace MyPortfolio.WebApi.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("CategoryBlog", b =>
+                {
+                    b.HasOne("MyPortfolio.WebApi.Entites.BlogCategory", null)
+                        .WithMany()
+                        .HasForeignKey("BlogCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MyPortfolio.WebApi.Entites.PortfolioBlog", null)
+                        .WithMany()
+                        .HasForeignKey("PortfolioBlogId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.LibraryEntities.Book", b =>
                 {
                     b.HasOne("MyPortfolio.WebApi.Entites.LibraryEntities.Author", "Author")
@@ -749,13 +774,6 @@ namespace MyPortfolio.WebApi.Migrations
                     b.Navigation("Publisher");
                 });
 
-            modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioBlog", b =>
-                {
-                    b.HasOne("MyPortfolio.WebApi.Entites.BlogCategory", null)
-                        .WithMany("PortfolioBlogs")
-                        .HasForeignKey("BlogCategoryId");
-                });
-
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.PortfolioBlogComment", b =>
                 {
                     b.HasOne("MyPortfolio.WebApi.Entites.PortfolioBlog", "PortfolioBlog")
@@ -776,11 +794,6 @@ namespace MyPortfolio.WebApi.Migrations
                         .IsRequired();
 
                     b.Navigation("PortfolioProject");
-                });
-
-            modelBuilder.Entity("MyPortfolio.WebApi.Entites.BlogCategory", b =>
-                {
-                    b.Navigation("PortfolioBlogs");
                 });
 
             modelBuilder.Entity("MyPortfolio.WebApi.Entites.LibraryEntities.Author", b =>

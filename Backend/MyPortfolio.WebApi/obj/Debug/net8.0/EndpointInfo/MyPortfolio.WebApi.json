@@ -2233,6 +2233,14 @@
               "format": "int32"
             },
             "nullable": true
+          },
+          "categoryIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -2635,6 +2643,14 @@
             "format": "date-time"
           },
           "tagIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "categoryIds": {
             "type": "array",
             "items": {
               "type": "integer",

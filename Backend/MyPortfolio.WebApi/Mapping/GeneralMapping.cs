@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using MyPortfolio.WebApi.Dtos.BlogCategoryDtos;
 using MyPortfolio.WebApi.Dtos.LibraryDtos.AuthorDtos;
 using MyPortfolio.WebApi.Dtos.LibraryDtos.BookDtos;
 using MyPortfolio.WebApi.Dtos.LibraryDtos.CategoryDtos;
@@ -70,35 +71,19 @@ namespace MyPortfolio.WebApi.Mapping
             CreateMap<PortfolioProject, UpdatePortfolioProjectDto>().ForMember(x => x.projectImages, opt => opt.MapFrom(src => src.Images)).ReverseMap();
             CreateMap<PortfolioProject, GetPortfolioProjectByPortfolioProjectIdDto>().ForMember(x => x.projectImages, opt => opt.MapFrom(src => src.Images)).ReverseMap();
 
-            //BlogTag
-            CreateMap<PortfolioBlogTag, GetAllPortfolioBlogTagDto>().ReverseMap();
-            CreateMap<PortfolioBlogTag, CreatePortfolioBlogTagDto>().ForMember(x => x.TagName, opt => opt.MapFrom(src => src.TagName)).ReverseMap();
-            CreateMap<PortfolioBlogTag, UpdatePortfolioBlogTagDto>().ForMember(x => x.TagName, opt => opt.MapFrom(src => src.TagName)).ReverseMap();
-
-            CreateMap<PortfolioBlog, GetPortfolioBlogTagsByPortfolioBlogId>()
-                       .ForMember(dest => dest.PortfolioBlogId, opt => opt.MapFrom(src => src.PortfolioBlogId))
-                       .ForMember(dest => dest.PortfolioBlogTags, opt => opt.MapFrom(src => src.PortfolioBlogTags));
-
-
-            CreateMap<PortfolioBlogTag, GetPortfolioBlogTagByPortfolioBlogTagId>().ForMember(x => x.TagName, opt => opt.MapFrom(src => src.TagName)).ReverseMap();
-            //CreateMap<PortfolioBlogTag, GetPortfolioBlogsByPortfolioBlogTagsIdDto>().ForMember(x => x.PortfolioBlogTags, opt => opt.MapFrom(src => src.PortfolioBlogs)).ReverseMap();
-            CreateMap<PortfolioBlog, GetPortfolioBlogsByPortfolioBlogTagsIdDto>().ForMember(dto => dto.PortfolioBlogTags, opt => opt.MapFrom(src => src.PortfolioBlogTags)).ReverseMap();
-
-
-
-
-            // Technology
-            CreateMap<PortfolioTechnology, GetAllPortfolioTechnologyDto>().ReverseMap();
-            CreateMap<PortfolioTechnology, CreatePortfolioTechnologyDto>().ReverseMap();
-            CreateMap<PortfolioTechnology, UpdatePortfolioTechnologyDto>().ReverseMap();
-            CreateMap<PortfolioTechnology, GetPortfolioTechnologyByPortfolioTechnologyIdDto>().ReverseMap();
-
             // Blog
             CreateMap<PortfolioBlog, GetAllPortfolioBlogDto>().ReverseMap();
             CreateMap<PortfolioBlog, CreatePortfolioBlogDto>().ReverseMap();
             CreateMap<PortfolioBlog, UpdatePortfolioBlogDto>().ReverseMap();
             CreateMap<PortfolioBlog, GetPortfolioBlogByPortfolioBlogIdDto>().ReverseMap();
             CreateMap<PortfolioBlog, GetPortfolioBlogsByPortfolioBlogTagsIdDto>().ReverseMap();
+
+            // Blog Category
+            CreateMap<BlogCategory, GetBlogCategoryDto>().ReverseMap();
+            CreateMap<BlogCategory, AddBlogCategoryDto>().ReverseMap();
+
+            // Blog Tag
+            CreateMap<PortfolioBlogTag, GetAllPortfolioBlogTagDto>().ReverseMap();
 
             // Contact
             CreateMap<PortfolioContact, GetAllPortfolioContactDto>().ReverseMap();
@@ -112,6 +97,12 @@ namespace MyPortfolio.WebApi.Mapping
             CreateMap<PortfolioBlogComment, GetPortfolioBlogCommentByPortfolioBlogCommentIdDto>().ReverseMap();
             CreateMap<PortfolioBlogComment, GetPortfolioBlogCommentByPortfolioBlogIdDto>().ReverseMap();
 
+            // Technology
+            CreateMap<PortfolioTechnology, GetAllPortfolioTechnologyDto>().ReverseMap();
+            CreateMap<PortfolioTechnology, CreatePortfolioTechnologyDto>().ReverseMap();
+            CreateMap<PortfolioTechnology, UpdatePortfolioTechnologyDto>().ReverseMap();
+            CreateMap<PortfolioTechnology, GetPortfolioTechnologyByPortfolioTechnologyIdDto>().ReverseMap();
+
             // Project Image
             CreateMap<ProjectImage, GetProjectImageByPortfolioProjectIdDto>().ReverseMap();
             CreateMap<ProjectImage, CreateProjectImageDto>().ReverseMap();
@@ -122,7 +113,6 @@ namespace MyPortfolio.WebApi.Mapping
             CreateMap<PortfolioSocialMediaFooter, CreatePortfolioSocialMediaFooterDto>().ReverseMap();
             CreateMap<PortfolioSocialMediaFooter, UpdatePortfolioSocialMediaFooterDto>().ReverseMap();
             CreateMap<PortfolioSocialMediaFooter, GetPortfolioSocialMediaFooterByIdDto>().ReverseMap();
-
 
             // freelance
             CreateMap<PortfolioFreelance, GetAllPortfolioFreelanceDto>().ReverseMap();
@@ -142,11 +132,9 @@ namespace MyPortfolio.WebApi.Mapping
             CreateMap<PortfolioProjectFooter, UpdatePortfolioProjectFooterDto>().ReverseMap();
             CreateMap<PortfolioProjectFooter, GetPortfolioProjectFooterByPortfolioProjectFooterIdDto>().ReverseMap();
 
-
             // Notification
             CreateMap<Notification, GetNotificationDto>().ReverseMap();
             CreateMap<Notification, AddNotificationDto>().ReverseMap();
-
 
             // Library parts
             //Book
@@ -172,7 +160,6 @@ namespace MyPortfolio.WebApi.Mapping
             CreateMap<Publisher, CreatePublisherDto>().ReverseMap();
             CreateMap<Publisher, UpdatePublisherDto>().ReverseMap();
             CreateMap<Publisher, GetPublisherByPublisherIdDto>().ReverseMap();
-
         }
     }
 }

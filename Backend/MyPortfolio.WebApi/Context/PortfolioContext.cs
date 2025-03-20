@@ -45,6 +45,7 @@ namespace MyPortfolio.WebApi.Context
                 .WithOne(y => y.PortfolioProject)
                 .HasForeignKey(z => z.PortfolioProjectId)
                 .IsRequired(true);
+
             modelBuilder.Entity<PortfolioBlog>()
                 .HasMany(x => x.PortfolioBlogTags)
                 .WithMany(y => y.PortfolioBlogs)
@@ -54,6 +55,17 @@ namespace MyPortfolio.WebApi.Context
                     m => m.HasOne(typeof(PortfolioBlog)).WithMany().HasForeignKey("PortfolioBlogId").HasPrincipalKey(nameof(PortfolioBlog.PortfolioBlogId)),
                     n => n.HasKey("PortfolioBlogId", "PortfolioBlogTagId")
                 );
+
+            modelBuilder.Entity<PortfolioBlog>()
+                .HasMany(x => x.PortfolioBlogCategories)
+                .WithMany(y => y.PortfolioBlogs)
+                .UsingEntity(
+                        "CategoryBlog",
+                        l => l.HasOne(typeof(BlogCategory)).WithMany().HasForeignKey("BlogCategoryId").HasPrincipalKey(nameof(BlogCategory.BlogCategoryId)),
+                        m => m.HasOne(typeof(PortfolioBlog)).WithMany().HasForeignKey("PortfolioBlogId").HasPrincipalKey(nameof(PortfolioBlog.PortfolioBlogId)),
+                        n => n.HasKey("PortfolioBlogId", "BlogCategoryId")
+                );
+
             modelBuilder.Entity<Book>()
                 .HasOne(x => x.Author)
                 .WithMany(y => y.Book)

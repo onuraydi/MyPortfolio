@@ -23,30 +23,46 @@ namespace MyPortfolio.WebApi.Services.PortfolioBlogServices
         {
             try
             {
-                var values = _mapper.Map<PortfolioBlog>(createPortfolioBlogDto);
+                var blog = _mapper.Map<PortfolioBlog>(createPortfolioBlogDto);
                 
-                // Eğer tag ID'leri varsa, ilişkilendirme yap
+                // Tag'leri ekle
                 if (createPortfolioBlogDto.TagIds != null && createPortfolioBlogDto.TagIds.Any())
                 {
-                    var existingTags = await _context.PortfolioBlogTags
+                    var tags = await _context.PortfolioBlogTags
                         .Where(t => createPortfolioBlogDto.TagIds.Contains(t.PortfolioBlogTagId))
                         .ToListAsync();
 
-                    if (existingTags.Count != createPortfolioBlogDto.TagIds.Count)
+                    if (tags.Count != createPortfolioBlogDto.TagIds.Count)
                     {
                         throw new Exception("Bazı tag'ler bulunamadı. Lütfen geçerli tag ID'leri gönderin.");
                     }
 
-                    values.PortfolioBlogTags = existingTags;
+                    blog.PortfolioBlogTags = tags;
                 }
 
-                await _context.portfolioBlogs.AddAsync(values);
+                // Kategorileri ekle
+                if (createPortfolioBlogDto.CategoryIds != null && createPortfolioBlogDto.CategoryIds.Any())
+                {
+                    var categories = await _context.BlogCategories
+                        .Where(c => createPortfolioBlogDto.CategoryIds.Contains(c.BlogCategoryId))
+                        .ToListAsync();
+
+                    if (categories.Count != createPortfolioBlogDto.CategoryIds.Count)
+                    {
+                        throw new Exception("Bazı kategoriler bulunamadı. Lütfen geçerli kategori ID'leri gönderin.");
+                    }
+
+                    blog.PortfolioBlogCategories = categories;
+                }
+
+                await _context.portfolioBlogs.AddAsync(blog);
                 await _context.SaveChangesAsync();
-                return _mapper.Map<CreatePortfolioBlogDto>(values);
+
+                return createPortfolioBlogDto;
             }
             catch (Exception ex)
             {
-                throw new Exception($"Blog eklenirken bir hata oluştu: {ex.Message}");
+                throw new Exception($"Blog oluşturulurken bir hata oluştu: {ex.Message}");
             }
         }
 
@@ -59,7 +75,7 @@ namespace MyPortfolio.WebApi.Services.PortfolioBlogServices
 
         public async Task<List<GetAllPortfolioBlogDto>> GetAllPortfolioBlogAsync(string query = "")
         {
-            var values = await _context.portfolioBlogs.Include(x => x.PortfolioBlogTags).ToListAsync();
+            var values = await _context.portfolioBlogs.Include(x => x.PortfolioBlogTags).Include(y => y.PortfolioBlogCategories).ToListAsync();
             if (string.IsNullOrEmpty(query))
             {
                 return _mapper.Map<List<GetAllPortfolioBlogDto>>(values);
@@ -76,47 +92,65 @@ namespace MyPortfolio.WebApi.Services.PortfolioBlogServices
 
         public async Task<GetPortfolioBlogByPortfolioBlogIdDto> GetPortfolioBlogByPortfolioBlogIdAsync(int id)
         {
-            var values = await _context.portfolioBlogs.Include(x=> x.PortfolioBlogTags).Where(x => x.PortfolioBlogId == id).FirstOrDefaultAsync();
+            var values = await _context.portfolioBlogs.Include(x=> x.PortfolioBlogTags).Include(y => y.PortfolioBlogCategories).Where(x => x.PortfolioBlogId == id).FirstOrDefaultAsync();
             return _mapper.Map<GetPortfolioBlogByPortfolioBlogIdDto>(values);
         }
 
         public async Task UpdatePortfolioBlogAsync(UpdatePortfolioBlogDto updatePortfolioBlogDto)
         {
-            // Mevcut blog'u ve ilişkili tag'leri getir
-            var existingBlog = await _context.portfolioBlogs
-                .Include(x => x.PortfolioBlogTags)
-                .FirstOrDefaultAsync(x => x.PortfolioBlogId == updatePortfolioBlogDto.PortfolioBlogId);
-
-            if (existingBlog == null)
+            try
             {
-                throw new Exception("Blog bulunamadı");
-            }
+                var existingBlog = await _context.portfolioBlogs
+                    .Include(b => b.PortfolioBlogTags)
+                    .Include(b => b.PortfolioBlogCategories)
+                    .FirstOrDefaultAsync(b => b.PortfolioBlogId == updatePortfolioBlogDto.PortfolioBlogId);
 
-            // Blog özelliklerini güncelle
-            existingBlog.Title = updatePortfolioBlogDto.Title;
-            existingBlog.SubContent = updatePortfolioBlogDto.SubContent;
-            existingBlog.Content = updatePortfolioBlogDto.Content;
-            existingBlog.CoverImage = updatePortfolioBlogDto.CoverImage;
-            existingBlog.PublishDate = updatePortfolioBlogDto.PublishDate;
+                if (existingBlog == null)
+                {
+                    throw new Exception("Blog bulunamadı.");
+                }
 
-            // Tag ilişkilerini güncelle
-            if (updatePortfolioBlogDto.TagIds != null && updatePortfolioBlogDto.TagIds.Any())
-            {
-                // Mevcut tag'leri temizle
+                // Mevcut tag ve kategorileri temizle
                 existingBlog.PortfolioBlogTags.Clear();
+                existingBlog.PortfolioBlogCategories.Clear();
 
                 // Yeni tag'leri ekle
-                var newTags = await _context.PortfolioBlogTags
-                    .Where(t => updatePortfolioBlogDto.TagIds.Contains(t.PortfolioBlogTagId))
-                    .ToListAsync();
-
-                foreach (var tag in newTags)
+                if (updatePortfolioBlogDto.TagIds != null && updatePortfolioBlogDto.TagIds.Any())
                 {
-                    existingBlog.PortfolioBlogTags.Add(tag);
+                    var tags = await _context.PortfolioBlogTags
+                        .Where(t => updatePortfolioBlogDto.TagIds.Contains(t.PortfolioBlogTagId))
+                        .ToListAsync();
+                    foreach (var tag in tags)
+                    {
+                        existingBlog.PortfolioBlogTags.Add(tag);
+                    }
                 }
-            }
 
-            await _context.SaveChangesAsync();
+                // Yeni kategorileri ekle
+                if (updatePortfolioBlogDto.CategoryIds != null && updatePortfolioBlogDto.CategoryIds.Any())
+                {
+                    var categories = await _context.BlogCategories
+                        .Where(c => updatePortfolioBlogDto.CategoryIds.Contains(c.BlogCategoryId))
+                        .ToListAsync();
+                    foreach (var category in categories)
+                    {
+                        existingBlog.PortfolioBlogCategories.Add(category);
+                    }
+                }
+
+                // Diğer özellikleri güncelle
+                existingBlog.Title = updatePortfolioBlogDto.Title;
+                existingBlog.SubContent = updatePortfolioBlogDto.SubContent;
+                existingBlog.Content = updatePortfolioBlogDto.Content;
+                existingBlog.CoverImage = updatePortfolioBlogDto.CoverImage;
+                existingBlog.PublishDate = updatePortfolioBlogDto.PublishDate;
+
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Blog güncellenirken bir hata oluştu: {ex.Message}");
+            }
         }
     }
 }
