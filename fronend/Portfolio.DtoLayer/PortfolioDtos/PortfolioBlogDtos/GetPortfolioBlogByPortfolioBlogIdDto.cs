@@ -1,4 +1,5 @@
-﻿using Portfolio.DtoLayer.PortfolioDtos.PortfolioBlogTagDtos;
+﻿using Portfolio.DtoLayer.PortfolioDtos.BlogCategoryDtos;
+using Portfolio.DtoLayer.PortfolioDtos.PortfolioBlogTagDtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,7 @@ namespace Portfolio.DtoLayer.PortfolioDtos.PortfolioBlogDtos
         public string Content { get; set; }
         public string CoverImage { get; set; }
         public DateTime PublishDate { get; set; }
-        public List<GetAllPortfolioBlogTagDto> PortfolioBlogTags { get; set; }
+        public List<GetAllPortfolioBlogTagDto> PortfolioBlogTags { get; set; } = new List<GetAllPortfolioBlogTagDto>();
+        public List<GetBlogCategoryDto> PortfolioBlogCategories { get; set; } = new List<GetBlogCategoryDto>();
     }
 }

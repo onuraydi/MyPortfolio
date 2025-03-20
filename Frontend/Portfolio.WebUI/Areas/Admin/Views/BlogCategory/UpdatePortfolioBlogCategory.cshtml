@@ -1,0 +1,23 @@
+﻿@model GetBlogCategoryDto
+@{
+    ViewData["Title"] = "UpdatePortfolioBlogCategory";
+    Layout = "~/Areas/Admin/Views/AdminLayout/AdminLayout.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card" style="background-color: #191c24">
+    <div class="card-body">
+        <h4 class="card-title">Blog Kategorileri</h4>
+        <p class="card-description">Bloglara ait kategorileri Bu Sayfadan Güncelleyebilirsin</p>
+        <form class="forms-sample" method="post" enctype="multipart/form-data">
+            <input type="hidden" asp-for="BlogCategoryId" />
+            <div class="form-group">
+                <label for="Title">Kategori Adı</label>
+                <input type="text" class="form-control" asp-for="CategoryName" placeholder="Kategori Adı" />
+            </div>
+            <button type="submit" class="btn btn-primary mr-2">Güncelle</button>
+            <button type="button" onclick="history.back()" class="btn btn-dark">Geri</button>
+        </form>
+    </div>
+</div>
+
+
