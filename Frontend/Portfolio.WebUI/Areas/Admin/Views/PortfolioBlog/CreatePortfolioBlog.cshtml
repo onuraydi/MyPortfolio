@@ -41,6 +41,12 @@
         font-size: 12px;
         margin-top: 5px;
     }
+
+    .category-limit-message{
+        color: #ff4d4d;
+        font-size: 12px;
+        margin-top: 5px;
+    }
 </style>
 
 <div class="col-lg-12 grid-margin stretch-card" style="background-color: #191c24">
@@ -68,17 +74,24 @@
             <div class="form-group">
                 <label>Etiketler</label>
                 <div id="PortfolioBlogTags" class="tag-container">
-                    @*@foreach (var item in Model.BlogTags)
-        {
-            <span class="tag" data-tag="@item.TagName" data-id="@item.PortfolioBlogTagId">@item.TagName</span>
-        }*@
                     @foreach (var item in Model.BlogTags)
                     {
                         <span class="tag" data-tag="@item.TagName" data-id="@item.PortfolioBlogTagId">@item.TagName</span>
                     }
-
                 </div>
                 <div id="tagLimitMessage" class="tag-limit-message" style="display: none;">Maksimum 4 etiket ekleyebilirsiniz!</div>
+            </div>
+
+            <!-- Kategoriler kısmı -->
+            <div class="form-group">
+                <label>Kategoriler</label>
+                <div id="PortfolioBlogCategories" class="tag-container">
+                    @foreach (var item in Model.BlogCategories)
+                    {
+                        <span class="tag" data-tag="@item.CategoryName" data-id="@item.BlogCategoryId">@item.CategoryName</span>
+                    }
+                </div>
+                <div id="CategoryLimitMessage" class="category-limit-message" style="display:none;">Maksimum 4 kategori seçebilirsiniz!</div>
             </div>
             <div id="editor-container">
                 <p></p>
@@ -97,6 +110,11 @@
         const tagLimitMessage = document.getElementById("tagLimitMessage");
         const maxTags = 4;
         let selectedTags = [];
+
+        const categoryContainer = document.getElementById("PortfolioBlogCategories");
+        const categoryLimitMessage = document.getElementById("CategoryLimitMessage");
+        const maxCategory = 4;
+        let selectedCategories = [];
 
         // Etiket tıklama olayları
         tagContainer.addEventListener("click", function (event) {
@@ -129,11 +147,42 @@
                 } else {
                     tagLimitMessage.style.display = "none";
                 }
-
-                console.log("Seçili tag'ler:", selectedTags); // Debug için
             }
         });
 
+        // KAtegori tıklama olayları
+        categoryContainer.addEventListener("click", function (event) {
+            const clickedCategory = event.target;
+
+            // Tıklanan elemanın "tag" sınıfında olup olmadığını kontrol et
+            if (clickedCategory.classList.contains("tag")) {
+                const categoryName = clickedCategory.getAttribute("data-tag");
+                const categoryId = parseInt(clickedCategory.getAttribute("data-id")); // ID'yi integer'a çevir
+
+                // Seçili etiket kaldırma
+                if (clickedCategory.classList.contains("selected")) {
+                    clickedCategory.classList.remove("selected");
+                    selectedCategories = selectedCategories.filter(t => t.categoryId !== categoryId);
+                }
+                // Yeni etiket ekleme
+                else {
+                    if (selectedCategories.length < maxCategory) {
+                        clickedCategory.classList.add("selected");
+                        selectedCategories.push({
+                            categoryId: categoryId,
+                            categoryName: categoryName
+                        });
+                    }
+                }
+
+                // Etiket limiti kontrolü
+                if (selectedCategories.length >= maxCategory) {
+                    categoryLimitMessage.style.display = "block";
+                } else {
+                    categoryLimitMessage.style.display = "none";
+                }
+            }
+        });
         // Form submit işlemi
         document.getElementById("submitBtn").addEventListener("click", function (event) {
             event.preventDefault();
@@ -146,7 +195,7 @@
 
             // Seçili etiketlerin ID'lerini al
             var tagIds = selectedTags.map(tag => tag.tagId);
-            console.log("Seçili tag ID'leri:", tagIds); // Debug için
+            var categoryIds = selectedCategories.map(category => category.categoryId);
 
             // Blog verisi oluştur
             var blogData = {
@@ -155,10 +204,10 @@
                 Content: content,
                 CoverImage: coverImage,
                 PublishDate: publishDate,
-                TagIds: tagIds || [] // Eğer tagIds undefined ise boş array kullan
+                TagIds: tagIds || [],
+                categoryIds: categoryIds|| [] 
             };
 
-            console.log('Gönderilen veri:', JSON.stringify(blogData)); // Debug için
 
             // AJAX POST isteği
             $.ajax({
@@ -167,7 +216,6 @@
                 contentType: 'application/json',
                 data: JSON.stringify(blogData),
                 success: function (response) {
-                    console.log('Başarılı yanıt:', response); // Debug için
                     if (response.success) {
                         window.location.href = response.redirectToUrl;
                     } else {
@@ -175,8 +223,6 @@
                     }
                 },
                 error: function (xhr, status, error) {
-                    console.log('Hata detayı:', xhr.responseText); // Debug için
-                    console.log('Gönderilen veri:', blogData); // Hata durumunda gönderilen veriyi de logla
                     alert("Bir hata oluştu: " + error);
                 }
             });

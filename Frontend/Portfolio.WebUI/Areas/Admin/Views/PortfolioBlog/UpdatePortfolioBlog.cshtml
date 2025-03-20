@@ -6,9 +6,10 @@
 
 <link href="~/css/quill.css" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css2?family=Arial&family=Courier+New&family=Georgia&family=Times+New+Roman&family=Verdana&family=Trebuchet+MS&family=Comic+Sans+MS&family=Impact&family=Tahoma&family=Helvetica&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.core.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" />
 <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/quill-image-resize-module@3.0.0/image-resize.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.core.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <style>
@@ -37,6 +38,11 @@
     }
 
     .tag-limit-message {
+        color: #ff4d4d;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+    .category-limit-message {
         color: #ff4d4d;
         font-size: 12px;
         margin-top: 5px;
@@ -78,6 +84,21 @@
                 </div>
                 <div id="tagLimitMessage" class="tag-limit-message" style="display: none;">Maksimum 4 etiket ekleyebilirsiniz!</div>
             </div>
+
+            <div class="form-group">
+                <label>Kategoriler</label>
+                <div id="PortfolioBlogCategory" class="tag-container">
+                    @foreach (var item in Model.BlogCategories)
+                    {
+                        var isSelected = Model.BlogUpdate.PortfolioBlogCategories.Any(c => c.BlogCategoryId == item.BlogCategoryId);
+                        <span class="tag @(isSelected ? "selected": "")" 
+                              data-tag="@item.CategoryName" 
+                              data-id="@item.BlogCategoryId">@item.CategoryName</span>
+                    }
+                </div>
+                <div id="CategoryLimitMessage" class="category-limit-message" style="display:none;">Maksimum 4 Kategori seçebilirisiniz!</div>
+            </div>
+
             <div id="editor-container">
                 @Html.Raw(Model.BlogUpdate.Content)
             </div>
@@ -89,8 +110,8 @@
 </div>
 
 <script>
-    // Global değişkenler
     let selectedTags = [];
+    let selectedCategories = [];
     let quill;
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -98,13 +119,33 @@
         const tagLimitMessage = document.getElementById("tagLimitMessage");
         const maxTags = 4;
 
+        const categoryContainer = document.getElementById("PortfolioBlogCategory");
+        const categoryLimitMessage = document.getElementById("CategoryLimitMessage");
+        const maxCategory = 4;
+
         // Başlangıçta seçili olan tag'leri selectedTags array'ine ekle
-        document.querySelectorAll('.tag.selected').forEach(tag => {
+        document.querySelectorAll('#PortfolioBlogTags .tag.selected').forEach(tag => {
             selectedTags.push({
                 tagId: parseInt(tag.getAttribute('data-id')),
                 tagName: tag.getAttribute('data-tag')
             });
         });
+
+        // Başlangıçta seçili olan kategorileri selectedCategories array'ine ekle
+        document.querySelectorAll('#PortfolioBlogCategory .tag.selected').forEach(category => {
+            selectedCategories.push({
+                categoryId: parseInt(category.getAttribute('data-id')),
+                categoryName: category.getAttribute('data-tag')
+            });
+        });
+
+        // Başlangıçta limit mesajlarını kontrol et
+        if (selectedTags.length >= maxTags) {
+            tagLimitMessage.style.display = "block";
+        }
+        if (selectedCategories.length >= maxCategory) {
+            categoryLimitMessage.style.display = "block";
+        }
 
         // Etiket tıklama olayları
         tagContainer.addEventListener("click", function (event) {
@@ -117,6 +158,7 @@
                 if (clickedTag.classList.contains("selected")) {
                     clickedTag.classList.remove("selected");
                     selectedTags = selectedTags.filter(t => t.tagId !== tagId);
+                    tagLimitMessage.style.display = "none";
                 } else {
                     if (selectedTags.length < maxTags) {
                         clickedTag.classList.add("selected");
@@ -124,16 +166,38 @@
                             tagId: tagId,
                             tagName: tagName
                         });
+                        if (selectedTags.length >= maxTags) {
+                            tagLimitMessage.style.display = "block";
+                        }
                     }
                 }
+            }
+        });
 
-                if (selectedTags.length >= maxTags) {
-                    tagLimitMessage.style.display = "block";
+        // Kategori tıklama olayları
+        categoryContainer.addEventListener("click", function (event) {
+            const clickedCategory = event.target;
+
+            if (clickedCategory.classList.contains("tag")) {
+                const categoryName = clickedCategory.getAttribute("data-tag");
+                const categoryId = parseInt(clickedCategory.getAttribute("data-id"));
+
+                if (clickedCategory.classList.contains("selected")) {
+                    clickedCategory.classList.remove("selected");
+                    selectedCategories = selectedCategories.filter(t => t.categoryId !== categoryId);
+                    categoryLimitMessage.style.display = "none";
                 } else {
-                    tagLimitMessage.style.display = "none";
+                    if (selectedCategories.length < maxCategory) {
+                        clickedCategory.classList.add("selected");
+                        selectedCategories.push({
+                            categoryId: categoryId,
+                            categoryName: categoryName
+                        });
+                        if (selectedCategories.length >= maxCategory) {
+                            categoryLimitMessage.style.display = "block";
+                        }
+                    }
                 }
-
-                console.log("Seçili tag'ler:", selectedTags);
             }
         });
 
@@ -149,7 +213,9 @@
             var publishDate = document.getElementById('PublishDate').value;
 
             var tagIds = selectedTags.map(tag => tag.tagId);
-            console.log("Seçili tag ID'leri:", tagIds);
+            var categoryIds = selectedCategories.map(c => c.categoryId);
+
+            console.log('Seçilen Kategori ID\'leri:', categoryIds);
 
             var blogData = {
                 PortfolioBlogId: parseInt(blogId),
@@ -158,15 +224,17 @@
                 Content: content,
                 CoverImage: coverImage,
                 PublishDate: publishDate,
-                TagIds: tagIds
+                TagIds: tagIds,
+                CategoryIds: categoryIds
             };
 
-            console.log('Gönderilen veri:', JSON.stringify(blogData));
+            console.log('Gönderilecek veri:', blogData);
 
             $.ajax({
                 url: '@Url.Action("UpdatePortfolioBlog", "PortfolioBlog", new { area = "Admin", id = Model.BlogUpdate.PortfolioBlogId })',
                 type: 'POST',
-                contentType: 'application/json',
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
                 data: JSON.stringify(blogData),
                 success: function (response) {
                     console.log('Başarılı yanıt:', response);
@@ -177,7 +245,11 @@
                     }
                 },
                 error: function (xhr, status, error) {
-                    console.log('Hata detayı:', xhr.responseText);
+                    console.error('Hata detayları:', {
+                        status: status,
+                        error: error,
+                        response: xhr.responseText
+                    });
                     alert("Bir hata oluştu: " + error);
                 }
             });
@@ -185,54 +257,56 @@
     });
 
     // Quill JS başlatma
-    const fontSizeArr = ['8px', '9px', '10px', '12px', '14px', '16px', '20px', '24px', '32px', '42px', '54px', '68px', '84px', '98px'];
-    const fontFamilyArr = ['Arial', 'Courier New', 'Georgia', 'Times New Roman', 'Verdana', 'Trebuchet MS', 'Comic Sans MS', 'Impact', 'Tahoma', 'Helvetica'];
+    document.addEventListener("DOMContentLoaded", function () {
+        const fontSizeArr = ['8px', '9px', '10px', '12px', '14px', '16px', '20px', '24px', '32px', '42px', '54px', '68px', '84px', '98px'];
+        const fontFamilyArr = ['Arial', 'Courier New', 'Georgia', 'Times New Roman', 'Verdana', 'Trebuchet MS', 'Comic Sans MS', 'Impact', 'Tahoma', 'Helvetica'];
 
-    var Font = Quill.import('attributors/style/font');
-    Font.whitelist = fontFamilyArr;
-    Quill.register(Font, true);
+        var Font = Quill.import('attributors/style/font');
+        Font.whitelist = fontFamilyArr;
+        Quill.register(Font, true);
 
-    var Size = Quill.import('attributors/style/size');
-    Size.whitelist = fontSizeArr;
-    Quill.register(Size, true);
+        var Size = Quill.import('attributors/style/size');
+        Size.whitelist = fontSizeArr;
+        Quill.register(Size, true);
 
-    var toolbarOptions = [
-        [{ 'font': fontFamilyArr }],
-        [{ 'size': fontSizeArr }],
-        ['bold', 'italic', 'underline', 'strike'],
-        [{ 'color': [] }, { 'background': [] }],
-        [{ 'script': 'sub'}, { 'script': 'super' }],
-        [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-        ['blockquote', 'code-block'],
-        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-        [{ 'indent': '-1'}, { 'indent': '+1' }],
-        [{ 'direction': 'rtl' }],
-        [{ 'align': [] }],
-        ['link', 'image', 'video'],
-        ['clean']
-    ];
+        var toolbarOptions = [
+            [{ 'font': fontFamilyArr }],
+            [{ 'size': fontSizeArr }],
+            ['bold', 'italic', 'underline', 'strike'],
+            [{ 'color': [] }, { 'background': [] }],
+            [{ 'script': 'sub'}, { 'script': 'super' }],
+            [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+            ['blockquote', 'code-block'],
+            [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+            [{ 'indent': '-1'}, { 'indent': '+1' }],
+            [{ 'direction': 'rtl' }],
+            [{ 'align': [] }],
+            ['link', 'image', 'video'],
+            ['clean']
+        ];
 
-    quill = new Quill('#editor-container', {
-        modules: {
-            toolbar: toolbarOptions,
-            imageResize: {}
-        },
-        theme: 'snow'
+        quill = new Quill('#editor-container', {
+            modules: {
+                toolbar: toolbarOptions,
+                imageResize: {}
+            },
+            theme: 'snow'
+        });
+
+        // Veritabanından gelen içeriği modelden almak
+        var contentFromModel = '@Html.Raw(Json.Serialize(Model.BlogUpdate.Content))';
+        
+        // Baş ve sondaki tırnak işaretlerini temizlemek
+        contentFromModel = contentFromModel.replace(/^"|"$/g, '');
+        
+        // HTML entity'lerini temizlemek
+        var contentHTML = contentFromModel
+            .replace(/&quot;/g, '"')
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&amp;/g, '&');
+        
+        // Quill editörüne içeriği aktar
+        quill.root.innerHTML = contentHTML;
     });
-
-    // Veritabanından gelen içeriği modelden almak
-    var contentFromModel = '@Html.Raw(Json.Serialize(Model.BlogUpdate.Content))';
-
-    // Baş ve sondaki tırnak işaretlerini temizlemek
-    contentFromModel = contentFromModel.replace(/^"|"$/g, '');
-
-    // HTML entity'lerini temizlemek
-    var contentHTML = contentFromModel
-        .replace(/&quot;/g, '"')
-        .replace(/&lt;/g, '<')
-        .replace(/&gt;/g, '>')
-        .replace(/&amp;/g, '&');
-
-    // Quill editörüne içeriği aktar
-    quill.root.innerHTML = contentHTML;
 </script>

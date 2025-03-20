@@ -7,12 +7,11 @@ namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogServices
     public class PortfolioBlogService : IPortfolioBlogService
     {
         private readonly HttpClient _httpClient;
-        private readonly IPortfolioBlogTagServices _portfolioBlogTagServices;
+        //private readonly IPortfolioBlogTagServices _portfolioBlogTagServices;
 
-        public PortfolioBlogService(HttpClient httpClient, IPortfolioBlogTagServices portfolioBlogTagServices)
+        public PortfolioBlogService(HttpClient httpClient)
         {
             _httpClient = httpClient;
-            _portfolioBlogTagServices = portfolioBlogTagServices;
         }
 
         public async Task<CreatePortfolioBlogDto> CreatePortfolioBlogAsync(CreatePortfolioBlogDto createPortfolioBlogDto)
@@ -26,7 +25,8 @@ namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogServices
                     Content = createPortfolioBlogDto.Content,
                     CoverImage = createPortfolioBlogDto.CoverImage,
                     PublishDate = createPortfolioBlogDto.PublishDate,
-                    TagIds = createPortfolioBlogDto.TagIds
+                    TagIds = createPortfolioBlogDto.TagIds,
+                    CategoryIds = createPortfolioBlogDto.CategoryIds
                 });
 
                 if (!responseMessage.IsSuccessStatusCode)
@@ -76,7 +76,8 @@ namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogServices
                     Content = updatePortfolioBlogDto.Content,
                     CoverImage = updatePortfolioBlogDto.CoverImage,
                     PublishDate = updatePortfolioBlogDto.PublishDate,
-                    TagIds = updatePortfolioBlogDto.TagIds
+                    TagIds = updatePortfolioBlogDto.TagIds,
+                    CategoryIds = updatePortfolioBlogDto.CategoryIds
                 });
 
                 if (!responseMessage.IsSuccessStatusCode)

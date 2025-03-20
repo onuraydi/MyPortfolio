@@ -10,6 +10,7 @@ using Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogTagServices;
 using Portfolio.WebUI.Models;
 using Portfolio.DtoLayer.PortfolioDtos.PortfolioBlogTagDtos;
 using Microsoft.AspNetCore.Authorization;
+using Portfolio.WebUI.Services.PortfolioServices.BlogCategoryServices;
 
 namespace Portfolio.WebUI.Areas.Admin.Controllers
 {
@@ -20,11 +21,13 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
     {
         private readonly IPortfolioBlogService _portfolioBlogService;
         private readonly IPortfolioBlogTagServices _portfolioBlogTagService;
+        private readonly IBlogCategoryService _blogCategoryService;
 
-        public PortfolioBlogController(IPortfolioBlogService portfolioBlogService, IPortfolioBlogTagServices portfolioBlogTagService)
+        public PortfolioBlogController(IPortfolioBlogService portfolioBlogService, IPortfolioBlogTagServices portfolioBlogTagService, IBlogCategoryService blogCategoryService)
         {
             _portfolioBlogService = portfolioBlogService;
             _portfolioBlogTagService = portfolioBlogTagService;
+            _blogCategoryService = blogCategoryService;
         }
 
         [HttpGet]
@@ -40,9 +43,11 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
         public async Task<IActionResult> CreatePortfolioBlog()
         {
             var tags = await _portfolioBlogTagService.GetAllPortfolioBlogTagAsync();
+            var categories = await _blogCategoryService.GetAllPortfolioBlogCategoryAsync();
             var model = new BlogTagsViewModel
-            {
+            {   
                 BlogTags = tags,
+                BlogCategories = categories,
                 BlogCreate = new CreatePortfolioBlogDto()
             };
             return View(model);
@@ -73,38 +78,18 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
             }
         }
 
-        public class BlogPostModel
-        {
-            public CreatePortfolioBlogDto createPortfolioBlogDto { get; set; }
-            public List<int> selectedTagIds { get; set; }
-        }
-
-        [HttpGet]
-        [Route("AddTagPortfolioBlog/{id}")]
-        public async Task<IActionResult> AddTagPortfolioBlog(int id)
-        {
-            var values = await _portfolioBlogService.GetPortfolioBlogByPortfolioBlogIdAsync(id);
-            return View(values);
-        }
-
-        [HttpPost]
-        [Route("AddTagPortfolioBlog/{id}")]
-        public async Task<IActionResult> AddTagPortfolioBlog(UpdatePortfolioBlogDto updatePortfolioBlogDto)
-        {
-            await _portfolioBlogService.UpdatePortfolioBlogAsync(updatePortfolioBlogDto);
-            return RedirectToAction("GetAllPortfolioBlog", "PortfolioBlog", new { area = "Admin" });
-        }
-
         [HttpGet]
         [Route("UpdatePortfolioBlog/{id}")]
         public async Task<IActionResult> UpdatePortfolioBlog(int id)
         {
             var blog = await _portfolioBlogService.GetPortfolioBlogByPortfolioBlogIdAsync(id);
             var allTags = await _portfolioBlogTagService.GetAllPortfolioBlogTagAsync();
+            var allCategories = await _blogCategoryService.GetAllPortfolioBlogCategoryAsync();
 
             var model = new BlogTagsViewModel
             {
                 BlogTags = allTags,
+                BlogCategories = allCategories,
                 BlogUpdate = blog
             };
 
@@ -117,11 +102,6 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
         {
             try
             {
-                if (updatePortfolioBlogDto == null)
-                {
-                    return Json(new { success = false, message = "Blog verisi boş olamaz." });
-                }
-
                 await _portfolioBlogService.UpdatePortfolioBlogAsync(updatePortfolioBlogDto);
                 
                 return Json(new { 
