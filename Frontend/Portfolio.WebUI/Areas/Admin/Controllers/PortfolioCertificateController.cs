@@ -38,8 +38,11 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
         [Route("CreatePortfolioCertificate")]
         public async Task<IActionResult> CreatePortfolioCertificate(CreatePortfolioCertificateDto createPortfolioCertificateDto, IFormFile image)
         {
-            var uplodingImage = await _imageUploadService.UploadImageAsync(image);
-            createPortfolioCertificateDto.Image = uplodingImage;
+            if(image != null)
+            {
+                var uplodingImage = await _imageUploadService.UploadImageAsync(image);
+                createPortfolioCertificateDto.Image = uplodingImage;
+            }
             await _portfolioCertificateService.CreatePortfolioCertificateAsync(createPortfolioCertificateDto);
             return RedirectToAction("GetAllPortfolioCertificate", "PortfolioCertificate",new {area="Admin"});
         }
@@ -56,7 +59,7 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
         [Route("UpdatePortfolioCertificate/{id}")]
         public async Task<IActionResult> UpdatePortfolioCertificate(UpdatePortfolioCertificateDto updatePortfolioCertificateDto,IFormFile image)
         {
-            if (image != null || image.Length > 0)
+            if (image != null)
             {
                 var updatedImage = await _imageUploadService.UploadImageAsync(image);
                 updatePortfolioCertificateDto.Image = updatedImage;

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Portfolio.DtoLayer.PortfolioDtos.PortfolioAboutMeDtos;
 using Portfolio.WebUI.Services.ImageUploadServices.ImageUploadServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioAboutMeServices;
+using Portfolio.WebUI.Services.PortfolioServices.PortfolioMainTitleServices;
 
 namespace Portfolio.WebUI.Areas.Admin.Controllers
 {
@@ -13,11 +14,13 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
     {
         private readonly IPortfolioAboutMeService _portfolioAboutMeService;
         private readonly IImageUploadService _imageUploadService;
+        private readonly IPortfolioMainTitleService _portfolioMainTitleService;
 
-        public PortfolioAboutMeController(IPortfolioAboutMeService portfolioAboutMeService, IImageUploadService imageUploadService)
+        public PortfolioAboutMeController(IPortfolioAboutMeService portfolioAboutMeService, IImageUploadService imageUploadService, IPortfolioMainTitleService portfolioMainTitleService)
         {
             _portfolioAboutMeService = portfolioAboutMeService;
             _imageUploadService = imageUploadService;
+            _portfolioMainTitleService = portfolioMainTitleService;
         }
 
         [HttpGet]
@@ -53,8 +56,40 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
                     updatePortfolioAboutMeDto.Image = existingData.Image;
                 }
             }
+
+            // CV dosyasının yolunu PortfolioMainTitle'dan al
+            var mainTitleData = await _portfolioMainTitleService.GetPortfolioMainTitleAsync();
+            if (mainTitleData != null && mainTitleData.Any() && !string.IsNullOrEmpty(mainTitleData.FirstOrDefault().Button1Href))
+            {
+                updatePortfolioAboutMeDto.ButtonHref = mainTitleData.FirstOrDefault().Button1Href;
+            }
+
             await _portfolioAboutMeService.UpdatePortfolioAboutMeAsync(updatePortfolioAboutMeDto);
             return RedirectToAction("GetPortfolioAboutMe", "PortfolioAboutMe", new { area = "Admin" });
+        }
+
+        public async Task<IActionResult> DownloadCv(int id)
+        {
+            var data = await _portfolioAboutMeService.GetPortfolioAboutMeByPortfolioAboutMeIdAsync(id);
+            if (data == null || string.IsNullOrEmpty(data.ButtonHref))
+            {
+                return NotFound("CV dosyası bulunamadı.");
+            }
+
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", data.ButtonHref);
+            if (!System.IO.File.Exists(filePath))
+            {
+                return NotFound("CV dosyası bulunamadı.");
+            }
+
+            var memory = new MemoryStream();
+            using (var stream = new FileStream(filePath, FileMode.Open))
+            {
+                await stream.CopyToAsync(memory);
+            }
+            memory.Position = 0;
+
+            return File(memory, "application/pdf", "CV.pdf");
         }
     }
 }

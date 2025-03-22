@@ -40,12 +40,18 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
         [Route("CreatePortfolioProject")]
         public async Task<IActionResult> CreatePortfolioProject(CreatePortfolioProjectDto createPortfolioProjectDto, List<IFormFile> projectImages, IFormFile image)
         {
-            var uploadingImages = await _imageUploadService.UploadManyImageAsync(projectImages);
-            createPortfolioProjectDto.projectImages.AddRange(uploadingImages);
+            if(projectImages != null)
+            {
+                var uploadingImages = await _imageUploadService.UploadManyImageAsync(projectImages);
+                createPortfolioProjectDto.projectImages.AddRange(uploadingImages);
+            }
 
+            if(image != null)
+            {
+                var uploadingCoverImage = await _imageUploadService.UploadImageAsync(image);
+                createPortfolioProjectDto.Image = uploadingCoverImage;
+            }
 
-            var uploadingCoverImage = await _imageUploadService.UploadImageAsync(image);
-            createPortfolioProjectDto.Image = uploadingCoverImage;
 
             await _portfolioProjectService.CreatePortfolioProjectAsync(createPortfolioProjectDto);
             return RedirectToAction("GetAllPortfolioProject", "PortfolioProject", new { area = "Admin" });
@@ -64,7 +70,7 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
         [Route("UpdatePortfolioProject/{id}")]
         public async Task<IActionResult> UpdatePortfolioProject(UpdatePortfolioProjectDto updatePortfolioProjectDto, IFormFile image)
         {
-            if (image != null && image.Length > 0)
+            if (image != null)
             {
                 var uploadedImage = await _imageUploadService.UploadImageAsync(image);
                 updatePortfolioProjectDto.Image = uploadedImage;
@@ -97,7 +103,7 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
         [Route("UpdateProjectImages/{id}")]
         public async Task<IActionResult> UpdateProjectImages(GetProjectImageByPortfolioProjectIdDto updateProjectImageDto, IFormFile projectImages, int ProjectImageId, int PortfolioProjectId)
         {
-            if (projectImages != null && projectImages.Length > 0)
+            if (projectImages != null)
             {
                 var uploadedImages = await _imageUploadService.UpdateManyImageAsync(projectImages);
                 uploadedImages.PortfolioProjectId = PortfolioProjectId;

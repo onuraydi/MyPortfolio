@@ -53,7 +53,7 @@
     <div class="card-body">
         <h4 class="card-title">Blog</h4>
         <p class="card-description">Blog Güncelleme Sayfası</p>
-        <form id="blogForm" class="forms-sample">
+        <form id="blogForm" class="forms-sample" enctype="multipart/form-data">
             <input type="hidden" id="PortfolioBlogId" value="@Model.BlogUpdate.PortfolioBlogId" />
             <div class="form-group">
                 <label for="Title">Başlık</label>
@@ -65,7 +65,13 @@
             </div>
             <div class="form-group">
                 <label for="CoverImage">Kapak Resmi</label>
-                <input type="text" class="form-control" id="CoverImage" value="@Model.BlogUpdate.CoverImage" placeholder="Kapak Resmi" />
+                <div class="input-group">
+                    <input type="file" name="image" id="image" class="form-control file-upload-default" accept="image/*" />
+                    <input type="text" class="form-control file-upload-info" disabled placeholder="@Model.BlogUpdate.CoverImage" />
+                    <span class="input-group-append">
+                        <button class="btn btn-primary" type="button" onclick="document.getElementById('image').click()">Yükle</button>
+                    </span>
+                </div>
             </div>
             <div class="form-group">
                 <label for="PublishDate">Yayımlanma Tarihi</label>
@@ -209,46 +215,78 @@
             var blogId = document.getElementById('PortfolioBlogId').value;
             var title = document.getElementById('title').value;
             var subContent = document.getElementById('SubContent').value;
-            var coverImage = document.getElementById('CoverImage').value;
             var publishDate = document.getElementById('PublishDate').value;
+            var imageFile = document.getElementById('image').files[0];
 
+            // Form verilerinin doğruluğunu kontrol et
+            if (!blogId) {
+                alert("Blog ID bulunamadı!");
+                return;
+            }
+
+            if (!title || !subContent || !publishDate) {
+                alert("Lütfen tüm zorunlu alanları doldurun!");
+                return;
+            }
+
+            // Seçili etiketlerin ve kategorilerin ID'lerini al
             var tagIds = selectedTags.map(tag => tag.tagId);
-            var categoryIds = selectedCategories.map(c => c.categoryId);
+            var categoryIds = selectedCategories.map(category => category.categoryId);
 
-            var blogData = {
-                PortfolioBlogId: parseInt(blogId),
-                Title: title,
-                SubContent: subContent,
-                Content: content,
-                CoverImage: coverImage,
-                PublishDate: publishDate,
-                TagIds: tagIds,
-                CategoryIds: categoryIds
-            };
+            // FormData oluştur
+            var formData = new FormData();
+            formData.append("PortfolioBlogId", blogId);
+            formData.append("Title", title);
+            formData.append("SubContent", subContent);
+            formData.append("Content", content);
+            formData.append("PublishDate", publishDate);
+            formData.append("tagIds", JSON.stringify(tagIds));
+            formData.append("categoryIds", JSON.stringify(categoryIds));
+            
+            // Resim varsa ekle
+            if (imageFile) {
+                formData.append("image", imageFile);
+            }
 
-            console.log('Gönderilecek veri:', blogData);
+            // Form verilerini konsola yazdır (debug için)
+            console.log("Gönderilen veriler:", {
+                blogId: blogId,
+                title: title,
+                subContent: subContent,
+                publishDate: publishDate,
+                tagIds: tagIds,
+                categoryIds: categoryIds,
+                hasImage: !!imageFile,
+                imageName: imageFile ? imageFile.name : null
+            });
 
+            // AJAX POST isteği
             $.ajax({
-                url: '@Url.Action("UpdatePortfolioBlog", "PortfolioBlog", new { area = "Admin", id = Model.BlogUpdate.PortfolioBlogId })',
+                url: '@Url.Action("UpdatePortfolioBlog", "PortfolioBlog", new { area = "Admin" })',
                 type: 'POST',
-                contentType: 'application/json; charset=utf-8',
-                dataType: 'json',
-                data: JSON.stringify(blogData),
+                data: formData,
+                processData: false,
+                contentType: false,
                 success: function (response) {
-                    console.log('Başarılı yanıt:', response);
                     if (response.success) {
                         window.location.href = response.redirectToUrl;
                     } else {
-                        alert(response.message);
+                        console.error("Sunucu hatası:", response);
+                        alert(response.message || "Güncelleme sırasında bir hata oluştu!");
                     }
                 },
                 error: function (xhr, status, error) {
-                    console.error('Hata detayları:', {
+                    console.error("Hata detayları:", {
                         status: status,
                         error: error,
                         response: xhr.responseText
                     });
-                    alert("Bir hata oluştu: " + error);
+                    try {
+                        var errorResponse = JSON.parse(xhr.responseText);
+                        alert("Hata: " + (errorResponse.message || error));
+                    } catch (e) {
+                        alert("Güncelleme sırasında bir hata oluştu: " + error);
+                    }
                 }
             });
         });

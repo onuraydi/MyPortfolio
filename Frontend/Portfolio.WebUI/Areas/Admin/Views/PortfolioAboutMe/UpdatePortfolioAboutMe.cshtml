@@ -69,12 +69,13 @@
                     <input type="text" class="form-control" asp-for="ButtonName" placeholder="Buton Adı" />
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="Title">Yol</label>
-                    <input type="text" class="form-control" asp-for="ButtonHref" placeholder="Yol" />
+                    <label for="Title">CV Dosyası Yolu</label>
+                    <input type="text" class="form-control bg-dark text-white" asp-for="ButtonHref" placeholder="CV Dosyası Yolu" readonly style="background-color: #2a2d35 !important;" />
+                    <small class="text-muted">CV dosyası yolu otomatik olarak ana başlık kısmından alınacaktır.</small>
                 </div>
             </div>
             <button type="submit" class="btn btn-primary mr-2">Güncelle</button>
-            <button type="button" class="btn btn-dark">Geri</button>
+            <button type="button" onclick="history.back()" class="btn btn-dark">Geri</button>
         </form>
     </div>
 </div>

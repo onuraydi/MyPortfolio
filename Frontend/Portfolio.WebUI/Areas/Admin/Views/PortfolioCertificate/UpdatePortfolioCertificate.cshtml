@@ -30,15 +30,15 @@
             <div class="form-group">
                 <label for="image" class="text-white">Sertifika Resmi</label>
                 <div class="input-group-append">
-                    <input type="file" asp-for="Image" id="image" class="form-control file-upload-default" />
-                    <input type="text" class="form-control file-upload-info" disabled placeholder="Sertifika Resmi" />
+                    <input type="file" name="image" id="image" class="form-control file-upload-default" />
+                    <input type="text" class="form-control file-upload-info"  disabled placeholder="Sertifika Resmi" />
                     <span class="input-group-append">
                         <button class="btn btn-primary" type="button" onclick="document.getElementById('image').click()">Yükle</button>
                     </span>
                 </div>
             </div>
             <button type="submit" class="btn btn-primary mr-2">Güncelle</button>
-            <button class="btn btn-info">Geri</button>
+            <button onclick="history.back()" class="btn btn-info">Geri</button>
         </form>
     </div>
 </div>

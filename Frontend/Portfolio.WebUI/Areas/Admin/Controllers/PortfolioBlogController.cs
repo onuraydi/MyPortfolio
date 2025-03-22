@@ -11,6 +11,7 @@ using Portfolio.WebUI.Models;
 using Portfolio.DtoLayer.PortfolioDtos.PortfolioBlogTagDtos;
 using Microsoft.AspNetCore.Authorization;
 using Portfolio.WebUI.Services.PortfolioServices.BlogCategoryServices;
+using Portfolio.WebUI.Services.ImageUploadServices.ImageUploadServices;
 
 namespace Portfolio.WebUI.Areas.Admin.Controllers
 {
@@ -22,12 +23,14 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
         private readonly IPortfolioBlogService _portfolioBlogService;
         private readonly IPortfolioBlogTagServices _portfolioBlogTagService;
         private readonly IBlogCategoryService _blogCategoryService;
+        private readonly IImageUploadService _imageUploadService;
 
-        public PortfolioBlogController(IPortfolioBlogService portfolioBlogService, IPortfolioBlogTagServices portfolioBlogTagService, IBlogCategoryService blogCategoryService)
+        public PortfolioBlogController(IPortfolioBlogService portfolioBlogService, IPortfolioBlogTagServices portfolioBlogTagService, IBlogCategoryService blogCategoryService, IImageUploadService imageUploadService)
         {
             _portfolioBlogService = portfolioBlogService;
             _portfolioBlogTagService = portfolioBlogTagService;
             _blogCategoryService = blogCategoryService;
+            _imageUploadService = imageUploadService;
         }
 
         [HttpGet]
@@ -55,13 +58,28 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 
         [HttpPost]
         [Route("CreatePortfolioBlog")]
-        public async Task<IActionResult> CreatePortfolioBlog([FromBody] CreatePortfolioBlogDto createPortfolioBlogDto)
+        public async Task<IActionResult> CreatePortfolioBlog([FromForm] CreatePortfolioBlogDto createPortfolioBlogDto, IFormFile image, [FromForm] string tagIds, [FromForm] string categoryIds)
         {
             try
             {
                 if (createPortfolioBlogDto == null)
                 {
                     return Json(new { success = false, message = "Blog verisi boş olamaz." });
+                }
+
+                if (image != null)
+                {
+                    createPortfolioBlogDto.CoverImage = await _imageUploadService.UploadImageAsync(image);
+                }
+
+                // Tag ve kategori ID'lerini parse et
+                if (!string.IsNullOrEmpty(tagIds))
+                {
+                    createPortfolioBlogDto.TagIds = JsonConvert.DeserializeObject<List<int>>(tagIds);
+                }
+                if (!string.IsNullOrEmpty(categoryIds))
+                {
+                    createPortfolioBlogDto.CategoryIds = JsonConvert.DeserializeObject<List<int>>(categoryIds);
                 }
 
                 // Blog'u oluştur
@@ -98,10 +116,73 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 
         [HttpPost]
         [Route("UpdatePortfolioBlog/{id}")]
-        public async Task<IActionResult> UpdatePortfolioBlog([FromBody] UpdatePortfolioBlogDto updatePortfolioBlogDto)
+        public async Task<IActionResult> UpdatePortfolioBlog([FromForm] UpdatePortfolioBlogDto updatePortfolioBlogDto, IFormFile image, [FromForm] string tagIds, [FromForm] string categoryIds)
         {
             try
             {
+                if (updatePortfolioBlogDto == null)
+                {
+                    return Json(new { success = false, message = "Blog verisi boş olamaz." });
+                }
+
+                // Mevcut blog verisini al
+                var existingBlog = await _portfolioBlogService.GetPortfolioBlogByPortfolioBlogIdAsync(updatePortfolioBlogDto.PortfolioBlogId);
+                if (existingBlog == null)
+                {
+                    return Json(new { success = false, message = "Blog bulunamadı." });
+                }
+
+                // Resim işlemi
+                if (image != null && image.Length > 0)
+                {
+                    try
+                    {
+                        // Resim uzantısını kontrol et
+                        var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" };
+                        var fileExtension = Path.GetExtension(image.FileName).ToLowerInvariant();
+                        
+                        if (!allowedExtensions.Contains(fileExtension))
+                        {
+                            return Json(new { success = false, message = "Sadece .jpg, .jpeg, .png ve .gif formatları desteklenmektedir." });
+                        }
+
+                        // Resim boyutunu kontrol et (max 5MB)
+                        if (image.Length > 5 * 1024 * 1024)
+                        {
+                            return Json(new { success = false, message = "Resim boyutu 5MB'dan büyük olamaz." });
+                        }
+
+                        var updatedImage = await _imageUploadService.UploadImageAsync(image);
+                        updatePortfolioBlogDto.CoverImage = updatedImage;
+                    }
+                    catch (Exception ex)
+                    {
+                        return Json(new { success = false, message = "Resim yükleme hatası: " + ex.Message });
+                    }
+                }
+                else
+                {
+                    // Mevcut resmi koru
+                    updatePortfolioBlogDto.CoverImage = existingBlog.CoverImage;
+                }
+
+                // Tag ve kategori ID'lerini parse et
+                try
+                {
+                    if (!string.IsNullOrEmpty(tagIds))
+                    {
+                        updatePortfolioBlogDto.TagIds = JsonConvert.DeserializeObject<List<int>>(tagIds);
+                    }
+                    if (!string.IsNullOrEmpty(categoryIds))
+                    {
+                        updatePortfolioBlogDto.CategoryIds = JsonConvert.DeserializeObject<List<int>>(categoryIds);
+                    }
+                }
+                catch (JsonException ex)
+                {
+                    return Json(new { success = false, message = "Tag veya kategori verilerinde hata: " + ex.Message });
+                }
+
                 await _portfolioBlogService.UpdatePortfolioBlogAsync(updatePortfolioBlogDto);
                 
                 return Json(new { 
@@ -111,7 +192,7 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
             }
             catch (Exception ex)
             {
-                return Json(new { success = false, message = ex.Message });
+                return Json(new { success = false, message = "Güncelleme sırasında bir hata oluştu: " + ex.Message });
             }
         }
 
