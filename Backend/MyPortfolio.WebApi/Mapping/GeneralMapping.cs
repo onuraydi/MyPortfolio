@@ -84,6 +84,10 @@ namespace MyPortfolio.WebApi.Mapping
 
             // Blog Tag
             CreateMap<PortfolioBlogTag, GetAllPortfolioBlogTagDto>().ReverseMap();
+            CreateMap<PortfolioBlogTag, CreatePortfolioBlogTagDto>().ReverseMap();
+            CreateMap<PortfolioBlogTag, GetPortfolioBlogsByPortfolioTagId>().ReverseMap();
+            CreateMap<PortfolioBlogTag, GetPortfolioBlogTagByPortfolioBlogTagId>().ReverseMap();
+            CreateMap<PortfolioBlogTag, UpdatePortfolioBlogTagDto>().ReverseMap();
 
             // Contact
             CreateMap<PortfolioContact, GetAllPortfolioContactDto>().ReverseMap();

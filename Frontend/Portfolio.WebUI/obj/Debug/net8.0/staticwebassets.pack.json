@@ -129,6 +129,10 @@
       "PackagePath": "staticwebassets\\AdminTemplate\\assets\\fonts\\Rubik\\Rubik-Regular.ttf"
     },
     {
+      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\AdminTemplate\\assets\\images\\OADMIN.svg",
+      "PackagePath": "staticwebassets\\AdminTemplate\\assets\\images\\OADMIN.svg"
+    },
+    {
       "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\AdminTemplate\\assets\\images\\auth\\Login_bg.jpg",
       "PackagePath": "staticwebassets\\AdminTemplate\\assets\\images\\auth\\Login_bg.jpg"
     },
@@ -3699,6 +3703,10 @@
     {
       "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\129fc503-6c37-40f6-8f9f-9b197d694b5a.png",
       "PackagePath": "staticwebassets\\Uploads\\129fc503-6c37-40f6-8f9f-9b197d694b5a.png"
+    },
+    {
+      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\1ba00475-7f68-4a43-99c2-3987669e04c4.png",
+      "PackagePath": "staticwebassets\\Uploads\\1ba00475-7f68-4a43-99c2-3987669e04c4.png"
     },
     {
       "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\3059d9d1-b05b-4c92-8e74-fc271775d5ff.png",
