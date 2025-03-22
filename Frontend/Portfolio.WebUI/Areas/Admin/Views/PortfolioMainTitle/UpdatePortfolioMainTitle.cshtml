@@ -25,23 +25,13 @@
 
             <div class="form-group">
                 <label for="Image" class="text-white">Resim (.png)</label>
-
                 <div class="input-group">
-                    <input type="file" asp-for="Image"  id="Image" class="form-control file-upload-default" accept=".png" />
+                    <input type="file" name="image" id="Image" class="form-control file-upload-default" accept=".png" />
                     <input type="text" class="form-control file-upload-info" disabled placeholder="@Model.Image" />
                     <span class="input-group-append">
                         <button class="btn btn-primary" type="button" onclick="document.getElementById('Image').click()">Yükle</button>
                     </span>
                 </div>
-            </div>
-
-            <div class="form-group">
-                <label for="CVFile">CV Dosyası (PDF)</label>
-                <input type="file" class="form-control" id="CVFile" name="cvFile" accept=".pdf" />
-                @if (!string.IsNullOrEmpty(Model.CV))
-                {
-                    <a href="@Model.CV" class="btn btn-success mt-2" target="_blank">Mevcut CV'yi İndir</a>
-                }
             </div>
 
             <div class="row">
@@ -50,8 +40,18 @@
                     <input type="text" class="form-control" asp-for="ButtonName1" placeholder="Buton Adı" />
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="Description" class="text-white">Yol</label>
-                    <input type="text" class="form-control" asp-for="Button1Href" placeholder="Yol" />
+                    <label for="Description" class="text-white">CV Dosyası (PDF)</label>
+                    <div class="input-group">
+                        <input type="file" name="cvFile" id="CVFile" class="form-control file-upload-default" accept=".pdf" />
+                        <input type="text" class="form-control file-upload-info" disabled placeholder="@Model.Button1Href" />
+                        <span class="input-group-append">
+                            <button class="btn btn-primary" type="button" onclick="document.getElementById('CVFile').click()">Yükle</button>
+                        </span>
+                    </div>
+                    @if (!string.IsNullOrEmpty(Model.Button1Href))
+                    {
+                        <a href="@Model.Button1Href" class="btn btn-success mt-2" target="_blank">Mevcut CV'yi İndir</a>
+                    }
                 </div>
             </div>
             <div class="row">

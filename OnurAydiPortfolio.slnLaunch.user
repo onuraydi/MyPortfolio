@@ -15,7 +15,7 @@
         "Action": "Start"
       },
       {
-        "Path": "..\\..\\Identity\\Identity.csproj",
+        "Path": "Identity\\Identity.csproj",
         "Action": "Start"
       }
     ]

@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Portfolio.DtoLayer.PortfolioDtos.PortfolioMainTitleDtos;
+using Portfolio.WebUI.Services.CvUploadServices;
 using Portfolio.WebUI.Services.ImageUploadServices.ImageUploadServices;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioMainTitleServices;
+using System.IO;
 
 namespace Portfolio.WebUI.Areas.Admin.Controllers
 {
@@ -13,10 +15,12 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
     {
         private readonly IPortfolioMainTitleService _portfolioMainTitleService;
         private readonly IImageUploadService _imageUploadService;
-        public PortfolioMainTitleController(IPortfolioMainTitleService portfolioMainTitleService, IImageUploadService imageUploadService)
+        private readonly ICvUploadService _cvUploadService;
+        public PortfolioMainTitleController(IPortfolioMainTitleService portfolioMainTitleService, IImageUploadService imageUploadService, ICvUploadService cvUploadService)
         {
             _portfolioMainTitleService = portfolioMainTitleService;
             _imageUploadService = imageUploadService;
+            _cvUploadService = cvUploadService;
         }
 
         [HttpGet]
@@ -31,13 +35,12 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
         [Route("UpdatePortfolioMainTitle/{id}")]
         public async Task<IActionResult> UpdatePortfolioMainTitle(int id)
         {
-
             var values = await _portfolioMainTitleService.GetPortfolioMainTitleByPortfolioMainTitleIdAsync(id);
             return View(values);
         }
 
         [HttpPost]
-        [Route("UpdatePortfolioMainTitle/{id}")]  
+        [Route("UpdatePortfolioMainTitle/{id}")]
         public async Task<IActionResult> UpdatePortfolioMainTitle(UpdatePortfolioMainTitleDto updatePortfolioMainTitleDto, IFormFile image, IFormFile cvFile)
         {
             if (image != null && image.Length > 0)
@@ -53,18 +56,18 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
                     updatePortfolioMainTitleDto.Image = existingData.Image;
                 }
             }
-
-            if (cvFile != null && cvFile.Length > 0)
+            if (cvFile != null)
             {
-                var uploadedCV = await _imageUploadService.UploadImageAsync(cvFile);
-                updatePortfolioMainTitleDto.CV = uploadedCV;
+                updatePortfolioMainTitleDto.Button1Href = await _cvUploadService.CreateCvFileAsync(cvFile);
             }
             else
             {
-                var existingData = await _portfolioMainTitleService.GetPortfolioMainTitleByPortfolioMainTitleIdAsync(updatePortfolioMainTitleDto.PortfolioMainTitleId);
-                if (existingData != null)
-                {
-                    updatePortfolioMainTitleDto.CV = existingData.CV;
+                var existingCvData = await _portfolioMainTitleService.GetPortfolioMainTitleByPortfolioMainTitleIdAsync(updatePortfolioMainTitleDto.PortfolioMainTitleId);
+                    {
+                    if(existingCvData != null)
+                    {
+                        updatePortfolioMainTitleDto.Button1Href = existingCvData.Button1Href;
+                    }
                 }
             }
 
@@ -72,17 +75,15 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
             return RedirectToAction("GetPortfolioMainTitle", "PortfolioMainTitle", new { area = "Admin" });
         }
 
-        [HttpGet]
-        [Route("DownloadCV/{id}")]
-        public async Task<IActionResult> DownloadCV(int id)
+        public async Task<IActionResult> DownloadCv(int id)
         {
             var data = await _portfolioMainTitleService.GetPortfolioMainTitleByPortfolioMainTitleIdAsync(id);
-            if (data == null || string.IsNullOrEmpty(data.CV))
+            if (data == null || string.IsNullOrEmpty(data.Button1Href))
             {
                 return NotFound("CV dosyası bulunamadı.");
             }
 
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", data.CV);
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", data.Button1Href);
             if (!System.IO.File.Exists(filePath))
             {
                 return NotFound("CV dosyası bulunamadı.");
@@ -97,6 +98,5 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
 
             return File(memory, "application/pdf", "CV.pdf");
         }
-
     }
 }

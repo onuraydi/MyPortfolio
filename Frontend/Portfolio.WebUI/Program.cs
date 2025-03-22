@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Portfolio.WebUI.Handlers;
+using Portfolio.WebUI.Services.CvUploadServices;
 using Portfolio.WebUI.Services.IdentityServices.Abstract;
 using Portfolio.WebUI.Services.IdentityServices.Concrete;
 using Portfolio.WebUI.Services.ImageUploadServices.ImageUploadServices;
@@ -31,12 +32,13 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IImageUploadService, ImageUploadService>();
+builder.Services.AddScoped<ICvUploadService, CvUploadService>();
 
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddCookie(JwtBearerDefaults.AuthenticationScheme, opt =>
 {
     opt.LoginPath = "/Login/Login";
-    opt.LogoutPath = "/deneme/index";
+    opt.LogoutPath = "/";
     opt.AccessDeniedPath = "/Login/Login";  // eriþimi olmayan sayfaya eriþmeye çalýþýrsa
     opt.Cookie.SameSite = SameSiteMode.Strict;
     opt.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
@@ -47,7 +49,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddCo
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, opt =>
 {
     opt.LoginPath = "/Login/Login";
-    opt.LogoutPath = "/deneme/index/";
+    opt.LogoutPath = "/";
     opt.ExpireTimeSpan = TimeSpan.FromDays(1);
     opt.Cookie.Name = "PortfolioCookie";
     opt.SlidingExpiration = true;
