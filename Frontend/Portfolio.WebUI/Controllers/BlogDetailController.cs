@@ -17,10 +17,9 @@ namespace Portfolio.WebUI.Controllers
             _portfolioBlogCommentService = portfolioBlogCommentService;
             _portfolioBlogService = portfolioBlogService;
         }
-        public async Task<IActionResult> GetAllBlog()
+        public IActionResult GetAllBlog(int page = 1)
         {
-            //var values = await _portfolioBlogService.GetAllPortfolioBlogAsync();
-            //return View(values);
+            ViewData["page"] = page;
             return View();
         }
         public async Task<IActionResult> GetBlogDetail(int id,BlogsViewModel blogsView)
