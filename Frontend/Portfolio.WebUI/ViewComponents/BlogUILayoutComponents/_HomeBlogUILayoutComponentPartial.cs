@@ -14,8 +14,12 @@ namespace Portfolio.WebUI.ViewComponents.BlogUILayoutComponents
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            int id = Convert.ToInt32(ViewData["id"]);
-            var values = await _portfolioBlogService.GetPortfolioBlogByPortfolioBlogIdAsync(id);
+            var id = ViewData["id"];
+            if (id == null)
+            {
+                return View();
+            }
+            var values = await _portfolioBlogService.GetPortfolioBlogByPortfolioBlogIdAsync(Convert.ToInt32(id));
             return View(values);
         }
     }
