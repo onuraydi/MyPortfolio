@@ -1,10 +1,11 @@
-﻿
+﻿@await Component.InvokeAsync("_HomeBlogUILayoutComponentPartial")
 <section class="ftco-section">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 ftco-animate">
 
-
+                @await Component.InvokeAsync("_BlogGetAllBlogContentBlogUILayoutComponentPartial")    
+            
                 @await Component.InvokeAsync("_BlogContentContentBlogUILayoutComponentPartial")
 
 
@@ -23,13 +24,13 @@
             </div> <!-- Arama kısmı -->
             <div class="col-lg-4 sidebar ftco-animate">
                 @await Component.InvokeAsync("_BlogSearchBarContentBlogUILayoutComponentPartial")
-                
+
 
                 @await Component.InvokeAsync("_BlogCategoryContentBlogUILayoutComponentPartial")
 
 
                 @await Component.InvokeAsync("_BlogOtherBlogContentBlogUILayoutComponentPartial")
-                
+
                 @await Component.InvokeAsync("_BlogBlogTagsContentBlogUILayoutComponentPartial")
 
                 @await Component.InvokeAsync("_BlogSubParagraphContentBlogUILayoutComponentPartial")

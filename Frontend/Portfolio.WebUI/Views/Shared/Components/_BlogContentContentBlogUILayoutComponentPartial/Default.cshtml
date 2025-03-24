@@ -14,19 +14,24 @@
     }
 </style>
 
-<div>
-    <h2 class="mb-3">@Model.Title</h2>
-    <div id="blog-content" class="content">@Html.Raw(Model.Content)</div>
-        
-    
-    <div class="tag-widget post-tag-container mb-5 mt-5">
-        <div class="tagcloud">
-            @foreach (var item in Model.PortfolioBlogTags)
-            {
-                <a href="#" class="tag-cloud-link">@item.TagName</a>
-            }
+@if (Model != null)
+{
+    <div>
+        <h2 class="mb-3">@Model.Title</h2>
+        <div id="blog-content" class="content">@Html.Raw(Model.Content)</div>
+
+
+        <div class="tag-widget post-tag-container mb-5 mt-5">
+            <div class="tagcloud">
+                @foreach (var item in Model.PortfolioBlogTags)
+                {
+                    <a href="#" class="tag-cloud-link">@item.TagName</a>
+                }
+            </div>
         </div>
     </div>
-</div>
+}
+
+
 
 @*@await Html.PartialAsync("~/Views/Shared/Components/_BlogAllCommentsContentBlogUILayoutComponentPartial/Default.cshtml",new {id = ViewBag.Blogid})*@

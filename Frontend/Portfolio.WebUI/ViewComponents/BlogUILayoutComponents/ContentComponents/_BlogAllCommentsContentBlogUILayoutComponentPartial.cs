@@ -16,7 +16,7 @@ namespace Portfolio.WebUI.ViewComponents.BlogUILayoutComponents.ContentComponent
         {
             var id = ViewData["id"];
             var values = await _portfolioBlogCommentService.GetPortfolioBlogCommentByPortfolioBlogIdAsync(Convert.ToInt32(id));
-            return View();
+            return View(values);
         }
     }
 }

@@ -250,6 +250,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/BlogDetail/GetAllBlog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ0RldGFpbFxHZXRBbGxCbG9nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/BlogDetail/GetBlogDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ0RldGFpbFxHZXRCbG9nRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -300,6 +304,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_BlogContentContentBlogUILayoutComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Jsb2dDb250ZW50Q29udGVudEJsb2dVSUxheW91dENvbXBvbmVudFBhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_BlogGetAllBlogContentBlogUILayoutComponentPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Jsb2dHZXRBbGxCbG9nQ29udGVudEJsb2dVSUxheW91dENvbXBvbmVudFBhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_BlogLeaveCommentContentBlogUILayoutComponentPartial/Default.cshtml]
