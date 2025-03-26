@@ -385,9 +385,19 @@
   },
   {
     "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioBlogsController",
+    "Method": "GetSuggestedPortfolioBlog",
+    "RelativePath": "api/PortfolioBlogs/GetSuggestedPortfolioBlog",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioBlogsController",
     "Method": "MarkSuggested",
-    "RelativePath": "api/PortfolioBlogs/{id}",
-    "HttpMethod": "PUT",
+    "RelativePath": "api/PortfolioBlogs/MarkSuggested/{id}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [

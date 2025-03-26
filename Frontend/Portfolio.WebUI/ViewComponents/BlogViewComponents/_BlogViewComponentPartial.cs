@@ -14,7 +14,7 @@ namespace Portfolio.WebUI.ViewComponents.BlogViewComponents
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            var values = await _portfolioBlogService.GetAllPortfolioBlogAsync();
+            var values = await _portfolioBlogService.GetSuggestedPortfolioBlog();
             return View(values);
         }
     }

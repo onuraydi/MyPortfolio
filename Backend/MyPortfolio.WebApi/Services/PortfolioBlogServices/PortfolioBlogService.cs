@@ -96,6 +96,12 @@ namespace MyPortfolio.WebApi.Services.PortfolioBlogServices
             return _mapper.Map<GetPortfolioBlogByPortfolioBlogIdDto>(values);
         }
 
+        public async Task<List<GetAllPortfolioBlogDto>> GetSuggestedPortfolioBlog()
+        {
+            var values = await _context.portfolioBlogs.Where(x => x.isSuggested == true).ToListAsync();
+            return _mapper.Map<List<GetAllPortfolioBlogDto>>(values);
+        }
+
         public async Task MarkSuggested(int id)
         {
             var values = await _context.portfolioBlogs.Where(x => x.PortfolioBlogId == id).FirstOrDefaultAsync();

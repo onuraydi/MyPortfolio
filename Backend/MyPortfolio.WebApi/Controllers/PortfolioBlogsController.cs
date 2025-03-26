@@ -41,11 +41,19 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
-        [HttpPut("{id}")]
+        [HttpGet("MarkSuggested/{id}")]
         public async Task<IActionResult> MarkSuggested(int id)
         {
             await _portfolioBlogService.MarkSuggested(id);
             return Ok("Önerilme durumu değiştirildi");
+        }
+
+        [AllowAnonymous]
+        [HttpGet("GetSuggestedPortfolioBlog")]
+        public async Task<IActionResult> GetSuggestedPortfolioBlog()
+        {
+            var values = await _portfolioBlogService.GetSuggestedPortfolioBlog();
+            return Ok(values);
         }
 
         [HttpPut]

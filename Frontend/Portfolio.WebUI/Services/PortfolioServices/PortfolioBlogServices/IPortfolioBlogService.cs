@@ -8,6 +8,8 @@ namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogServices
         Task<CreatePortfolioBlogDto> CreatePortfolioBlogAsync(CreatePortfolioBlogDto createPortfolioBlogDto);
         Task UpdatePortfolioBlogAsync(UpdatePortfolioBlogDto updatePortfolioBlogDto);
         Task DeletePortfolioBlogAsync(int id);
+        Task MarkSuggested(int id);
         Task<GetPortfolioBlogByPortfolioBlogIdDto> GetPortfolioBlogByPortfolioBlogIdAsync(int id);
+        Task<List<GetAllPortfolioBlogDto>> GetSuggestedPortfolioBlog();
     }
 }

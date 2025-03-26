@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Portfolio.DtoLayer.PortfolioDtos.PortfolioBlogDtos;
 using Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogTagServices;
+using System.Net.Http.Json;
 
 namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogServices
 {
@@ -25,6 +26,7 @@ namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogServices
                     Content = createPortfolioBlogDto.Content,
                     CoverImage = createPortfolioBlogDto.CoverImage,
                     PublishDate = createPortfolioBlogDto.PublishDate,
+                    isSuggested = createPortfolioBlogDto.isSuggested,
                     TagIds = createPortfolioBlogDto.TagIds,
                     CategoryIds = createPortfolioBlogDto.CategoryIds
                 });
@@ -64,6 +66,19 @@ namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogServices
             return values;
         }
 
+        public async Task<List<GetAllPortfolioBlogDto>> GetSuggestedPortfolioBlog()
+        {
+            var responseMessage = await _httpClient.GetAsync("portfolioblogs/GetSuggestedPortfolioBlog");
+            var jsonData = await responseMessage.Content.ReadAsStringAsync();
+            var values = JsonConvert.DeserializeObject<List<GetAllPortfolioBlogDto>>(jsonData);
+            return values;
+        }
+
+        public async Task MarkSuggested(int id)
+        {
+            await _httpClient.GetAsync("portfolioblogs/markSuggested/" + id);
+        }
+
         public async Task UpdatePortfolioBlogAsync(UpdatePortfolioBlogDto updatePortfolioBlogDto)
         {
             try
@@ -76,6 +91,7 @@ namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogServices
                     Content = updatePortfolioBlogDto.Content,
                     CoverImage = updatePortfolioBlogDto.CoverImage,
                     PublishDate = updatePortfolioBlogDto.PublishDate,
+                    isSuggested = updatePortfolioBlogDto.isSuggested,
                     TagIds = updatePortfolioBlogDto.TagIds,
                     CategoryIds = updatePortfolioBlogDto.CategoryIds
                 });

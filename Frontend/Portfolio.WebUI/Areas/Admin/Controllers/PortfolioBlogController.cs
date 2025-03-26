@@ -96,6 +96,14 @@ namespace Portfolio.WebUI.Areas.Admin.Controllers
             }
         }
 
+        [HttpPost("{id}/MarkSugessted")]
+        [Route("MarkSugessted/{id}")]
+        public async Task<IActionResult> MarkSuggested(int id)
+        {
+            await _portfolioBlogService.MarkSuggested(id);
+            return RedirectToAction("GetAllPortfolioBlog", "PortfolioBlog", new { area = "Admin" });
+        }
+
         [HttpGet]
         [Route("UpdatePortfolioBlog/{id}")]
         public async Task<IActionResult> UpdatePortfolioBlog(int id)

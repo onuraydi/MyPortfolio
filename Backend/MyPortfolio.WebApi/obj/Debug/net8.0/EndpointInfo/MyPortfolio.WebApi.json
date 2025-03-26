@@ -563,8 +563,10 @@
             "description": "Success"
           }
         }
-      },
-      "put": {
+      }
+    },
+    "/api/PortfolioBlogs/MarkSuggested/{id}": {
+      "get": {
         "tags": [
           "PortfolioBlogs"
         ],
@@ -578,6 +580,18 @@
               "format": "int32"
             }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/PortfolioBlogs/GetSuggestedPortfolioBlog": {
+      "get": {
+        "tags": [
+          "PortfolioBlogs"
         ],
         "responses": {
           "200": {
