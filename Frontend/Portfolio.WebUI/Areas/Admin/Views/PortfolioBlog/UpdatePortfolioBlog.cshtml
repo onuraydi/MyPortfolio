@@ -290,10 +290,8 @@
                 }
             });
         });
-    });
 
-    // Quill JS başlatma
-    document.addEventListener("DOMContentLoaded", function () {
+        // Quill JS başlatma
         const fontSizeArr = ['8px', '9px', '10px', '12px', '14px', '16px', '20px', '24px', '32px', '42px', '54px', '68px', '84px', '98px'];
         const fontFamilyArr = ['Arial', 'Courier New', 'Georgia', 'Times New Roman', 'Verdana', 'Trebuchet MS', 'Comic Sans MS', 'Impact', 'Tahoma', 'Helvetica'];
 
@@ -344,5 +342,14 @@
         
         // Quill editörüne içeriği aktar
         quill.root.innerHTML = contentHTML;
+
+        // Resim yükleme işlemi
+        quill.getModule('toolbar').addHandler('image', () => {
+            const url = prompt('Resim URL\'sini girin:');
+            if (url) {
+                const range = quill.getSelection();
+                quill.insertEmbed(range.index, 'image', url, Quill.sources.USER);
+            }
+        });
     });
 </script>
