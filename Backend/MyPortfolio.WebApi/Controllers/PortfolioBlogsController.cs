@@ -40,7 +40,14 @@ namespace MyPortfolio.WebApi.Controllers
             var values = await _portfolioBlogService.CreatePortfolioBlogAsync(createPortfolioBlogDto);
             return Ok(values);
         }
-        
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> MarkSuggested(int id)
+        {
+            await _portfolioBlogService.MarkSuggested(id);
+            return Ok("Önerilme durumu değiştirildi");
+        }
+
         [HttpPut]
         public async Task<IActionResult> UpdatePortfolioBlog(UpdatePortfolioBlogDto updatePortfolioBlogDto)
         {

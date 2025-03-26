@@ -9,5 +9,6 @@ namespace MyPortfolio.WebApi.Services.PortfolioBlogServices
         Task UpdatePortfolioBlogAsync(UpdatePortfolioBlogDto updatePortfolioBlogDto);
         Task DeletePortfolioBlogAsync(int id);
         Task<GetPortfolioBlogByPortfolioBlogIdDto> GetPortfolioBlogByPortfolioBlogIdAsync(int id);
+        Task MarkSuggested(int id);
     }
 }

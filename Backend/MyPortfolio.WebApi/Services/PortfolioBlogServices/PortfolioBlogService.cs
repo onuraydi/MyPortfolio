@@ -96,6 +96,20 @@ namespace MyPortfolio.WebApi.Services.PortfolioBlogServices
             return _mapper.Map<GetPortfolioBlogByPortfolioBlogIdDto>(values);
         }
 
+        public async Task MarkSuggested(int id)
+        {
+            var values = await _context.portfolioBlogs.Where(x => x.PortfolioBlogId == id).FirstOrDefaultAsync();
+            if(values.isSuggested == false)
+            {
+                values.isSuggested = true;
+            }
+            else
+            {
+                values.isSuggested = false;
+            }
+            await _context.SaveChangesAsync();
+        }
+
         public async Task UpdatePortfolioBlogAsync(UpdatePortfolioBlogDto updatePortfolioBlogDto)
         {
             try
@@ -144,6 +158,7 @@ namespace MyPortfolio.WebApi.Services.PortfolioBlogServices
                 existingBlog.Content = updatePortfolioBlogDto.Content;
                 existingBlog.CoverImage = updatePortfolioBlogDto.CoverImage;
                 existingBlog.PublishDate = updatePortfolioBlogDto.PublishDate;
+                existingBlog.isSuggested = updatePortfolioBlogDto.isSuggested;
 
                 await _context.SaveChangesAsync();
             }

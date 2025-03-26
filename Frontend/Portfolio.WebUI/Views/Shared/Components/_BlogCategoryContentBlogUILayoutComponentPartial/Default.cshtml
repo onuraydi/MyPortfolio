@@ -1,11 +1,52 @@
-﻿<!--Blog Kategorileri-->
-@model List<GetBlogCategoryDto>
+﻿@model List<GetBlogCategoryDto>
 <div class="sidebar-box ftco-animate">
-    <h3 class="heading-sidebar">Categories</h3>
-    <ul class="categories">
-        @foreach (var item in Model)
+    <h3 class="heading-sidebar">Kategoriler</h3>
+    <ul class="categories" id="categoriesList">
+        @foreach (var item in Model.Take(5))
         {
-            <li><a href="#">@item.CategoryName <span>sayı ve link gelecek</span></a></li>
+            <li>
+                <a href="#"> @item.CategoryName <span>@Model.Count(x => x.CategoryName == item.CategoryName)</span></a>
+            </li>
         }
     </ul>
+    <p id="showMoreCategories" style="cursor:pointer;">Daha Fazla Kategori Göster</p>
 </div>
+
+<style>
+    .categories {
+        transition: max-height 1s linear;
+        max-height: 220px;
+        overflow: hidden;
+    }
+</style>
+
+<script>
+    var allCategories = @Html.Raw(Json.Serialize(Model));
+    var currentCount = 5;
+    var isExpanded = false;
+
+    document.getElementById('showMoreCategories').onclick = function() {
+        var categoriesList = document.getElementById('categoriesList');
+        if (!isExpanded) {
+            for (var i = currentCount; i < allCategories.length; i++) {
+                var li = document.createElement('li');
+                li.innerHTML = '<a href="#">' + allCategories[i].categoryName + ' <span>' + allCategories.filter(x => x.categoryName === allCategories[i].categoryName).length + '</span></a>';
+                categoriesList.appendChild(li);
+            }
+            currentCount = allCategories.length;
+            this.innerText = 'Daha Az';
+            categoriesList.style.maxHeight = "1000px";
+        } else {
+            categoriesList.style.maxHeight = "220px";
+            setTimeout(function() {
+                var totalItems = categoriesList.children.length;
+                for (var i = totalItems - 1; i >= 5; i--) {
+                    categoriesList.removeChild(categoriesList.children[i]);
+                }
+                currentCount = 5;
+                document.getElementById('showMoreCategories').innerText = 'Daha Fazla';
+            }, 1000); // match this duration with the CSS transition duration
+        }
+        isExpanded = !isExpanded;
+    };
+</script>

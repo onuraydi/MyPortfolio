@@ -291,6 +291,9 @@ namespace MyPortfolio.WebApi.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("isSuggested")
+                        .HasColumnType("bit");
+
                     b.HasKey("PortfolioBlogId");
 
                     b.ToTable("portfolioBlogs");

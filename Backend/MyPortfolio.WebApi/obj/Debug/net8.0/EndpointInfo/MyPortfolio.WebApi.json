@@ -563,6 +563,27 @@
             "description": "Success"
           }
         }
+      },
+      "put": {
+        "tags": [
+          "PortfolioBlogs"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
       }
     },
     "/api/PortfolioBlogTags": {
@@ -2226,6 +2247,9 @@
             "type": "string",
             "format": "date-time"
           },
+          "isSuggested": {
+            "type": "boolean"
+          },
           "tagIds": {
             "type": "array",
             "items": {
@@ -2641,6 +2665,9 @@
           "publishDate": {
             "type": "string",
             "format": "date-time"
+          },
+          "isSuggested": {
+            "type": "boolean"
           },
           "tagIds": {
             "type": "array",

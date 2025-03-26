@@ -10,6 +10,7 @@ namespace MyPortfolio.WebApi.Dtos.PortfolioBlogDtos
         public string Content { get; set; }
         public string CoverImage { get; set; }
         public DateTime PublishDate { get; set; }
+        public bool isSuggested { get; set; } = false;
         public List<int> TagIds { get; set; } = new();
         public List<int> CategoryIds { get; set; } = new();
     }

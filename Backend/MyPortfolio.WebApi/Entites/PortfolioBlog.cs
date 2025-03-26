@@ -8,7 +8,7 @@
         public string Content { get; set; }
         public string CoverImage { get; set; }
         public DateTime PublishDate { get; set; }
-
+        public bool isSuggested { get; set; }
         public virtual ICollection<PortfolioBlogTag> PortfolioBlogTags { get; set; } = new List<PortfolioBlogTag>();
 
         public virtual ICollection<BlogCategory> PortfolioBlogCategories { get; set; } = new List<BlogCategory>();

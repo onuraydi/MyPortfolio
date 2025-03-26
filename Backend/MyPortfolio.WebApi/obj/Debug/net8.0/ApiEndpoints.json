@@ -384,6 +384,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioBlogsController",
+    "Method": "MarkSuggested",
+    "RelativePath": "api/PortfolioBlogs/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioBlogTagsController",
     "Method": "GetAllPortfolioBlogTag",
     "RelativePath": "api/PortfolioBlogTags",
