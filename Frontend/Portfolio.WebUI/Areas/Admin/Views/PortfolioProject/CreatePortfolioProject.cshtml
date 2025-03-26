@@ -21,7 +21,7 @@
             <div class="form-group">
                 <label for="Title">Kapak Resmi</label>
                 <div class="input-group">
-                    <input type="file" id="image" name = "image" asp-for="Image" class="form-control file-upload-default"/>
+                    <input type="file" id="image" name="image" asp-for="Image" class="form-control file-upload-default" />
                     <input type="text" class="form-control file-upload-info" disabled placeholder="Projeye ait kapak Resmi" />
                     <span class="input-group-append">
                         <button class="btn btn-primary" type="button" onclick="document.getElementById('image').click()">Yükle</button>
@@ -35,6 +35,10 @@
             <div class="form-group">
                 <label for="Title">Projeye Bitiş Tarihi</label>
                 <input type="text" class="form-control" asp-for="ProjectFinishDate" placeholder="Projeye Bitiş Tarihi" />
+            </div>
+            <div class="form-group">
+                <label for="Title">Projeye Linki</label>
+                <input type="text" class="form-control" asp-for="ProjectHref" placeholder="Projeye ait link" />
             </div>
             <div class="form-group">
                 <label for="Title">Proje Açıklaması</label>

@@ -2453,6 +2453,10 @@
             "type": "string",
             "nullable": true
           },
+          "projectHref": {
+            "type": "string",
+            "nullable": true
+          },
           "projectImages": {
             "type": "array",
             "items": {
@@ -2881,6 +2885,10 @@
             "nullable": true
           },
           "projectFinishDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "projectHref": {
             "type": "string",
             "nullable": true
           },

@@ -15,6 +15,7 @@ namespace Portfolio.DtoLayer.PortfolioDtos.PortfolioProjectDtos
         public string ProjectDescription { get; set; }
         public string ProjectStartDate { get; set; }
         public string ProjectFinishDate { get; set; }
+        public string ProjectHref { get; set; }
         public List<CreateProjectImageDto> projectImages { get; set; } = new List<CreateProjectImageDto>();
     }
 }
