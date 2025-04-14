@@ -27,7 +27,9 @@ namespace MyPortfolio.WebApi.Controllers
             return Ok(values);
         }
 
+
         [HttpGet("{id}")]
+        [AllowAnonymous]
         public async Task<IActionResult> GetBlogCategoryById(int id)
         {
             var values = await _blogCategoryService.GetBlogCategoryByIdAsync(id);

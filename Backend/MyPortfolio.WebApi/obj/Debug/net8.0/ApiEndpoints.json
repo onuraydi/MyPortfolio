@@ -385,6 +385,38 @@
   },
   {
     "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioBlogsController",
+    "Method": "GetBlogByCategory",
+    "RelativePath": "api/PortfolioBlogs/GetBlogByCategory/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioBlogsController",
+    "Method": "GetblogByTag",
+    "RelativePath": "api/PortfolioBlogs/GetBlogByTag/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyPortfolio.WebApi.Controllers.PortfolioBlogsController",
     "Method": "GetSuggestedPortfolioBlog",
     "RelativePath": "api/PortfolioBlogs/GetSuggestedPortfolioBlog",
     "HttpMethod": "GET",

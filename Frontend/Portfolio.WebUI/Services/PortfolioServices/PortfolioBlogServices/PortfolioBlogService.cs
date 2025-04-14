@@ -59,6 +59,22 @@ namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogServices
             return values;
         }
 
+        public async Task<List<GetAllPortfolioBlogDto>> GetBlogByCategory(int id)
+        {
+            var responseMessage = await _httpClient.GetAsync("portfolioblogs/getblogbycategory/" + id);
+            var jsonData = await responseMessage.Content.ReadAsStringAsync();
+            var values = JsonConvert.DeserializeObject<List<GetAllPortfolioBlogDto>>(jsonData);
+            return values;
+        }
+
+        public async Task<List<GetAllPortfolioBlogDto>> GetBlogByTag(int id)
+        {
+            var responseMessage = await _httpClient.GetAsync("portfolioblogs/getblogbytag/" + id);
+            var jsonData = await responseMessage.Content.ReadAsStringAsync();
+            var values = JsonConvert.DeserializeObject<List<GetAllPortfolioBlogDto>>(jsonData);
+            return values;
+        }
+
         public async Task<GetPortfolioBlogByPortfolioBlogIdDto> GetPortfolioBlogByPortfolioBlogIdAsync(int id)
         {
             var responseMessage = await _httpClient.GetAsync("portfolioblogs/" + id);

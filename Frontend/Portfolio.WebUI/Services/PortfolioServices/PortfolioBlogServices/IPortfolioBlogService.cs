@@ -11,5 +11,7 @@ namespace Portfolio.WebUI.Services.PortfolioServices.PortfolioBlogServices
         Task MarkSuggested(int id);
         Task<GetPortfolioBlogByPortfolioBlogIdDto> GetPortfolioBlogByPortfolioBlogIdAsync(int id);
         Task<List<GetAllPortfolioBlogDto>> GetSuggestedPortfolioBlog();
+        Task<List<GetAllPortfolioBlogDto>> GetBlogByCategory(int id);
+        Task<List<GetAllPortfolioBlogDto>> GetBlogByTag(int id);
     }
 }

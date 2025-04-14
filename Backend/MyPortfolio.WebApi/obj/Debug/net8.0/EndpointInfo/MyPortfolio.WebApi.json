@@ -565,6 +565,52 @@
         }
       }
     },
+    "/api/PortfolioBlogs/GetBlogByCategory/{id}": {
+      "get": {
+        "tags": [
+          "PortfolioBlogs"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/PortfolioBlogs/GetBlogByTag/{id}": {
+      "get": {
+        "tags": [
+          "PortfolioBlogs"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/PortfolioBlogs/MarkSuggested/{id}": {
       "get": {
         "tags": [

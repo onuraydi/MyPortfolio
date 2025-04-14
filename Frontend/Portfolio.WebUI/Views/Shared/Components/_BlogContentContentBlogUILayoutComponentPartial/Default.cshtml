@@ -25,7 +25,7 @@
             <div class="tagcloud">
                 @foreach (var item in Model.PortfolioBlogTags)
                 {
-                    <a href="#" class="tag-cloud-link">@item.TagName</a>
+                    <a href="/BlogDetail/GetBlogByTag/@item.PortfolioBlogTagId" class="tag-cloud-link">@item.TagName</a>
                 }
             </div>
         </div>

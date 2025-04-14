@@ -39,6 +39,7 @@ namespace MyPortfolio.WebApi.Services.BlogCategoryServices
             return _mapper.Map<List<GetBlogCategoryDto>>(values);
         }
 
+
         public async Task<GetBlogCategoryDto> GetBlogCategoryByIdAsync(int id)
         {
             var values = await _context.BlogCategories.FindAsync(id);

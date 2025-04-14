@@ -254,6 +254,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ0RldGFpbFxHZXRBbGxCbG9nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/BlogDetail/GetBlogByCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ0RldGFpbFxHZXRCbG9nQnlDYXRlZ29yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/BlogDetail/GetBlogByTag.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ0RldGFpbFxHZXRCbG9nQnlUYWcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/BlogDetail/GetBlogDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ0RldGFpbFxHZXRCbG9nRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -308,6 +316,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_BlogGetAllBlogContentBlogUILayoutComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Jsb2dHZXRBbGxCbG9nQ29udGVudEJsb2dVSUxheW91dENvbXBvbmVudFBhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_BlogGetBlogByCategoryContentBlogUILayoutComponentPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Jsb2dHZXRCbG9nQnlDYXRlZ29yeUNvbnRlbnRCbG9nVUlMYXlvdXRDb21wb25lbnRQYXJ0aWFsXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_BlogGetBlogByTagContentBlogUILayoutComponentPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Jsb2dHZXRCbG9nQnlUYWdDb250ZW50QmxvZ1VJTGF5b3V0Q29tcG9uZW50UGFydGlhbFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ONUR/Desktop/CurrentProjects/OnurAydiPortfolio/Frontend/Portfolio.WebUI/Views/Shared/Components/_BlogLeaveCommentContentBlogUILayoutComponentPartial/Default.cshtml]

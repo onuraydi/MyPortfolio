@@ -90,6 +90,18 @@ namespace MyPortfolio.WebApi.Services.PortfolioBlogServices
             }
         }
 
+        public async Task<List<GetAllPortfolioBlogDto>> GetBlogByCategory(int id)
+        {
+            var values = await _context.BlogCategories.Where(x => x.BlogCategoryId == id).SelectMany(y => y.PortfolioBlogs).Include(a => a.PortfolioBlogCategories).Include(b => b.PortfolioBlogTags).ToListAsync();
+            return _mapper.Map<List<GetAllPortfolioBlogDto>>(values);
+        }
+
+        public async Task<List<GetAllPortfolioBlogDto>> GetBlogByTag(int id)
+        {
+            var values = await _context.PortfolioBlogTags.Where(x => x.PortfolioBlogTagId == id).SelectMany(y => y.PortfolioBlogs).Include(a => a.PortfolioBlogTags).Include(b => b.PortfolioBlogCategories).ToListAsync();
+            return _mapper.Map<List<GetAllPortfolioBlogDto>>(values);
+        }
+
         public async Task<GetPortfolioBlogByPortfolioBlogIdDto> GetPortfolioBlogByPortfolioBlogIdAsync(int id)
         {
             var values = await _context.portfolioBlogs.Include(x=> x.PortfolioBlogTags).Include(y => y.PortfolioBlogCategories).Where(x => x.PortfolioBlogId == id).FirstOrDefaultAsync();

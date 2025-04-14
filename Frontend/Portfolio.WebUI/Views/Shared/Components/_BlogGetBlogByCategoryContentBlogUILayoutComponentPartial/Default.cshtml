@@ -1,0 +1,61 @@
+﻿@model List<GetAllPortfolioBlogDto>
+
+<section class="ftco-section" id="blog-section" style="padding-top: 0;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <h2 class="mb-3">@ViewBag.CategoryName</h2>
+            </div>
+        </div>
+        <div class="row d-flex">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="blog-entry justify-content-end">
+                        <a href="/BlogDetail/GetBlogDetail/@item.PortfolioBlogId" class="block-20" style="background-image: url('@Url.Content(item.CoverImage)');">
+                        </a>
+                        <div class="text mt-3 float-right d-block">
+                            <div class="d-flex align-items-center mb-3 meta">
+                                <p class="mb-0">
+                                    <span class="mr-2">@item.PublishDate.ToString("dd MMMM yyyy")</span>
+                                    <a class="mr-2">Onur Aydı</a>
+                                    <a class="meta-chat"><span class="icon-chat"></span> 3</a>
+                                </p>
+                            </div>
+                            <h3 class="heading"><a href="/BlogDetail/GetBlogDetail/@item.PortfolioBlogId">@item.Title</a></h3>
+                            <p>@item.SubContent</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        @if (ViewBag.categoryTotalPage > 1)
+        {
+            <div class="row mt-3">
+                <div class="col text-center">
+                    <div class="block-27">
+                        <ul>
+                            @if (ViewBag.categoryCurrentPage > 1)
+                            {
+                                <li><a href="/BlogDetail/GetBlogByCategory/@ViewBag.CategoryId/?page=@(ViewBag.categoryCurrentPage - 1)" style="background-color: #000; color: #f8f9fa;">&lt;</a></li>
+                            }
+
+                            @for (int i = 1; i <= ViewBag.categoryTotalPage; i++)
+                            {
+                                <li class="@(i == ViewBag.categoryCurrentPage ? "active" : "")">
+                                    <a href="/BlogDetail/GetBlogByCategory/@ViewBag.CategoryId/?page=@i" style="@(i == ViewBag.categoryCurrentPage ? "background-color: white; color: #000;" : "background-color: #000; color: #f8f9fa;")">@i</a>
+                                </li>
+                            }
+
+                            @if (ViewBag.categoryCurrentPage < ViewBag.categoryTotalPage)
+                            {
+                                <li><a href="/BlogDetail/GetBlogByCategory/@ViewBag.CategoryId/?page=@(ViewBag.categoryCurrentPage + 1)" style="background-color: #000; color: #f8f9fa;">&gt;</a></li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>

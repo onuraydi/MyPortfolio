@@ -7,13 +7,13 @@
     @foreach (var item in Model)
     {
         <div class="block-21 mb-4 d-flex">
-            <a class="blog-img mr-4" style="background-image: url(@item.CoverImage);"></a>
+            <a href="/BlogDetail/GetBlogDetail/@item.PortfolioBlogId" class="blog-img mr-4" style="background-image: url(@item.CoverImage);"></a>
             <div class="text">
                 <h3 class="heading"><a href="#">@item.Title</a></h3>
                 <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> @item.PublishDate.ToString("dd MMMM yyyy")</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Onur Aydı</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 3</a></div>
+                    <div><a href="/BlogDetail/GetBlogDetail/@item.PortfolioBlogId"><span class="icon-calendar"></span> @item.PublishDate.ToString("dd MMMM yyyy")</a></div>
+                    <div><a href="/BlogDetail/GetBlogDetail/@item.PortfolioBlogId"><span class="icon-person"></span> Onur Aydı</a></div>
+                    <div><a href="/BlogDetail/GetBlogDetail/@item.PortfolioBlogId"><span class="icon-chat"></span> 3</a></div>
                 </div>
             </div>
         </div>

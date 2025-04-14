@@ -33,6 +33,22 @@ namespace MyPortfolio.WebApi.Controllers
             var values = await _portfolioBlogService.GetPortfolioBlogByPortfolioBlogIdAsync(id);
             return Ok(values);
         }
+
+        [HttpGet("GetBlogByCategory/{id}")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetBlogByCategory(int id)
+        {
+            var values = await _portfolioBlogService.GetBlogByCategory(id);
+            return Ok(values);
+        }
+
+        [HttpGet("GetBlogByTag/{id}")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetblogByTag(int id)
+        {
+            var values = await _portfolioBlogService.GetBlogByTag(id);
+            return Ok(values);
+        }
         
         [HttpPost]
         public async Task<IActionResult> CreatePortfolioBlog([FromBody] CreatePortfolioBlogDto createPortfolioBlogDto)

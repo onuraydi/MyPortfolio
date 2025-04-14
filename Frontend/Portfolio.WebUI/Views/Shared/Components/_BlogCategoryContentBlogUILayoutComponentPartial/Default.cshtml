@@ -5,7 +5,7 @@
         @foreach (var item in Model.Take(5))
         {
             <li>
-                <a href="#"> @item.CategoryName <span>@Model.Count(x => x.CategoryName == item.CategoryName)</span></a>
+                <a href="/BlogDetail/GetBlogByCategory/@item.BlogCategoryId"> @item.CategoryName <span>@Model.Count(x => x.CategoryName == item.CategoryName)</span></a>
             </li>
         }
     </ul>
@@ -30,7 +30,10 @@
         if (!isExpanded) {
             for (var i = currentCount; i < allCategories.length; i++) {
                 var li = document.createElement('li');
-                li.innerHTML = '<a href="#">' + allCategories[i].categoryName + ' <span>' + allCategories.filter(x => x.categoryName === allCategories[i].categoryName).length + '</span></a>';
+                li.innerHTML = '<a href="/BlogDetail/GetBlogByCategory/' + allCategories[i].blogCategoryId + '">' + 
+                allCategories[i].categoryName + 
+                ' <span>' + allCategories.filter(x => x.categoryName === allCategories[i].categoryName).length + '</span></a>';
+
                 categoriesList.appendChild(li);
             }
             currentCount = allCategories.length;

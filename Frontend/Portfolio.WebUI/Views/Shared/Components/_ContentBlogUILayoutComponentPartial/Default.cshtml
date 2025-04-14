@@ -5,7 +5,7 @@
         <div class="row">
             @{
                 var currentUrl = Context.Request.Path.Value;
-                if (currentUrl.Contains("/blogdetail/GetAllBlog",StringComparison.OrdinalIgnoreCase))
+                if (currentUrl.Contains("/blogdetail/GetAllBlog/", StringComparison.OrdinalIgnoreCase))
                 {
                     <div class="col-lg-8 ftco-animate">
                         @await Component.InvokeAsync("_BlogGetAllBlogContentBlogUILayoutComponentPartial")
@@ -19,7 +19,38 @@
                         @await Component.InvokeAsync("_BlogSubParagraphContentBlogUILayoutComponentPartial")
                     </div>
                 }
-                else if (currentUrl.Contains("/blogdetail/GetBlogDetail/",StringComparison.OrdinalIgnoreCase))
+
+                else if (currentUrl.Contains("/blogdetail/GetBlogByCategory/", StringComparison.OrdinalIgnoreCase))
+                {
+                    <div class="col-lg-8 ftco-animate">
+                        @await Component.InvokeAsync("_BlogGetBlogByCategoryContentBlogUILayoutComponentPartial")
+                    </div>
+
+                    <div class="col-lg-4 sidebar ftco-animate">
+                        @await Component.InvokeAsync("_BlogSearchBarContentBlogUILayoutComponentPartial")
+                        @await Component.InvokeAsync("_BlogCategoryContentBlogUILayoutComponentPartial")
+                        @await Component.InvokeAsync("_BlogOtherBlogContentBlogUILayoutComponentPartial")
+                        @await Component.InvokeAsync("_BlogBlogTagsContentBlogUILayoutComponentPartial")
+                        @await Component.InvokeAsync("_BlogSubParagraphContentBlogUILayoutComponentPartial")
+                    </div>
+                }
+
+                else if (currentUrl.Contains("/blogdetail/GetBlogByTag/", StringComparison.OrdinalIgnoreCase))
+                {
+                    <div class="col-lg-8 ftco-animate">
+                        @await Component.InvokeAsync("_BlogGetBlogByTagContentBlogUILayoutComponentPartial")
+                    </div>
+
+                    <div class="col-lg-4 sidebar ftco-animate">
+                        @await Component.InvokeAsync("_BlogSearchBarContentBlogUILayoutComponentPartial")
+                        @await Component.InvokeAsync("_BlogCategoryContentBlogUILayoutComponentPartial")
+                        @await Component.InvokeAsync("_BlogOtherBlogContentBlogUILayoutComponentPartial")
+                        @await Component.InvokeAsync("_BlogBlogTagsContentBlogUILayoutComponentPartial")
+                        @await Component.InvokeAsync("_BlogSubParagraphContentBlogUILayoutComponentPartial")
+                    </div>
+                }
+
+                else if (currentUrl.Contains("/blogdetail/GetBlogDetail/", StringComparison.OrdinalIgnoreCase))
                 {
                     <div class="col-lg-8 ftco-animate">
                         @await Component.InvokeAsync("_BlogContentContentBlogUILayoutComponentPartial")

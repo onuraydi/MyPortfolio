@@ -30,6 +30,7 @@ namespace MyPortfolio.WebApi.Controllers
         
         
         [HttpGet("{id}")]
+        [AllowAnonymous]
         public async Task<IActionResult> GetPortfolioBlogTagByPortfolioBlogTagId(int id)
         {
             var values = await _portfolioBlogTagService.GetPortfolioBlogTagByPortfolioBlogTagIdAsync(id);
