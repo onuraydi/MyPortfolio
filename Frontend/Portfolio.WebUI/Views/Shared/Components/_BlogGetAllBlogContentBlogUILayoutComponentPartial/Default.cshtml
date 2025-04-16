@@ -5,7 +5,7 @@
     <div class="container" >
         <div class="row justify-content-center">
             <div class="col-md-7 heading-section text-center ftco-animate">
-                <h2 class="mb-3">Tüm Bloglar</h2>
+                <h2 class="mb-3">Tüm Makaleler</h2>
             </div>
         </div>
         <div class="row d-flex">
@@ -39,19 +39,19 @@
                         <ul>
                             @if (ViewBag.CurrentPage > 1)
                             {
-                                <li><a href="/BlogDetail/GetAllBlog?page=@(ViewBag.CurrentPage - 1)" style="background-color: #000; color: #f8f9fa;">&lt;</a></li>
+                                <li><a href="/BlogDetail/GetAllBlog/?page=@(ViewBag.CurrentPage - 1)" style="background-color: #000; color: #f8f9fa;">&lt;</a></li>
                             }
 
                             @for (int i = 1; i <= ViewBag.TotalPages; i++)
                             {
                                 <li class="@(i == ViewBag.CurrentPage ? "active" : "")">
-                                    <a href="/BlogDetail/GetAllBlog?page=@i" style="@(i == ViewBag.CurrentPage ? "background-color: white; color: #000;" : "background-color: #000; color: #f8f9fa;")">@i</a>
+                                    <a href="/BlogDetail/GetAllBlog/?page=@i" style="@(i == ViewBag.CurrentPage ? "background-color: white; color: #000;" : "background-color: #000; color: #f8f9fa;")">@i</a>
                                 </li>
                             }
 
                             @if (ViewBag.CurrentPage < ViewBag.TotalPages)
                             {
-                                <li><a href="/BlogDetail/GetAllBlog?page=@(ViewBag.CurrentPage + 1)" style="background-color: #000; color: #f8f9fa;">&gt;</a></li>
+                                <li><a href="/BlogDetail/GetAllBlog/?page=@(ViewBag.CurrentPage + 1)" style="background-color: #000; color: #f8f9fa;">&gt;</a></li>
                             }
                         </ul>
                     </div>

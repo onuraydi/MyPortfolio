@@ -1,6 +1,42 @@
 ﻿<!-- Projeler kısmı-->
 @model List<GetAllPortfolioProjectDto>
+    <style>
+        .carousel-item img {
+            width: 100%; /* Genişliği container'a göre ayarla */
+            height: 300px; /* Yüksekliği artır */
+            object-fit: cover; /* Resmi kesmeden container'a sığdır */
+        }
 
+        /* Modal için tam ekran carousel */
+        .modal-fullscreen {
+            max-width: 80%;
+            width: auto;
+            max-height: 80%; /* Modal yüksekliği artırıldı */
+            height: auto; /* Yükseklik içeriğe göre ayarlanır */
+        }
+
+        .modal-dialog-centered {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-body {
+            padding: 0; /* Modal içinde boşluk bırakılmasın */
+        }
+
+        /* Modal içindeki carousel resimlerinin boyutunu ayarla */
+        .modal .carousel-item img {
+            height: 800px; /* Modal içindeki resimlerin yüksekliği artırıldı */
+            object-fit: fill; /* Resmi modal içinde düzgün sığdır */
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #FFBD39; /* Proje adının rengiyle aynı */
+            border-radius: 50%; /* Düğmeleri dairesel yap */
+        }
+
+    </style>
 
 <section class="ftco-section ftco-project" id="projects-section">
     <div class="container">
@@ -8,24 +44,120 @@
             <div class="col-md-12 heading-section text-center ftco-animate">
                 <h1 class="big big-2">Projelerim</h1>
                 <h2 class="mb-4">Rol aldığım Projeler</h2>
-                <p>Bu kısımda rol aldığım ve tek başıma yaptığım projeler yer alıyor. (İlerleyen Zamanlarda projeye ait diğer detayların gösterilmesi adına blog kısmı gibi bir kısım oluşturulup projenin resimleri ve diğer detayları eklenecek)</p>
+                <p>Bu kısımda rol aldığım ve tek başıma yaptığım projeler yer alıyor.</p>
             </div>
         </div>
         <div class="row">
             @foreach (var item in Model)
-            {     <!-- a tagı sadece yazıya ait bunu düzelt-->
+            {
                 <div class="col-md-6">
-                    <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url('@Url.Content(item.Image)');">
-                        <div class="overlay"></div>
-                        <div class="text text-center p-4">
-                            <h3><a href="@item.ProjectHref">@item.ProjectName</a></h3>
-                            <span>@item.ProjectRole</span>
+                    <div id="carousel-@item.PortfolioProjectId" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            @foreach (var image in item.projectImages) // item.Images, projeye ait resimlerin listesi
+                            {
+                                <div class="carousel-item @(image == item.projectImages.First() ? "active" : "")">
+                                    <img src="@Url.Content(image.Image)" class="d-block w-100 project-image" alt="@item.ProjectName"
+                                         data-project-id="@item.PortfolioProjectId">
+                                </div>
+                            }
                         </div>
+                        <a class="carousel-control-prev" href="#carousel-@item.PortfolioProjectId" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Önceki</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel-@item.PortfolioProjectId" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Sonraki</span>
+                        </a>
+                    </div>
+                    <div class="text text-center p-4">
+                        <h3><a href="@item.ProjectHref">@item.ProjectName</a></h3>
+                        <span>@item.ProjectRole</span>
                     </div>
                 </div>
             }
         </div>
     </div>
 </section>
+
+<!-- Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div id="carouselModal" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Resimler buraya dinamik olarak eklenecek -->
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselModal" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Önceki</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselModal" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Sonraki</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>document.addEventListener('DOMContentLoaded', function () {
+        const projectImages = document.querySelectorAll('.project-image');
+        const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+        const modalCarouselInner = document.querySelector('#carouselModal .carousel-inner');
+
+        projectImages.forEach(image => {
+            image.addEventListener('click', function () {
+                const projectId = this.getAttribute('data-project-id');
+                const projectCarousel = document.querySelector(`#carousel-${projectId} .carousel-inner`);
+
+                // Modal carousel içeriğini temizle
+                modalCarouselInner.innerHTML = '';
+
+                // Seçilen carousel'in tüm resimlerini modal'a ekle
+                projectCarousel.querySelectorAll('.carousel-item').forEach(item => {
+                    const newItem = item.cloneNode(true); // Orijinal carousel'deki öğeleri klonla
+                    modalCarouselInner.appendChild(newItem);
+                });
+
+                // Modal'ı aç
+                modal.show();
+            });
+        });
+    });</script>
+
+
+<!-- Projeler kısmı-->
+@*@model List<GetAllPortfolioProjectDto>*@
+
+
+@*<section class="ftco-section ftco-project" id="projects-section">
+        <div class="container">
+            <div class="row justify-content-center pb-5">
+                <div class="col-md-12 heading-section text-center ftco-animate">
+                    <h1 class="big big-2">Projelerim</h1>
+                    <h2 class="mb-4">Rol aldığım Projeler</h2>
+                    <p>Bu kısımda rol aldığım ve tek başıma yaptığım projeler yer alıyor. (İlerleyen Zamanlarda projeye ait diğer detayların gösterilmesi adına blog kısmı gibi bir kısım oluşturulup projenin resimleri ve diğer detayları eklenecek)</p>
+                </div>
+            </div>
+            <div class="row">
+
+                @foreach (var item in Model)
+                {--><!-- a tagı sadece yazıya ait bunu düzelt-->
+                    <!--<div class="col-md-6">
+                        <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url('@Url.Content(item.Image)');">
+                            <div class="overlay"></div>
+                            <div class="text text-center p-4">
+                                <h3><a href="@item.ProjectHref">@item.ProjectName</a></h3>
+                                <span>@item.ProjectRole</span>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>*@
 
 <!--  Daha sonraki zamanlarda proje detayları kısmı oluşturularak orada diğer detaylar ve projeye ait resimler gözükecek  -->
