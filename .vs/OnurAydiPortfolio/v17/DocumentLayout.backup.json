@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\views\\shared\\components\\_blogsearchbarcontentbloguilayoutcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\views\\shared\\components\\_blogsearchbarcontentbloguilayoutcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\views\\shared\\components\\_bloggetallblogcontentbloguilayoutcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\views\\shared\\components\\_bloggetallblogcontentbloguilayoutcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A92B13E2-C8F5-4A40-8019-20B8025917A5}|Identity\\Identity.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\identity\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A92B13E2-C8F5-4A40-8019-20B8025917A5}|Identity\\Identity.csproj|solutionrelative:identity\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A92B13E2-C8F5-4A40-8019-20B8025917A5}|Identity\\Identity.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\identity\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A92B13E2-C8F5-4A40-8019-20B8025917A5}|Identity\\Identity.csproj|solutionrelative:identity\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A92B13E2-C8F5-4A40-8019-20B8025917A5}|Identity\\Identity.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\identity\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A92B13E2-C8F5-4A40-8019-20B8025917A5}|Identity\\Identity.csproj|solutionrelative:identity\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A92B13E2-C8F5-4A40-8019-20B8025917A5}|Identity\\Identity.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\identity\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A92B13E2-C8F5-4A40-8019-20B8025917A5}|Identity\\Identity.csproj|solutionrelative:identity\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +39,76 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_BlogGetAllBlogContentBlogUILayoutComponentPartial\\Default.cshtml",
-              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_BlogGetAllBlogContentBlogUILayoutComponentPartial\\Default.cshtml",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_BlogGetAllBlogContentBlogUILayoutComponentPartial\\Default.cshtml",
-              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_BlogGetAllBlogContentBlogUILayoutComponentPartial\\Default.cshtml",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\appsettings.json",
+              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\appsettings.json",
+              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\appsettings.json",
+              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-16T07:05:42.503Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-22T14:24:43.567Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_BlogSearchBarContentBlogUILayoutComponentPartial\\Default.cshtml",
-              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_BlogSearchBarContentBlogUILayoutComponentPartial\\Default.cshtml",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_BlogSearchBarContentBlogUILayoutComponentPartial\\Default.cshtml",
-              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_BlogSearchBarContentBlogUILayoutComponentPartial\\Default.cshtml",
-              "ViewState": "AgIAAJMAAAAAAAAAAAAAAIYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-16T07:02:57.014Z",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Program.cs",
+              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Program.cs",
+              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Program.cs",
+              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Program.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T14:24:41.664Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Identity\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Identity\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Identity\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Identity\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-22T14:24:35.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Identity\\Program.cs",
+              "RelativeDocumentMoniker": "Identity\\Program.cs",
+              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Identity\\Program.cs",
+              "RelativeToolTip": "Identity\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T14:24:18.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Identity\\Startup.cs",
+              "RelativeDocumentMoniker": "Identity\\Startup.cs",
+              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Identity\\Startup.cs",
+              "RelativeToolTip": "Identity\\Startup.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T14:24:14.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Config.cs",
+              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Identity\\Config.cs",
+              "RelativeDocumentMoniker": "Identity\\Config.cs",
+              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Identity\\Config.cs",
+              "RelativeToolTip": "Identity\\Config.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T14:24:10.817Z"
             }
           ]
         }

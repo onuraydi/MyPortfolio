@@ -33,14 +33,17 @@
 		<PackageReference Include="Volo.Abp.IdentityModel" Version="8.0.1" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<ProjectReference Include="..\..\fronend\Portfolio.DtoLayer\Portfolio.DtoLayer.csproj" />
-	</ItemGroup>
-
 
 	<ItemGroup>
 		<Folder Include="Areas\Admin\Data\" />
 		<Folder Include="Areas\Admin\Models\" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <Reference Include="Portfolio.DtoLayer">
+	    <HintPath>..\..\fronend\Portfolio.DtoLayer\bin\Debug\net8.0\Portfolio.DtoLayer.dll</HintPath>
+	  </Reference>
 	</ItemGroup>
 
 </Project>

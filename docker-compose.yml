@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  identity:
+    build:
+      context: ./Identity/Identity
+      dockerfile: dockerfile
+    ports:
+      - "5001:5001"
+    restart: always
+
+  webapi:
+    build:
+      context: ./Backend/MyPortfolio.WebApi
+      dockerfile: dockerfile
+    ports:
+      - "7301:7301"
+    restart: always
+
+  ocelot:
+    build:
+      context: ./ApiGateway/Portfolio.OcelotGateway
+      dockerfile: dockerfile
+    ports:
+      - "7300:7300"
+    restart: always
+
+  webui:
+    build:
+      context: ./Frontend/Portfolio.WebUI
+      dockerfile: dockerfile
+    ports:
+      - "7006:7006"
+    restart: always
