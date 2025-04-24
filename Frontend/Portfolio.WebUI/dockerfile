@@ -1,16 +1,14 @@
 ﻿FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 EXPOSE 7006
+COPY ..
 
+RUN dotnet publish -c Release --property:PublishDir=/out
+
+# Runtime image
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /src
-COPY ["webui/webui.csproj", "webui/"]
-RUN dotnet restore "webui/webui.csproj"
-COPY . .
-WORKDIR "/src/webui"
-RUN dotnet publish "webui.csproj" -c Release -o /app/publish
 
-FROM base AS final
 WORKDIR /app
-COPY --from=build /app/publish .
-ENTRYPOINT ["dotnet", "webui.dll"]
+COPY --from=build-env /out .
+
+ENTRYPOINT dotnet Portfolio.WebUI.dll
