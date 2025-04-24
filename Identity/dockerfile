@@ -1,14 +1,23 @@
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-WORKDIR /app
-EXPOSE 5001
-COPY ..
-
-RUN dotnet publish -c Release --property:PublishDir=/out
-
-# Runtime image
+# Build aþamasý
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
-WORKDIR /app
-COPY --from=build-env /out .
+WORKDIR /src
 
-ENTRYPOINT dotnet Identity.dll
+# Proje dosyasýný kopyala ve restore yap
+COPY Identity.csproj ./
+RUN dotnet restore
+
+# Tüm kaynaklarý kopyala ve publish et
+COPY . . 
+RUN dotnet publish -c Release -o /app/out
+
+# Runtime aþamasý
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+
+WORKDIR /app
+EXPOSE 5001
+
+# Yayýnlanmýþ çýktýyý al
+COPY --from=build /app/out .
+
+ENTRYPOINT ["dotnet", "Identity.dll"]

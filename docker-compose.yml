@@ -24,6 +24,9 @@ services:
     ports:
       - "7300:7300"
     restart: always
+    depends_on:
+      - identity
+      - webapi
 
   webui:
     build:
@@ -32,3 +35,5 @@ services:
     ports:
       - "7006:7006"
     restart: always
+    depends_on:
+      - ocelot

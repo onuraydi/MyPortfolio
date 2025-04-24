@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\start.sh||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|solutionrelative:start.sh||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\areas\\admin\\controllers\\blogcategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\areas\\admin\\controllers\\blogcategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A92B13E2-C8F5-4A40-8019-20B8025917A5}|Identity\\Identity.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\identity\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A92B13E2-C8F5-4A40-8019-20B8025917A5}|Identity\\Identity.csproj|solutionrelative:identity\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\frontend\\portfolio.webui\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +27,41 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "start.sh",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\start.sh",
-              "RelativeDocumentMoniker": "start.sh",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\start.sh",
-              "RelativeToolTip": "start.sh",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAsAAAAAAAAAA==",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|",
-              "WhenOpened": "2025-04-24T09:36:24.816Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BlogCategoryController.cs",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Areas\\Admin\\Controllers\\BlogCategoryController.cs",
-              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Areas\\Admin\\Controllers\\BlogCategoryController.cs",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Areas\\Admin\\Controllers\\BlogCategoryController.cs",
-              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Areas\\Admin\\Controllers\\BlogCategoryController.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAiwB4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T09:07:56.885Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "docker-compose.yml",
               "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\docker-compose.yml",
               "RelativeDocumentMoniker": "docker-compose.yml",
               "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\docker-compose.yml",
               "RelativeToolTip": "docker-compose.yml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-04-24T08:41:11.498Z"
+              "WhenOpened": "2025-04-24T09:53:40.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "dockerfile",
+              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Identity\\dockerfile",
+              "RelativeDocumentMoniker": "Identity\\dockerfile",
+              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Identity\\dockerfile",
+              "RelativeToolTip": "Identity\\dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-24T09:52:46.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "dockerfile",
+              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\dockerfile",
+              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\dockerfile",
+              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\dockerfile",
+              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-24T09:52:09.276Z",
+              "EditorCaption": ""
             }
           ]
         }
