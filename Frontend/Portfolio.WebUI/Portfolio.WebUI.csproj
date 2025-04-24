@@ -42,7 +42,7 @@
 
 	<ItemGroup>
 	  <Reference Include="Portfolio.DtoLayer">
-	    <HintPath>..\..\fronend\Portfolio.DtoLayer\bin\Debug\net8.0\Portfolio.DtoLayer.dll</HintPath>
+	    <HintPath>..\Portfolio.DtoLayer.dll</HintPath>
 	  </Reference>
 	</ItemGroup>
 

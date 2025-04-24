@@ -444,7 +444,6 @@ C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Frontend\Portfolio.WebUI
 C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Frontend\Portfolio.WebUI\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Frontend\Portfolio.WebUI\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Frontend\Portfolio.WebUI\bin\Debug\net8.0\Portfolio.DtoLayer.dll
-C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Frontend\Portfolio.WebUI\bin\Debug\net8.0\Portfolio.DtoLayer.pdb
 C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Frontend\Portfolio.WebUI\obj\Debug\net8.0\Portfolio.WebUI.csproj.AssemblyReference.cache
 C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Frontend\Portfolio.WebUI\obj\Debug\net8.0\Portfolio.WebUI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\ONUR\Desktop\CurrentProjects\OnurAydiPortfolio\Frontend\Portfolio.WebUI\obj\Debug\net8.0\Portfolio.WebUI.AssemblyInfoInputs.cache
