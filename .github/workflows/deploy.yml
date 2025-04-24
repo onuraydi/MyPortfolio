@@ -3,26 +3,40 @@ name: Deploy to VPS
 on:
   push:
     branches:
-      - main
+      - main # değiştirmen gerekebilir
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Set up SSH
-      uses: webfactory/ssh-agent@v0.5.4
-      with:
-        ssh-private-key: ${{ secrets.VPS_PRIVATE_KEY }}
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
 
-    - name: Deploy over SSH
-      run: |
-        ssh -o StrictHostKeyChecking=no your_user@your_vps_ip << 'EOF'
-          cd /home/your_user/your_project_directory
-          git pull origin main
-          docker-compose down
-          docker-compose up -d --build
-        EOF
+      - name: Build projects
+        run: |
+          dotnet restore
+          dotnet build --no-restore
+
+      - name: Add SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.VPS_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H YOUR_VPS_IP >> ~/.ssh/known_hosts
+        env:
+          VPS_PRIVATE_KEY: ${{ secrets.VPS_PRIVATE_KEY }}
+
+      - name: Deploy via SSH
+        run: |
+          ssh -i ~/.ssh/id_rsa root@YOUR_VPS_IP << 'EOF'
+            cd /root/portfolio-deploy-path # projenin yer aldığı dizin
+            git pull origin main
+            docker-compose down
+            docker-compose up --build -d
+          EOF
