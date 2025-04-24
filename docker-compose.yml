@@ -3,7 +3,7 @@ version: '3.8'
 services:
   identity:
     build:
-      context: ./Identity/Identity
+      context: ./Identity
       dockerfile: dockerfile
     ports:
       - "5001:5001"
