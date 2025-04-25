@@ -1,12 +1,71 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A92B13E2-C8F5-4A40-8019-20B8025917A5}|Identity\\Identity.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\identity\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A92B13E2-C8F5-4A40-8019-20B8025917A5}|Identity\\Identity.csproj|solutionrelative:identity\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46DF9A54-B8E8-4ADC-B25C-ABFF4B21FB8E}|ApiGateway\\Portfolio.OcelotGateway\\Portfolio.OcelotGateway.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\apigateway\\portfolio.ocelotgateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{46DF9A54-B8E8-4ADC-B25C-ABFF4B21FB8E}|ApiGateway\\Portfolio.OcelotGateway\\Portfolio.OcelotGateway.csproj|solutionrelative:apigateway\\portfolio.ocelotgateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46DF9A54-B8E8-4ADC-B25C-ABFF4B21FB8E}|ApiGateway\\Portfolio.OcelotGateway\\Portfolio.OcelotGateway.csproj|c:\\users\\onur\\desktop\\currentprojects\\onuraydiportfolio\\apigateway\\portfolio.ocelotgateway\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{46DF9A54-B8E8-4ADC-B25C-ABFF4B21FB8E}|ApiGateway\\Portfolio.OcelotGateway\\Portfolio.OcelotGateway.csproj|solutionrelative:apigateway\\portfolio.ocelotgateway\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Identity\\appsettings.json",
+              "RelativeDocumentMoniker": "Identity\\appsettings.json",
+              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Identity\\appsettings.json",
+              "RelativeToolTip": "Identity\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-25T15:43:20.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ocelot.json",
+              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\ApiGateway\\Portfolio.OcelotGateway\\ocelot.json",
+              "RelativeDocumentMoniker": "ApiGateway\\Portfolio.OcelotGateway\\ocelot.json",
+              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\ApiGateway\\Portfolio.OcelotGateway\\ocelot.json",
+              "RelativeToolTip": "ApiGateway\\Portfolio.OcelotGateway\\ocelot.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-25T15:41:50.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\ApiGateway\\Portfolio.OcelotGateway\\appsettings.json",
+              "RelativeDocumentMoniker": "ApiGateway\\Portfolio.OcelotGateway\\appsettings.json",
+              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\ApiGateway\\Portfolio.OcelotGateway\\appsettings.json",
+              "RelativeToolTip": "ApiGateway\\Portfolio.OcelotGateway\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-25T15:41:39.096Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
