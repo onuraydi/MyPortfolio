@@ -1,39 +1,48 @@
-version: '3.8'
-
+version: "3.8"
 services:
+  backend:
+    build: ./Backend
+    container_name: backend
+    ports:
+      - "5000:80"
+    networks:
+      - app-net
+
   identity:
-    build:
-      context: ./Identity
-      dockerfile: dockerfile
+    build: ./Identity
+    container_name: identity
     ports:
-      - "5001:5001"
-    restart: always
+      - "5001:80"
+    networks:
+      - app-net
 
-  webapi:
-    build:
-      context: ./Backend/MyPortfolio.WebApi
-      dockerfile: dockerfile
+  api-gateway:
+    build: ./ApiGateway
+    container_name: gateway
     ports:
-      - "7301:7301"
-    restart: always
+      - "5002:80"
+    networks:
+      - app-net
 
-  ocelot:
-    build:
-      context: ./ApiGateway/Portfolio.OcelotGateway
-      dockerfile: dockerfile
+  frontend:
+    build: ./Frontend
+    container_name: frontend
     ports:
-      - "7300:7300"
-    restart: always
-    depends_on:
-      - identity
-      - webapi
+      - "5003:80"
+    networks:
+      - app-net
 
-  webui:
-    build:
-      context: ./Frontend/Portfolio.WebUI
-      dockerfile: dockerfile
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: mssql
+    environment:
+      SA_PASSWORD: "81A84y04o09e19."
+      ACCEPT_EULA: "Y"
     ports:
-      - "7006:7006"
-    restart: always
-    depends_on:
-      - ocelot
+      - "1433:1433"
+    networks:
+      - app-net
+
+networks:
+  app-net:
+    driver: bridge
