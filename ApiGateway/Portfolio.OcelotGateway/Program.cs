@@ -11,7 +11,10 @@ var builder = WebApplication.CreateBuilder(args);
 //    opt.Audience = "ResourceOcelot";
 //});
 
-
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(5002); // 5000 portundan HTTP baðlantý kabul et
+});
 
 IConfiguration configuration = new ConfigurationBuilder().AddJsonFile("ocelot.json").Build();
 
@@ -21,7 +24,7 @@ var app = builder.Build();
 
 await app.UseOcelot();
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 
 app.MapGet("/", () => "Hello World!");

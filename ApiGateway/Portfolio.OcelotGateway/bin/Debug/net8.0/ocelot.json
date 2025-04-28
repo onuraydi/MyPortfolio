@@ -2,16 +2,16 @@
   "Routes": [
     {
       "DownstreamPathTemplate": "/api/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7301
+          "Port": 5000
         }
       ],
       "UpstreamPathTemplate": "/Backend/{everything}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
-      "UpstreamScheme": "https"
+      "UpstreamScheme": "http"
       //"AuthenticationOptions": {
       //  "AuthenticationProviderKey": "OcelotAuthenticationScheme",
       //  "AllowedScopes": [ "PortfolioFullPermission" ]
@@ -19,6 +19,6 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:7300"
+    "BaseUrl": "http://localhost:5002"
   }
 }

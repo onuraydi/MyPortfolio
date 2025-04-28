@@ -3,10 +3,6 @@
     "Name": "New Profile",
     "Projects": [
       {
-        "Path": "Backend\\MyPortfolio.WebApi\\MyPortfolio.WebApi.csproj",
-        "Action": "Start"
-      },
-      {
         "Path": "Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj",
         "Action": "Start"
       },
@@ -16,6 +12,10 @@
       },
       {
         "Path": "Identity\\Identity.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Backend\\MyPortfolio.WebApi\\MyPortfolio.WebApi.csproj",
         "Action": "Start"
       }
     ]

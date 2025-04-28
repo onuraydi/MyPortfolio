@@ -53,7 +53,10 @@ builder.Services.AddCors(opt =>
         });
 });
 
-
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(5000); // 5000 portundan HTTP baðlantý kabul et
+});
 
 #region
 
@@ -204,7 +207,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseCors("AllowAllOrigins"); // CORS politikasýný uygulayýn
 app.UseAuthentication();
 app.UseAuthorization();
