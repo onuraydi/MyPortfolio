@@ -1,4 +1,5 @@
 ﻿using Portfolio.DtoLayer.PortfolioDtos.LoginDtos;
+using Portfolio.WebUI.Models;
 
 namespace Portfolio.WebUI.Services.IdentityServices.Abstract
 {

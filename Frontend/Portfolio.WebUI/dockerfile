@@ -1,13 +1,22 @@
-﻿FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-WORKDIR /app
-EXPOSE 80
-
+﻿# 1. Build aşaması
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
+
+# Proje dosyanızı kopyalayıp restore edin
+COPY ["Frontend/Portfolio.WebUI/Portfolio.WebUI.csproj", "Frontend/"]
+RUN dotnet restore "Frontend/Portfolio.WebUI.csproj"
+
+# Kaynak kodu kopyala ve publish et
 COPY . .
+WORKDIR "/src/Frontend"
 RUN dotnet publish -c Release -o /app/publish
 
-FROM base AS final
+# 2. Runtime aşaması
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 COPY --from=build /app/publish .
+
+# Servis portu
+EXPOSE 5003
+
 ENTRYPOINT ["dotnet", "Portfolio.WebUI.dll"]

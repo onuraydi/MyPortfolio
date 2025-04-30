@@ -1,48 +1,65 @@
-version: "3.8"
+version: '3.8'
 services:
-  backend:
-    build: ./Backend
-    container_name: backend
-    ports:
-      - "5000:80"
-    networks:
-      - app-net
-
-  identity:
-    build: ./Identity
-    container_name: identity
-    ports:
-      - "5001:80"
-    networks:
-      - app-net
-
-  api-gateway:
-    build: ./ApiGateway
-    container_name: gateway
-    ports:
-      - "5002:80"
-    networks:
-      - app-net
-
-  frontend:
-    build: ./Frontend
-    container_name: frontend
-    ports:
-      - "5003:80"
-    networks:
-      - app-net
-
   mssql:
-    image: mcr.microsoft.com/mssql/server:2019-latest
-    container_name: mssql
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: myapp-mssql
+    networks: [myapp-net]
     environment:
-      SA_PASSWORD: "81A84y04o09e19."
+      SA_PASSWORD: "YourStrong!Passw0rd"
       ACCEPT_EULA: "Y"
     ports:
       - "1433:1433"
-    networks:
-      - app-net
+    volumes:
+      - mssql-data:/var/opt/mssql
 
-networks:
-  app-net:
-    driver: bridge
+  backend:
+    build:
+      context: .
+      dockerfile: MyBackend/Dockerfile
+    container_name: myapp-backend
+    networks: [myapp-net]
+    depends_on:
+      - mssql
+    environment:
+      ConnectionStrings__Default: "Server=mssql;Database=MyDb;User Id=sa;Password=YourStrong!Passw0rd;"
+    ports:
+      - "5000:5000"
+
+  identity:
+    build:
+      context: .
+      dockerfile: Identity/Dockerfile
+    container_name: myapp-identity
+    networks: [myapp-net]
+    depends_on:
+      - mssql
+    ports:
+      - "5001:5001"
+
+  ocelot:
+    build:
+      context: .
+      dockerfile: OcelotApiGateway/Dockerfile
+    container_name: myapp-ocelot
+    networks: [myapp-net]
+    depends_on:
+      - backend
+      - identity
+    ports:
+      - "5002:5002"
+    volumes:
+      - ./OcelotApiGateway/ocelot.json:/app/ocelot.json
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Frontend/Dockerfile
+    container_name: myapp-frontend
+    networks: [myapp-net]
+    depends_on:
+      - ocelot
+    ports:
+      - "5003:5003"
+
+volumes:
+  mssql-data:

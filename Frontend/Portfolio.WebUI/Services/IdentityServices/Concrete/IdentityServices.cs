@@ -10,6 +10,7 @@ using System.Security.Claims;
 using System.Security.Principal;
 using Microsoft.Extensions.Logging;
 using Duende.IdentityServer.Models;
+using Portfolio.WebUI.Models;
 
 namespace Portfolio.WebUI.Services.IdentityServices.Concrete
 {
@@ -59,6 +60,7 @@ namespace Portfolio.WebUI.Services.IdentityServices.Concrete
                 return false;
             }
         }
+
 
         public async Task<bool> SignIn(LoginDto loginDto)
         {
