@@ -6,7 +6,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "https://identity:5001"
+      "applicationUrl": "http://identity:5001"
     }
   }
 }
