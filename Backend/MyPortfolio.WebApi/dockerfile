@@ -2,13 +2,19 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Proje dosyanızı kopyalayıp restore edin
-COPY ["Backend/MyPortfolio.WebApi/MyPortfolio.WebApi.csproj", "MyBackend/"]
-RUN dotnet restore "MyBackend/MyBackend.csproj"
+# Proje dosyasını kopyala
+COPY ["Backend/MyPortfolio.WebApi/MyPortfolio.WebApi.csproj", "Backend/MyPortfolio.WebApi/"]
 
-# Kaynak kodu kopyala ve publish et
+# Bağımlılıkları yükle
+RUN dotnet restore "Backend/MyPortfolio.WebApi/MyPortfolio.WebApi.csproj"
+
+# Tüm kaynak kodunu kopyala
 COPY . .
-WORKDIR "/src/MyBackend"
+
+# Proje dizinine geç
+WORKDIR "/src/Backend/MyPortfolio.WebApi"
+
+# Yayınla
 RUN dotnet publish -c Release -o /app/publish
 
 # 2. Runtime aşaması
@@ -16,7 +22,8 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 COPY --from=build /app/publish .
 
-# Servis portu
+# Servis portunu aç
 EXPOSE 5000
 
+# Başlatıcı
 ENTRYPOINT ["dotnet", "MyPortfolio.WebApi.dll"]

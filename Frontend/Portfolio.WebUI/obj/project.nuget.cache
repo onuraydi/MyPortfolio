@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UrTODilBF10=",
+  "dgSpecHash": "Rc97PthLEQY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj",
+  "projectFilePath": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ONUR\\.nuget\\packages\\asynckeyedlock\\6.2.2\\asynckeyedlock.6.2.2.nupkg.sha512",
     "C:\\Users\\ONUR\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",

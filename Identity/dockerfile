@@ -3,8 +3,8 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 # Proje dosyanýzý kopyalayýp restore edin
-COPY ["Identity/Portfolio.Identity.csproj", "Identity/"]
-RUN dotnet restore "Identity/Portfolio.Identity.csproj"
+COPY ["Identity/Identity.csproj", "Identity/"]
+RUN dotnet restore "Identity/Identity.csproj"
 
 # Kaynak kodu kopyala ve publish et
 COPY . .
@@ -19,5 +19,5 @@ COPY --from=build /app/publish .
 # Servis portu
 EXPOSE 5001
 
-ENTRYPOINT ["dotnet", "Portfolio.Identity.dll"]
+ENTRYPOINT ["dotnet", "Identity.dll"]
 

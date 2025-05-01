@@ -1,11 +1,12 @@
-version: '3.8'
+version: "3.7"
+
 services:
   mssql:
     image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: myapp-mssql
     networks: [myapp-net]
     environment:
-      SA_PASSWORD: "YourStrong!Passw0rd"
+      SA_PASSWORD: "81A84y04o09e19."
       ACCEPT_EULA: "Y"
     ports:
       - "1433:1433"
@@ -15,20 +16,20 @@ services:
   backend:
     build:
       context: .
-      dockerfile: MyBackend/Dockerfile
+      dockerfile: Backend/MyPortfolio.WebApi/dockerfile
     container_name: myapp-backend
     networks: [myapp-net]
     depends_on:
       - mssql
     environment:
-      ConnectionStrings__Default: "Server=mssql;Database=MyDb;User Id=sa;Password=YourStrong!Passw0rd;"
+      ConnectionStrings__Default: "Server=mssql;Database=MyDb;User Id=sa;Password=81A84y04o09e19.;"
     ports:
       - "5000:5000"
 
   identity:
     build:
       context: .
-      dockerfile: Identity/Dockerfile
+      dockerfile: Identity/dockerfile
     container_name: myapp-identity
     networks: [myapp-net]
     depends_on:
@@ -39,7 +40,7 @@ services:
   ocelot:
     build:
       context: .
-      dockerfile: OcelotApiGateway/Dockerfile
+      dockerfile: ApiGateway/Portfolio.OcelotGateway/dockerfile
     container_name: myapp-ocelot
     networks: [myapp-net]
     depends_on:
@@ -48,12 +49,12 @@ services:
     ports:
       - "5002:5002"
     volumes:
-      - ./OcelotApiGateway/ocelot.json:/app/ocelot.json
+      - ./ApiGateway/Portfolio.OcelotGateway/ocelot.json:/app/ocelot.json
 
   frontend:
     build:
       context: .
-      dockerfile: Frontend/Dockerfile
+      dockerfile: Frontend/Portfolio.WebUI/dockerfile
     container_name: myapp-frontend
     networks: [myapp-net]
     depends_on:
@@ -61,5 +62,26 @@ services:
     ports:
       - "5003:5003"
 
+  nginx:
+    build:
+      context: .
+      dockerfile: nginx/Dockerfile
+    container_name: myapp-nginx
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/sites-available:/etc/nginx/sites-available
+      - ./nginx/sites-enabled:/etc/nginx/sites-enabled
+      - ./nginx/certs:/etc/nginx/certs
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - frontend
+    networks:
+      - myapp-net
+
 volumes:
   mssql-data:
+
+networks:
+  myapp-net:

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mLJbyg0Rpf0=",
+  "dgSpecHash": "pUcQurNrNGs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\ApiGateway\\Portfolio.OcelotGateway\\Portfolio.OcelotGateway.csproj",
+  "projectFilePath": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\ApiGateway\\Portfolio.OcelotGateway\\Portfolio.OcelotGateway.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ONUR\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\ONUR\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
