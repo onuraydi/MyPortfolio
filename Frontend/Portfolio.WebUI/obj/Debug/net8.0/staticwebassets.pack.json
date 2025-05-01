@@ -3697,140 +3697,16 @@
       "PackagePath": "staticwebassets\\AdminTemplate\\partials\\_sidebar.html"
     },
     {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\001edb96-d7f2-404e-b66e-bd60beedc110.png",
-      "PackagePath": "staticwebassets\\Uploads\\001edb96-d7f2-404e-b66e-bd60beedc110.png"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\12078ad5-793b-4f07-bc51-6606061531ff.png",
-      "PackagePath": "staticwebassets\\Uploads\\12078ad5-793b-4f07-bc51-6606061531ff.png"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\129fc503-6c37-40f6-8f9f-9b197d694b5a.png",
-      "PackagePath": "staticwebassets\\Uploads\\129fc503-6c37-40f6-8f9f-9b197d694b5a.png"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\1ba00475-7f68-4a43-99c2-3987669e04c4.png",
-      "PackagePath": "staticwebassets\\Uploads\\1ba00475-7f68-4a43-99c2-3987669e04c4.png"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\3059d9d1-b05b-4c92-8e74-fc271775d5ff.png",
-      "PackagePath": "staticwebassets\\Uploads\\3059d9d1-b05b-4c92-8e74-fc271775d5ff.png"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\36ee822e-98e3-46ce-8928-3829bff91913.png",
-      "PackagePath": "staticwebassets\\Uploads\\36ee822e-98e3-46ce-8928-3829bff91913.png"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\42796854-1a58-4650-bf4f-23ad0366a870.png",
-      "PackagePath": "staticwebassets\\Uploads\\42796854-1a58-4650-bf4f-23ad0366a870.png"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\450103cc-8fff-495a-bb6e-ec865d9d7f69.png",
-      "PackagePath": "staticwebassets\\Uploads\\450103cc-8fff-495a-bb6e-ec865d9d7f69.png"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\47b22bab-105d-4e8e-ad04-6e0adc00d401.png",
-      "PackagePath": "staticwebassets\\Uploads\\47b22bab-105d-4e8e-ad04-6e0adc00d401.png"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\4d6280fc-6e52-45de-870c-1126fb5f0acb.jpg",
-      "PackagePath": "staticwebassets\\Uploads\\4d6280fc-6e52-45de-870c-1126fb5f0acb.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\58115f58-16ac-477d-856f-5ecd77872205.png",
-      "PackagePath": "staticwebassets\\Uploads\\58115f58-16ac-477d-856f-5ecd77872205.png"
-    },
-    {
       "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\607c2505-f0bd-4d59-a4fc-0252d8c12cc2.JPG",
       "PackagePath": "staticwebassets\\Uploads\\607c2505-f0bd-4d59-a4fc-0252d8c12cc2.JPG"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\60f13eb8-0b50-43bf-8f49-1971c7fd9d36.png",
-      "PackagePath": "staticwebassets\\Uploads\\60f13eb8-0b50-43bf-8f49-1971c7fd9d36.png"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\6265c295-90c2-41aa-b182-9c6b8966af75.png",
-      "PackagePath": "staticwebassets\\Uploads\\6265c295-90c2-41aa-b182-9c6b8966af75.png"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\6b031125-ad54-4575-b8b8-2cee860dcde3.png",
-      "PackagePath": "staticwebassets\\Uploads\\6b031125-ad54-4575-b8b8-2cee860dcde3.png"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\8c5cf6a0-e0bf-43dd-a6fe-c1cb3f3375c9.png",
-      "PackagePath": "staticwebassets\\Uploads\\8c5cf6a0-e0bf-43dd-a6fe-c1cb3f3375c9.png"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\8ef7c749-d5e6-4cd9-99ac-6fe422fc9d7b.png",
-      "PackagePath": "staticwebassets\\Uploads\\8ef7c749-d5e6-4cd9-99ac-6fe422fc9d7b.png"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\961997e2-b411-4087-bbc0-1bb61e21cc7b.png",
-      "PackagePath": "staticwebassets\\Uploads\\961997e2-b411-4087-bbc0-1bb61e21cc7b.png"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\9b4d48fa-ad58-4eaa-a140-eed8e754b089.png",
-      "PackagePath": "staticwebassets\\Uploads\\9b4d48fa-ad58-4eaa-a140-eed8e754b089.png"
     },
     {
       "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\OnurAydiCv_Tr.pdf.pdf",
       "PackagePath": "staticwebassets\\Uploads\\OnurAydiCv_Tr.pdf.pdf"
     },
     {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\a3bfa686-81a6-4d6a-aaff-302a72dc59ab.png",
-      "PackagePath": "staticwebassets\\Uploads\\a3bfa686-81a6-4d6a-aaff-302a72dc59ab.png"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\ae6b8ac3-c659-4238-ad8e-614a183303a0.png",
-      "PackagePath": "staticwebassets\\Uploads\\ae6b8ac3-c659-4238-ad8e-614a183303a0.png"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\bdceeb4d-d993-4d66-b499-6da7bce303e6.png",
-      "PackagePath": "staticwebassets\\Uploads\\bdceeb4d-d993-4d66-b499-6da7bce303e6.png"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\c0d698ae-7f4c-4166-aea4-8e7886cbaf2c.png",
-      "PackagePath": "staticwebassets\\Uploads\\c0d698ae-7f4c-4166-aea4-8e7886cbaf2c.png"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\c21d61e9-ad31-4798-845e-6fa8fb11a8ef.png",
-      "PackagePath": "staticwebassets\\Uploads\\c21d61e9-ad31-4798-845e-6fa8fb11a8ef.png"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\cacb3bc9-618b-472f-9159-fd3cac1b4173.jpg",
-      "PackagePath": "staticwebassets\\Uploads\\cacb3bc9-618b-472f-9159-fd3cac1b4173.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\cf16a660-16a8-4037-8dec-948d8591659c.png",
-      "PackagePath": "staticwebassets\\Uploads\\cf16a660-16a8-4037-8dec-948d8591659c.png"
-    },
-    {
       "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\computer-screens-desk-advanced-server-hub.jpg",
       "PackagePath": "staticwebassets\\Uploads\\computer-screens-desk-advanced-server-hub.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\d0e4e6e3-e147-4c60-9d08-f831e104bbd4.png",
-      "PackagePath": "staticwebassets\\Uploads\\d0e4e6e3-e147-4c60-9d08-f831e104bbd4.png"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\d5bab683-4a3b-43e5-84fc-25c00c4af12c.png",
-      "PackagePath": "staticwebassets\\Uploads\\d5bab683-4a3b-43e5-84fc-25c00c4af12c.png"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\dc8fe6d1-e8f7-42ec-afd9-7f8b2bef79f0.png",
-      "PackagePath": "staticwebassets\\Uploads\\dc8fe6d1-e8f7-42ec-afd9-7f8b2bef79f0.png"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\e00e0995-9471-4c2f-86cc-d5d290120fbe.png",
-      "PackagePath": "staticwebassets\\Uploads\\e00e0995-9471-4c2f-86cc-d5d290120fbe.png"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\ef0e5abc-fe82-425d-9ed3-2e5a83ed9375.png",
-      "PackagePath": "staticwebassets\\Uploads\\ef0e5abc-fe82-425d-9ed3-2e5a83ed9375.png"
-    },
-    {
-      "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\Uploads\\f3df11d1-34c2-4a8f-aad0-2fbffd48b8de.png",
-      "PackagePath": "staticwebassets\\Uploads\\f3df11d1-34c2-4a8f-aad0-2fbffd48b8de.png"
     },
     {
       "Id": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\ckeditor5\\ckeditor5-content.css",

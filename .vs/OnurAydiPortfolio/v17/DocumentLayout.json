@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\myportfolio\\frontend\\portfolio.webui\\views\\shared\\components\\_navbaruilayoutcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\views\\shared\\components\\_navbaruilayoutcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\myportfolio\\frontend\\portfolio.webui\\views\\shared\\components\\_navbarbloguilayoutcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\views\\shared\\components\\_navbarbloguilayoutcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\myportfolio\\frontend\\portfolio.webui\\views\\uilayout\\_uilayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\views\\uilayout\\_uilayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\myportfolio\\frontend\\portfolio.webui\\views\\shared\\components\\_homeviewcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\views\\shared\\components\\_homeviewcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_UILayout.cshtml",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\Views\\UILayout\\_UILayout.cshtml",
-              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Views\\UILayout\\_UILayout.cshtml",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\Views\\UILayout\\_UILayout.cshtml",
-              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Views\\UILayout\\_UILayout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-01T10:56:27.142Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_NavbarBlogUILayoutComponentPartial\\Default.cshtml",
-              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_NavbarBlogUILayoutComponentPartial\\Default.cshtml",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_NavbarBlogUILayoutComponentPartial\\Default.cshtml",
-              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_NavbarBlogUILayoutComponentPartial\\Default.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-01T10:55:47.201Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Default.cshtml",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_NavbarUILayoutComponentPartial\\Default.cshtml",
-              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_NavbarUILayoutComponentPartial\\Default.cshtml",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_NavbarUILayoutComponentPartial\\Default.cshtml",
-              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_NavbarUILayoutComponentPartial\\Default.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAGAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_HomeViewComponentPartial\\Default.cshtml",
+              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_HomeViewComponentPartial\\Default.cshtml",
+              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_HomeViewComponentPartial\\Default.cshtml",
+              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_HomeViewComponentPartial\\Default.cshtml",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAiwIsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-01T10:55:45.455Z",
+              "WhenOpened": "2025-05-01T13:56:13.548Z",
               "EditorCaption": ""
             }
           ]

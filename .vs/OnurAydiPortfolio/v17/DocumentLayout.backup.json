@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A92B13E2-C8F5-4A40-8019-20B8025917A5}|Identity\\Identity.csproj|c:\\users\\onur\\desktop\\currentprojects\\myportfolio\\identity\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A92B13E2-C8F5-4A40-8019-20B8025917A5}|Identity\\Identity.csproj|solutionrelative:identity\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\myportfolio\\frontend\\portfolio.webui\\views\\shared\\components\\_homeviewcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\views\\shared\\components\\_homeviewcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Identity\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Identity\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Identity\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Identity\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-01T10:40:02.323Z",
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_HomeViewComponentPartial\\Default.cshtml",
+              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_HomeViewComponentPartial\\Default.cshtml",
+              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_HomeViewComponentPartial\\Default.cshtml",
+              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_HomeViewComponentPartial\\Default.cshtml",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAiwIsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-01T13:56:13.548Z",
               "EditorCaption": ""
             }
           ]
