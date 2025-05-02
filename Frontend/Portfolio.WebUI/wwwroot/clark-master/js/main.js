@@ -83,31 +83,67 @@
 	onePageClick();
 	
 
-	var carousel = function() {
+	var carousel = function () {
 		$('.home-slider').owlCarousel({
-	    loop:true,
-	    autoplay: true,
-	    margin:0,
-	    animateOut: 'fadeOut',
-	    animateIn: 'fadeIn',
-	    nav:false,
-	    autoplayHoverPause: false,
-	    items: 1,
-	    navText : ["<span class='ion-md-arrow-back'></span>","<span class='ion-chevron-right'></span>"],
-	    responsive:{
-	      0:{
-	        items:1
-	      },
-	      600:{
-	        items:1
-	      },
-	      1000:{
-	        items:1
-	      }
-	    }
+			loop: true,
+			autoplay: true,
+			margin: 0,
+			animateOut: 'fadeOut',
+			animateIn: 'fadeIn',
+			nav: false,
+			autoplayHoverPause: false,
+			items: 1,
+			navText: ["<span class='ion-md-arrow-back'></span>", "<span class='ion-chevron-right'></span>"],
+			touchDrag: true,
+			mouseDrag: true,
+			pullDrag: true,
+			freeDrag: false,
+			smartSpeed: 1000,
+			responsive: {
+				0: {
+					items: 1,
+					touchDrag: true,
+					mouseDrag: true,
+					pullDrag: true
+				},
+				600: {
+					items: 1,
+					touchDrag: true,
+					mouseDrag: true,
+					pullDrag: true
+				},
+				1000: {
+					items: 1,
+					touchDrag: true,
+					mouseDrag: true,
+					pullDrag: true
+				}
+			},
+			onInitialized: function () {
+				$('.home-slider').css('touch-action', 'pan-y');
+			}
 		});
 	};
 	carousel();
+	
+	// Sayfa kaydırma davranışını düzenle
+	$(document).on('touchmove', function (e) {
+		if ($(e.target).closest('.home-slider').length) {
+			var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+			var startY = touch.pageY;
+			var startX = touch.pageX;
+	
+			$(document).on('touchmove', function (e) {
+				var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+				var deltaY = Math.abs(touch.pageY - startY);
+				var deltaX = Math.abs(touch.pageX - startX);
+	
+				if (deltaY > deltaX) {
+					e.stopPropagation();
+				}
+			});
+		}
+	});
 
 	$('nav .dropdown').hover(function(){
 		var $this = $(this);
