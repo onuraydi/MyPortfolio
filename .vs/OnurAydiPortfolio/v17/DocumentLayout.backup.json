@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\myportfolio\\frontend\\portfolio.webui\\wwwroot\\clark-master\\js\\jquery.stellar.min.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\wwwroot\\clark-master\\js\\jquery.stellar.min.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\myportfolio\\frontend\\portfolio.webui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,6 +27,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "jquery.stellar.min.js",
+              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\clark-master\\js\\jquery.stellar.min.js",
+              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\wwwroot\\clark-master\\js\\jquery.stellar.min.js",
+              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\wwwroot\\clark-master\\js\\jquery.stellar.min.js",
+              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\wwwroot\\clark-master\\js\\jquery.stellar.min.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-03T07:29:47.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\Program.cs",
               "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Program.cs",
@@ -35,7 +52,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Properties\\launchSettings.json",
@@ -43,8 +60,7 @@
               "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-03T07:10:07.323Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T07:10:07.323Z"
             }
           ]
         }
