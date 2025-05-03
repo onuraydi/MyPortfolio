@@ -61,6 +61,8 @@ services:
       - ocelot
     ports:
       - "5003:5003"
+    volumes:
+      - ./Frontend/Portfolio.WebUI/wwwroot/Uploads:/app/wwwroot/Uploads
 
   nginx:
     build:
