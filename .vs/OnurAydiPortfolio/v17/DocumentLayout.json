@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\myportfolio\\frontend\\portfolio.webui\\views\\shared\\components\\_homeviewcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\views\\shared\\components\\_homeviewcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|c:\\users\\onur\\desktop\\currentprojects\\myportfolio\\frontend\\portfolio.webui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92763589-DF3B-40BC-BC11-D00B4E33D971}|Frontend\\Portfolio.WebUI\\Portfolio.WebUI.csproj|solutionrelative:frontend\\portfolio.webui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_HomeViewComponentPartial\\Default.cshtml",
-              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_HomeViewComponentPartial\\Default.cshtml",
-              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_HomeViewComponentPartial\\Default.cshtml",
-              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Views\\Shared\\Components\\_HomeViewComponentPartial\\Default.cshtml",
-              "ViewState": "AgIAACYAAAAAAAAAAAAAAEIAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-03T08:21:58.157Z",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\Program.cs",
+              "RelativeDocumentMoniker": "Frontend\\Portfolio.WebUI\\Program.cs",
+              "ToolTip": "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\MyPortfolio\\Frontend\\Portfolio.WebUI\\Program.cs",
+              "RelativeToolTip": "Frontend\\Portfolio.WebUI\\Program.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAuwDoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T09:07:25.836Z",
               "EditorCaption": ""
             }
           ]

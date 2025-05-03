@@ -57,6 +57,17 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 });
 
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins", policy =>
+    {
+        // Tüm kaynaklara izin veriyoruz
+        policy.WithOrigins("https://onuraydi.com.tr", "https://www.onuraydi.com.tr") // Ýstediðiniz domainleri buraya ekleyebilirsiniz
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 
 builder.Services.AddHttpClient();
 builder.Services.AddHttpContextAccessor();
