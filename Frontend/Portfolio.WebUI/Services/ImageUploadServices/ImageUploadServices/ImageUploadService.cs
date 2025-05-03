@@ -31,7 +31,7 @@ namespace Portfolio.WebUI.Services.ImageUploadServices.ImageUploadServices
 
             var result = new GetProjectImageByPortfolioProjectIdDto
             {
-                Image = Path.Combine("/uploads/", fileName) // DTO'nun ImagePath veya uygun alanını ayarlayın.
+                Image = Path.Combine("/Uploads/", fileName) // DTO'nun ImagePath veya uygun alanını ayarlayın.
             };
 
             return result;
@@ -80,7 +80,7 @@ namespace Portfolio.WebUI.Services.ImageUploadServices.ImageUploadServices
 
                 var imagesDto = new CreateProjectImageDto()
                 {
-                    Image = Path.Combine("/uploads/", fileName),
+                    Image = Path.Combine("/Uploads/", fileName),
                 };
 
                 imagePaths.Add(imagesDto);

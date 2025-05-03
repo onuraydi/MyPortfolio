@@ -82,7 +82,6 @@ builder.Services.Configure<ClientSettings>(builder.Configuration.GetSection("Cli
 
 
 
-
 builder.Services.AddHttpContextAccessor();
 
 

@@ -27,7 +27,7 @@ namespace Portfolio.WebUI.Services.CvUploadServices
                 await cvFile.CopyToAsync(fileStream);
             }
 
-            return Path.Combine("/uploads/", fileName);
+            return Path.Combine("/Uploads/", fileName);
         }
     }
 }
