@@ -125,19 +125,19 @@
 		});
 	};
 	carousel();
-	
-	// Sayfa kaydÄ±rma davranÄ±ÅŸÄ±nÄ± dÃ¼zenle
+
+	// Sayfa kaydýrma davranýþýný düzenle
 	$(document).on('touchmove', function (e) {
 		if ($(e.target).closest('.home-slider').length) {
 			var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
 			var startY = touch.pageY;
 			var startX = touch.pageX;
-	
+
 			$(document).on('touchmove', function (e) {
 				var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
 				var deltaY = Math.abs(touch.pageY - startY);
 				var deltaX = Math.abs(touch.pageX - startX);
-	
+
 				if (deltaY > deltaX) {
 					e.stopPropagation();
 				}

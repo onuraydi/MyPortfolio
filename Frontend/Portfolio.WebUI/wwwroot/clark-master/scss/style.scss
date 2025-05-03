@@ -359,14 +359,18 @@ h1, h2, h3, h4, h5,
 //OWL CAROUSEL
 .owl-carousel {
 	position: relative;
+
 	.owl-item {
 		opacity: .4;
+
 		&.active {
 			opacity: 1;
 		}
 	}
+
 	.owl-dots {
 		text-align: center;
+
 		.owl-dot {
 			width: 10px;
 			height: 10px;
@@ -374,7 +378,8 @@ h1, h2, h3, h4, h5,
 			border-radius: 50%;
 			background: lighten($black, 90%);
 			position: relative;
-			&:after{
+
+			&:after {
 				position: absolute;
 				top: -2px;
 				left: -2px;
@@ -383,21 +388,25 @@ h1, h2, h3, h4, h5,
 				width: 14px;
 				height: 14px;
 				content: '';
-				border:1px solid rgba(255,255,255,.3);
+				border: 1px solid rgba(255,255,255,.3);
 				@include border-radius(50%);
-			}	
-			&:hover, &:focus{
+			}
+
+			&:hover, &:focus {
 				outline: none !important;
 			}
+
 			&.active {
 				background: lighten($black, 70%);
 			}
 		}
 	}
+
 	&.home-slider {
 		position: relative;
 		height: 750px;
 		z-index: 0;
+
 		.slider-item {
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -405,30 +414,35 @@ h1, h2, h3, h4, h5,
 			height: 750px;
 			position: relative;
 			z-index: 0;
-			@include media-breakpoint-down(lg){
+
+			@include media-breakpoint-down(lg) {
 				background-position: center center !important;
 			}
-			.overlay{
+
+			.overlay {
 				position: absolute;
 				top: 0;
 				bottom: 0;
 				left: 0;
 				right: 0;
 				background: $black;
-				opacity: 0;
+				opacity: 0; /* Baþlangýçta görünmez */
 			}
+
 			.slider-text {
 				height: 750px;
 				z-index: 0;
-				@include media-breakpoint-down(md){
+
+				@include media-breakpoint-down(md) {
 					text-align: center;
 				}
-				.one-third{
+
+				.one-third {
 					width: 60%;
 					position: relative;
-					// height: 650px;
 					z-index: -1;
-					.overlay{
+
+					.overlay {
 						position: absolute;
 						top: 0;
 						bottom: 0;
@@ -437,24 +451,30 @@ h1, h2, h3, h4, h5,
 						background: $black;
 						opacity: 0;
 					}
-					@include media-breakpoint-down(lg){
+
+					@include media-breakpoint-down(lg) {
 						width: 85%;
 					}
-					@include media-breakpoint-down(md){
+
+					@include media-breakpoint-down(md) {
 						width: 100%;
 						z-index: 0;
-						.overlay{
-							opacity: .3;
+
+						.overlay {
+							opacity: .3; /* Opaklýk mobilde arttýrýldý */
 						}
-						&:after{
+
+						&:after {
 							opacity: 0;
 						}
 					}
 				}
-				.one-forth{
+
+				.one-forth {
 					width: 50%;
 					position: relative;
-					@include media-breakpoint-up(md){
+
+					@include media-breakpoint-up(md) {
 						position: absolute;
 						top: 0;
 						left: 0;
@@ -463,7 +483,8 @@ h1, h2, h3, h4, h5,
 						width: 1200px;
 						margin: 0 auto;
 					}
-					@include media-breakpoint-down(md){
+
+					@include media-breakpoint-down(md) {
 						width: 100%;
 						position: absolute;
 						top: 0;
@@ -473,38 +494,24 @@ h1, h2, h3, h4, h5,
 						z-index: 1;
 						padding: 1em;
 					}
-					.text{
+
+					.text {
 						width: 100%;
-						@include media-breakpoint-up(lg){
+
+						@include media-breakpoint-up(lg) {
 							position: absolute;
 							top: 50%;
 							left: 0;
 							transform: translateY(-50%);
 							right: 0;
-							// width: 1200px;
 							max-width: 50%;
 							padding-left: 45px;
 							padding-right: 3em;
 						}
 					}
 				}
-				// .icon-video{
-				// 	position: absolute;
-				// 	top: 120px;
-				// 	right: 70px;
-				// 	content: '';
-				// 	width: 70px;
-				// 	height: 70px;
-				// 	background: $white;
-				// 	@include border-radius(50%);
-				// 	span{
-				// 		font-size: 20px;
-				// 		color: $black;
-				// 	}
-				// 	span.play{
-				// 	}
-				// }
-				.subheading{
+
+				.subheading {
 					color: $black;
 					font-weight: 600;
 					font-size: 14px;
@@ -512,45 +519,54 @@ h1, h2, h3, h4, h5,
 					text-transform: uppercase;
 					color: $primary;
 				}
-				.text{
+
+				.text {
 					position: relative;
 					z-index: 1;
 				}
+
 				h1 {
 					font-size: 60px;
 					color: $white;
 					line-height: 1.2;
 					font-weight: 800;
-					span{
+
+					span {
 						font-weight: 800;
 						color: $primary;
 					}
+
 					@include media-breakpoint-down(md) {
 						color: $white;
 						font-size: 50px;
 					}
+
 					@include media-breakpoint-down(sm) {
 						font-size: 40px;
-						// color: $pri;
 					}
 				}
-				h2{
+
+				h2 {
 					font-size: 30px;
 					font-weight: 400;
-					@include media-breakpoint-down(md){
+
+					@include media-breakpoint-down(md) {
 						color: $white;
 					}
 				}
+
 				p {
-					color: rgba(0,0,0,.8);
+					color: rgba(0, 0, 0, .8);
 					font-weight: 400;
+
 					@include media-breakpoint-down(md) {
-						color: rgba(255,255,255,.7);
+						color: rgba(255, 255, 255, .7);
 						font-size: 23px;
 					}
 				}
-				.btn-custom{
-					bordeR: 1px solid $primary;
+
+				.btn-custom {
+					border: 1px solid $primary;
 					padding: 5px 20px;
 					text-transform: uppercase;
 					font-size: 12px;
@@ -558,6 +574,7 @@ h1, h2, h3, h4, h5,
 				}
 			}
 		}
+
 		.owl-nav {
 			position: absolute;
 			bottom: 60px !important;
@@ -565,9 +582,11 @@ h1, h2, h3, h4, h5,
 			right: 0;
 			// max-width: 1200px;
 			margin: 0 auto;
-			@include media-breakpoint-down(md){
+
+			@include media-breakpoint-down(md) {
 				display: none;
 			}
+
 			.owl-prev,
 			.owl-next {
 				position: absolute;
@@ -576,6 +595,7 @@ h1, h2, h3, h4, h5,
 				// color: $primary !important;
 				background: $white !important;
 				@include transition(.7s);
+
 				span {
 					&:before {
 						font-size: 20px;
@@ -583,17 +603,22 @@ h1, h2, h3, h4, h5,
 						color: $black;
 					}
 				}
+
 				opacity: 1;
 			}
+
 			.owl-prev {
 				top: 0 !important;
 				right: 0 !important;
-				@include media-breakpoint-up(lg){
+
+				@include media-breakpoint-up(lg) {
 					right: 61px !important;
 				}
-				&:hover, &:focus{
+
+				&:hover, &:focus {
 					background: $black !important;
 					outline: none !important;
+
 					span {
 						&:before {
 							font-size: 20px;
@@ -603,15 +628,19 @@ h1, h2, h3, h4, h5,
 					}
 				}
 			}
+
 			.owl-next {
 				top: 0 !important;
 				right: 0 !important;
-				@include media-breakpoint-up(lg){
+
+				@include media-breakpoint-up(lg) {
 					right: 0 !important;
 				}
-				&:hover, &:focus{
+
+				&:hover, &:focus {
 					background: $black !important;
 					outline: none !important;
+
 					span {
 						&:before {
 							font-size: 24px;
@@ -622,21 +651,25 @@ h1, h2, h3, h4, h5,
 				}
 			}
 		}
+
 		.owl-dots {
 			position: absolute;
 			left: 0;
 			right: 0;
 			bottom: 40px;
 			width: 100%;
-			@include media-breakpoint-down(sm){
+
+			@include media-breakpoint-down(sm) {
 				bottom: 5px;
 			}
+
 			.owl-dot {
 				width: 10px;
 				height: 10px;
 				margin: 5px;
 				border-radius: 50%;
 				background: rgba(255,255,255,.4);
+
 				&.active {
 					background: $white;
 				}
