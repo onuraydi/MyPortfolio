@@ -54,7 +54,7 @@ namespace Portfolio.WebUI.Services.ImageUploadServices.ImageUploadServices
                 await image.CopyToAsync(filestream);
             }
 
-            return Path.Combine("/uploads/", fileName);
+            return Path.Combine("/Uploads/", fileName);
         }
 
         public async Task<List<CreateProjectImageDto>> UploadManyImageAsync(List<IFormFile> images)

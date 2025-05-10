@@ -27,8 +27,6 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "C:\\Users\\ONUR\\Desktop\\CurrentProjects\\OnurAydiPortfolio\\IdentityNuget-main\\IdentityNuget-main\\templates": {},
-          "C:\\Users\\ONUR\\Desktop\\IdentityNuget-main\\IdentityNuget-main\\templates": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

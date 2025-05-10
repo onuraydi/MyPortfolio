@@ -24,7 +24,7 @@ namespace Portfolio.WebUI.Controllers
         {
             
             await _portfolioContactService.CreatePortfolioContactAsync(createPortfolioContactDto);
-            return RedirectToAction("Index","deneme");
+            return View();
         }
     }
 }
